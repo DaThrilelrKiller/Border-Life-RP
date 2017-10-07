@@ -1,0 +1,8 @@
+[
+"addNote",
+"addWarrant",
+"clear_warrants",
+"name",
+"open",
+"search"
+];

@@ -1,0 +1,1 @@
+core_loop_array set [count core_loop_array, _this];

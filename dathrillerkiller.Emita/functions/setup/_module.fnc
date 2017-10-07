@@ -1,0 +1,12 @@
+[
+"fired",
+"getIn",
+"getOut",
+"handleDamage",
+"init",
+"killed",
+"newPlayer",
+"paused",
+"respawn",
+"jip"
+];

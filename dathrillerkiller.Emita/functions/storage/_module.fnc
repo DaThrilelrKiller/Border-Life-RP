@@ -1,0 +1,16 @@
+[
+"add",
+"array",
+"set",
+"todialog",
+"amount",
+"kg",
+"maxkg",
+"remove",
+"setAmount",
+"trunk",
+"move",
+"isNumber",
+"dropall",
+"RemoveKind"
+];

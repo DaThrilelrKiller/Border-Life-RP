@@ -1,0 +1,5 @@
+[
+"grabVehicle",
+"handler",
+"init"
+];

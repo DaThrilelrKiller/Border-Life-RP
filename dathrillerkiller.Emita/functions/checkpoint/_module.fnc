@@ -1,0 +1,6 @@
+[
+"open",
+"clear",
+"drop",
+"purchase"
+];

@@ -1,0 +1,11 @@
+			class Itemint_number
+			{
+				position[]=array_position;
+				id=int_id;
+				side="str_side";
+				azimut=float_dir;
+				vehicle=str_class;
+				skill=float_skill;
+				init="str_init";
+				description="str_description";
+			}

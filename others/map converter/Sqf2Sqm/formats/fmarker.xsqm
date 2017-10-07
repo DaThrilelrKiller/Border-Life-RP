@@ -1,0 +1,6 @@
+		class Itemint_number
+		{
+			position[]=array_position;
+			name="str_name";
+			type="str_type";
+		};

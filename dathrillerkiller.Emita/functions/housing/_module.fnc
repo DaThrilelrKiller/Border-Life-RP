@@ -1,0 +1,11 @@
+[
+"init",
+"buyhouse",
+"getbuildingid",
+"sellhouse",
+"alreadyownshouse",
+"garage",
+"ownshouse",
+"gethouseprice",
+"buyhouse"
+];

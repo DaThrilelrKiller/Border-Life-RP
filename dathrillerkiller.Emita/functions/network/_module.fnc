@@ -1,0 +1,15 @@
+[
+"init",
+"mpexec",
+"run",
+"switchmove",
+"chat",
+"lock",
+"moveincargo",
+"sendmoney",
+"setdate",
+"setfuel",
+"action",
+"allowDamage",
+"setUnconscious"
+];

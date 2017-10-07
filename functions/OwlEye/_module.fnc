@@ -1,0 +1,16 @@
+[
+["init",false],
+["ban",true],
+["DialogCheck",true],
+["IsNearBank",true],
+["kick",true],
+["LogToServer",true],
+["magizine",false],
+["patches",false],
+["Recoil",false],
+["variables",false],
+["vehicle",false],
+["weapon",false],
+["jip",false],
+["banned",false]
+];

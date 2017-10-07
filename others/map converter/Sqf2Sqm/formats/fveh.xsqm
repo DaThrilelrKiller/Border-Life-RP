@@ -1,0 +1,10 @@
+		class Itemint_number
+		{
+			presenceCondition="str_cop";
+			position[]=array_position;
+			id=int_id;
+			side="EMPTY";
+			vehicle=str_class;
+			azimut=float_dir;
+			init="str_init";
+		};

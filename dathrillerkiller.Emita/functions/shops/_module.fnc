@@ -1,0 +1,12 @@
+[
+"buylist",
+"canuseshop",
+"purchase",
+"sell",
+"openshop",
+"selllist",
+"refresh",
+"processmoney",
+"purchaselic",
+"createvehicle"
+];

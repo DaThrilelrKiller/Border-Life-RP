@@ -1,0 +1,83 @@
+Version 1 - 122 Files changed
+
+DaThrillerKiller - Removed string functions that were not needed.
+DaThrillerKiller - removed old Loading titleText
+DaThrillerKiller - Added a wait to make sure bis functions were compiled
+DaThrillerKiller - Made it so TFR freqs. where not encrypted
+DaThrillerKiller - Converted TFR and drug functions to a module based system
+DaThrillerKiller - Fixed string length functions which converts a string to certain length
+DaThrillerKiller - Fixed money dupe when selling sirens glitch
+DaThrillerKiller - made the shop sell list refresh after selling something
+DaThrillerKiller - Change toggle plates function to be faster and more simple in code
+DaThrillerKiller - Removed Keypress module because it was done messing with it trying to get it to work the way i intended in to work
+DaThrillerKiller - Tweaked the admin menu to make it more user friendly
+DaThrillerKiller - Fixed shipment dialog button being under the map
+DaThrillerKiller - Optimized if statments in the speedcam file.
+DaThrillerKiller - Removed defined but not used local variables in the shopfarmfaclicenseactions.sqf file
+DaThrillerKiller - removed ClientSetupMap because it was not being used
+DaThrillerKiller - New format the module loading messages
+DaThrillerKiller - Converted functions from preprocessFileLineNumbers to preprocessFile because all our files are 1 line anyways (in theory this should use less ram)
+DaThrillerKiller - Made it so u dont get kick when using drugs for spawning smokeShells
+Trevor - Removed more buildings off the map
+DaThrillerKiller - Changed medical marker name
+Trevor - Added Three more whitelist for some faction that i have no clue what they are
+Trevor - Added some more new vehicles 
+Trevor - Added another Spawn for Tristen's Pizzeria
+Trevor - Changed default sirens that spawn on vehicles
+Trevor - Fixed spelling mistakes
+DaThrillerKiller - Cleaned up the init files a bit more / faster loading times
+Trevor - Added another ATM to the map
+
+Version 1.1 - 103 Files changed
+DaThrillerKiller - Improved anti hack a bit
+DaThrillerKiller - Converted string functions to modules
+DaThrillerKiller - Added new medical system and removed old one
+Trevor - Removed the GMC Ambo for some reason?
+Trevor - Removed Stretcher from untrained box
+Trevor - Added new Truck the Rattlers Tucking Service
+Trevor - Added DTKs new vehicles
+DaThrillerKiller - Changed respawn delay
+DaThrillerKiller - Fixed time to string function
+DaThrillerKiller - Fixed shop bug where it basicly just fucked up the prices
+DaThrillerKiller - Removed shop functions that were blank
+DaThrillerKiller - Deleted the dumb dropbox cache directory
+DaThrillerKiller - Added new atm Menu and module 
+DaThrillerKiller - Removed old atm scripts
+DaThrillerKiller - Changed the ways active buttons look
+DaThrillerKiller - Removed all chat channels
+DaThrillerKiller - Added new twitter feed
+DaThrillerKiller - When using chat commands they no longer show up for everyone example: !peforance
+DaThrillerKiller - Added new chat tags example: [Developer]
+DaThrillerKiller - fixed isNumber function
+
+Version 1.2 - 135 Files changed
+DaThrillerKiller - re did some of the server side functions to serverside modules 
+DaThrillerKiller - Added a JIP event script for modules 
+DaThrillerKiller - IMplmented a new/redone antihack again 
+DaThrillerKiller - Removed old antihack 
+DaThrillerKiller - Abilty for ems to drag bodies 
+DaThrillerKiller - fixed atm showing invers amounts for bank and money 
+DaThrillerKiller - fixed shops refresh function
+DaThrillerKiller - Improve Twiiter a bit more
+DaThrillerKiller - Added new Medical Uncon effect
+DaThrillerKiller - Fixed Purchase function
+DaThrillerKiller - Added in server Authentication to make sure all functions are loaded
+DaThrillerKiller - Converted join the server chat to systemchat
+DaThrillerKiller - More Orgainzation server side
+
+Version 1.3 - 57 Files changed
+Trevor - Fixed some spelling mistakes
+DaThrillerKiller - moved more variable to their correct module
+DaThrillerKiller - Fixed hud not showing for some people
+DaThrillerKiller - Added example module with event scripts for refrence
+DaThrillerKiller - removed outdated variables
+Trevor - Changed shops file, dont know what he did
+
+Version 1.4 - 16 Files changed
+DaThrillerKiller - Made it so you can only acess vehicle gear if you have keys
+DaThrillerKiller - backend optimization
+
+
+
+
+

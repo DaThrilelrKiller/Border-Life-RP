@@ -1,0 +1,5 @@
+[
+"plate",
+"setplate",
+"plateToVehicle"
+];

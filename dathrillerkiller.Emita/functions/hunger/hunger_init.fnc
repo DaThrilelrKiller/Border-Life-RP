@@ -1,0 +1,1 @@
+[15,hunger_loop]call core_AddLoop;

@@ -1,0 +1,13 @@
+[
+["Datarizer",false],
+["dbexists",false],
+["LoadFromDB",false],
+["log",false],
+["read",false],
+["saveloop",false],
+["SaveToDB",false],
+["WLoadFromDB",false],
+["write",false],
+["jip",false],
+["init",false]
+];

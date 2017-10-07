@@ -1,0 +1,10 @@
+[
+"setWorkers",
+"refresh",
+"owner",
+"open",
+"getInfo",
+"Manifacture",
+"buy",
+"loaditems"
+];

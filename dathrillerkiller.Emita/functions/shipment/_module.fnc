@@ -1,0 +1,10 @@
+[
+"add",
+"handler",
+"Open",
+"payout",
+"police_distance",
+"time",
+"update_map",
+"defent"
+];
