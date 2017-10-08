@@ -35,12 +35,12 @@ dtk_active_modules =
 
 /*loads variables first for all active modules*/
 {
-	call compile format['call compile preprocessFileLineNumbers "functions\%1\_vars.fnc";', _x ];
+	call compile format['call compile preprocessFileLineNumbers "functions\%1\_module.variables";', _x ];
 }count dtk_active_modules;
 
 /*loads module functions*/
 {
-	_functions = call compile format['call compile preprocessFileLineNumbers "functions\%1\_module.fnc";', _x];
+	_functions = call compile format['call compile preprocessFileLineNumbers "functions\%1\_module.functions";', _x];
 	_module = _x;
 	{
 		call compile format['
