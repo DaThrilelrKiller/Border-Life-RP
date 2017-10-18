@@ -77,6 +77,14 @@ Version 1.4 - 16 Files changed
 DaThrillerKiller - Made it so you can only acess vehicle gear if you have keys
 DaThrillerKiller - backend optimization
 
+Version 1.5
+
+Version 1.6 25 Files Changed
+DaThrillerKiller - New SpeedCam module witch adds note to the computer under the car licence plate lookup, so the computer has more use now
+DaThrillerKiller - New Hunger module 
+DaThrillerKiller - Optimized and added another pram to the cdb_AddNote function
+DaThrillerKiller - Deleted old hunger and speedcam files and variables
+
 
 
 

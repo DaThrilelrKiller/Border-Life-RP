@@ -30,7 +30,9 @@ dtk_active_modules =
 "Statsave",
 "Hud",
 "Gear",
-"Robbery"
+"Robbery",
+"Hunger",
+"Speedcam"
 ];
 
 /*loads variables first for all active modules*/

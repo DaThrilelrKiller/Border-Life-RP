@@ -5,7 +5,7 @@ _save =
 	[
 		["Main", "BankAcount", kontostand], 
 		["Main", "NAME", name player],
-		["Main", "Hunger", INV_hunger], 	
+		["Main", "Hunger", dtk_hunger], 	
 		[ar_side, "Inventory", player getVariable "dtk_storage"], 
 		[ar_side, "INV_Lizenz", (player getvariable "cdb_license")], 	
 		[ar_side, "VehiclesLand", INVVehiclesLand],

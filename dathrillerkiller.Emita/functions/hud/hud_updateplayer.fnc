@@ -3,7 +3,7 @@ private ["_hud","_playhud","_vcl","_vclClass","_storweight","_maxweight","_stor"
 _hud = uiNameSpace getVariable "ar_hud";
 _playhud = _hud displayCtrl 154;
 
-_hunger = round(INV_hunger);
+_hunger = round(dtk_hunger);
 _invmoney = [[player,"geld"] call storage_amount] call Main_FormatMoney;
 _bankmoney = [(konToStand)] call Main_FormatMoney;
 

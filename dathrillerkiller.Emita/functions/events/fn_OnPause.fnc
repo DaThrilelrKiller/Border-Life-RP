@@ -37,7 +37,7 @@ for "_a" from 0 to 1 step 0 do
 					{
 						/*Saves player acount to prevent dupping*/
 						private ["_save"];
-						_save = [player,[ 	["Main", "BankAcount", kontostand], ["Main", "NAME",name player], ["Main", "Hunger", INV_hunger], [ar_side, "Inventory", player getVariable "dtk_storage"], 	[ar_side, "INV_Lizenz", (player getvariable "cdb_license")],[ar_side, "VehiclesLand", INVVehiclesLand],[ar_side, "ARHP", ARHP],[ar_side, "ARHR", ARHR],[ar_side, "Weapons", weapons player],[ar_side, "Magazines", magazines player],[ar_side, "INVAppsInstalled",INVAppsInstalled]]];
+						_save = [player,[ 	["Main", "BankAcount", kontostand], ["Main", "NAME",name player], ["Main", "Hunger", dtk_hunger], [ar_side, "Inventory", player getVariable "dtk_storage"], 	[ar_side, "INV_Lizenz", (player getvariable "cdb_license")],[ar_side, "VehiclesLand", INVVehiclesLand],[ar_side, "ARHP", ARHP],[ar_side, "ARHR", ARHR],[ar_side, "Weapons", weapons player],[ar_side, "Magazines", magazines player],[ar_side, "INVAppsInstalled",INVAppsInstalled]]];
 						["SERVER",_save,"S_statsave_SaveToDB",false,false]call network_MPExec;
 						_text1 = format ["Saving Stats",_e]; 
 					};

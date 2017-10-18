@@ -11,6 +11,7 @@ Instagram: https://www.instagram.com/tuckeeeee
 Prams: 
 none
 */
+if (dtk_server)exitWith {};
 
 []spawn gear_handler;
 gear_init_done = true;

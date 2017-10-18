@@ -1,7 +1,5 @@
 ["sfg_textures\misc\Gps.paa",-0.06,-0.36] call bis_customGPS;
 [0,0,0,["clientloop"]] execVM "gangs.sqf";
-/* ["init"] execVM "FUNCTIONS\ITEMS\food.sqf"; */
-execVM "CORE\CLIENT\SpeedCams1.sqf";
 execVM "CORE\CLIENT\nametags.sqf";
 call events_events;
 call dtk_markersortinit;

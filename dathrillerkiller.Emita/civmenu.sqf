@@ -103,7 +103,7 @@ dtk_disabledkeys = [44,47];
 (format ["%1 switchmove ""%2"";", player, "normal"]) call network_broadcast;
 call INV_EntferneIllegales;	
 local_arrest    = 1;		
-INV_hunger      = 0;					
+dtk_hunger      = 0;					
 CivTimeInPrison = (_this select 1);
 systemChat  format [localize "STRS_civmenucheck_arrested_self", (CivTimeInPrison call string_intToString)];
 stolencash = 0;

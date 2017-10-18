@@ -12,7 +12,6 @@ private ["_name","_price","_condition","_lic","_index"];
 		_x addaction [format ["Buy %1 ($%2)",_name,_price],"noscript.sqf", format ["%1 call licenses_buy",_index], 1, false, true, "", format ["!('%1' in (player getvariable 'cdb_license')) && {(%2)}",_lic,_condition]];
 		true
 	}count (_x select 1);
-	call compile format ['demerits%1 = 10;',_lic];
 	true
 }forEach dtk_licenses;
 

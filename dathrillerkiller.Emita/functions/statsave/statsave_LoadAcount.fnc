@@ -23,7 +23,7 @@ systemChat format ["Almost loaded with (%1`s) stats requesting stats again",_UID
 };
 
 kontostand = (_stats select 1);
-INV_hunger = (_stats select 2);
+dtk_hunger = (_stats select 2);
 player setVariable ["dtk_storage",(_stats select 3), true];
 INVVehiclesLand = (_stats select 5);
 {player addMagazine _x} count (_stats select 9);

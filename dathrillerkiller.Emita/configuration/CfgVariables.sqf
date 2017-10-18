@@ -109,7 +109,6 @@ stolencash		 = 0;
 Maxbankrobpercentlost    = 0.1; 
 robenable              	 = true;     
 bankflagarray            = [mainbank,copbank,copairbank,copswatbank,copsgtbank,copdispatchbank,copcmdbank,copcoastguardbank,atm5,atm6,atm10,atm11,atm12,atm13,atmswag,devatm,atmmall,atmsubfire,psoatm,docatm,garageatm,rattlersbank,pmcatm,cophwatm,tpatm];
-speedcamarray            = [speed1,speed2,speed3,speed4,speed5];
 drugsellarray		 = [mdrugsell,cdrugsell,ldrugsell,hdrugsell,whalesell,methsell];
 TankstellenArray         = [fuel2,fuel4,fuel5,fuel7,fuel8];
 

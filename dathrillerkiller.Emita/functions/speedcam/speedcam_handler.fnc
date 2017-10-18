@@ -22,9 +22,11 @@ if ((_car  animationPhase "ani_lights") != 0.1)then
 		if(_speed >= 170 		 ) then {_penalty = 7};
 
 		systemChat  format["You have just been flashed by a speed camera Slow down! (Limit: 90, Speed: %1)", round _speed];
+		[_car,format ['Speeding: %1',round _speed],format ["Speedcam %1",(_forEachIndex + 1)]]call cdb_addNote;
+		sleep 2;
 		}; 
 
-	} count speedcam_array;
+	} forEach speedcam_array;
 };
 
 sleep 0.5;
