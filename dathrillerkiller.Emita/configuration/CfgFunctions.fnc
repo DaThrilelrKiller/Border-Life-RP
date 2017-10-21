@@ -9,20 +9,16 @@ _Funcitons =
 
 ["goverment","addtax","goverment"],
 
-["inv","storagehaskindof","inventory"],
 ["inv","storageremovekindof","inventory"],
 ["inv","entferneillegales","inventory"],
 ["inv","getobjectsteuer","inventory"],
 ["inv","addprozent","inventory"],
 ["inv","isarmed","inventory"],
 ["inv","getitemsteuer","inventory"],
-["inv","haslicense","inventory"],
-["inv","getlicensename","inventory"],
 ["inv","getscriptfromclass_mag","inventory"],
 ["inv","getscriptfromclass_weap","inventory"],
 ["inv","getitemarray","inventory"],
 ["inv","getshoparray","inventory"],
-["inv","getshopnum","inventory"],
 ["inv","getshopitemnum","inventory"],
 ["inv","mygang","inventory"],
 ["inv","seen","inventory"],
@@ -43,7 +39,6 @@ _Funcitons =
 ["main","holster","main"],
 ["main","loadstartingmenus","main"],
 ["main","arraytolist","main"],
-["main","sayloop","main"],
 
 ["ems","revive","ems"],
 ["ems","firehose","ems"],
@@ -61,47 +56,21 @@ _Funcitons =
 ["other","pullout","vehicle"],
 ["other","impound","vehicle"],
 ["other","putplayerincar","vehicle"],
-["vehicle","givekeys","vehicle"],
-["vehicle","haskeys","vehicle"],
-["vehicle","keylist","vehicle"],
-["vehicle","keychainlock","vehicle"],
 
 ["other","getlottoarray","other"],
 ["other","safehack","other"],
 ["other","safecodedlgitems","other"],
 ["other","ismayor","other"],
-["other","c_delete","other\clothing"],
-["other","clothes","other\clothing"],
-["other","player_exists","other\clothing"],
 ["other","getquest","other\quest"],
 
-["admin","addalllicenses","admin"],
+
 ["admin","fillmenu","admin"],
 ["admin","exec","admin"],
-["dtk","markersorter","dathrillerkiller"],
-["dtk","markersortinit","dathrillerkiller"],
 ["dtk","interationhandler","dathrillerkiller"],
 ["dtk","playersettingsmenu","dathrillerkiller"],
-["dtk","mycookie","dathrillerkiller"],
 ["dtk","splitstring","dathrillerkiller"],
-["dtk","playerlisttocontrol","dathrillerkiller"],
+["dtk","playerlisttocontrol","dathrillerkiller"]
 
-["bis","customgps","bis"],
-["bis","selectrandom","bis"],
-["bis","timeToString","bis"],
-["ipad","loadapps","ipad"],
-["ipad","openipad","ipad"],
-["ipad","getapparray","ipad"],
-
-["bal","calculate","dathrillerkiller\bal"],
-["bal","drink","dathrillerkiller\bal"],
-["bal","info","dathrillerkiller\bal"],
-
-["ticket","giveticket","police\ticket"],
-["ticket","ticket","police\ticket"],
-
-["item","jammerhandler","items"],
-["item","jammer","items"]
 ];
 
 _externalFunctions = 

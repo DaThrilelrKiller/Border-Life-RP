@@ -30,7 +30,7 @@ if (count _warrants > 0)then
 if (count _license > 0)then
 {
 	{
-		_index = lbAdd [3,format["License: %1",_x call INV_GetLicenseName]];
+		_index = lbAdd [3,format["License: %1",_x call licenses_name]];
 		lbSetColor [3,_index,[0.23,0.34,0.98, 1]];
 	}count _license;
 }

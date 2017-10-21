@@ -20,8 +20,8 @@ _role addaction ["Remove Caution Tape","noscript.sqf",'if ([player,"10mTape",1] 
 _role addaction ["Remove Body Bag","noscript.sqf",'[player,"geld",1000] call storage_add; deletevehicle cursorTarget',1,true,true,"",'(typeOf cursorTarget == "body") && {player distance cursorTarget < 4}'];
 
 /*SHOPS*/
-_role addaction ["Shop 1 Export","noscript.sqf","[ (shop1 call INV_getshopnum)]call shops_openshop; ",1,false,true,"","player distance shop1export <= 3"];
-_role addaction ["Shop 4 Export","noscript.sqf","[ (shop4 call INV_getshopnum)]call shops_openshop; ",1,false,true,"","player distance shop4export <= 3"];
+_role addaction ["Shop 1 Export","noscript.sqf","[ (shop1 call shops_index)]call shops_openshop; ",1,false,true,"","player distance shop1export <= 3"];
+_role addaction ["Shop 4 Export","noscript.sqf","[ (shop4 call shops_index)]call shops_openshop; ",1,false,true,"","player distance shop4export <= 3"];
 
 
 _role addaction [format ["Buy K9 ($%1)", dog_cost],"copdog.sqf", ["buydog"],1,false,true,"",'player distance dogspawn <= 5 and (K9_id)'];
@@ -41,51 +41,51 @@ _role addaction ["Escort VIP", "noscript.sqf", "[VIPtarget] join (group player);
 _role addaction ["Remove Blindfold","FUNCTIONS\ITEMS\blindfold.sqf",[],1,false,true,"","isPlayer cursorTarget and cursorTarget getVariable 'blindfolded'"];
 
 /*VEHICLE*/
-player addaction ["Role Vehicle Over","noscript.sqf",'[]call Other_unflipvehicle;',1,false,true,"",'_vcl = cursorTarget; player distance _vcl < 5 and [player,_vcl]call vehicle_hasKeys'];
-_role addaction [localize "STRS_addaction_trunk_see","noscript.sqf",'_vcl = cursorTarget;_var = _vcl getVariable "DTK_OwnerUID"; _str = format["%1_storage", _vcl];[_str]call Other_vehiclecheck;',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID"; player distance _vcl < 5 and !([player,_vcl]call vehicle_hasKeys) and (!isNil "_var")'];
-_role addaction [localize "STRS_addaction_trunk_check","noscript.sqf",'_vcl = cursorTarget;_var = _vcl getVariable "DTK_OwnerUID";_str = format["%1_storage", _vcl];if([_vcl,_str] call INV_RemoveIllegalStorage)then{call compile format["publicvariable ""%1"";", _str]};',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID"; player distance _vcl < 5 and !([player,_vcl]call vehicle_hasKeys) and (!isNil "_var")'];
+player addaction ["Role Vehicle Over","noscript.sqf",'[]call Other_unflipvehicle;',1,false,true,"",'_vcl = cursorTarget; player distance _vcl < 5 and [player,_vcl]call keys_has'];
+_role addaction [localize "STRS_addaction_trunk_see","noscript.sqf",'_vcl = cursorTarget;_var = _vcl getVariable "DTK_OwnerUID"; _str = format["%1_storage", _vcl];[_str]call Other_vehiclecheck;',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID"; player distance _vcl < 5 and !([player,_vcl]call keys_has) and (!isNil "_var")'];
+_role addaction [localize "STRS_addaction_trunk_check","noscript.sqf",'_vcl = cursorTarget;_var = _vcl getVariable "DTK_OwnerUID";_str = format["%1_storage", _vcl];if([_vcl,_str] call INV_RemoveIllegalStorage)then{call compile format["publicvariable ""%1"";", _str]};',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID"; player distance _vcl < 5 and !([player,_vcl]call keys_has) and (!isNil "_var")'];
 _role addaction ["Pull Player Out","noscript.sqf",'cursorTarget spawn Other_pullout;',1,true,true,"",'_vcl = cursorTarget;player distance _vcl < 5 and count (crew _vcl) > 0 and (call INV_isArmed)'];
 _role addaction [localize "STRS_addAction_vehicleinfo","noscript.sqf",'cursorTarget call Other_vehinfo;',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID";player distance _vcl < 5 and (!isNil "_var")'];
 _role addaction ["Put Player In Vehicle","noscript.sqf",'[]call Other_PutPlayerInCar;',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID"; player distance _vcl < 5 and (!isNil "_var")'];
 _role addaction ["Impound Vehicle","noscript.sqf",'_vcl = cursorTarget;[_vcl, "impound",""]call Other_impound;',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID"; player distance _vcl < 10 and (!isNil "_var")'];
 
 /*VEHICLE SAVER*/
-_role addaction ["[SAVE YOUR LAND VEHICLE]","noscript.sqf",'[]call StatSave_SaveVehicle;',1,true,true,"",'player distance cursorTarget < 5 and [player,cursorTarget]call vehicle_hasKeys and (player distance savepoint2 <= 30 or player distance savepontpdcommand <= 30 or player distance savepoint2s <= 30 )'];
+_role addaction ["[SAVE YOUR LAND VEHICLE]","noscript.sqf",'[]call StatSave_SaveVehicle;',1,true,true,"",'player distance cursorTarget < 5 and [player,cursorTarget]call keys_has and (player distance savepoint2 <= 30 or player distance savepontpdcommand <= 30 or player distance savepoint2s <= 30 )'];
 _role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[ctrafficspawn]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance savepoint2 <= 3"];
 _role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[ccarspawnchief]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance savepontpdcommand <= 3"];
 _role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[ccarspawn1]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance savepoint2s <= 3"];
 
 /*SKINS*/
-_role addaction ["Switch To CIRU Probationary Uniform","noscript.sqf",'["vilas_sira_swat_m416"] call Other_clothes;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
-_role addaction ["Switch To CIRU Uniform","noscript.sqf",'["ibr_fea"] call Other_clothes;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
-_role addaction ["Switch To CIRU Marksman Uniform","noscript.sqf",'["USMC_SoldierS_Sniper"] call Other_clothes;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
-_role addaction ["Switch To CIRU Lead Uniform","noscript.sqf",'["vilas_sira_swat"] call Other_clothes;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
-_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call Other_clothes;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
-_role addaction ["Switch To Chief Uniform","noscript.sqf",'["sfg_trevor"] call Other_clothes;',1,true,true,"",'Chief_id && {player distance copcmdbank < 2}'];
-_role addaction ["Switch To Asst.Chief Uniform","noscript.sqf",'["sfg_asstc"] call Other_clothes;',1,true,true,"",'Chief_id && {player distance copcmdbank < 2}'];
-_role addaction ["Switch To Pilot Uniform","noscript.sqf",'["US_Soldier_Pilot_EP1"] call Other_clothes;',1,true,true,"",'PDAviation_id && {player distance copairweapon < 2}'];
-_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call Other_clothes;',1,true,true,"",'PDAviation_id && {player distance copairweapon < 2}'];
-_role addaction ["Switch To Pilot Uniform","noscript.sqf",'["US_Soldier_Pilot_EP1"] call Other_clothes;',1,true,true,"",'PDAviation_id && {player distance copairweapon2 < 2}'];
-_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call Other_clothes;',1,true,true,"",'PDAviation_id && {player distance copairweapon2 < 2}'];
-_role addaction ["Switch To K-9 Uniform","noscript.sqf",'["sfg_k9"] call Other_clothes;',1,true,true,"",'K9_id && {player distance copk9 < 2}'];
-_role addaction ["Switch To K-9 Command Uniform","noscript.sqf",'["sfg_k9com"] call Other_clothes;',1,true,true,"",'K9_id && {player distance copk9 < 2}'];
-_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call Other_clothes;',1,true,true,"",'K9_id && {player distance copk9 < 2}'];
-_role addaction ["Switch To Captain Uniform","noscript.sqf",'["sfg_cpt"] call Other_clothes;',1,true,true,"",'Cpt_id && {player distance copcmdbank < 2}'];
-_role addaction ["Switch To Lieutenant Uniform","noscript.sqf",'["sfg_lt"] call Other_clothes;',1,true,true,"",'Lt_id && {player distance copcmdbank < 2}'];
-_role addaction ["Switch To Patrol Sgt. Uniform","noscript.sqf",'["sfg_sgt"] call Other_clothes;',1,true,true,"",'Sgt_id && {player distance copsgt < 2}'];
-_role addaction ["Switch To Patrol Cpl. Uniform","noscript.sqf",'["sfg_cpl"] call Other_clothes;',1,true,true,"",'Cpl_id && {player distance copcpl < 2}'];
-_role addaction ["Switch To Patrol Senior Patrol Uniform","noscript.sqf",'["sfg_snr"] call Other_clothes;',1,true,true,"",'PO3_id && {player distance coppo3 < 2}'];
-_role addaction ["Switch To Coast Guard Uniform","noscript.sqf",'["yup_uscg_Pilot"] call Other_clothes;',1,true,true,"",'CoastGuard_id && {player distance copcoastguardbank < 2}'];
-_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call Other_clothes;',1,true,true,"",'PO2_id && {player distance copcoastguardbank < 2}'];
-_role addaction ["Switch To DOC Uniform","noscript.sqf",'["sfg_doc"] call Other_clothes;',1,true,true,"",'DOC_id && {player distance docatm < 2}'];
-_role addaction ["Switch To DOC Command Uniform","noscript.sqf",'["sfg_doccom"] call Other_clothes;',1,true,true,"",'DOC_id && {player distance docatm < 2}'];
-_role addaction ["Switch To DTU Command Uniform","noscript.sqf",'["sfg_uccom"] call Other_clothes;',1,true,true,"",'Lt_id && {player distance devatm < 2}'];
-_role addaction ["Switch To DTU Uniform","noscript.sqf",'["sfg_uc"] call Other_clothes;',1,true,true,"",'Lt_id && {player distance devatm < 2}'];
-_role addaction ["Switch To Highway Patrol Uniform","noscript.sqf",'["sfg_hwp"] call Other_clothes;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
-_role addaction ["Switch To Senior Highway Patrol Uniform","noscript.sqf",'["sfg_hwpsnr"] call Other_clothes;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
-_role addaction ["Switch To Highway Patrol Cpl. Uniform","noscript.sqf",'["sfg_hwpcpl"] call Other_clothes;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
-_role addaction ["Switch To Highway Patrol Sgt. Uniform","noscript.sqf",'["sfg_hwpsgt"] call Other_clothes;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
-_role addaction ["Switch To Highway Patrol Command Uniform","noscript.sqf",'["sfg_hwpcmd"] call Other_clothes;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
+_role addaction ["Switch To CIRU Probationary Uniform","noscript.sqf",'["vilas_sira_swat_m416"] call clothing_switch;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
+_role addaction ["Switch To CIRU Uniform","noscript.sqf",'["ibr_fea"] call clothing_switch;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
+_role addaction ["Switch To CIRU Marksman Uniform","noscript.sqf",'["USMC_SoldierS_Sniper"] call clothing_switch;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
+_role addaction ["Switch To CIRU Lead Uniform","noscript.sqf",'["vilas_sira_swat"] call clothing_switch;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
+_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call clothing_switch;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
+_role addaction ["Switch To Chief Uniform","noscript.sqf",'["sfg_trevor"] call clothing_switch;',1,true,true,"",'Chief_id && {player distance copcmdbank < 2}'];
+_role addaction ["Switch To Asst.Chief Uniform","noscript.sqf",'["sfg_asstc"] call clothing_switch;',1,true,true,"",'Chief_id && {player distance copcmdbank < 2}'];
+_role addaction ["Switch To Pilot Uniform","noscript.sqf",'["US_Soldier_Pilot_EP1"] call clothing_switch;',1,true,true,"",'PDAviation_id && {player distance copairweapon < 2}'];
+_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call clothing_switch;',1,true,true,"",'PDAviation_id && {player distance copairweapon < 2}'];
+_role addaction ["Switch To Pilot Uniform","noscript.sqf",'["US_Soldier_Pilot_EP1"] call clothing_switch;',1,true,true,"",'PDAviation_id && {player distance copairweapon2 < 2}'];
+_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call clothing_switch;',1,true,true,"",'PDAviation_id && {player distance copairweapon2 < 2}'];
+_role addaction ["Switch To K-9 Uniform","noscript.sqf",'["sfg_k9"] call clothing_switch;',1,true,true,"",'K9_id && {player distance copk9 < 2}'];
+_role addaction ["Switch To K-9 Command Uniform","noscript.sqf",'["sfg_k9com"] call clothing_switch;',1,true,true,"",'K9_id && {player distance copk9 < 2}'];
+_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call clothing_switch;',1,true,true,"",'K9_id && {player distance copk9 < 2}'];
+_role addaction ["Switch To Captain Uniform","noscript.sqf",'["sfg_cpt"] call clothing_switch;',1,true,true,"",'Cpt_id && {player distance copcmdbank < 2}'];
+_role addaction ["Switch To Lieutenant Uniform","noscript.sqf",'["sfg_lt"] call clothing_switch;',1,true,true,"",'Lt_id && {player distance copcmdbank < 2}'];
+_role addaction ["Switch To Patrol Sgt. Uniform","noscript.sqf",'["sfg_sgt"] call clothing_switch;',1,true,true,"",'Sgt_id && {player distance copsgt < 2}'];
+_role addaction ["Switch To Patrol Cpl. Uniform","noscript.sqf",'["sfg_cpl"] call clothing_switch;',1,true,true,"",'Cpl_id && {player distance copcpl < 2}'];
+_role addaction ["Switch To Patrol Senior Patrol Uniform","noscript.sqf",'["sfg_snr"] call clothing_switch;',1,true,true,"",'PO3_id && {player distance coppo3 < 2}'];
+_role addaction ["Switch To Coast Guard Uniform","noscript.sqf",'["yup_uscg_Pilot"] call clothing_switch;',1,true,true,"",'CoastGuard_id && {player distance copcoastguardbank < 2}'];
+_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call clothing_switch;',1,true,true,"",'PO2_id && {player distance copcoastguardbank < 2}'];
+_role addaction ["Switch To DOC Uniform","noscript.sqf",'["sfg_doc"] call clothing_switch;',1,true,true,"",'DOC_id && {player distance docatm < 2}'];
+_role addaction ["Switch To DOC Command Uniform","noscript.sqf",'["sfg_doccom"] call clothing_switch;',1,true,true,"",'DOC_id && {player distance docatm < 2}'];
+_role addaction ["Switch To DTU Command Uniform","noscript.sqf",'["sfg_uccom"] call clothing_switch;',1,true,true,"",'Lt_id && {player distance devatm < 2}'];
+_role addaction ["Switch To DTU Uniform","noscript.sqf",'["sfg_uc"] call clothing_switch;',1,true,true,"",'Lt_id && {player distance devatm < 2}'];
+_role addaction ["Switch To Highway Patrol Uniform","noscript.sqf",'["sfg_hwp"] call clothing_switch;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
+_role addaction ["Switch To Senior Highway Patrol Uniform","noscript.sqf",'["sfg_hwpsnr"] call clothing_switch;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
+_role addaction ["Switch To Highway Patrol Cpl. Uniform","noscript.sqf",'["sfg_hwpcpl"] call clothing_switch;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
+_role addaction ["Switch To Highway Patrol Sgt. Uniform","noscript.sqf",'["sfg_hwpsgt"] call clothing_switch;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
+_role addaction ["Switch To Highway Patrol Command Uniform","noscript.sqf",'["sfg_hwpcmd"] call clothing_switch;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
 
 
 /*GAS STATIONS*/
@@ -111,8 +111,8 @@ _role addaction ["Drug Search","noscript.sqf", '[cursorTarget] execVM "dogsearch
 _role addaction ["Board Car","noscript.sqf", '[1, cursorTarget] execVM "dogVehicle.sqf"', 1, false, true, "", "ar_doggy"];
 _role addaction ["Dismount","noscript.sqf", '[2] execVM "dogVehicle.sqf"', 1, false, true, "", "ar_doggy"];
 
-_role addaction ["Tow Vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0);["TOW",_vcl] call Other_Towing;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0); player distance _vcl < 10 and _vcl getVariable "towing" == "" and [player,_vcl]call vehicle_hasKeys'];
-_role addaction ["Release Vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0);["RELEASE",_vcl] call Other_Towing;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0); player distance _vcl < 10 and _vcl getVariable "towing" != "" and [player,_vcl]call vehicle_hasKeys'];
+_role addaction ["Tow Vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0);["TOW",_vcl] call Other_Towing;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0); player distance _vcl < 10 and _vcl getVariable "towing" == "" and [player,_vcl]call keys_has'];
+_role addaction ["Release Vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0);["RELEASE",_vcl] call Other_Towing;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0); player distance _vcl < 10 and _vcl getVariable "towing" != "" and [player,_vcl]call keys_has'];
 
 _role addaction ["Burn Marijuana","noscript.sqf", "['SERVER',[cursorTarget],'s_drug_burnplant',true,false]call network_MPExec;", 1, false, true, "", "player distance cursorTarget < 3 && {typeOf cursorTarget == 'as_p_fiberPlant_EP1'}"];
 _role addaction ["Burn Poppy","noscript.sqf", "['SERVER',[cursorTarget],'s_drug_burnplant',true,false]call network_MPExec;", 1, false, true, "", "player distance cursorTarget < 3 && {typeOf cursorTarget == 'as_b_PinusM1s_EP1'}"];
@@ -120,4 +120,4 @@ _role addaction ["Burn Cocaine","noscript.sqf", "['SERVER',[cursorTarget],'s_dru
 
 
 /*Garage*/
-(vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call INV_getshopnum)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance ccarspawn <= 10) and vehicle player != player"];
+(vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call shops_index)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance ccarspawn <= 10) and vehicle player != player"];

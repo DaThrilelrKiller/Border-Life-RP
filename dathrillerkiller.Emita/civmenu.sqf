@@ -96,7 +96,7 @@ if (_civkopfgeld != 0) then
 
 player setpos getmarkerpos "prisonspawn"; player setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.9];
 ar_typeofplayer = typeOf player;
-["sfg_prisonor"] call Other_clothes;
+["sfg_prisonor"] call clothing_switch;
 dtk_disabledkeys = [44,47];
 
 
@@ -145,7 +145,7 @@ if ((_exitart == "frei") or (_exitart == "freigelassen")) then
 	player setPos getMarkerPos "jail_freemarker";	player setdamage 0;	
 	(format ["if (player == %1) then {local_arrest = 0; systemChat  localize ""STRS_civmenucheck_free_self"";}; systemChat format [localize ""STRS_civmenucheck_free_global"", name %1];", player]) call network_broadcast;
 	player call cdb_clear_warrants;
-	[ar_typeofplayer] call Other_clothes;
+	[ar_typeofplayer] call clothing_switch;
 	dtk_disabledkeys = [];
 	};
 

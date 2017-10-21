@@ -1,6 +1,6 @@
 private ["_swag"];
 _swag = _this select 1;
-[_swag] call Other_clothes;
+[_swag] call clothing_switch;
 
 player sideChat format["You have changed into a %1",typeof vehicle player];
 systemChat  "Damn you are looking sexy";

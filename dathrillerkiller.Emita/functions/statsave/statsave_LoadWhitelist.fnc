@@ -6,7 +6,6 @@ adminlevel2 = false;
 SwagDevs = false;
 TowingService_id = false;
 RT_id = false;
-VFD_id = false;
 STKO1_id = false;
 STKO2_id = false;
 TP_id = false;

@@ -6,10 +6,8 @@ INV_DrogenCounter = 0;
 /*Main*/
 keyblock		 = false;
 pickingup   		 = false;
-PG_CustomIPadBG = false;
 halfwaythereallfiredup = false;
 EMSMissionAction = false;
-PureGamingMarkerArray = [];
 dropVehicleVar = false;
 shopusearray = [];
 
@@ -22,8 +20,6 @@ ar_ballevel = 0;
 /*QUEST*/
 QuestTime = 0;
 QuestItems = [];
-
-DamageBuildings =[];
 
 /*Invars*/
 INV_shortcuts           = true;
@@ -108,7 +104,6 @@ rblock			 = 0;
 stolencash		 = 0;
 Maxbankrobpercentlost    = 0.1; 
 robenable              	 = true;     
-bankflagarray            = [mainbank,copbank,copairbank,copswatbank,copsgtbank,copdispatchbank,copcmdbank,copcoastguardbank,atm5,atm6,atm10,atm11,atm12,atm13,atmswag,devatm,atmmall,atmsubfire,psoatm,docatm,garageatm,rattlersbank,pmcatm,cophwatm,tpatm];
 drugsellarray		 = [mdrugsell,cdrugsell,ldrugsell,hdrugsell,whalesell,methsell];
 TankstellenArray         = [fuel2,fuel4,fuel5,fuel7,fuel8];
 
@@ -120,7 +115,7 @@ LottoArray =
 ["lotto1", 	"Penny Saver Scratch Card",	 		100,		1000],							
 ["lotto2", 	"Money Lover Scratch Card",		    2500,       15000],	
 ["lotto3", 	"Big Bucks Scratch Card",         	10000,  	70000],								
-["lotto4",	"Fosters Fortune Scratch Card",			25000, 	    175000]
+["lotto4",	"Fortune Scratch Card",			25000, 	    175000]
 ];
 
 LottoFlags = 									

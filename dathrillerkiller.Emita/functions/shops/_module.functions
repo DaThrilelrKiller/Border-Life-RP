@@ -8,5 +8,6 @@
 "refresh",
 "processmoney",
 "purchaselic",
-"createvehicle"
+"createvehicle",
+"index"
 ];

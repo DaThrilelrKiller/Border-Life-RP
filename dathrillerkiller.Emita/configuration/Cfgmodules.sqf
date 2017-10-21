@@ -4,6 +4,7 @@ dtk_fnc_total = 0;
 dtk_active_modules = 
 [
 "Core",
+"BIS",
 "Network",
 "Storage",
 "Shops",
@@ -27,12 +28,17 @@ dtk_active_modules =
 "Drug",
 "ATM",
 "Medical",
-"Statsave",
 "Hud",
 "Gear",
 "Robbery",
-"Hunger",
-"Speedcam"
+"Speedcam",
+"Ipad",
+"Keys",
+"Garage",
+"Clothing",
+"GPS",
+"Statsave",
+"Hunger"
 ];
 
 /*loads variables first for all active modules*/
@@ -50,11 +56,11 @@ dtk_active_modules =
 		',_module,_x];
 		dtk_fnc_num = _forEachIndex + 1;
 	}forEach _functions;
-	systemchat format ["Loaded Module - %1 With %2 Functions",_module,dtk_fnc_num];
+	diag_log format ["Loaded Module - %1 With %2 Functions",_module,dtk_fnc_num];
 	dtk_fnc_total = dtk_fnc_total + dtk_fnc_num;
 }count dtk_active_modules;
 
-systemchat format ["Total Modules: %2 Total Functions: %1",dtk_fnc_total,count dtk_active_modules];
+diag_log format ["Total Modules: %2 Total Functions: %1",dtk_fnc_total,count dtk_active_modules];
 
 _handler = []spawn setup_init;
 waitUntil {ScriptDone _handler};

@@ -918,7 +918,7 @@ INV_AlleItemsArray = [
 ["kanister", ["Item", "service"],["kanister", "Gas Can"], [5000, 2500], [2, "", ""],[true,true,true, false, "refuelveh"] ],
 ["Fuelline", ["Item", "service"],["cl_syphon", "Syphon Fuel-kit"], [1000, 900], [1, "", ""],[true,true,true, false, "syphon"] ],
 ["OilBarrel", ["Item", "service"],["cl_petroleum", "Petroleum"], [5000, 5000], [10, "", ""],[true,true,true, false, "refuelveh"] ],
-["schluesselbund",["Item", "carobjects"],["schluesselbund", "Key chain"],[0, 0], [0, "",""], [false,false, false,false,vehicle_keyList] ],
+["schluesselbund",["Item", "carobjects"],["schluesselbund", "Key chain"],[0, 0], [0, "",""], [false,false, false,false,keys_list] ],
 ["idcard",["Item", "misc"],["idcard", "ID"],[0, 0], [0, "",""], [false,false, false,false,"IDcard"] ],
 ["pistole",["Item", "weapon"], ["pistole", "Concealed Sidearm"],[0, 0],[0, "",""],[false, false,false, false, "nouse"]],
 ["weaponBag",["Item", "misc"],["weaponBag", "Weapon Bag"],[1000, 750], [0.5, "", ""], [true, true, true,false,"Scripts\Misc\HolsterPWeapon"]],
@@ -1041,7 +1041,6 @@ INV_AlleItemsArray = [
 ["emptybeer",["Item", "drink"],["Suitcase", "Empty Beer Can"],[0, 0], [0.3, "",""], [true, true, true,false,"nouse"]],
 ["emptyVodka",["Item", "drink"],["Suitcase", "Empty Vodka Bottle"],[0, 0], [0.3, "",""], [true, true, true,false,"nouse"]],
 ["emptywiskey",["Item", "drink"],["Suitcase", "Empty Wiskey Bottle"],[0, 0], [0.3, "",""], [true, true, true,false,"nouse"]],
-["pg_jammer",["Item", "misc"],["Suitcase", "Radio Jammer"],[10000000000000, 0], [0.6, "",""], [true, true, true,false,item_jammer]],
 
 ["DTK_LableBreak",["Label", "misc"],["DTK_LableBreak",         "==========================================="], [99999999999999999, 0], [5, "", ""],[false,false,false, false, "nouse"]],
 ["DTK_LableEquipment",["Label", "misc"],["DTK_LableEquipment", "                 Equipment                 "], [99999999999999999, 0], [5, "", ""],[false,false,false, false, "nouse"]],

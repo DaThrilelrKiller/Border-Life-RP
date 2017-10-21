@@ -14,7 +14,7 @@ Prams:
  1. Sort type by (i.e. ColorOrange)
 */
 
-private ["_i","_SortBy","_SortBy2"];
+private ["_SortBy","_SortBy2"];
 _SortBy = _this select 0;
 _SortBy2 = _this select 1;
 
@@ -38,7 +38,7 @@ switch(_SortBy)do
 	};
 	case "colorName":
 	{
-		_handler = ["HideAll",""]spawn DTK_MarkerSorter;
+		_handler = ["HideAll",""]spawn gps_sort;
 		waitUntil {scriptDone _handler};
 		
 		{

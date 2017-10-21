@@ -1,6 +1,6 @@
 	private ["_vcl","_vclClass","_trunk","_speedupgrade","_save","_plate","_warrants","_license","_notes"];
 	_vcl = cursorTarget;
-	if !([player,_vcl]call vehicle_hasKeys)exitWith {systemChat "Make sure you are looking at the vehicle you are trying to save"};
+	if !([player,_vcl]call keys_has)exitWith {systemChat "Make sure you are looking at the vehicle you are trying to save"};
 	_vclClass = (_vcl getVariable "DTK_OwnerUID" select 1);
 	_trunk = _vcl getVariable "dtk_storage";
 	_speedupgrade = _vcl getvariable ["tuning",0];

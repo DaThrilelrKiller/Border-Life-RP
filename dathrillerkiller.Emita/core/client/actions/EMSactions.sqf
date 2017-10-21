@@ -20,13 +20,13 @@ _role addaction ["Open/Close Gate","noscript.sqf",'_gate = (nearestobjects [getp
 
 
 
-_role addaction ["Role Vehicle Over","noscript.sqf",'[]call Other_unflipvehicle;',1,false,true,"",'_vcl = cursorTarget;player distance _vcl < 5 and [player,_vcl]call vehicle_hasKeys'];
+_role addaction ["Role Vehicle Over","noscript.sqf",'[]call Other_unflipvehicle;',1,false,true,"",'_vcl = cursorTarget;player distance _vcl < 5 and [player,_vcl]call keys_has'];
 _role addaction ["Repair Vehicle","noscript.sqf",'[cursorTarget]call Other_repairvehicle;',1,true,true,"",'_vcl = cursorTarget; [_vcl,["Air", "Ship", "LandVehicle"]]call core_isKindOf && {player distance _vcl < 10}'];
 _role addaction ["Impound Vehicle","noscript.sqf",'[cursorTarget, "Impound",""]call Other_impound;',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID";[_vcl,["Air", "Ship", "LandVehicle"]]call core_isKindOf and player distance _vcl < 5 and (!isNil "_var")'];
 _role addaction ["Extract Victim","noscript.sqf",'cursorTarget spawn Other_pullout;',1,true,true,"",'_vcl = cursorTarget;[_vcl,["Air", "Ship", "LandVehicle"]]call core_isKindOf and player distance _vcl < 5 and count (crew _vcl) > 0'];
 _role addaction [localize "STRS_addAction_vehicleinfo","noscript.sqf",'(nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0)call Other_vehinfo;',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID"; [_vcl,["Air", "Ship", "LandVehicle"]]call core_isKindOf and player distance _vcl < 5 and (!isNil "_var")'];
-_role addaction ["Shop 1 Export","noscript.sqf",'[ (shop1 call INV_getshopnum)]call shops_openshop; ',1,false,true,"","player distance shop1export <= 3"];
-_role addaction ["Shop 4 Export","noscript.sqf",'[ (shop4 call INV_getshopnum)]call shops_openshop; ',1,false,true,"","player distance shop4export <= 3"];
+_role addaction ["Shop 1 Export","noscript.sqf",'[ (shop1 call shops_index)]call shops_openshop; ',1,false,true,"","player distance shop1export <= 3"];
+_role addaction ["Shop 4 Export","noscript.sqf",'[ (shop4 call shops_index)]call shops_openshop; ',1,false,true,"","player distance shop4export <= 3"];
 _role addaction ["Impound Lot","noscript.sqf",'[dummyobj, "Retrive","LandVehicle"]call Other_impound;',1,false,true,"","player distance newimpoundlot <= 5"];
 _role addaction ["Elect A Governor","maindialogs.sqf",["wahlen"],1,false,true,"","player distance rathaus <= 3"];
 _role addaction ["Sign-Up For Debit Card","debitcardsignup.sqf",["mainbank"],1,false,true,"","player distance mainbank <= 15 and (!SigningUpForDebitCard)"];
@@ -36,34 +36,34 @@ _role addaction ["Resuscitate/Shock Victim","noscript.sqf",'[ems_nearman]call em
 _role addaction ["Remove Blindfold","FUNCTIONS\ITEMS\blindfold.sqf",[],1,false,true,"","isPlayer cursorTarget and cursorTarget getVariable 'blindfolded'"];
 
 
-_role addaction ["Switch To Turn Out Uniform","noscript.sqf",'["a2l_firefighter1"] call Other_clothes;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call vehicle_hasKeys and (FF1_id)'];
-_role addaction ["Switch To Turn Out SCBA Uniform","noscript.sqf",'["a2l_firefighter"] call Other_clothes;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call vehicle_hasKeys and (FF1_id)'];
-_role addaction ["Switch To Firefighter Duty Uniform","noscript.sqf",'["sfg_fr"] call Other_clothes;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call vehicle_hasKeys and (FF1_id)'];
-_role addaction ["Switch To Turn Out Uniform","noscript.sqf",'["a2l_firefighter1"] call Other_clothes;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call vehicle_hasKeys and (FF1_id)'];
-_role addaction ["Switch To Turn Out SCBA Uniform","noscript.sqf",'["a2l_firefighter"] call Other_clothes;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call vehicle_hasKeys and (FF1_id)'];
-_role addaction ["Switch To Firefighter Duty Uniform","noscript.sqf",'["sfg_fr"] call Other_clothes;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call vehicle_hasKeys and (FF1_id)'];
+_role addaction ["Switch To Turn Out Uniform","noscript.sqf",'["a2l_firefighter1"] call clothing_switch;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call keys_has and (FF1_id)'];
+_role addaction ["Switch To Turn Out SCBA Uniform","noscript.sqf",'["a2l_firefighter"] call clothing_switch;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call keys_has and (FF1_id)'];
+_role addaction ["Switch To Firefighter Duty Uniform","noscript.sqf",'["sfg_fr"] call clothing_switch;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call keys_has and (FF1_id)'];
+_role addaction ["Switch To Turn Out Uniform","noscript.sqf",'["a2l_firefighter1"] call clothing_switch;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call keys_has and (FF1_id)'];
+_role addaction ["Switch To Turn Out SCBA Uniform","noscript.sqf",'["a2l_firefighter"] call clothing_switch;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call keys_has and (FF1_id)'];
+_role addaction ["Switch To Firefighter Duty Uniform","noscript.sqf",'["sfg_fr"] call clothing_switch;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call keys_has and (FF1_id)'];
 
 
-_role addaction ["Switch To EMT Uniform","noscript.sqf",'["sfg_emt"] call Other_clothes;',1,true,true,"",'EMTBasic_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To Paramedic Uniform","noscript.sqf",'["sfg_paramedic"] call Other_clothes;',1,true,true,"",'EMTAdavnced_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To Firefighter Duty Uniform","noscript.sqf",'["sfg_fr"] call Other_clothes;',1,true,true,"",'FF1_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To EMS Supervisor Uniform","noscript.sqf",'["sfg_emssup"] call Other_clothes;',1,true,true,"",'EMSSupervisor_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To Fire Supervisor Uniform","noscript.sqf",'["sfg_firesup"] call Other_clothes;',1,true,true,"",'EMSSupervisor_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To EMS Command Uniform","noscript.sqf",'["sfg_emscmd"] call Other_clothes;',1,true,true,"",'EMSCommand_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To Fire Command Uniform","noscript.sqf",'["sfg_fdcmd"] call Other_clothes;',1,true,true,"",'EMSCommand_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To ECEMS District Chief's Uniform","noscript.sqf",'["sfg_dchief"] call Other_clothes;',1,true,true,"",'EMSChiefs_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To FECEMS Chief's Uniform","noscript.sqf",'["sfg_fchief"] call Other_clothes;',1,true,true,"",'EMSChiefs_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To EMT Uniform","noscript.sqf",'["sfg_emt"] call Other_clothes;',1,true,true,"",'EMTBasic_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To Paramedic Uniform","noscript.sqf",'["sfg_paramedic"] call Other_clothes;',1,true,true,"",'EMTAdavnced_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To Firefighter Duty Uniform","noscript.sqf",'["sfg_fr"] call Other_clothes;',1,true,true,"",'FF1_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To EMS Supervisor Uniform","noscript.sqf",'["sfg_emssup"] call Other_clothes;',1,true,true,"",'EMSSupervisor_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To Fire Supervisor Uniform","noscript.sqf",'["sfg_firesup"] call Other_clothes;',1,true,true,"",'EMSSupervisor_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To EMS Command Uniform","noscript.sqf",'["sfg_emscmd"] call Other_clothes;',1,true,true,"",'EMSCommand_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To Fire Command Uniform","noscript.sqf",'["sfg_fdcmd"] call Other_clothes;',1,true,true,"",'EMSCommand_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To ECEMS District Chief's Uniform","noscript.sqf",'["sfg_dchief"] call Other_clothes;',1,true,true,"",'EMSChiefs_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To FECEMS Chief's Uniform","noscript.sqf",'["sfg_fchief"] call Other_clothes;',1,true,true,"",'EMSChiefs_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To PSO Command Uniform","noscript.sqf",'["sfg_psocmd"] call Other_clothes;',1,true,true,"",'PSOCommand_id && {player distance psoatm < 2}'];
-_role addaction ["Switch To PSO Uniform","noscript.sqf",'["sfg_psoreg"] call Other_clothes;',1,true,true,"",'PSO_id && {player distance psoatm < 2}'];
+_role addaction ["Switch To EMT Uniform","noscript.sqf",'["sfg_emt"] call clothing_switch;',1,true,true,"",'EMTBasic_id && {player distance atmsubfire < 2}'];
+_role addaction ["Switch To Paramedic Uniform","noscript.sqf",'["sfg_paramedic"] call clothing_switch;',1,true,true,"",'EMTAdavnced_id && {player distance atmsubfire < 2}'];
+_role addaction ["Switch To Firefighter Duty Uniform","noscript.sqf",'["sfg_fr"] call clothing_switch;',1,true,true,"",'FF1_id && {player distance atmsubfire < 2}'];
+_role addaction ["Switch To EMS Supervisor Uniform","noscript.sqf",'["sfg_emssup"] call clothing_switch;',1,true,true,"",'EMSSupervisor_id && {player distance atmsubfire < 2}'];
+_role addaction ["Switch To Fire Supervisor Uniform","noscript.sqf",'["sfg_firesup"] call clothing_switch;',1,true,true,"",'EMSSupervisor_id && {player distance atmsubfire < 2}'];
+_role addaction ["Switch To EMS Command Uniform","noscript.sqf",'["sfg_emscmd"] call clothing_switch;',1,true,true,"",'EMSCommand_id && {player distance atmsubfire < 2}'];
+_role addaction ["Switch To Fire Command Uniform","noscript.sqf",'["sfg_fdcmd"] call clothing_switch;',1,true,true,"",'EMSCommand_id && {player distance atmsubfire < 2}'];
+_role addaction ["Switch To ECEMS District Chief's Uniform","noscript.sqf",'["sfg_dchief"] call clothing_switch;',1,true,true,"",'EMSChiefs_id && {player distance atmsubfire < 2}'];
+_role addaction ["Switch To FECEMS Chief's Uniform","noscript.sqf",'["sfg_fchief"] call clothing_switch;',1,true,true,"",'EMSChiefs_id && {player distance atmsubfire < 2}'];
+_role addaction ["Switch To EMT Uniform","noscript.sqf",'["sfg_emt"] call clothing_switch;',1,true,true,"",'EMTBasic_id && {player distance atm5 < 2}'];
+_role addaction ["Switch To Paramedic Uniform","noscript.sqf",'["sfg_paramedic"] call clothing_switch;',1,true,true,"",'EMTAdavnced_id && {player distance atm5 < 2}'];
+_role addaction ["Switch To Firefighter Duty Uniform","noscript.sqf",'["sfg_fr"] call clothing_switch;',1,true,true,"",'FF1_id && {player distance atm5 < 2}'];
+_role addaction ["Switch To EMS Supervisor Uniform","noscript.sqf",'["sfg_emssup"] call clothing_switch;',1,true,true,"",'EMSSupervisor_id && {player distance atm5 < 2}'];
+_role addaction ["Switch To Fire Supervisor Uniform","noscript.sqf",'["sfg_firesup"] call clothing_switch;',1,true,true,"",'EMSSupervisor_id && {player distance atm5 < 2}'];
+_role addaction ["Switch To EMS Command Uniform","noscript.sqf",'["sfg_emscmd"] call clothing_switch;',1,true,true,"",'EMSCommand_id && {player distance atm5 < 2}'];
+_role addaction ["Switch To Fire Command Uniform","noscript.sqf",'["sfg_fdcmd"] call clothing_switch;',1,true,true,"",'EMSCommand_id && {player distance atm5 < 2}'];
+_role addaction ["Switch To ECEMS District Chief's Uniform","noscript.sqf",'["sfg_dchief"] call clothing_switch;',1,true,true,"",'EMSChiefs_id && {player distance atm5 < 2}'];
+_role addaction ["Switch To FECEMS Chief's Uniform","noscript.sqf",'["sfg_fchief"] call clothing_switch;',1,true,true,"",'EMSChiefs_id && {player distance atm5 < 2}'];
+_role addaction ["Switch To PSO Command Uniform","noscript.sqf",'["sfg_psocmd"] call clothing_switch;',1,true,true,"",'PSOCommand_id && {player distance psoatm < 2}'];
+_role addaction ["Switch To PSO Uniform","noscript.sqf",'["sfg_psoreg"] call clothing_switch;',1,true,true,"",'PSO_id && {player distance psoatm < 2}'];
 
 
 _role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel2 <= 23 and TankenCost < maxpetroluse"];
@@ -78,17 +78,17 @@ _role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","playe
 _role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel8 <= 23 and TankenCost >= maxpetroluse"];
 
 
-(vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call INV_getshopnum)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance tdocspawn <= 10) and vehicle player != player"];
-(vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call INV_getshopnum)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance psocarspawn <= 10) and vehicle player != player"];
-(vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call INV_getshopnum)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance tdocspawnsub <= 10) and vehicle player != player"];
+(vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call shops_index)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance tdocspawn <= 10) and vehicle player != player"];
+(vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call shops_index)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance psocarspawn <= 10) and vehicle player != player"];
+(vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call shops_index)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance tdocspawnsub <= 10) and vehicle player != player"];
 
-_role addaction ["[SAVE YOUR LAND VEHICLE]","noscript.sqf",'[carspawn1]call StatSave_SaveVehicle;',1,true,true,"",'player distance cursorTarget < 5 and [cursorTarget,_vcl]call vehicle_hasKeys and (player distance emssavepoint2 <= 30 or player distance emssavepoint1 <= 30)'];
+_role addaction ["[SAVE YOUR LAND VEHICLE]","noscript.sqf",'[carspawn1]call StatSave_SaveVehicle;',1,true,true,"",'player distance cursorTarget < 5 and [cursorTarget,_vcl]call keys_has and (player distance emssavepoint2 <= 30 or player distance emssavepoint1 <= 30)'];
 _role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[tdocspawn]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance emssavepoint1 <= 3"];
 _role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[tdocspawnsub]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance emssavepoint2 <=3"];
 
 
-_role addaction ["Tow Vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0);["TOW",_vcl] call Other_Towing;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0); player distance _vcl < 10 and _vcl getVariable "towing" == "" and [player,_vcl]call vehicle_hasKeys'];
-_role addaction ["Release Vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0);["RELEASE",_vcl] call Other_Towing;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0); player distance _vcl < 10 and _vcl getVariable "towing" != "" and [player,_vcl]call vehicle_hasKeys'];
+_role addaction ["Tow Vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0);["TOW",_vcl] call Other_Towing;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0); player distance _vcl < 10 and _vcl getVariable "towing" == "" and [player,_vcl]call keys_has'];
+_role addaction ["Release Vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0);["RELEASE",_vcl] call Other_Towing;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0); player distance _vcl < 10 and _vcl getVariable "towing" != "" and [player,_vcl]call keys_has'];
 _role addaction ["Fix Gas Leak","noscript.sqf",'[]call ems_FixGas;',1,false,true,"",'_vcl = (nearestobjects [getpos player, ["HeliH"], 10] select 0);player distance _vcl < 10 and EMSMissionType == "Gas" and !EMSMissionAction'];
 _role addaction ["Clean Up Building Collapse","noscript.sqf",'[]call Other_CleanUpBuildingCollapes;',1,false,true,"",'_vcl = (nearestobjects [getpos player, ["HeliH"], 10] select 0);player distance _vcl < 10 and EMSMissionType == "Collapes" and !EMSMissionAction'];
 _role addaction ["Move Stretcher","noscript.sqf",'detach cursorTarget; cursorTarget attachTo [player];',1,false,true,"",'(typeOf cursorTarget) == "stretcher" and player distance cursorTarget < 7'];

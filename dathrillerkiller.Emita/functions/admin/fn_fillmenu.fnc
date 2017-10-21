@@ -15,7 +15,6 @@ _MenuItems = switch (true) do
 	"World Heal",
 	"Global Comp. 100k",
 	"Masterkey",
-	"Add All Licenses",
 	"Set Time To 12 PM",
 	"Set Time To 11 PM",
 	"Console",

@@ -16,4 +16,4 @@ dtk_keychainarray = [];
 
 } count (allMissionObjects "AllVehicles");
 
-buttonSetAction [5,"call vehicle_giveKeys;"];
+buttonSetAction [5,"call keys_give;"];

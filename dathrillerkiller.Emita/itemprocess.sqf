@@ -14,7 +14,7 @@ processscriptrunning = 1;
  _nitem1 = [player,_item1] call storage_amount;
  _name1 = _item1 call INV_getitemName;
  _name2 = _item2 call INV_getitemName;
- if(!(_license call INV_HasLicense))exitwith{systemChat  "you do not have the license to do this";
+ if(!(_license call licenses_has))exitwith{systemChat  "you do not have the license to do this";
  processscriptrunning = 0;};
  _multi = floor(_nitem1/_req); 
 _total = _req*_multi;  

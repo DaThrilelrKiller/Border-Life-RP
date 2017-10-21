@@ -22,8 +22,7 @@ switch (_Playerteam) do
 			[_playerside, "STKO1_id"],
 			[_playerside, "STKO2_id"],
 			[_playerside, "TP_id"],
-            [_playerside, "RT_id"],
-			[_playerside, "VFD_id"]
+            [_playerside, "RT_id"]
 		];
     };
 

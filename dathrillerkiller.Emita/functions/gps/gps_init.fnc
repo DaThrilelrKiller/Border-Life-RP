@@ -1,9 +1,10 @@
 /*
-File: fn_MarkerSortInit.sqf
-Desc: Setups all the variables for the marker sorting system
+File: markers_init.fnc
+Desc: sbuilds a array for marker infomation from the mission.sqm for use in the sorter
 Author: DaThrillerKiller -PureGaming Founder
 Youtube: https://www.youtube.com/channel/UCY-d_qX9l2ABnJ3cDO7VUIQ
 Email: dathrillerkiller@gmail.com 
+Instagram: https://www.instagram.com/tuckeeeee
 Instagram: https://www.instagram.com/tuckeeeee
 
 	Use Without Permission is prohibited
@@ -32,16 +33,5 @@ _hieght = if (isNil "_hieght")then {1}else {_hieght};
 PureGamingMarkerArray set[count PureGamingMarkerArray,[_markerID,_position,[_width,_hieght],_name,_text,_type,_colorName]];
 };
 
-player createDiarySubject ["PureNav","Map Navigation"];
-
- player createDiaryRecord ["PureNav", ["Hide/Show Markers", 
-    "
-	Main<br/>
-	<execute expression='[""ShowAll"",""""]spawn DTK_MarkerSorter; '>Show All Markers</execute><br/>
-	<execute expression='[""HideAll"",""""]spawn DTK_MarkerSorter;  '>Hide All Markers</execute><br/>
-	<br/>
-	Color<br/>
-	<execute expression='[""colorName"",""ColorBlue""]spawn DTK_MarkerSorter; '>Show Blue</execute><br/>
-	<execute expression='[""colorName"",""ColorOrange""]spawn DTK_MarkerSorter; '>Show Orange</execute><br/>
-	
-	"]];
+call gps_diary;
+gps_init_done = true;

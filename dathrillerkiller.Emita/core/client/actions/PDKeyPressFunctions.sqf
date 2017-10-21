@@ -78,7 +78,7 @@ KeyPressL =
 {
 if(!INV_shortcuts)exitwith{};
 _vcl = (getPos player nearEntities [["LandVehicle", "Air", "ship"], 7] select 0);
-if(!([player,_vcl]call vehicle_hasKeys))exitwith{systemChat  "You do not have the keys to this vehicle.";};
+if(!([player,_vcl]call keys_has))exitwith{systemChat  "You do not have the keys to this vehicle.";};
 	 if (locked _vcl) then 
 	 {
 	 systemChat "Vehicle Unlocked";
@@ -102,8 +102,8 @@ KeyPressT =
 	if(dialog)exitwith{closeDialog 0;};
 	_vcls = nearestobjects [getpos player, ["LandVehicle", "Air", "ship", "TKOrdnanceBox_EP1"], 12];
 	_vcl = _vcls select 0;if (player != driver _vcl)exitwith{systemChat  "You must be in the drivers seat to get to the trunk";};
-	if(!([player,_vcl]call vehicle_hasKeys) and typeof _vcl == "TKOrdnanceBox_EP1")exitwith{systemChat  "You do not have the keys to this hideout.";};
-	if(!([player,_vcl]call vehicle_hasKeys))exitwith{systemChat  "You do not have the keys to this vehicle.";};
+	if(!([player,_vcl]call keys_has) and typeof _vcl == "TKOrdnanceBox_EP1")exitwith{systemChat  "You do not have the keys to this hideout.";};
+	if(!([player,_vcl]call keys_has))exitwith{systemChat  "You do not have the keys to this vehicle.";};
 	if(UpgradingCar)exitWith{systemChat  "You cant use your trunk while upgrading your car"};
 	if(!isnull _vcl)then
 	{
@@ -138,7 +138,7 @@ KeyPressE =
 		{  			
 			_i = 4; 			
 			if(iscop and _civ in drugsellarray)exitwith{_civ execVM "drugsearch.sqf"}; 			
-			_id = _civ call INV_getshopnum;  	
+			_id = _civ call shops_index;  	
 			[_id]call shops_openshop;
 		};  
 		if(!(isnull _atm) and _atm in bankflagarray) exitwith  			

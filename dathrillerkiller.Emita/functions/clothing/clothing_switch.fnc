@@ -34,7 +34,7 @@ if (_skinsold != _skin) then {
 	waitUntil {isPlayer _to_become};
 	player removeWeapon "ItemRadio";
 	_group selectLeader _to_become;
-	[_oldplayer] call Other_C_delete;
+	[_oldplayer] call clothing_delete;
 	removeAllWeapons _to_become;
 	player removeAllEventHandlers "killed";
 	player removeAllEventHandlers "Fired";
@@ -69,6 +69,7 @@ if (_skinsold != _skin) then {
 	
 	sleep 1;
 	call TFAR_addRadios;
+	call gps_diary;
 	AR_PlayerVaribale = player;
 	};
 	

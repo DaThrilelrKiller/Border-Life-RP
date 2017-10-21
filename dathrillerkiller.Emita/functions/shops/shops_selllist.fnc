@@ -46,7 +46,7 @@ _calssname = _infos call INV_getitemClassName;
 					_vclClass = (_vehicle getVariable "DTK_OwnerUID" select 1);
 					if (!isNil "_vclClass")then 
 					{
-						if (_vclClass == _item and [player,_vehicle]call vehicle_hasKeys) then 
+						if (_vclClass == _item and [player,_vehicle]call keys_has) then 
 						{			
 							_index = lbAdd [101, format["%1 ($%2, %3)", _vehicle, (_preis call string_intToString), _name] ];															
 							lbSetData [101, _index, format ['%1',[_item,_infos,_preisOhneTax, _preis,[_vehicle]]]];	
@@ -59,7 +59,7 @@ _calssname = _infos call INV_getitemClassName;
 				{
 					_vehicle = _x;
 					_weps = (weapons _vehicle);				
-					if (_item in _weps and [player,_vehicle]call vehicle_hasKeys) then 
+					if (_item in _weps and [player,_vehicle]call keys_has) then 
 					{			
 						_index = lbAdd [101, format["%1 ($%2, %3)", _vehicle, (_preis call string_intToString), _name] ];															
 						lbSetData [101, _index, format ['%1',[_item,_infos,_preisOhneTax, _preis,[_vehicle]]]];	

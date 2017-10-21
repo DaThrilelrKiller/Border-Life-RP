@@ -14,9 +14,9 @@ Prams:
 
 private ["_location","_gasMarker","_gasMarker2"];
 
-'if (isamedic or VFD_id) then {playsound "bells"};'call network_broadcast;			
-'if (isamedic or VFD_id) then {player sidechat "Fire Alarm Emita Fire...Respond To A Report Of A Gas Leak!"};'call network_broadcast;
-'if (isamedic or VFD_id) then {player sidechat "CHECK YOUR MAP FOR THE LOCATION AND GET TO IT QUICKLY!"};'call network_broadcast;
+'if (isamedic) then {playsound "bells"};'call network_broadcast;			
+'if (isamedic) then {player sidechat "Fire Alarm Emita Fire...Respond To A Report Of A Gas Leak!"};'call network_broadcast;
+'if (isamedic) then {player sidechat "CHECK YOUR MAP FOR THE LOCATION AND GET TO IT QUICKLY!"};'call network_broadcast;
 
 _location = gasspawnlocations call bis_selectrandom;  
 GasObject = createVehicle ["HeliH", _location, [], 0, "CAN_COLLIDE"];

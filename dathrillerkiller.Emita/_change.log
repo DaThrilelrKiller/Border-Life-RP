@@ -85,6 +85,37 @@ DaThrillerKiller - New Hunger module
 DaThrillerKiller - Optimized and added another pram to the cdb_AddNote function
 DaThrillerKiller - Deleted old hunger and speedcam files and variables
 
+Version 1.7 151 Files Changed
+DaThrillerKiller - Removed unused server side variables
+DaThrillerKiller - Added Ipad to the modules system
+DaThrillerKiller - Added Vehcile keys to its own module 
+DaThrillerKiller - Added Bis functions to its own module
+DaThrillerKiller - you can now see the ID of the person u detained
+DaThrillerKiller - Made cookies,garage, and siren client side ;) scence the mission is now open sourse and theres no poin in protecting them
+DaThrillerKiller - New and more optimized licence functions
+DaThrillerKiller - Removed alot of unused neglected files
+DaThrillerKiller - Removed TFR Loop hopefuly this will help prevent TFR crashes
+DaThrillerKiller - Fixed markers not showing for civ so they can see where they are if the gamemode is on veteran
+DaThrillerKiller - Removed volenteer fire deparment
+DaThrillerKiller - Removed volenteer fire deparment
+DaThrillerKiller - Implemented the old broadcast system into the new one
+DaThrillerKiller - Implemented a new map navigation system still work in progress
+DaThrillerKiller - new shop infex function
+DaThrillerKiller - Removed the current function and module statues while loading in now apears in the .RPT file instead
+DaThrillerKiller - New clothes module
+DaThrillerKiller - New clothes module
+DaThrillerKiller - New ExecVM function for the network
+DaThrillerKiller - New reset safecode function 100% random now
+DaThrillerKiller - increased starvation time
+
+
+
+
+
+
+
+
+
 
 
 

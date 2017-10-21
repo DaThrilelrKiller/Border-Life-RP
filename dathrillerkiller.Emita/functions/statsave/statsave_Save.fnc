@@ -1,4 +1,4 @@
-if (isNil "INV_PrivateStorage" or isNil "ar_side" or isNil "ar_sidename")exitWith {systemChat "[SAVE ABORTED]Your stats have not loaded yet"};
+if (isNil "INVAppsInstalled" or isNil "ar_side" or isNil "ar_sidename")exitWith {systemChat "[SAVE ABORTED]Your stats have not loaded yet"};
 private ["_save"];
 _save = 
 [player,

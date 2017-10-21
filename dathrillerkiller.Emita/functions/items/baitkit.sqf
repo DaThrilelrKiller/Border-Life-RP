@@ -3,7 +3,7 @@ private["_cars","_baitcar","_baitctrls"];
 _cars = nearestObjects [getPos player, ["LandVehicle"], 10];
 if (count _cars < 1) exitWith {systemChat  "No Cars To Bait!";};
 _baitcar = _cars select 0;
-if ([player,_baitcar]call vehicle_hasKeys) then
+if ([player,_baitcar]call keys_has) then
 {
 	[player,"Bait_Kit",-1] call storage_add;
 	_baitctrls = [player,"Bait_Ctrl"] call storage_amount;

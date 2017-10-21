@@ -27,7 +27,7 @@ if (!(createDialog "liste_1_button")) exitWith {hint "Dialog Error!";};
 	lbAdd [1, localize "STRS_statdialog_licenselist"];
 	for [{_i=0}, {_i < (count dtk_licenses)}, {_i=_i+1}] do 
 	{
-		if (((dtk_licenses select _i) select 0) call INV_HasLicense) then 
+		if (((dtk_licenses select _i) select 0) call licenses_has) then 
 		{
 			lbAdd [1, ((dtk_licenses select _i) select 2)];
 		};
@@ -146,7 +146,7 @@ if (_art == "inventorycheck") then
 	for [{_i=0}, {_i < (count _licensearray)}, {_i=_i+1}] do 
 	{
 		_lizenz = (_licensearray select _i);
-		lbAdd [1, format ["%1", (_lizenz call INV_GetLicenseName)]];
+		lbAdd [1, format ["%1", (_lizenz call licenses_name)]];
 	};
 	lbAdd [1, _trennlinie];
 	lbAdd [1, localize "STRS_statdialog_inventarlist"];
@@ -193,7 +193,7 @@ if (_art == "licensecheck") then
 	for [{_i=0}, {_i < (count _licensearray)}, {_i=_i+1}] do 
 	{
 		_lizenz = (_licensearray select _i);
-		lbAdd [1, format ["%1", (_lizenz call INV_GetLicenseName)]];
+		lbAdd [1, format ["%1", (_lizenz call licenses_name)]];
 	};
 	lbAdd [1, _trennlinie];
 	

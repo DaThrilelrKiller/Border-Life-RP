@@ -16,7 +16,7 @@ _closeVcl = (getPos player nearEntities [["LandVehicle", "Air", "ship"], 7] sele
 if (isNil '_closeVcl')exitWith {systemChat localize "STRS_inventar_lockpick_zuweit";};
 
 	if(_closeVcl isKindOf "Tank" || _closeVcl isKindOf "Air")exitwith{systemChat  "You cannot lockpick this vehicle!"};
-	if ([player,_closeVcl]call vehicle_hasKeys) then 
+	if ([player,_closeVcl]call keys_has) then 
 
 		{	
 

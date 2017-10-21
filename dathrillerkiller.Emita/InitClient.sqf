@@ -2,7 +2,6 @@
 [0,0,0,["clientloop"]] execVM "gangs.sqf";
 execVM "CORE\CLIENT\nametags.sqf";
 call events_events;
-call dtk_markersortinit;
 
 player setVariable ["Attached",false,false];
 
@@ -12,8 +11,5 @@ player setVariable ["Attached",false,false];
 [player,"has joined the server",[0.03,1,0.32,1]]call admin_logs_add;
 
 []spawn main_loadstartingmenus;
-[player,"cookie", 1] call storage_add;
 
-server Globalchat "Mission Developed By: DaThrillerKiller";
-server Globalchat "Hosted By: Straight Forward Gaming";
 diag_log "[LOG] Straight Forward Gaming Island Life Init Finished";

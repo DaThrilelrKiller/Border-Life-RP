@@ -20,7 +20,7 @@ class submit : RscButton
 idc = 56;	
 x = 0.35; y = 0.70;w = 0.31; h = 0.04;
 text = $STRD_inv_description_inventar_use;
-action = "[]call vehicle_keychainlock";
+action = "[]call keys_lock";
 };
 class submit2 : RscButton
 {

@@ -7,5 +7,6 @@
 "isKindOf",
 "AddLoop",
 "loop",
-"init"
+"init",
+"addAction"
 ];

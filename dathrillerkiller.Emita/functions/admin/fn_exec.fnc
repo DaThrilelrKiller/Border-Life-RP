@@ -71,12 +71,6 @@ switch (_text) do
 		 };
 		_message = format["[Admin Log] Admin %1 has used Masterkey on %2",name player,_vcl];
 	};
-	case "Add All Licenses": 
-	{
-		_message = format["[Admin Log] Admin %1 has Given Themselves All Licenses",name player];
-		
-		call Admin_AddAllLicenses;
-	};
 	case "Set Time To 12 PM":
 	{
 		_message = format["[Admin Log] Admin %1 has set the time to 12 PM",name player];

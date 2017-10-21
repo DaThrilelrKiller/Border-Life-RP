@@ -19,9 +19,9 @@ FireObject = createVehicle ["HeliH", _location, [], 0, "CAN_COLLIDE"];
 FireObject setVehicleInit "i=[this,10,time,false,false] spawn BIS_Effects_Burn; hideobject this;"; 
 processInitCommands;
 
-'if (isamedic or VFD_id) then {playsound "bells"};'call network_broadcast;			
-'if (isamedic or VFD_id) then {player sidechat "Fire Alarm Emita Fire...Respond To A Report Of A Large Fire!"};'call network_broadcast;
-'if (isamedic or VFD_id) then {player sidechat "CHECK YOUR MAP FOR THE LOCATION AND GET TO IT QUICKLY!"};'call network_broadcast;
+'if (isamedic) then {playsound "bells"};'call network_broadcast;			
+'if (isamedic) then {player sidechat "Fire Alarm Emita Fire...Respond To A Report Of A Large Fire!"};'call network_broadcast;
+'if (isamedic) then {player sidechat "CHECK YOUR MAP FOR THE LOCATION AND GET TO IT QUICKLY!"};'call network_broadcast;
 	
 _fireMarker = createMarker ["EMSMissionMrk1", _location];
 _fireMarker setMarkerShape "ELLIPSE";

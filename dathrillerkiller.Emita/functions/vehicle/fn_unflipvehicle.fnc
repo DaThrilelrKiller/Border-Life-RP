@@ -1,6 +1,6 @@
 	private ["_vcl"];
 	_vcl = (nearestobjects [getpos player, ["LandVehicle"], 10] select 0);
-	if ([player,_vcl] call vehicle_hasKeys) then
+	if ([player,_vcl] call keys_has) then
 	{
 
 	if ((count crew _vcl) > 0) exitWith {systemChat  "The vehicle is not empty!";};

@@ -25,7 +25,7 @@ call compile preprocessFile  "ServerLoad\miscfunctions.sqf";
 call compile preprocessFile "ServerLoad\INVfunctions.sqf";
 call compile preprocessFile "ServerLoad\createfunctions.sqf";
 call compile preprocessFile "ServerLoad\customfunctions.sqf";
-call compile preprocessFile "ServerLoad\broadcast.sqf";
+
 /* Removes all event handlers */
 waitUntil {(!isNull player and !isnull findDisplay 46) or dtk_server};
 player removeAllEventHandlers "killed";
@@ -45,6 +45,7 @@ if (dtk_client)then {
 	};
 call compile preprocessFile format ['configuration\SIDEVARIABLES\%1variables.sqf',ar_side];
 };
+
 []spawn compile preprocessFile "configuration\Cfgmodules.sqf";
 
 

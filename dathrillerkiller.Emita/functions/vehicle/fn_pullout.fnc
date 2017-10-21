@@ -18,7 +18,3 @@ _this lock false;
 player switchMove "AmovPercMstpSnonWnonDnon_AcrgPknlMstpSnonWnonDnon_getInLow";
 sleep 0.4;
 [_target,["eject", vehicle _target],"network_action",false,false]call network_MPExec;
-
-
-["SCRIPT","#1111",format['%1 pulled %2 out of a %3!',(name player),(name _target),_this]]call ANTIHACK_LogToServer;
-

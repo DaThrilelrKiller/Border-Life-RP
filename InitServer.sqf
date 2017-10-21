@@ -8,7 +8,6 @@ waitUntil {scriptDone _H};
 [0, 0, 0, ["serverloop"]] execVM "mayor.sqf";
 
 
-[] execVM "\MPMissions\Server\LoadServerStats.sqf";
 []spawn S_ems_missionloop;
 []spawn S_drug_GrowLoop;
 

@@ -3,5 +3,7 @@
 "say",
 "getsleep",
 "mode",
-"changemode"
+"changemode",
+"playAuto",
+"playManual"
 ];

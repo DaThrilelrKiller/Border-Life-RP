@@ -38,7 +38,7 @@ _hunger = switch _item do
 		case "wulf":     	{6};
 		case "fuzz":     	{4};
 		case "inby":     	{4};
-		case "cookie":     {["SERVER",player,"S_dtk_GetFortune",false,false]call network_MPExec; 4};
+		case "cookie":     {call hunger_cookie; 4};
 		default {0};
 	};
 

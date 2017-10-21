@@ -4,5 +4,6 @@
 "has",
 "toDialog",
 "add",
-"remove"
+"remove",
+"name"
 ];

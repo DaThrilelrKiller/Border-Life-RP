@@ -21,7 +21,7 @@ _text =  (ctrlText _display);
 if (_text != "")then 
 {
 	_vehicle = _text call gear_grabVehicle;
-	if  (!([player,_vehicle]call vehicle_hasKeys) && {vehicle player != _vehicle})then 
+	if  (!([player,_vehicle]call keys_has) && {vehicle player != _vehicle})then 
 	{
 		(findDisplay 106) closeDisplay 1;
 		systemchat format ["(%1) you do not have the keys, sorry ;(",_text];

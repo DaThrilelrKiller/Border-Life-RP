@@ -39,7 +39,7 @@ if (_Action == "impound")then
 		INVVehiclesImpoundArray set [count INVVehiclesImpoundArray, [_UID,_Scriptname,_Playerside,_trunk,_speedupgrade]];
 		publicvariable "INVVehiclesImpoundArray";
 		deleteVehicle _vcl;
-		if !([player,_vcl]call vehicle_hasKeys)then {[player,"geld",2000] call storage_add; systemChat "You have been pain 2000$ for impounding that vehicles"};
+		if !([player,_vcl]call keys_has)then {[player,"geld",2000] call storage_add; systemChat "You have been pain 2000$ for impounding that vehicles"};
 		["ALL",["true",format ["%1 has impounded %2",_nameimp, _vcl],3],"network_chat",false,false]call network_MPExec;
 		
 		["SERVER",[],"s_vehicle_saveimpound",false,false]call network_MPExec;

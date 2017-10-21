@@ -29,7 +29,7 @@ _cost = _amount*_costwithTax;
  
 
 if !([_cost,false,_info] call shops_ProcessMoney)exitWith {systemChat "you do not have enought money";dtk_shopactive = false;};
-if (!(_license1 call INV_HasLicense) and isciv and _license) exitWith {systemChat  format[localize "STRS_inv_buyitems_nolicense", (_license1 call INV_GetLicenseName)];dtk_shopactive = false;};
+if (!(_license1 call licenses_has) and isciv and _license) exitWith {systemChat  format[localize "STRS_inv_buyitems_nolicense", (_license1 call licenses_name)];dtk_shopactive = false;};
 
 switch(_itemtype)do
 {

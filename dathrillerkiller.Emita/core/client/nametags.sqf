@@ -37,7 +37,7 @@ for [{_i=1}, {_i < 25}, {_i=_i+2}] do
 
 			};
 
-		if(([player,_car]call vehicle_hasKeys) and typeof _car == "LocalBasicWeaponsBox" and !(isnull _car) and vehicle player == player and _distCP < 3) then
+		if(([player,_car]call keys_has) and typeof _car == "LocalBasicWeaponsBox" and !(isnull _car) and vehicle player == player and _distCP < 3) then
 
 			{
 
@@ -80,10 +80,17 @@ for [{_i=1}, {_i < 25}, {_i=_i+2}] do
 			{
 
 			_text = (_tag call INV_getshopArray) select 1;
+			_img = _text select 0;
+			_name = _text select 1;
 			titleRsc["Rtags", "PLAIN"];
 			_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
 			if(iscop and _tag in drugsellarray)exitwith{_control ctrlSetText "Drug Search (E)";_control ctrlSetTextColor [0, 0, 1, 0.8]};
-			_control ctrlSetStructuredText parseText format['<t align="center">%1 (E)</t>',_text];
+			if (_img != "")then 
+			{
+				_control ctrlSetStructuredText parseText format['<t align="center"><img image="sfg_textures\tags\%1.paa"/> %2 (E)</t>',_img,_name];
+			}else{
+				_control ctrlSetStructuredText parseText format['<t align="center">%1 (E)</t>',_name];
+			};
 			_control ctrlSetTextColor [1, 1, 1, 0.8];
 
 			};

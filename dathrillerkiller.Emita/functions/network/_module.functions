@@ -11,5 +11,6 @@
 "setfuel",
 "action",
 "allowDamage",
-"setUnconscious"
+"setUnconscious",
+"broadcast"
 ];

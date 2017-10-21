@@ -55,10 +55,12 @@ _object setPos [ getPos this select 0, (getPos this select 1)+4, (getPos this se
 _object setvariable ["droparray", [_amount, _resource], true];
 };
 };
+
 _object  setvehicleinit format["
 this addaction ['Pickup %1 (%2)','pickup.sqf',[this, '%3', %2]];
 ", _name, _amount,_resource];
 processInitCommands;
+
 titletext ["Restart the machine it has shut down...", "PLAIN DOWN", 3];
 };
 working=false;

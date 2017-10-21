@@ -3,7 +3,6 @@ PG_SSF = [];
 
 _Funcitons = 
 [
-["DTK","GetFortune","DaThrillerKiller",false],
 ["drug","GrowLoop","DaThrillerKiller\drugs",false],
 ["drug","burnplant","DaThrillerKiller\drugs",false],
 ["gang","capturearea","DaThrillerKiller\gangs",false],
@@ -14,16 +13,7 @@ _Funcitons =
 ["main","SetupMap","main",false],
 ["main","ServerCleaner","main",false],
 ["vehicle","OwnerOnline","vehicle",false],
-["vehicle","saveimpound","vehicle",false],
-
-["siren","playAuto","dathrillerkiller\siren",true],
-["siren","playManual","dathrillerkiller\siren",true],
-
-["garage","InstallSiren","dathrillerkiller\garage",true],
-["garage","installUpgrade","dathrillerkiller\garage",true],
-["garage","serviceVehicle","dathrillerkiller\garage",true],
-["garage","cam","dathrillerkiller\garage",true],
-["garage","paint","dathrillerkiller\garage",true]
+["vehicle","saveimpound","vehicle",false]
 ];
 
 {

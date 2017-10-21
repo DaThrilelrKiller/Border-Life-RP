@@ -1,3 +1,5 @@
+_Cookie = dtk_hunger_messages call BIS_selectRandom;
+
 /*
 File: fn_MyCookie.sqf
 Desc: displays a fortune saying to the user
@@ -9,7 +11,7 @@ Instagram: https://www.instagram.com/tuckeeeee
 	Use Without Permission is prohibited
 
 Prams: 
-	_this a string of the forture
+	none
 */
 
 private ["_ui","_Main"];
@@ -19,5 +21,5 @@ disableSerialization;
 	
 _ui = uiNameSpace getVariable "MyCookie";
 _Main = _ui displayCtrl 1200;
-_Main ctrlSetStructuredText parseText _this;
+_Main ctrlSetStructuredText parseText _Cookie;
 _Main ctrlCommit 2;
