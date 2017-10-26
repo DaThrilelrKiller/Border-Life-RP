@@ -70,8 +70,7 @@ class Mission
 		"CAWheeled2_VWGolf",
 		"aplion_buildings",
 		"E76_Objects",
-		"GLT_Objects",
-		"dtk_ui"
+		"GLT_Objects"
 	};
 	addOnsAuto[]=
 	{
@@ -153,7 +152,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=177;
+		items=178;
 		class Item0
 		{
 			side="LOGIC";
@@ -3838,7 +3837,7 @@ class Mission
 				{
 					position[]={2496.4216,4.1295543,4690.125};
 					azimut=180;
-					id=861;
+					id=858;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -3847,10 +3846,29 @@ class Mission
 				};
 			};
 		};
+		class Item177
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5341.8379,71.636124,-82.375};
+					azimut=270;
+					id=862;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="gangs";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=688;
+		items=685;
 		class Item0
 		{
 			position[]={742.70056,60,3036.9316};
@@ -10964,43 +10982,34 @@ class Mission
 		};
 		class Item666
 		{
-			position[]={1051.3212,4.1295543,2270.5981};
-			azimut=49.075371;
+			position[]={4119.021,5.84025,6093.9399};
+			azimut=-42.28458;
 			id=842;
 			side="EMPTY";
-			vehicle="DTK_InfoStand";
-			leader=1;
+			vehicle="MAP_t_pyrus2s";
 			skill=0.60000002;
-			text="stkoshop1";
-			init="this allowdamage false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.3];";
 		};
 		class Item667
 		{
-			position[]={1052.1719,4.1295543,2269.6248};
-			azimut=49.075371;
+			position[]={4165.9819,6.7329874,6069.1353};
+			azimut=-42.28458;
 			id=843;
 			side="EMPTY";
-			vehicle="DTK_InfoStand";
-			leader=1;
+			vehicle="MAP_t_pyrus2s";
 			skill=0.60000002;
-			text="stkoshop2";
-			init="this allowdamage false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.3];";
 		};
 		class Item668
 		{
-			position[]={1053.026,4.1295543,2268.6892};
-			azimut=49.075371;
+			position[]={4199.9009,5.4012127,6118.7026};
+			azimut=-42.28458;
 			id=844;
 			side="EMPTY";
-			vehicle="DTK_InfoStand";
-			leader=1;
+			vehicle="MAP_t_pyrus2s";
 			skill=0.60000002;
-			text="stkoshop3";
-			init="this allowdamage false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.3];";
 		};
 		class Item669
 		{
-			position[]={4119.021,5.84025,6093.9399};
+			position[]={4157.6665,5.239213,6146.855};
 			azimut=-42.28458;
 			id=845;
 			side="EMPTY";
@@ -11009,7 +11018,7 @@ class Mission
 		};
 		class Item670
 		{
-			position[]={4165.9819,6.7329874,6069.1353};
+			position[]={4211.5322,4.9152222,6030.4775};
 			azimut=-42.28458;
 			id=846;
 			side="EMPTY";
@@ -11018,7 +11027,7 @@ class Mission
 		};
 		class Item671
 		{
-			position[]={4199.9009,5.4012127,6118.7026};
+			position[]={4253.5757,4.2731166,6079.1133};
 			azimut=-42.28458;
 			id=847;
 			side="EMPTY";
@@ -11027,7 +11036,7 @@ class Mission
 		};
 		class Item672
 		{
-			position[]={4157.6665,5.239213,6146.855};
+			position[]={4063.6118,3.0589211,6011.397};
 			azimut=-42.28458;
 			id=848;
 			side="EMPTY";
@@ -11036,7 +11045,7 @@ class Mission
 		};
 		class Item673
 		{
-			position[]={4211.5322,4.9152222,6030.4775};
+			position[]={4126.3784,4.0027924,6002.9565};
 			azimut=-42.28458;
 			id=849;
 			side="EMPTY";
@@ -11045,7 +11054,7 @@ class Mission
 		};
 		class Item674
 		{
-			position[]={4253.5757,4.2731166,6079.1133};
+			position[]={4139.542,3.353996,5958.7661};
 			azimut=-42.28458;
 			id=850;
 			side="EMPTY";
@@ -11054,7 +11063,7 @@ class Mission
 		};
 		class Item675
 		{
-			position[]={4063.6118,3.0589211,6011.397};
+			position[]={4083.6077,2.7906241,5961.979};
 			azimut=-42.28458;
 			id=851;
 			side="EMPTY";
@@ -11063,7 +11072,7 @@ class Mission
 		};
 		class Item676
 		{
-			position[]={4126.3784,4.0027924,6002.9565};
+			position[]={4235.2197,3.5039411,6163.3032};
 			azimut=-42.28458;
 			id=852;
 			side="EMPTY";
@@ -11072,7 +11081,7 @@ class Mission
 		};
 		class Item677
 		{
-			position[]={4139.542,3.353996,5958.7661};
+			position[]={4194.4878,3.3268728,6188.6616};
 			azimut=-42.28458;
 			id=853;
 			side="EMPTY";
@@ -11081,7 +11090,7 @@ class Mission
 		};
 		class Item678
 		{
-			position[]={4083.6077,2.7906241,5961.979};
+			position[]={4285.9829,2.4281619,6154.3472};
 			azimut=-42.28458;
 			id=854;
 			side="EMPTY";
@@ -11090,45 +11099,18 @@ class Mission
 		};
 		class Item679
 		{
-			position[]={4235.2197,3.5039411,6163.3032};
-			azimut=-42.28458;
-			id=855;
-			side="EMPTY";
-			vehicle="MAP_t_pyrus2s";
-			skill=0.60000002;
-		};
-		class Item680
-		{
-			position[]={4194.4878,3.3268728,6188.6616};
-			azimut=-42.28458;
-			id=856;
-			side="EMPTY";
-			vehicle="MAP_t_pyrus2s";
-			skill=0.60000002;
-		};
-		class Item681
-		{
-			position[]={4285.9829,2.4281619,6154.3472};
-			azimut=-42.28458;
-			id=857;
-			side="EMPTY";
-			vehicle="MAP_t_pyrus2s";
-			skill=0.60000002;
-		};
-		class Item682
-		{
 			position[]={2514.1914,4.1295543,4692.6001};
 			azimut=180.11874;
-			id=858;
+			id=855;
 			side="EMPTY";
 			vehicle="Land_MBG_GER_PUB_1";
 			skill=0.60000002;
 		};
-		class Item683
+		class Item680
 		{
 			position[]={2518.405,4.1295543,4696.4199};
 			azimut=90.711014;
-			id=859;
+			id=856;
 			side="EMPTY";
 			vehicle="tcg_atm";
 			leader=1;
@@ -11136,11 +11118,11 @@ class Mission
 			text="tpatm";
 			init="this allowdamage false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.4];";
 		};
-		class Item684
+		class Item681
 		{
 			position[]={2518.4819,4.1295543,4694.4219};
 			azimut=-270.31314;
-			id=860;
+			id=857;
 			side="EMPTY";
 			vehicle="DTK_InfoStand";
 			leader=1;
@@ -11148,29 +11130,29 @@ class Mission
 			text="tpshop";
 			init="this allowdamage false;this enableSimulation false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.4];";
 		};
-		class Item685
+		class Item682
 		{
 			position[]={729.86731,4.1295543,1380.0015};
 			azimut=104.078;
-			id=862;
+			id=859;
 			side="EMPTY";
 			vehicle="bc_bank";
 			skill=0.60000002;
 			init="this allowDammage false;";
 		};
-		class Item686
+		class Item683
 		{
 			position[]={729.76636,4.1295543,1379.3159};
-			id=863;
+			id=860;
 			side="EMPTY";
 			vehicle="cluttercutter_ep1";
 			skill=0.2;
 		};
-		class Item687
+		class Item684
 		{
 			position[]={1545.1947,8,2568.9277};
 			azimut=75.151901;
-			id=864;
+			id=861;
 			side="EMPTY";
 			vehicle="DTK_InfoStand";
 			leader=1;

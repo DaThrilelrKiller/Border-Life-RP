@@ -108,6 +108,28 @@ DaThrillerKiller - New ExecVM function for the network
 DaThrillerKiller - New reset safecode function 100% random now
 DaThrillerKiller - increased starvation time
 
+Version 1.8
+DaThrillerKiller - Removed impound save loop it now save over the network when a vehciel is impounded
+DaThrillerKiller - Removed old gang files
+DaThrillerKiller - added new gang module, complete over haul and allow ranks to be set for gangs
+DaThrillerKiller - gangs can now change names
+DaThrillerKiller - gangs can set custom ranks per member
+DaThrillerKiller - gangs can invite people 
+DaThrillerKiller - overall better experence within the gang menu
+DaThrillerKiller - re wrote server side compile functions file
+DaThrillerKiller - Remove unneed whitelist
+DaThrillerKiller - change stun file to hopfuly work better
+DaThrillerKiller - remove all unneeded strings from strinable.cvs
+DaThrillerKiller - added gang logic to mission.sqm
+DaThrillerKiller - spawn menu added to the new module system 
+DaThrillerKiller - split_string function added to string module
+DaThrillerKiller - remove revive function to the medical module
+DaThrillerKiller - change the way keys work when locating the nearest vehicle, its alot better now!
+DaThrillerKiller - new dance module, basicly moves the y key animation to module
+DaThrillerKiller - removed old admin menu
+DaThrillerKiller - remove unneeded spawn points
+DaThrillerKiller - removed unneeded shops from shop file
+
 
 
 

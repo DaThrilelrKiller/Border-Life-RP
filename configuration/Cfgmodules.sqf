@@ -1,5 +1,5 @@
 private ["_modules","_functions"];
-
+PG_SSF = [];
 
 dtk_server_modules = 
 [

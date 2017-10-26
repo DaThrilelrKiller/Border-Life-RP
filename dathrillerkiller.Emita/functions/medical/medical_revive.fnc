@@ -40,7 +40,7 @@ detach _Deadplayer;
 detach _LifePack;
 detach player;
 
-["ALL",[_Deadplayer," "],"network_SwitchMove",false,true]call network_MPExec;
+["ALL",[_Deadplayer,"amovppnemsprslowwrfldf"],"network_SwitchMove",false,true]call network_MPExec;
 deleteMarker ("medical_" + name _Deadplayer);
 
 LifePack animate ["AEDFront", 0];;

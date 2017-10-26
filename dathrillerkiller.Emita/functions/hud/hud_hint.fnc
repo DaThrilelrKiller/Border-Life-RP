@@ -2,7 +2,7 @@ private ['_ui','_hintstrl','_text','_length','_y','_array','_numberarray','_line
 
 1002 cutRsc ['AR_hint','PLAIN'];
 
-_array = [_this,' '] call dtk_splitstring;
+_array = [_this,' '] call string_split;
 _numberarray = [];
 {_numberarray set [count _numberarray,toArray _x]}forEach _array;
 _lines = 0;

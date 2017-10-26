@@ -2,7 +2,7 @@ private ["_display","_chat","_text","_stringElements","_command"];
 
 [player,format['typed "%1" in chat',_this],[1,1,1,1]]call admin_logs_add;
 
-_stringElements = [_this," "] call DTK_splitString;
+_stringElements = [_this," "] call string_split;
 _stringElements call chat_checkwords;
 _command = _stringElements select 0;
 

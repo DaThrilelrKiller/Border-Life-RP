@@ -8,5 +8,6 @@
 "lenght",
 "setLegth",
 "toArray",
-"toInt"
+"toInt",
+"split"
 ];

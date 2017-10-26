@@ -5,7 +5,7 @@ if(dialog)exitwith{closeDialog 0;};
 if(!INV_shortcuts)exitwith{}; 
 if (animationstate player == "actspercmstpsnonwrfldnon_interrogate02_forgoten")exitWith {};
 if (lifeState player == "UNCONSCIOUS")exitWith{};
-[] execVM "animdlgopen.sqf";
+call dance_open;
 };
 
 Keypress9 = 
@@ -20,19 +20,20 @@ if(INV_shortcuts)then{INV_shortcuts=false; titletext["SFG Keys Off", "PLAIN DOWN
 
 KeyPressL = 
 {
-	if(!INV_shortcuts)exitwith{};
-	_vcl = (getPos player nearEntities [["LandVehicle", "Air", "ship"], 7] select 0);
-	if(!([player,_vcl]call keys_has))exitwith{systemChat  "You do not have the keys to this vehicle.";_handled=true;};
+if(!INV_shortcuts)exitwith{};
+
+	_vcl = call keys_grabVehicle;
+
 	if (locked _vcl) then 
-	 {
-	 systemChat "Vehicle Unlocked";
-	 [_vcl,[_vcl,false],'network_lock',false,true]call network_MPExec;
-	 }
-	 else
-	 {
-	  systemChat "Vehicle Locked";
-	  [_vcl,[_vcl,true],'network_lock',false,true]call network_MPExec;
-	 };
+	{
+		systemChat "Vehicle Unlocked";
+		[_vcl,[_vcl,false],'network_lock',false,true]call network_MPExec;
+	}
+	else
+	{
+		systemChat "Vehicle Locked";
+		[_vcl,[_vcl,true],'network_lock',false,true]call network_MPExec;
+	};
 };
 
 KeyPressT = 
@@ -213,10 +214,7 @@ call admin_console;
 
 KeyPress6 = 
 {
-if(dialog)exitwith{closeDialog 0;};
-if(!INV_shortcuts)exitwith{};
-if !(SwagDevs or adminlevel2 or adminlevel3 or adminlevel4) exitWith {};
-createDialog "Main";
+
 };
 
 KeypressHolsterPistol = 

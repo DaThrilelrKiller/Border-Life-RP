@@ -1,7 +1,6 @@
 private ["_i","_time"];
 
 ar_mayor_rt = (time + 2);
-ar_gangs_rt = (time + 60);
 ar_taxi_rt = (time + 10);
 ar_assassination_rt = (time + 10);
 ar_hostage_rt = (time + 10);
@@ -15,7 +14,6 @@ for "_i" from 0 to 1 step 0 do
 {
 	_time = time;
 
-	if (_time > ar_gangs_rt) then {[0, 0, 0, ["serverloop"]] execVM "gangs.sqf";};
 	if (_time > ar_taxi_rt) then {[0,0,0,["serverloop"]] execVM "taxi.sqf";};
 	if (_time > ar_assassination_rt) then {[0,0,0,["serverloop"]] execVM "assassination.sqf";};
 	if (_time > ar_hostage_rt) then {[0,0,0,["serverloop"]] execVM "hostage.sqf";};

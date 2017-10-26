@@ -1,4 +1,4 @@
-SpawnPoints = [["Civ_Spawn_1","true"],["Civ_Spawn_2","true"],["Civ_Spawn_3","true"],["Civ_Spawn_4","TowingService_id"],["Civ_Spawn_6","RT_id"],["Civ_Spawn_7","PMC_id"],["Civ_Spawn_8","TP_id"]];
+SpawnPoints = [["Civ_Spawn_1","true"],["Civ_Spawn_2","true"],["Civ_Spawn_3","true"],["Civ_Spawn_4","TowingService_id"],["Civ_Spawn_6","RT_id"],["Civ_Spawn_7","PMC_id"]];
 
 isciv         	= true;						
 iscop          	= false;	
@@ -25,7 +25,7 @@ INV_apps = [
 ["app_oil","sfg_textures\ipad\OIL.PAA","[0,0,0,[""oilswag""]] execVM 'maindialogs.sqf'"],
 ["app_dmv","sfg_textures\ipad\DMV.PAA","[0,0,0,[""licswag""]] execVM 'maindialogs.sqf';"],
 ["app_laws","sfg_textures\ipad\LAWS.PAA","[0,0,0,[""lawswag""]] execVM 'maindialogs.sqf';"],
-["app_gangs","sfg_textures\ipad\GANGS.PAA","closeDialog 0;[0,0,0,['gangmenu']] execVM ""maindialogs.sqf"";"],
+["app_gangs","sfg_textures\ipad\GANGS.PAA","closeDialog 0;call gang_open"],
 ["app_stockmarket","sfg_textures\ipad\stockmarket.PAA","[0,0,0,[""fundsswag""]] execVM ""maindialogs.sqf"";"],
 ["app_store","sfg_textures\ipad\stockmarket.PAA","[AppStorenum]call shops_openshop; "],
 ["app_phone","sfg_textures\ipad\PHONE.PAA","systemChat 'W.I.P';"],

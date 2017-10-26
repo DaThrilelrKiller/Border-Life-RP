@@ -32,7 +32,7 @@ _role addaction ["Elect A Governor","maindialogs.sqf",["wahlen"],1,false,true,""
 _role addaction ["Sign-Up For Debit Card","debitcardsignup.sqf",["mainbank"],1,false,true,"","player distance mainbank <= 15 and (!SigningUpForDebitCard)"];
 _role addaction ["Crime Log","maindialogs.sqf",["coplog"],1,false,true,"","player distance rathaus <= 3"];
 _role addaction [format ["Pay Bail", slave_cost],"maindialogs.sqf", ["bail"],1,false,true,"","player distance bailflag <= 3 and isciv"];
-_role addaction ["Resuscitate/Shock Victim","noscript.sqf",'[ems_nearman]call ems_revive;',1,true,true,"",'call ems_neardead'];
+_role addaction ["Resuscitate/Shock Victim","noscript.sqf",'[ems_nearman]call medical_revive;',1,true,true,"",'call ems_neardead'];
 _role addaction ["Remove Blindfold","FUNCTIONS\ITEMS\blindfold.sqf",[],1,false,true,"","isPlayer cursorTarget and cursorTarget getVariable 'blindfolded'"];
 
 

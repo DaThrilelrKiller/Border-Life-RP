@@ -73,30 +73,6 @@ INV_VehicleGaragen = [
 [dummyobj, 50]
 ];
 
-/*Animation List*/
-ANIM_AllAnimationArray = [
-[" ", "Return to normal", "anim", "Return To Normal", 2, ""],
-["amovpercmstpssurwnondnon", "Hands up", "anim", "Hands up", 2, ""],
-["AidlPercSnonWnonDnon_talk1", "reden", "playMoveNow", "talk", 2, ""],
-["UnaErc_UnaErcPoslechVelitele", "reden", "playMoveNow", "hands2", 2, ""],
-["ActsPercMstpSnonWpstDnon_sceneBardakPistol01", "pistolplay", "anim", "pistolplay", 2, ""],
-["AmovPercMstpSlowWrflDnon_Salute", "Salute", "anim", "Salute", 2, ""],
-["AsigPercMstpSlowWrflDnon_AmovPercMrunSlowWrflDnon_GoGo", "Follow me!", "anim", "Follow me!", 2, ""],
-["AsigPercMstpSlowWrflDnon_GoGo", "I'll follow you!", "anim", "I'll follow you!", 2, ""],
-["shaftoe_c0briefing_otazky_loop6", "Cross arms", "anim", "Cross arms", 2, ""],
-["c7a_bravoTleskani_idle1", "Clapping", "anim", "Clapping", 2, ""],
-["AmovPercMstpSnonWnonDnon_idle56kliky", "Workout", "anim", "Workout", 2, ""],
-["AmovPercMstpSnonWnonDnon_idle68boxing", "Boxing,", "anim", "Boxing", 2, ""],
-["AmovPercMstpSnonWnonDnon_idle71kliky", "Pushups", "anim", "Pushups", 2, ""],
-["AidlPpneMstpSnonWnonDnon_SleepC_killFly", "Shew fly", "anim", "Shew fly", 2, ""],
-["ActsPercMstpSnonWnonDnon_DancingDuoStefan", "reden", "playMoveNow", "Dance1", 2, ""],
-["ActsPercMstpSnonWnonDnon_Dancingstefan", "reden", "playMoveNow", "Dance2", 2,	""],
-["ActsPercMstpSnonWnonDnon_DancingDuoIvan", "reden", "playMoveNow", "Dance3", 2, ""],
-["AmovPercMstpSnonWnonDnon_exerciseKata", "reden", "playMoveNow", "Karate", 2, ""],
-["NavigationHeli", "Signial Heli", "anim", "Signial Heli", 2, ""]
-];
-
-
 /*bank Vars*/
 local_useBankPossible    = true;  
 maxinsafe                = 300000;
@@ -180,10 +156,6 @@ oilbaseprice		 = 15000;
 shovelmax=2;
 pickaxedur=50;
 working=false;
-gangincome		 = 3200;
-gangcreatecost	 = 125000;
-gangmember		 = false;
-gangleader		 = false;
 gangareas		 = [gangarea1,gangarea2,gangarea3,gangarea4];
 CityLocationArray        = [[CityLogic1, 500], [CityLogic2, 400], [CityLogic4, 500], [CityLogic5, 200]];
 coppatrolarray  = [[4045.69,2284.16,0],[3661.66,4261.21,0],[4169.17,3648.72,0],[2918,3514.07,0],[1139.32,4564.22,0],[1112.11,3782.8,0],[3025.85,4435.61,0],[2190.9,4489.62,0],[2429.91,4768.43,0],[904.459,1176.82,0],[1578.37,4739.66,0],[1972.94,4290.42,0],[1523.08,4389.92,0],[2570.85,3779.43,0],[2846.55,1488.14,0],[1483.26,2539.71,0],[727.739,2934.53,0],[1563.24,4871.82,0],[2520.61,4665.69,0]];

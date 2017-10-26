@@ -14,7 +14,6 @@ dtk_active_modules =
 "Chat",
 "Markers",
 "Siren",
-"Factories",
 "Checkpoint",
 "Admin",
 "Cdb",
@@ -37,8 +36,11 @@ dtk_active_modules =
 "Garage",
 "Clothing",
 "GPS",
+"Dance",
 "Statsave",
-"Hunger"
+"Hunger",
+"Spawn",
+"Gang"
 ];
 
 /*loads variables first for all active modules*/

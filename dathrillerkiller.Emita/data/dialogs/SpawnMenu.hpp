@@ -3,7 +3,7 @@ class AR_SpawnMenu
 	idd = 1600;
 	movingEnable = true;
 	objects[] = {};
-	onLoad = "[]spawn Main_PickSpawn;";
+	onLoad = "[]spawn spawn_menu;";
 	class controls
 	{	
 

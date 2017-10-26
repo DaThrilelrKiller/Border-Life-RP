@@ -2,7 +2,6 @@
 INV_ServerImpoundArray = [];
 workplacejob_hostage_serverarray = [];
 WahlArray                = [];
-gangdeltime		 = 900;
 playercount    	= 80;
 drugsellarray		 = [mdrugsell,cdrugsell,ldrugsell,hdrugsell,whalesell,methsell];
 for [{_i=0}, {_i < playercount}, {_i=_i+1}] do {WahlArray = WahlArray + [ [] ];};
@@ -34,8 +33,6 @@ gasspawnlocations =  [[1649.76,4703.58,0.00143957],[1487.75,4136.12,0.00143909],
 
 EMSMissionType = "";
 publicvariable "EMSMissionType";
-gangsarray		 = [];
-publicvariable "gangsarray";
 PG_mayor = objNull;
 publicvariable "PG_mayor";
 

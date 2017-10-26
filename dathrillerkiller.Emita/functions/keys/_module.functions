@@ -2,5 +2,6 @@
 "give",
 "has",
 "list",
-"lock"
+"lock",
+"grabVehicle"
 ];

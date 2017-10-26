@@ -19,8 +19,6 @@ switch (_Playerteam) do
 			[_playerside, "PMCDivisions_id"],
 			[_playerside, "PMCCommand_id"],
 			[_playerside, "TowingService_id"],
-			[_playerside, "STKO1_id"],
-			[_playerside, "STKO2_id"],
 			[_playerside, "TP_id"],
             [_playerside, "RT_id"]
 		];

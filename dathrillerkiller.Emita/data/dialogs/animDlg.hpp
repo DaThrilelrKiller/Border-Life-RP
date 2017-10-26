@@ -30,7 +30,7 @@ class animationsdialog
 		x = 0.30; y = 0.78;
 		w = 0.20; h = 0.04;
 		text = "Submit";
-		action = "[lbCurSel 1, (lbData [1, (lbCurSel 1)])] execVM ""animplay.sqf""; closedialog 0;";
+		action = "[lbCurSel 1]call dance_play; closedialog 0;";
 	};
 	class cancel : RscButton
 	{

@@ -19,9 +19,7 @@ _Funcitons =
 ["inv","getscriptfromclass_weap","inventory"],
 ["inv","getitemarray","inventory"],
 ["inv","getshoparray","inventory"],
-["inv","getshopitemnum","inventory"],
-["inv","mygang","inventory"],
-["inv","seen","inventory"],
+
 
 ["main","netsay3d","main"],
 ["main","resetsafecode","main"],
@@ -30,17 +28,13 @@ _Funcitons =
 ["main","format_integer","main"],
 ["main","formatamount","main"],
 ["main","stringucase","main"],
-["main","pickspawn","main"],
 ["main","formatmoney","main"],
 ["main","isplayernear","main"],
 ["main","random","main"],
 ["main","playersettings","main"],
 ["main","ispistol","main"],
 ["main","holster","main"],
-["main","loadstartingmenus","main"],
-["main","arraytolist","main"],
 
-["ems","revive","ems"],
 ["ems","firehose","ems"],
 ["ems","fixgas","ems"],
 ["other","cleanupbuildingcollapes","ems"],
@@ -64,11 +58,8 @@ _Funcitons =
 ["other","getquest","other\quest"],
 
 
-["admin","fillmenu","admin"],
-["admin","exec","admin"],
 ["dtk","interationhandler","dathrillerkiller"],
 ["dtk","playersettingsmenu","dathrillerkiller"],
-["dtk","splitstring","dathrillerkiller"],
 ["dtk","playerlisttocontrol","dathrillerkiller"]
 
 ];

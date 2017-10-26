@@ -1,20 +1,4 @@
-﻿if(dtk_server)then
-{
-INV_itemstocks =
-[
--1
-];
- 
-publicvariable "INV_itemstocks";
-};
- 
-INV_itemmaxstocks =
-[
--1
-];
- 
-
-_emptyshop = [];
+﻿_emptyshop = [];
 
 _fs = ["kanister","Fuelline","reparaturkit","tcgmp","doshd","gdar","bjerk","wulf"];
 
@@ -585,59 +569,6 @@ _rtshop =
 "bc_semi_sdgry",
 "bc_semi_sorng",
 "semitrailer"
-];
-
-
-_stko1 =
-[
-"tcg_hrly",
-"tcg_hrly_coco",
-"tcg_hrly_coco",
-"tcg_hrly_demon",
-"tcg_hrly_limited",
-"tcg_hrly_orig1",
-"tcg_hrly_gay",
-"tcg_hrly_metal",
-"tcg_hrly_orig2",
-"tcg_hrly_white",
-"tcg_hrly_blue",
-"tcg_hrly_red"
-];
-
-
-_stko2 =
-[
-"RH_M4aim_uc",
-"RH_M4eotech_uc",
-"RH_M4acog_uc",
-"RH_m16a2_pd",
-"AK_47_S_uc",
-"RH_akm",
-"RH_aks47",
-"RH_aks47b",
-"AK_47_S",
-"RH_aks47g",
-"RH_m1911old",
-"RH_m9",
-"RH_m9c",
-"RH_g19",
-"RH_g19t",
-"Huntingrifle",
-"RPG18",
-"RH_muzi",
-"30Rnd_556x45_Stanag",
-"30Rnd_762x39_AK47",
-"RH_8Rnd_45cal_m1911",
-"Rnd_9x19_M9",
-"RH_19Rnd_9x19_g18",
-"5x_22_LR_17_HMR",
-"RPG18_mag",
-"RH_9mm_32RND_Mag"
-];
-
-
-_stko3 =
-[
 ];
  
  
@@ -1423,9 +1354,6 @@ INV_ItemShops = [
 [docshop,["","DOC Shop"],docshop,doccarspawn,_copdoc,_copdoc,true,{DOC_id}],
 [hwpatolbox,["","Highway Patrol Shop"],hwpatolbox,hwpspawn,_hwpshop,_hwpshop,true,{HWP_id}],
 [rattlersshop,["","Trucking Shop"],rattlersshop,rattlersspawn,_rtshop,_rtshop,true,{RT_id}],
-[stkoshop1,["","STKO Vehicle Shop"],stkoshop1,rattlersspawn,_stko1,_stko1,true,{STKO1_id}],
-[stkoshop2,["","STKO Gang 1"],stkoshop2,rattlersspawn,_stko2,_stko2,true,{STKO1_id}],
-[stkoshop3,["","STKO Gang 2"],stkoshop3,rattlersspawn,_stko3,_stko3,true,{STKO2_id}],
 [tpshop,["","Pizzeria"],tpshop,tpvspawn,_tpstore,_tpstore,true,{TP_id}],
 [pmcshop,["","PMC Shop"],pmcshop,pmcvspawn,_pmc1,_pmc1,true,{PMC_id}],
 [pmcdivshop,["","PMC Division Shop"],pmcdivshop,pmcvspawn,_pmc2,_pmc2,true,{PMCDivisions_id}],

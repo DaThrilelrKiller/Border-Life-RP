@@ -1,18 +1,15 @@
-private ["_art","_pballbullets","_ammo","_wep","_bullet","_vel","_pos","_teiler","_shooter","_selection","_damage","_plydmg","_weapons"];
+private ["_art","_ammo","_wep","_bullet","_vel","_pos","_teiler","_shooter","_selection","_damage","_weapons"];
 _art         = _this select 0;
-_pballbullets = ["cal68_fieldpaint","cal68_propaint1","cal68_propaint2","cal68_specpaint1","cal68_specpaint2","cal68_propaint"];
 
 if (_art == "hit") then 
 {
 	_shooter   = _this select 1;
 	_selection = _this select 2;
 	_damage    = _this select 3;
-	_plydmg = getDammage player;
 	if(_damage < 0.01 or _selection == "")exitwith{};
 	if(vehicle player != player)exitWith {
 	[_shooter,["dtk_client","The person you tried to tase is in a vehicle!",3],"network_chat",false,false]call network_MPExec;
 	};
-	if ((_plydmg) < 0.5) then {player setDammage 0};
 	if(_selection == "Legs")exitwith{if(!canstand player)exitwith{};player setHit["Legs", 1];};
 	if(_selection == "Hands")exitwith{if(handshit player == 1)exitwith{};player setHit["Hands", 1];};																													
 	isstunned = true;
