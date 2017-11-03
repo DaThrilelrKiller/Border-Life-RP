@@ -1,6 +1,5 @@
 private ["_i","_time"];
 
-ar_mayor_rt = (time + 2);
 ar_taxi_rt = (time + 10);
 ar_assassination_rt = (time + 10);
 ar_hostage_rt = (time + 10);

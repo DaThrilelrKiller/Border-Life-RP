@@ -765,7 +765,7 @@ class Mission
 					azimut=-184.298;
 					id=199;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -788,7 +788,7 @@ class Mission
 					special="NONE";
 					id=200;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -811,7 +811,7 @@ class Mission
 					special="NONE";
 					id=201;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -834,7 +834,7 @@ class Mission
 					special="NONE";
 					id=202;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -857,7 +857,7 @@ class Mission
 					special="NONE";
 					id=203;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -880,7 +880,7 @@ class Mission
 					special="NONE";
 					id=204;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -903,7 +903,7 @@ class Mission
 					special="NONE";
 					id=205;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -926,7 +926,7 @@ class Mission
 					special="NONE";
 					id=206;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -950,7 +950,7 @@ class Mission
 					special="NONE";
 					id=207;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -1074,7 +1074,7 @@ class Mission
 					special="NONE";
 					id=253;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -1097,7 +1097,7 @@ class Mission
 					special="NONE";
 					id=254;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -1120,7 +1120,7 @@ class Mission
 					special="NONE";
 					id=255;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -1350,7 +1350,7 @@ class Mission
 					special="NONE";
 					id=281;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -2421,7 +2421,7 @@ class Mission
 					special="NONE";
 					id=366;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -2444,7 +2444,7 @@ class Mission
 					special="NONE";
 					id=367;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -2467,7 +2467,7 @@ class Mission
 					special="NONE";
 					id=368;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -2490,7 +2490,7 @@ class Mission
 					special="NONE";
 					id=369;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -2513,7 +2513,7 @@ class Mission
 					special="NONE";
 					id=370;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -2536,7 +2536,7 @@ class Mission
 					special="NONE";
 					id=371;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -2559,7 +2559,7 @@ class Mission
 					special="NONE";
 					id=372;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -2582,7 +2582,7 @@ class Mission
 					special="NONE";
 					id=373;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -2605,7 +2605,7 @@ class Mission
 					special="NONE";
 					id=374;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -2628,7 +2628,7 @@ class Mission
 					special="NONE";
 					id=375;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -2743,7 +2743,7 @@ class Mission
 					special="NONE";
 					id=386;
 					side="WEST";
-					vehicle="tcg_police_officer";
+					vehicle="sfg_patrol";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;

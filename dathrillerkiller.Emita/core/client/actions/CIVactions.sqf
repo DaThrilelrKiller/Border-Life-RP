@@ -28,20 +28,6 @@ _role addaction ["Process Heroin","itemprocess.sqf",["Unprocessed_Heroin", "hero
 _role addaction ["Process Marijuana","itemprocess.sqf",["Unprocessed_Marijuana", "marijuana", 5, "marijuanaga4"],1,false,true,"","player distance gangarea4 <= 5"];
 
 
-/*GANGS*/
-_role addaction ["Neutralise Flag","noscript.sqf",'["SERVER",[player,(player call gang_name),gangarea1,"neutralise"],"S_gang_capturearea",true,false]call network_MPExec;',1,false,true,"",'_control = gangarea1 getvariable "control";player distance gangarea1 <= 6 and _control != (player call gang_name) and gangmember and !pickingup'];
-_role addaction ["Neutralise Flag","noscript.sqf",'["SERVER",[player,(player call gang_name),gangarea2,"neutralise"],"S_gang_capturearea",true,false]call network_MPExec;',1,false,true,"",'_control = gangarea2 getvariable "control";player distance gangarea2 <= 6 and _control != (player call gang_name) and gangmember and !pickingup'];
-_role addaction ["Neutralise Flag","noscript.sqf",'["SERVER",[player,(player call gang_name),gangarea3,"neutralise"],"S_gang_capturearea",true,false]call network_MPExec;',1,false,true,"",'_control = gangarea3 getvariable "control";player distance gangarea3 <= 6 and _control != (player call gang_name) and gangmember and !pickingup'];
-_role addaction ["Neutralise Flag","noscript.sqf",'["SERVER",[player,(player call gang_name),gangarea4,"neutralise"],"S_gang_capturearea",true,false]call network_MPExec;',1,false,true,"",'_control = gangarea3 getvariable "control";player distance gangarea4 <= 6 and _control != (player call gang_name) and gangmember and !pickingup'];
-_role addaction ["Capture Flag","noscript.sqf",'["SERVER",[player,(player call gang_name),gangarea4,"capture"],"S_gang_capturearea",true,false]call network_MPExec;',1,false,true,"",'player distance gangarea4 <= 6 and gangmember and !pickingup and getpos gangarea4 select 2 < 0'];
-_role addaction ["Capture Flag","noscript.sqf",'["SERVER",[player,(player call gang_name),gangarea1,"capture"],"S_gang_capturearea",true,false]call network_MPExec;',1,false,true,"",'player distance gangarea1 <= 6 and gangmember and !pickingup and getpos gangarea1 select 2 < 0'];
-_role addaction ["Capture Flag","noscript.sqf",'["SERVER",[player,(player call gang_name),gangarea2,"capture"],"S_gang_capturearea",true,false]call network_MPExec;',1,false,true,"",'player distance gangarea2 <= 6 and gangmember and !pickingup and getpos gangarea2 select 2 < 0'];
-_role addaction ["Capture Flag","noscript.sqf",'["SERVER",[player,(player call gang_name),gangarea3,"capture"],"S_gang_capturearea",true,false]call network_MPExec;',1,false,true,"",'player distance gangarea3 <= 6 and gangmember and !pickingup and getpos gangarea3 select 2 < 0'];
-_role addaction ["Gang Shop","noscript.sqf",'[ (gangarea1 call shops_index)]call shops_openshop; ',1,false,true,"","_control = gangarea1 getvariable ""control"";!isnil ""_control"" and player distance gangarea1 <= 5 and (_control == (player call gang_name))"];
-_role addaction ["Gang Shop","noscript.sqf",'[ (gangarea2 call shops_index)]call shops_openshop; ',1,false,true,"","_control = gangarea2 getvariable ""control"";!isnil ""_control"" and player distance gangarea2 <= 5 and (_control == (player call gang_name))"];
-_role addaction ["Gang Shop","noscript.sqf",'[ (gangarea3 call shops_index)]call shops_openshop; ',1,false,true,"","_control = gangarea3 getvariable ""control"";!isnil ""_control"" and player distance gangarea3 <= 5 and (_control == (player call gang_name))"];
-_role addaction ["Gang Shop","noscript.sqf",'[ (gangarea4 call shops_index)]call shops_openshop; ',1,false,true,"","_control = gangarea4 getvariable ""control"";!isnil ""_control"" and player distance gangarea4 <= 5 and (_control == (player call gang_name))"];
-
 _role addaction ["Shop 1 Export","noscript.sqf",'[ (shop1 call shops_index)]call shops_openshop; ',1,false,true,"","player distance shop1export <= 3"];
 _role addaction ["Shop 3 Export","noscript.sqf",'[ (shop4 call shops_index)]call shops_openshop; ',1,false,true,"","player distance shop4export <= 3"];
 _role addaction ["Food And Candy","noscript.sqf",'[ (bailflag call shops_index)]call shops_openshop; ',1,false,true,"",'player distance (nearestobjects [getpos player, ["ibr_van_BNK"],  10] select 0) < 3'];
@@ -77,33 +63,8 @@ _role addaction [format [localize "STRS_lotto_action"], "noscript.sqf", "createD
 _role addaction ["Get Quest", "noscript.sqf", '[]call Other_GetQuest;',1,false,true,"","player distance questLog < 3 and QuestTime < 1"];
 _role addaction ["Remove Blindfold","FUNCTIONS\ITEMS\blindfold.sqf",[],1,false,true,"","isPlayer cursorTarget and cursorTarget getVariable 'blindfolded'"];
 
-/*GAS STATIONS*/
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel2 <= 23 and TankenCost < maxpetroluse"];
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel4 <= 23 and TankenCost < maxpetroluse"];
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel5 <= 23 and TankenCost < maxpetroluse"];
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel7 <= 23 and TankenCost < maxpetroluse"];
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel8 <= 23 and TankenCost < maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel2 <= 23 and TankenCost >= maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel4 <= 23 and TankenCost >= maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel5 <= 23 and TankenCost >= maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel7 <= 23 and TankenCost >= maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel8 <= 23 and TankenCost >= maxpetroluse"];
-
-
 _role addaction ["Tow Vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0);["TOW",_vcl] call Other_Towing;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0); player distance _vcl < 10 and _vcl getVariable "towing" == "" and [player,_vcl]call keys_has'];
 _role addaction ["Release Vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0);["RELEASE",_vcl] call Other_Towing;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0); player distance _vcl < 10 and _vcl getVariable "towing" != "" and [player,_vcl]call keys_has'];
 
-/*FACTORIES*/
-_role addaction ["Buy Factory","noscript.sqf","ar_active_factory = cursorTarget; ar_active_factory call factories_buy",1,false,true,"","cursorTarget in ar_factories && {!(cursorTarget call factories_owner == getPlayerUID player)}"];
-_role addaction ["Factory Storage","noscript.sqf","ar_active_factory = cursorTarget; [ar_active_factory]call storage_trunk;",1,false,true,"","cursorTarget in ar_factories && {(cursorTarget call factories_owner == getPlayerUID player)}"];
-_role addaction ["Open Factory","noscript.sqf","ar_active_factory = cursorTarget; call factories_open;",1,false,true,"","cursorTarget in ar_factories && {(cursorTarget call factories_owner == getPlayerUID player)}"];
-_role addaction ["Buy Workers","noscript.sqf","ar_active_factory = cursorTarget; call factories_setWorkers;",1,false,true,"","cursorTarget in ar_factories && {(cursorTarget call factories_owner == getPlayerUID player)}"];
-
 /*Garage*/
 (vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call shops_index)]call shops_openshop; ',1,false,true,"","player distance dtkgarage <= 10 and vehicle player != player"];
-
-/*Skins*/
-_role addaction ["Switch To PMC Command Uniform","noscript.sqf",'["US_Delta_Force_EP1"] call clothing_switch;',1,true,true,"",'PMCCommand_id && {player distance stkoatm < 2}'];
-_role addaction ["Switch To PMC Uniform","noscript.sqf",'["US_Soldier_Base_EP1"] call clothing_switch;',1,true,true,"",'PMC_id && {player distance stkoatm < 2}'];
-_role addaction ["Switch To PMC Marksman Uniform","noscript.sqf",'["US_Soldier_Sniper_EP1"] call clothing_switch;',1,true,true,"",'PMCDivisions_id && {player distance stkoatm < 2}'];
-_role addaction ["Switch To PMC Pilot Uniform","noscript.sqf",'["US_Soldier_Pilot_EP1"] call clothing_switch;',1,true,true,"",'PMCDivisions_id && {player distance stkoatm < 2}'];

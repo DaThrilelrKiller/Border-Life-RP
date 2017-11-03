@@ -1,4 +1,4 @@
-	private ["_vcl","_vclClass","_trunk","_speedupgrade","_save","_plate","_warrants","_license","_notes"];
+	private ["_vcl","_vclClass","_trunk","_speedupgrade","_save","_plate","_warrants","_license","_notes","_sirens"];
 	_vcl = cursorTarget;
 	if !([player,_vcl]call keys_has)exitWith {systemChat "Make sure you are looking at the vehicle you are trying to save"};
 	_vclClass = (_vcl getVariable "DTK_OwnerUID" select 1);
@@ -10,8 +10,9 @@
 	_warrants = _vcl getVariable ["cdb_warrants",[]];
 	_license = _vcl getVariable ["cdb_license",[]];
 	_notes = _vcl getVariable ["cdb_notes",[]];
+	_sirens = weapons _vcl;
 	
-	INVVehiclesLand set [count INVVehiclesLand, [_vclClass,_trunk,_speedupgrade,_weaps,_mags,_plate,_warrants,_license,_notes]];
+	INVVehiclesLand set [count INVVehiclesLand, [_vclClass,_trunk,_speedupgrade,_weaps,_mags,_plate,_warrants,_license,_notes,_sirens]];
 	deleteVehicle _vcl;
 
 	_save = [player,

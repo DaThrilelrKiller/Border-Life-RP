@@ -133,6 +133,26 @@ DaThrillerKiller - removed unneeded shops from shop file
 Version 1.9
 DaThrillerKiller - Remove unused modules they might be implmented at a later state
 
+Version 2.0
+DaThrillerKiller - Removed the warrant app for police forcing them to use the crimnal Database
+DaThrillerKiller - Added new way for gang actions to capture teratory
+DaThrillerKiller - Changed the way Switching clothing actions worked
+DaThrillerKiller - New Clothing module, more optimized adds actions direcly to object witch is better for performance
+DaThrillerKiller - Removed old dialogs
+DaThrillerKiller - Changed Chat tag to guest by default instead of side name
+DaThrillerKiller - added more time to the core loop
+DaThrillerKiller - Made it so you can now sell apps on the app store
+DaThrillerKiller - More clean up
+DaThrillerKiller - Fixed lossing moneyu when buying somting and you dont have enought room
+DaThrillerKiller - you can now sell apps and sirens
+DaThrillerKiller - you can now only have 3 sirens on a vehicle at at time
+DaThrillerKiller - new gas pump module, to refuel a car u get our and pick a pump and click buy gas
+DaThrillerKiller - Removed long wait for installing new sirens, now instant
+DaThrillerKiller - Changed the way vehicle lock was displayed on hud
+DaThrillerKiller - Sirens now save on vehciels
+DaThrillerKiller - changed to the new patrol uniform in the missoin.sqm no longer need to switch to it
+
+
 
 
 

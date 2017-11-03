@@ -6,7 +6,6 @@ isamedic       	= false;
 ar_sidename = "Police Officer";
 
 INV_apps = [
-["app_warrants","sfg_textures\ipad\WARRANTS.PAA","[0,1,2,[""coplog""]] execVM 'maindialogs.sqf';"],
 ["app_civilian","sfg_textures\ipad\CIVILIAN.PAA","[0,0,0,[""playerlist""]] execVM 'maindialogs.sqf';"],
 ["app_save","sfg_textures\ipad\SAVE.PAA","[]spawn StatSave_Save;"],
 ["app_oil","sfg_textures\ipad\OIL.PAA","[0,0,0,[""oilswag""]] execVM 'maindialogs.sqf'"],
@@ -23,7 +22,6 @@ INV_apps = [
 AppStoreArray = 
 [
 "app_phone",
-"app_warrants",
 "app_civilian",
 "app_oil",
 "app_dmv",

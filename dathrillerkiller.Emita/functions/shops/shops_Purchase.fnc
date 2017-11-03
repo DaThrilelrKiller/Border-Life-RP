@@ -1,4 +1,4 @@
-private ["_return","_data1","_item","_info","_itemcost","_costwithTax","_amount","_cost","_itemtype","_classname","_shoparray","_fahne","_crate","_logic","_license","_license1","_license2","_invspace","_menge"];
+private ["_weapons","_return","_data1","_item","_info","_itemcost","_costwithTax","_amount","_cost","_itemtype","_classname","_shoparray","_fahne","_crate","_logic","_license","_license1","_license2","_invspace","_menge"];
 
 
 if (dtk_shopactive)exitWith {systemChat "Please wait script active";};
@@ -37,7 +37,11 @@ switch(_itemtype)do
 	{
 		_invspace   = [player]call storage_kg;
 		_menge = (floor((INV_Tragfaehigkeit - _invspace) / (_info call INV_getitemTypeKg)));	
-		if (_menge <= 0) exitWith {systemChat  localize "STRS_inv_buyitems_maxgewicht"; dtk_shopactive = false;};	
+		if (_menge <= 0) exitWith {
+			systemChat  localize "STRS_inv_buyitems_maxgewicht"; 
+			dtk_shopactive = false;
+			_return = false;
+		};	
 
 		if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};		
 		[player,_item,_amount] call storage_add;
@@ -70,9 +74,18 @@ switch(_itemtype)do
 	};
 	case "siren":
 	{
-		[_className,(vehicle player)]spawn  garage_InstallSiren;
-		closeDialog 0;
-		_return = true;
+		_weapons = weapons (vehicle player);
+		
+		if (count _weapons > 2)then 
+		{
+			_return = false;
+			systemchat "You can only have 3 sirens installed at one time, uninstall one if you want this one";
+		}else
+		{
+			[_className,(vehicle player)]spawn  garage_InstallSiren;
+			closeDialog 0;
+			_return = true;
+		};
 	};
 	case "upgrade":
 	{

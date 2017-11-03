@@ -1,4 +1,4 @@
-private ["_hud","_vehhud","_vcl","_vclClass","_storweight","_maxweight","_stor"];
+private ["_hud","_vehhud","_vcl","_vclClass","_storweight","_maxweight","_stor","_locked"];
 
 
 _hud = uiNameSpace getVariable "ar_hud";
@@ -9,6 +9,7 @@ _vclClass = (_vcl getVariable "DTK_OwnerUID" select 1);
 _storweight = [_vcl] call storage_kg;
 _maxweight = _vclClass call INV_getvehmaxkg;
 _stor = format ["%1/%2",_storweight,_maxweight];
+_locked = ["Un-Locked","Locked"]select (locked _vcl);
 	
 _vehhud ctrlSetStructuredText parseText format [
 "
@@ -23,7 +24,7 @@ _vehhud ctrlSetStructuredText parseText format [
 ,"%"
 ,round damage _vcl
 ,((fuel _vcl) call string_rounddecimal)
-,locked _vcl
+,_locked
 ,round speed _vcl
 ,_stor
 ,""

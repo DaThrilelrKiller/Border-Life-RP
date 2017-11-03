@@ -6,4 +6,7 @@ while {ctrlVisible 2} do {
 	waitUntil {(lbCurSel 2) != _sel or !ctrlVisible 2};
 	lbClear 4;
 	[4,lbText[2,(lbCurSel 2)]]call gang_members;
+	if (_sel != -1)then {
+	ctrlEnable [7, true];
+	};
 };

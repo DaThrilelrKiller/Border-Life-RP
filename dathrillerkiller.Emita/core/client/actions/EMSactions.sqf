@@ -44,39 +44,8 @@ _role addaction ["Switch To Turn Out SCBA Uniform","noscript.sqf",'["a2l_firefig
 _role addaction ["Switch To Firefighter Duty Uniform","noscript.sqf",'["sfg_fr"] call clothing_switch;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call keys_has and (FF1_id)'];
 
 
-_role addaction ["Switch To EMT Uniform","noscript.sqf",'["sfg_emt"] call clothing_switch;',1,true,true,"",'EMTBasic_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To Paramedic Uniform","noscript.sqf",'["sfg_paramedic"] call clothing_switch;',1,true,true,"",'EMTAdavnced_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To Firefighter Duty Uniform","noscript.sqf",'["sfg_fr"] call clothing_switch;',1,true,true,"",'FF1_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To EMS Supervisor Uniform","noscript.sqf",'["sfg_emssup"] call clothing_switch;',1,true,true,"",'EMSSupervisor_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To Fire Supervisor Uniform","noscript.sqf",'["sfg_firesup"] call clothing_switch;',1,true,true,"",'EMSSupervisor_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To EMS Command Uniform","noscript.sqf",'["sfg_emscmd"] call clothing_switch;',1,true,true,"",'EMSCommand_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To Fire Command Uniform","noscript.sqf",'["sfg_fdcmd"] call clothing_switch;',1,true,true,"",'EMSCommand_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To ECEMS District Chief's Uniform","noscript.sqf",'["sfg_dchief"] call clothing_switch;',1,true,true,"",'EMSChiefs_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To FECEMS Chief's Uniform","noscript.sqf",'["sfg_fchief"] call clothing_switch;',1,true,true,"",'EMSChiefs_id && {player distance atmsubfire < 2}'];
-_role addaction ["Switch To EMT Uniform","noscript.sqf",'["sfg_emt"] call clothing_switch;',1,true,true,"",'EMTBasic_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To Paramedic Uniform","noscript.sqf",'["sfg_paramedic"] call clothing_switch;',1,true,true,"",'EMTAdavnced_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To Firefighter Duty Uniform","noscript.sqf",'["sfg_fr"] call clothing_switch;',1,true,true,"",'FF1_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To EMS Supervisor Uniform","noscript.sqf",'["sfg_emssup"] call clothing_switch;',1,true,true,"",'EMSSupervisor_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To Fire Supervisor Uniform","noscript.sqf",'["sfg_firesup"] call clothing_switch;',1,true,true,"",'EMSSupervisor_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To EMS Command Uniform","noscript.sqf",'["sfg_emscmd"] call clothing_switch;',1,true,true,"",'EMSCommand_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To Fire Command Uniform","noscript.sqf",'["sfg_fdcmd"] call clothing_switch;',1,true,true,"",'EMSCommand_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To ECEMS District Chief's Uniform","noscript.sqf",'["sfg_dchief"] call clothing_switch;',1,true,true,"",'EMSChiefs_id && {player distance atm5 < 2}'];
-_role addaction ["Switch To FECEMS Chief's Uniform","noscript.sqf",'["sfg_fchief"] call clothing_switch;',1,true,true,"",'EMSChiefs_id && {player distance atm5 < 2}'];
 _role addaction ["Switch To PSO Command Uniform","noscript.sqf",'["sfg_psocmd"] call clothing_switch;',1,true,true,"",'PSOCommand_id && {player distance psoatm < 2}'];
 _role addaction ["Switch To PSO Uniform","noscript.sqf",'["sfg_psoreg"] call clothing_switch;',1,true,true,"",'PSO_id && {player distance psoatm < 2}'];
-
-
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel2 <= 23 and TankenCost < maxpetroluse"];
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel4 <= 23 and TankenCost < maxpetroluse"];
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel5 <= 23 and TankenCost < maxpetroluse"];
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel7 <= 23 and TankenCost < maxpetroluse"];
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel8 <= 23 and TankenCost < maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel2 <= 23 and TankenCost >= maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel4 <= 23 and TankenCost >= maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel5 <= 23 and TankenCost >= maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel7 <= 23 and TankenCost >= maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel8 <= 23 and TankenCost >= maxpetroluse"];
-
 
 (vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call shops_index)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance tdocspawn <= 10) and vehicle player != player"];
 (vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call shops_index)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance psocarspawn <= 10) and vehicle player != player"];

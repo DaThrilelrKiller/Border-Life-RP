@@ -14,5 +14,7 @@
 "rank",
 "rename",
 "setRank",
-"refresh"
+"refresh",
+"actions",
+"init"
 ];

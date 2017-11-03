@@ -56,12 +56,9 @@ class CfgPatches
 #include "DATA\DIALOGS\PlayerCust.hpp"
 #include "DATA\DIALOGS\ipad.hpp"
 #include "DATA\DIALOGS\AR_KeyBindings.hpp"
-#include "DATA\DIALOGS\police.hpp"
-#include "DATA\DIALOGS\ar_kick.hpp"
 #include "DATA\DIALOGS\cdb_diaglog.hpp"
 #include "DATA\DIALOGS\admin_temp.hpp"
 #include "DATA\DIALOGS\shipments_dialog.hpp"
-#include "DATA\DIALOGS\dtk_dispatch.hpp"
 #include "DATA\DIALOGS\atm_menu.hpp"
 #include "DATA\DIALOGS\gang_menu.hpp"
 
@@ -71,7 +68,6 @@ class RscTitles
 #define screenheight (1 - safeZoney*2)
 #include "DATA\DIALOGS\AR_Hud.hpp"
 #include "DATA\DIALOGS\IDCard.hpp"
-#include "DATA\DIALOGS\AR_Nametags.hpp"
 #include "DATA\DIALOGS\RscTitles.hpp"
 #include "DATA\DIALOGS\ar_plate.hpp"
 };

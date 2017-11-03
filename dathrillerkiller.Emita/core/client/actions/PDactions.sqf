@@ -29,9 +29,6 @@ _role addaction [format ["Buy K9 ($%1)", dog_cost],"copdog.sqf", ["buydog"],1,fa
 /*OTHER*/
 _role addaction ["Get Patrol Mission","coppatrol.sqf",["start"],1,false,true,"","player distance copbank <= 4 and !pmissionactive and !patrolwaittime"];
 _role addaction ["Cancel My Patrol Mission","coppatrol.sqf",["end"],1,false,true,"","pmissionactive and player distance copbank <= 4"];
-_role addaction ["Get Security Mission","coppatrol.sqf",["start1"],1,false,true,"","player distance copbank <= 4 and !pmissionactive1 and !patrolwaittime1"];
-_role addaction ["Cancel My Security Mission","coppatrol.sqf",["end1"],1,false,true,"","pmissionactive1 and player distance copbank <= 4"];
-_role addaction ["Crime Log","maindialogs.sqf",["coplog"],1,false,true,"","player distance rathaus <= 3"];
 _role addaction ["Elect A Governor","maindialogs.sqf",["wahlen"],1,false,true,"","player distance rathaus <= 3"];
 _role addaction ["Sign-up For A Debit Card","debitcardsignup.sqf",["mainbank"],1,false,true,"","player distance mainbank <= 15 and (!SigningUpForDebitCard)"];
 _role addaction ["Impound Lot","noscript.sqf",'[dummyobj, "Retrive","LandVehicle"]call Other_impound;',1,false,true,"","player distance newimpoundlot <= 5"];
@@ -54,51 +51,6 @@ _role addaction ["[SAVE YOUR LAND VEHICLE]","noscript.sqf",'[]call StatSave_Save
 _role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[ctrafficspawn]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance savepoint2 <= 3"];
 _role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[ccarspawnchief]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance savepontpdcommand <= 3"];
 _role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[ccarspawn1]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance savepoint2s <= 3"];
-
-/*SKINS*/
-_role addaction ["Switch To CIRU Probationary Uniform","noscript.sqf",'["vilas_sira_swat_m416"] call clothing_switch;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
-_role addaction ["Switch To CIRU Uniform","noscript.sqf",'["ibr_fea"] call clothing_switch;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
-_role addaction ["Switch To CIRU Marksman Uniform","noscript.sqf",'["USMC_SoldierS_Sniper"] call clothing_switch;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
-_role addaction ["Switch To CIRU Lead Uniform","noscript.sqf",'["vilas_sira_swat"] call clothing_switch;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
-_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call clothing_switch;',1,true,true,"",'SWAT_id && {player distance copswatbank < 2}'];
-_role addaction ["Switch To Chief Uniform","noscript.sqf",'["sfg_trevor"] call clothing_switch;',1,true,true,"",'Chief_id && {player distance copcmdbank < 2}'];
-_role addaction ["Switch To Asst.Chief Uniform","noscript.sqf",'["sfg_asstc"] call clothing_switch;',1,true,true,"",'Chief_id && {player distance copcmdbank < 2}'];
-_role addaction ["Switch To Pilot Uniform","noscript.sqf",'["US_Soldier_Pilot_EP1"] call clothing_switch;',1,true,true,"",'PDAviation_id && {player distance copairweapon < 2}'];
-_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call clothing_switch;',1,true,true,"",'PDAviation_id && {player distance copairweapon < 2}'];
-_role addaction ["Switch To Pilot Uniform","noscript.sqf",'["US_Soldier_Pilot_EP1"] call clothing_switch;',1,true,true,"",'PDAviation_id && {player distance copairweapon2 < 2}'];
-_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call clothing_switch;',1,true,true,"",'PDAviation_id && {player distance copairweapon2 < 2}'];
-_role addaction ["Switch To K-9 Uniform","noscript.sqf",'["sfg_k9"] call clothing_switch;',1,true,true,"",'K9_id && {player distance copk9 < 2}'];
-_role addaction ["Switch To K-9 Command Uniform","noscript.sqf",'["sfg_k9com"] call clothing_switch;',1,true,true,"",'K9_id && {player distance copk9 < 2}'];
-_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call clothing_switch;',1,true,true,"",'K9_id && {player distance copk9 < 2}'];
-_role addaction ["Switch To Captain Uniform","noscript.sqf",'["sfg_cpt"] call clothing_switch;',1,true,true,"",'Cpt_id && {player distance copcmdbank < 2}'];
-_role addaction ["Switch To Lieutenant Uniform","noscript.sqf",'["sfg_lt"] call clothing_switch;',1,true,true,"",'Lt_id && {player distance copcmdbank < 2}'];
-_role addaction ["Switch To Patrol Sgt. Uniform","noscript.sqf",'["sfg_sgt"] call clothing_switch;',1,true,true,"",'Sgt_id && {player distance copsgt < 2}'];
-_role addaction ["Switch To Patrol Cpl. Uniform","noscript.sqf",'["sfg_cpl"] call clothing_switch;',1,true,true,"",'Cpl_id && {player distance copcpl < 2}'];
-_role addaction ["Switch To Patrol Senior Patrol Uniform","noscript.sqf",'["sfg_snr"] call clothing_switch;',1,true,true,"",'PO3_id && {player distance coppo3 < 2}'];
-_role addaction ["Switch To Coast Guard Uniform","noscript.sqf",'["yup_uscg_Pilot"] call clothing_switch;',1,true,true,"",'CoastGuard_id && {player distance copcoastguardbank < 2}'];
-_role addaction ["Switch To Patrol Uniform","noscript.sqf",'["sfg_patrol"] call clothing_switch;',1,true,true,"",'PO2_id && {player distance copcoastguardbank < 2}'];
-_role addaction ["Switch To DOC Uniform","noscript.sqf",'["sfg_doc"] call clothing_switch;',1,true,true,"",'DOC_id && {player distance docatm < 2}'];
-_role addaction ["Switch To DOC Command Uniform","noscript.sqf",'["sfg_doccom"] call clothing_switch;',1,true,true,"",'DOC_id && {player distance docatm < 2}'];
-_role addaction ["Switch To DTU Command Uniform","noscript.sqf",'["sfg_uccom"] call clothing_switch;',1,true,true,"",'Lt_id && {player distance devatm < 2}'];
-_role addaction ["Switch To DTU Uniform","noscript.sqf",'["sfg_uc"] call clothing_switch;',1,true,true,"",'Lt_id && {player distance devatm < 2}'];
-_role addaction ["Switch To Highway Patrol Uniform","noscript.sqf",'["sfg_hwp"] call clothing_switch;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
-_role addaction ["Switch To Senior Highway Patrol Uniform","noscript.sqf",'["sfg_hwpsnr"] call clothing_switch;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
-_role addaction ["Switch To Highway Patrol Cpl. Uniform","noscript.sqf",'["sfg_hwpcpl"] call clothing_switch;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
-_role addaction ["Switch To Highway Patrol Sgt. Uniform","noscript.sqf",'["sfg_hwpsgt"] call clothing_switch;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
-_role addaction ["Switch To Highway Patrol Command Uniform","noscript.sqf",'["sfg_hwpcmd"] call clothing_switch;',1,true,true,"",'HWP_id && {player distance cophwatm < 2}'];
-
-
-/*GAS STATIONS*/
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel2 <= 23 and TankenCost < maxpetroluse"];
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel4 <= 23 and TankenCost < maxpetroluse"];
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel5 <= 23 and TankenCost < maxpetroluse"];
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel7 <= 23 and TankenCost < maxpetroluse"];
-_role addaction [format [localize "STRS_addAction_buy_gas", TankenCost],"petrolrefuel.sqf",[],1,false,true,"","player distance fuel8 <= 23 and TankenCost < maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel2 <= 23 and TankenCost >= maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel4 <= 23 and TankenCost >= maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel5 <= 23 and TankenCost >= maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel7 <= 23 and TankenCost >= maxpetroluse"];
-_role addaction ["NO GAS AVAILABLE","petrolrefuel.sqf",[],1,false,true,"","player distance fuel8 <= 23 and TankenCost >= maxpetroluse"];
 
 _role addaction ["Dog Control","noscript.sqf", 'ar_doggy = true', 1, false, true, "", "!ar_doggy and alive (player getVariable 'CLAY_DogUnit')"];
 _role addaction ["Exit Dog Control","noscript.sqf", 'ar_doggy = false', 1, false, true, "", "ar_doggy"];

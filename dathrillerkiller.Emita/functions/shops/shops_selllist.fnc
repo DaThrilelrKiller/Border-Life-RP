@@ -66,6 +66,14 @@ _calssname = _infos call INV_getitemClassName;
 					};	
 				} forEach (allMissionObjects "AllVehicles");
 		};
+		case "App":
+		{
+			if (_item in INVAppsInstalled)then {
+				_index = lbAdd [101, format["%1 ($%2)", _name, (_preis call string_intToString)] ];																																							
+				lbSetData [101, _index, format ['%1',[_item,_infos,_preisOhneTax, _preis]]];
+
+			};			
+		};
 		default 
 		{
 			diag_log format ["[ERROR] ShopModule | Invalid type | %1",_type];

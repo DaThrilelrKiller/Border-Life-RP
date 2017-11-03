@@ -10,6 +10,7 @@ ctrlSetText [7,"Join"];
 buttonSetAction [7,"call gang_join"];
 
 /* disables buttons that are not needed if your not in a gang */
+ctrlEnable [7, false];
 ctrlEnable [8, false];
 ctrlEnable [9, false];
 ctrlEnable [10, false];

@@ -1,0 +1,3 @@
+module_fuel = true;
+v_fuel_max             = 400;
+v_fuel_use = 3;

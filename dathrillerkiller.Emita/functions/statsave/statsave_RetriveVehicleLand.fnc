@@ -24,10 +24,11 @@ _plate = _Array select 5;
 _warrants = _Array select 6;
 _Licences = _Array select 7;
 _notes = _Array select 8;
-_Loaction = _Array select 9;
+_sirens = _Array select 9;
+_Loaction = _Array select 10;
 
 [_Scriptname,_Loaction,player,ar_side,_plate]call shops_createVehicle;
-	[_trunk,_upgrades,_weaps,_mags,_warrants,_Licences,_notes]spawn
+	[_trunk,_upgrades,_weaps,_mags,_warrants,_Licences,_notes,_sirens]spawn
 	{
 		_weaps = _this select 2;
 		_mags = _this select 3;
@@ -41,12 +42,23 @@ _Loaction = _Array select 9;
 		newvehicle setVariable ['cdb_notes',(_this select 6),true];
 		clearWeaponCargo newvehicle;
 		clearMagazineCargo newvehicle;
+		removeallweapons newvehicle;
+		
 		{
 			newvehicle addWeaponCargo [_x, (_weaps select 1 select _forEachIndex)];
 		}forEach (_weaps select 0);
 		{
 			newvehicle addMagazineCargo [_x, (_mags select 1 select _forEachIndex)];
 		}forEach (_mags select 0);
+		
+		{
+					newvehicle removeWeapon _x;
+		}forEach (weapons newvehicle);
+		
+		{
+			newvehicle addWeapon _x;
+		}forEach (_this select 7);
+		
 		closeDialog 0;
 	};
 "];   

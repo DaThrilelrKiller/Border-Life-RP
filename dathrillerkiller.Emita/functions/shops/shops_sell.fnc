@@ -106,6 +106,13 @@ switch(_itemtype)do
 	};
 	case "App":
 	{
+		if (_item in INVAppsInstalled)then {
+		[player,"geld",_cost] call storage_add;
+		INVAppsInstalled = INVAppsInstalled - [_item];
+		
+		}else{
+		systemChat "you do not have the app you are tryin to sell";
+		};
 		
 	};
 	case "siren":

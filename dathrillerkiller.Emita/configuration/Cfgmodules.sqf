@@ -31,6 +31,7 @@ dtk_active_modules =
 "Gear",
 "Robbery",
 "Speedcam",
+"Fuel",
 "Ipad",
 "Keys",
 "Garage",

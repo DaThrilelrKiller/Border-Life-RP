@@ -53,7 +53,10 @@ if (dtk_client) then
 {
 	enableSentences false;
 	player disableConversation true;
-	waitUntil {!isNil 'AR_Whitelistloaded' and !isNil "AR_StaticsLoaded"};
+	waitUntil 
+	{
+	!isNil "AR_Whitelistloaded" and !isNil "AR_StaticsLoaded"
+	};
 };
 
 call compile preprocessFile "configuration\CfgVariables.sqf";													

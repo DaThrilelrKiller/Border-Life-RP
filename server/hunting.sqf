@@ -22,7 +22,7 @@ for [{_i=0}, {_i < (count huntingarray)},{_i=_i+1}] do
 	_boars = nearestobjects [_pos, ["wildboar"], _area];
 	if(count _boars < maxboars)then{createAgent ["Wildboar", _pos, [], _area, "NONE"];};
 	
-	_rabbits  = nearestobjects [_pos, ["cow01"], _area]; hint str count _rabbits;
+	_rabbits  = nearestobjects [_pos, ["cow01"], _area];
 	if(count _rabbits < maxcows)then{_unit = createAgent ["cow01", _pos, [], _area, "NONE"];};
 	
 	};

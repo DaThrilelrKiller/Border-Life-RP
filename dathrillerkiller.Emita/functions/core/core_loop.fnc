@@ -1,6 +1,6 @@
 private ["_time","_function"];
 
-for "_i" from 0 to 500 step 1 do 
+for "_i" from 0 to 1000 step 1 do 
 {
 
 	{
@@ -12,5 +12,5 @@ for "_i" from 0 to 500 step 1 do
 
 	}count core_loop_array;
 	uiSleep 1;
-if (_i == 500)then {_i = 0;};
+if (_i == 1000)then {_i = 0;};
 };

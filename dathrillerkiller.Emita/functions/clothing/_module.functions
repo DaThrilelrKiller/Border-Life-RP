@@ -1,5 +1,6 @@
 [
 "delete",
 "exsist",
-"switch"
+"switch",
+"init"
 ];

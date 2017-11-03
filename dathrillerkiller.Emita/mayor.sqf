@@ -86,16 +86,6 @@ if (_art == "serverloop") then
 	};
 };
 
-if (_art == "clientgesetz") then 
-{										
-	_nummer = _this select 1;							
-	_text   = _this select 2;																													
-	if (_nummer == -1) exitWith {};						
-	if ((_text call string_lenght) > 60) exitWith {systemChat  localize "STRS_text_zu_lang";};
-	call compile format ["GesetzArray SET [%1, ""%2""]; publicVariable 'GesetzArray'; ", _nummer, _text];
-	format ["hint format [localize ""STRS_gilde_gesetze_public"", %1, ""%2""];", _nummer, _text] call network_broadcast;
-};
-
 if (_art == "steuernMayor") then 
 {								
 	_item = _this select 1;			

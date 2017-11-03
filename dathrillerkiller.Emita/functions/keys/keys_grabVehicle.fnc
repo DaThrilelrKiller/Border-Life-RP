@@ -9,7 +9,7 @@ if (!isNull _cursor && {[player,_cursor]call keys_has})exitWith {_cursor};
 
 _return = 
 {
-	if ([player,_x]call keys_has)then {_x};
+	if ([player,_x]call keys_has)exitWith {_x};
 }forEach _array;
 _return
 

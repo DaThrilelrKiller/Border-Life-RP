@@ -8,5 +8,6 @@
 "AddLoop",
 "loop",
 "init",
-"addAction"
+"addAction",
+"waitUnitl"
 ];
