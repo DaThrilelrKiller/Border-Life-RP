@@ -11,7 +11,7 @@ switch(typeName _target)do
 {
 	case "OBJECT":
 	{
-		if (_Target == player)then
+		if (local _target)then
 		{
 			[_Prams,_Function,_Sceduled]call network_Run;
 		}

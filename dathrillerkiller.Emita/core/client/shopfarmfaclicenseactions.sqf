@@ -34,7 +34,7 @@ for [{_i = 0}, {_i < (count INV_FarmItemArray)}, {_i = _i + 1}] do
 
 		{																																																				
 
-		[(_arr select 1), (_arr select 2), (_arr select 3), (_arr select 4)] execVM "gathergen.sqf";	
+		[(_arr select 1), (_arr select 2), (_arr select 3), (_arr select 4)] execVM "scripts\gathergen.sqf";	
 
 		};	
 

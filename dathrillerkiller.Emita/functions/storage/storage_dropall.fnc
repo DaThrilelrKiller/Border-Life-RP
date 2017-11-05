@@ -28,7 +28,7 @@ _amounts = _array select 1;
 		_object setvariable ["droparray", [_amount, _x], true];
 		_name13 = _x call INV_getitemname;
 		_object  setvehicleinit format["
-		this addaction ['Pickup %1 (%2)','pickup.sqf',[this, '%3', %2]];
+		this addaction ['Pickup %1 (%2)','scripts\pickup.sqf',[this, '%3', %2]];
 		", _name13, _amount,_x];
 		processInitCommands;
 	};

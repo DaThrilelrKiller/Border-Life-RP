@@ -88,7 +88,7 @@ KeyPressE =
 			if(isCiv and !isCop) then 
 			{ 				
 				_i = 4; 				
-				call compile format['[0,0,0, ["civinteraktion", "%1", %1]] execVM "interact.sqf";', _civ]; 				
+				call compile format['[0,0,0, ["civinteraktion", "%1", %1]] execVM "scripts\interact.sqf";', _civ]; 				
 				_handled=true; 			
 			}; 					
 		};  		
@@ -154,7 +154,7 @@ KeyPressF =
 			{
 			_civ = _this select 0;
 			if(_civ distance player > 2 or !isPlayer _civ)exitwith{};
-			[_civ,[player],{["hit", (_this select 0), "Melee", 1] execVM "stun.sqf"},false,false]call network_MPExec;
+			[_civ,[player],{["hit", (_this select 0), "Melee", 1] execVM "scripts\stun.sqf"},false,false]call network_MPExec;
 			systemChat  "you stunned this player!";			 
 			}; 
 		}; 

@@ -40,8 +40,9 @@ dtk_active_modules =
 "Dance",
 "Statsave",
 "Hunger",
-"Spawn",
-"Gang"
+"Gang",
+"Vehicle",
+"Spawn"
 ];
 
 /*loads variables first for all active modules*/
@@ -59,11 +60,11 @@ dtk_active_modules =
 		',_module,_x];
 		dtk_fnc_num = _forEachIndex + 1;
 	}forEach _functions;
-	diag_log format ["Loaded Module - %1 With %2 Functions",_module,dtk_fnc_num];
+	diag_log text format ["Loaded Module - %1 With %2 Functions",_module,dtk_fnc_num];
 	dtk_fnc_total = dtk_fnc_total + dtk_fnc_num;
 }count dtk_active_modules;
 
-diag_log format ["Total Modules: %2 Total Functions: %1",dtk_fnc_total,count dtk_active_modules];
+diag_log text format ["Total Modules: %2 Total Functions: %1",dtk_fnc_total,count dtk_active_modules];
 
 _handler = []spawn setup_init;
 waitUntil {ScriptDone _handler};

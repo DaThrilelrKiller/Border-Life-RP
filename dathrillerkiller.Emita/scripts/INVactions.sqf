@@ -39,7 +39,7 @@ if ((_action == "drop") and (inv_candropitem)) then
 
 {
 
-_h = [_item, _textamount] execVM "drop.sqf";
+_h = [_item, _textamount] execVM "scripts\drop.sqf";
 waitUntil {ScriptDone _h};
 };
 
@@ -47,6 +47,6 @@ if ((_action == "give") and (inv_cangiveitem)) then
 
 {
 
-["uebergabe", _item, _textamount, _player] execVM "give.sqf";
+["uebergabe", _item, _textamount, _player] execVM "scripts\give.sqf";
 
 };

@@ -12,5 +12,6 @@
 "action",
 "allowDamage",
 "setUnconscious",
-"broadcast"
+"broadcast",
+"Say3D"
 ];

@@ -30,11 +30,8 @@ if (_Action == "impound")then
 		_Playerside = (_VclVar select 2);
 		_nameimp = if (dtk_server)then {"Server Cleaner"}else {(name player)};
 			
-		_trunk = _vcl getVariable "dtk_storage";
-		_speedupgrade = _vcl getvariable "tuning";
-			
-		if (isNil "_trunk")then {_trunk = [[],[]];};
-		if (isNil "_speedupgrade")then {_speedupgrade = 0;};
+		_trunk = _vcl getVariable ["dtk_storage",[[],[]]];
+		_speedupgrade = _vcl getvariable ["tuning",0];
 			
 		INVVehiclesImpoundArray set [count INVVehiclesImpoundArray, [_UID,_Scriptname,_Playerside,_trunk,_speedupgrade]];
 		publicvariable "INVVehiclesImpoundArray";

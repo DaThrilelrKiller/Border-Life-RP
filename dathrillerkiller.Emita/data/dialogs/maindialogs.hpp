@@ -32,7 +32,7 @@ class baildialog
 		h = 0.04;	
 		
 		text = $STRD_description_bail_pay;	
-		action = "[ctrlText 2] execVM ""bail.sqf""; closeDialog 0";		
+		action = "[ctrlText 2] execVM ""scripts\bail.sqf""; closeDialog 0";		
 	};
 	
 	class cancel : RscButton	
@@ -172,7 +172,7 @@ class gesetzdialog
 		idc = 3;
 
 		text = $STRD_dialogandere_gesetze_submit;	
-		action = "[0,0,0,[""clientgesetz"", lbcursel 1, Ctrltext 2]] execVM ""mayor.sqf""; closedialog 0;";	
+		action = "[0,0,0,[""clientgesetz"", lbcursel 1, Ctrltext 2]] execVM ""scripts\mayor.sqf""; closedialog 0;";	
 	};	
 	
 	class dummybutton : RscDummy 
@@ -469,7 +469,7 @@ class wahldialog
 		h = 0.04;
 		
 		text = $STRD_description_wahl_submit;
-		action = "[0,1,2,[""ClientWahl"", lbData [1, (lbCurSel 1)]]] execVM ""mayor.sqf""; closedialog 0";
+		action = "[0,1,2,[""ClientWahl"", lbData [1, (lbCurSel 1)]]] execVM ""scripts\mayor.sqf""; closedialog 0";
 	};
 	
 	class cancel : RscButton		
@@ -613,7 +613,7 @@ class steuerdialog
 		h = 0.04;
 		
 		text = $STRD_description_steuer_submit;
-		action = "[0,1,2,[""steuernMayor"", (round(sliderPosition 12)), (round(sliderPosition 32)), (round(sliderPosition 42)), (round(sliderPosition 22)), (round(sliderPosition 52))]] execVM ""mayor.sqf""; closedialog 0;";	
+		action = "[0,1,2,[""steuernMayor"", (round(sliderPosition 12)), (round(sliderPosition 32)), (round(sliderPosition 42)), (round(sliderPosition 22)), (round(sliderPosition 52))]] execVM ""scripts\mayor.sqf""; closedialog 0;";	
 	};
 	
 	class button_cancel : RscButton	

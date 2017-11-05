@@ -25,6 +25,6 @@ call ipad_LoadApps;
 
 lbSetCurSel [21009, 0];
 lbSetCurSel [15009, 0];
-buttonSetAction [16009,"[""use"",lbData [15009, (lbCurSel 15009)], ctrlText 10009, lbData [21009, (lbCurSel 21009)]] execVM ""INVactions.sqf""; closedialog 0;"];
-buttonSetAction [16019,"[""drop"",lbData [15009, (lbCurSel 15009)], ctrlText 10009, lbData [21009, (lbCurSel 21009)]] execVM ""INVactions.sqf""; closedialog 0;"];
-buttonSetAction [16029,"[""give"",lbData [15009, (lbCurSel 15009)], ctrlText 10009, lbData [21009, (lbCurSel 21009)]] execVM ""INVactions.sqf""; closedialog 0;"];
+buttonSetAction [16009,"[""use"",lbData [15009, (lbCurSel 15009)], ctrlText 10009, lbData [21009, (lbCurSel 21009)]] execVM ""scripts\INVactions.sqf""; closedialog 0;"];
+buttonSetAction [16019,"[""drop"",lbData [15009, (lbCurSel 15009)], ctrlText 10009, lbData [21009, (lbCurSel 21009)]] execVM ""scripts\INVactions.sqf""; closedialog 0;"];
+buttonSetAction [16029,"[""give"",lbData [15009, (lbCurSel 15009)], ctrlText 10009, lbData [21009, (lbCurSel 21009)]] execVM ""scripts\INVactions.sqf""; closedialog 0;"];

@@ -9,7 +9,7 @@ if (_art == "submit") then
 	if (_codeInput != safeCodeSet) exitWith
 	{
 		systemChat  "That code is incorrect!";
-		format['[0,1,2,["robwrongcode", %1]] execVM "bankrob.sqf";', _safeh] call network_broadcast;
+		format['[0,1,2,["robwrongcode", %1]] execVM "scripts\bankrob.sqf";', _safeh] call network_broadcast;
 		format['systemChat "Speedys Security INC Has Detected An Attempt To Hack Into The Bank Safe!";'] call network_broadcast;
 		('if(iscop) then {playsound "beep";}') call network_broadcast;
 		sleep 4;
@@ -20,7 +20,7 @@ if (_art == "submit") then
 	if (_codeInput == safeCodeSet) then
 	{
 		player sideChat "The code is correct! The code has been reset by Speedys Security INC automatic bank reset system!";
-		format['[0,1,2,["robstart", %1]] execVM "bankrob.sqf";', _safeh] call network_broadcast;
+		format['[0,1,2,["robstart", %1]] execVM "scripts\bankrob.sqf";', _safeh] call network_broadcast;
         ('if(iscop) then {playsound "beep";}') call network_broadcast;
         "if (iscop) then {player sideChat ""ATTENTION All Officers 10-19 to the Bank, currently being robbed by armed gunmen!""};" call network_broadcast;
 		[] call Main_ResetSafeCode;
@@ -104,7 +104,7 @@ if (_art == "submit") then
 	[1112, "RUN!!!!!!!!!!!",100] call Main_LoadingSetText;
 	22254 cutRsc["Default", "plain"];
 	[player,"Robbed the Bank",wantedamountforbank]call cdb_addWarrant;
-	[0,1,2,["ausrauben", Safe1]] execVM "bankrob.sqf";
+	[0,1,2,["ausrauben", Safe1]] execVM "scripts\bankrob.sqf";
 		};
 	};
 };

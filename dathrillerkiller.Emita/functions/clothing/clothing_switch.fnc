@@ -42,7 +42,7 @@ if (_skinsold != _skin) then {
 	player removeAllEventHandlers "HandleDamage";
 	player removeAllEventHandlers "Respawn";
 	player removeAllEventHandlers "MPHit";
-	player addEventHandler ["fired",{_this execVM "fired.sqf"}];
+	player addEventHandler ["fired",{_this execVM "scripts\fired.sqf"}];
 	player addEventHandler ["handleDamage", {_this call events_sethit}];
 	player addEventHandler ["respawn", {_this call setup_respawn; _this}]; 
 	player setPosATL _pos;

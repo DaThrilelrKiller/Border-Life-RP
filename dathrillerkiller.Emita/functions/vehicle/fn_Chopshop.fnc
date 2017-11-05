@@ -1,7 +1,3 @@
-/*
-TBD
-*/
-
 chopavailable = false;
  
 private["_vcl","_tune","_payout","_pay1","_pay2","_pay3","_pay4","_pay5","_pay6"];

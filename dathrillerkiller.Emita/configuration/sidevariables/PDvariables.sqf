@@ -6,13 +6,13 @@ isamedic       	= false;
 ar_sidename = "Police Officer";
 
 INV_apps = [
-["app_civilian","sfg_textures\ipad\CIVILIAN.PAA","[0,0,0,[""playerlist""]] execVM 'maindialogs.sqf';"],
+["app_civilian","sfg_textures\ipad\CIVILIAN.PAA","[0,0,0,[""playerlist""]] execVM 'scripts\maindialogs.sqf';"],
 ["app_save","sfg_textures\ipad\SAVE.PAA","[]spawn StatSave_Save;"],
-["app_oil","sfg_textures\ipad\OIL.PAA","[0,0,0,[""oilswag""]] execVM 'maindialogs.sqf'"],
-["app_dmv","sfg_textures\ipad\DMV.PAA","[0,0,0,[""licswag""]] execVM 'maindialogs.sqf';"],
-["app_laws","sfg_textures\ipad\LAWS.PAA","[0,0,0,[""lawswag""]] execVM 'maindialogs.sqf';"],
-["app_gangs","sfg_textures\ipad\GANGS.PAA","[0,0,0,[""gangsswag""]] execVM 'maindialogs.sqf';"],
-["app_stockmarket","sfg_textures\ipad\stockmarket.PAA","[0,0,0,[""fundsswag""]] execVM ""maindialogs.sqf"";"],
+["app_oil","sfg_textures\ipad\OIL.PAA","[0,0,0,[""oilswag""]] execVM 'scripts\maindialogs.sqf'"],
+["app_dmv","sfg_textures\ipad\DMV.PAA","[0,0,0,[""licswag""]] execVM 'scripts\maindialogs.sqf';"],
+["app_laws","sfg_textures\ipad\LAWS.PAA","[0,0,0,[""lawswag""]] execVM 'scripts\maindialogs.sqf';"],
+["app_gangs","sfg_textures\ipad\GANGS.PAA","[0,0,0,[""gangsswag""]] execVM 'scripts\maindialogs.sqf';"],
+["app_stockmarket","sfg_textures\ipad\stockmarket.PAA","[0,0,0,[""fundsswag""]] execVM ""scripts\maindialogs.sqf"";"],
 ["app_computer","sfg_textures\ipad\Computer.PAA","if(vehicle player != player)then{call cdb_open}else {systemChat 'You Must Be In A Vehicle To Access Your ECPD Computer!';};"],
 ["app_store","sfg_textures\ipad\stockmarket.PAA"," [AppStorenum]call shops_openshop; "],
 ["app_phone","sfg_textures\ipad\PHONE.PAA","systemChat 'W.I.P';"],

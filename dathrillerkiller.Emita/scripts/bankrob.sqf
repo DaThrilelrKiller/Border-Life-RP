@@ -29,7 +29,7 @@ call compile format["robpool%1 = 0;publicvariable ""robpool%1"";", _safe];
 systemChat  format[localize "STRS_bank_rob_info", (robb_money call string_intToString)];
 [] call Main_ResetSafeCode;
 
-format['[0,1,2,["opfer", %1, %2]] execVM "bankrob.sqf";', _safe, local_cash] call network_broadcast;
+format['[0,1,2,["opfer", %1, %2]] execVM "scripts\bankrob.sqf";', _safe, local_cash] call network_broadcast;
 
 if (_safedoor == "Safe1") then 
 {

@@ -5,7 +5,7 @@ waitUntil {scriptDone _H};
 
 [] execVM "\MPMissions\server\core\functions\main\fn_loop.sqf";
 
-[0, 0, 0, ["serverloop"]] execVM "mayor.sqf";
+[0, 0, 0, ["serverloop"]] execVM "scripts\mayor.sqf";
 
 
 []spawn S_ems_missionloop;

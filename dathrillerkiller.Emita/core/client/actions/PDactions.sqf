@@ -24,13 +24,13 @@ _role addaction ["Shop 1 Export","noscript.sqf","[ (shop1 call shops_index)]call
 _role addaction ["Shop 4 Export","noscript.sqf","[ (shop4 call shops_index)]call shops_openshop; ",1,false,true,"","player distance shop4export <= 3"];
 
 
-_role addaction [format ["Buy K9 ($%1)", dog_cost],"copdog.sqf", ["buydog"],1,false,true,"",'player distance dogspawn <= 5 and (K9_id)'];
+_role addaction [format ["Buy K9 ($%1)", dog_cost],"scripts\copdog.sqf", ["buydog"],1,false,true,"",'player distance dogspawn <= 5 and (K9_id)'];
 
 /*OTHER*/
-_role addaction ["Get Patrol Mission","coppatrol.sqf",["start"],1,false,true,"","player distance copbank <= 4 and !pmissionactive and !patrolwaittime"];
-_role addaction ["Cancel My Patrol Mission","coppatrol.sqf",["end"],1,false,true,"","pmissionactive and player distance copbank <= 4"];
-_role addaction ["Elect A Governor","maindialogs.sqf",["wahlen"],1,false,true,"","player distance rathaus <= 3"];
-_role addaction ["Sign-up For A Debit Card","debitcardsignup.sqf",["mainbank"],1,false,true,"","player distance mainbank <= 15 and (!SigningUpForDebitCard)"];
+_role addaction ["Get Patrol Mission","scripts\coppatrol.sqf",["start"],1,false,true,"","player distance copbank <= 4 and !pmissionactive and !patrolwaittime"];
+_role addaction ["Cancel My Patrol Mission","scripts\coppatrol.sqf",["end"],1,false,true,"","pmissionactive and player distance copbank <= 4"];
+_role addaction ["Elect A Governor","scripts\maindialogs.sqf",["wahlen"],1,false,true,"","player distance rathaus <= 3"];
+_role addaction ["Sign-up For A Debit Card","scripts\debitcardsignup.sqf",["mainbank"],1,false,true,"","player distance mainbank <= 15 and (!SigningUpForDebitCard)"];
 _role addaction ["Impound Lot","noscript.sqf",'[dummyobj, "Retrive","LandVehicle"]call Other_impound;',1,false,true,"","player distance newimpoundlot <= 5"];
 _role addaction ["Reset Targets","noscript.sqf",'{_x animate["terc",0]} count (nearestobjects [getpos player, ["TargetEpopup"],  500])',1,true,true,"",'player distance targetrange1 < 10'];
 _role addaction ["Reset Targets","noscript.sqf",'{_x animate["terc",0]} count (nearestobjects [getpos player, ["TargetEpopup"],  500])',1,true,true,"",'player distance targetrange2 < 10'];
@@ -58,10 +58,10 @@ _role addaction ["Follow","noscript.sqf", '[1] execVM "\CLAY_Dogs\handler\dogMov
 _role addaction ["Wait","noscript.sqf", '[2] execVM "\CLAY_Dogs\handler\dogMove.sqf"', 1, false, true, "", "ar_doggy"];
 _role addaction ["Move To Pos","noscript.sqf", '[3] execVM "\CLAY_Dogs\handler\dogMove.sqf"', 1, false, true, "", "ar_doggy"];
 _role addaction [" ","noscript.sqf", '', 1, false, true, "", "ar_doggy"];
-_role addaction ["Attack Target","noscript.sqf", '[cursorTarget] execVM "dogAttack.sqf"', 1, false, true, "", "ar_doggy"];
-_role addaction ["Drug Search","noscript.sqf", '[cursorTarget] execVM "dogsearch.sqf"', 1, false, true, "", "ar_doggy"];
-_role addaction ["Board Car","noscript.sqf", '[1, cursorTarget] execVM "dogVehicle.sqf"', 1, false, true, "", "ar_doggy"];
-_role addaction ["Dismount","noscript.sqf", '[2] execVM "dogVehicle.sqf"', 1, false, true, "", "ar_doggy"];
+_role addaction ["Attack Target","noscript.sqf", '[cursorTarget] execVM "scripts\dogAttack.sqf"', 1, false, true, "", "ar_doggy"];
+_role addaction ["Drug Search","noscript.sqf", '[cursorTarget] execVM "scripts\dogSearch.sqf"', 1, false, true, "", "ar_doggy"];
+_role addaction ["Board Car","noscript.sqf", '[1, cursorTarget] execVM "scripts\dogVehicle.sqf"', 1, false, true, "", "ar_doggy"];
+_role addaction ["Dismount","noscript.sqf", '[2] execVM "scripts\dogVehicle.sqf"', 1, false, true, "", "ar_doggy"];
 
 _role addaction ["Tow Vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0);["TOW",_vcl] call Other_Towing;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0); player distance _vcl < 10 and _vcl getVariable "towing" == "" and [player,_vcl]call keys_has'];
 _role addaction ["Release Vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0);["RELEASE",_vcl] call Other_Towing;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_TK_GUE_EP1","f350_red","f350_black","f350_blue","f350_pink","f350_white","il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_selvo","il_silverado_white","il_silverado_pd","lcu"], 10] select 0); player distance _vcl < 10 and _vcl getVariable "towing" != "" and [player,_vcl]call keys_has'];

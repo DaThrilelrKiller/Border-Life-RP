@@ -57,7 +57,7 @@ _object setvariable ["droparray", [_amount, _resource], true];
 };
 
 _object  setvehicleinit format["
-this addaction ['Pickup %1 (%2)','pickup.sqf',[this, '%3', %2]];
+this addaction ['Pickup %1 (%2)','scripts\pickup.sqf',[this, '%3', %2]];
 ", _name, _amount,_resource];
 processInitCommands;
 

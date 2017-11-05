@@ -27,6 +27,9 @@ _towers = ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_
 		newvehicle setVariable ["dtk_storage",[[],[]], true];
 	',_Classname, _SpawnLocation, MPID, round(time)];
 	
+	newvehicle addeventhandler ["HandleDamage",vehicle_handleDamag ];
+
+	
 	_plate = _this select 4;
 	if (isNil "_plate")then{
 	[newvehicle] call plates_setplate;
@@ -44,7 +47,7 @@ if (_ScriptClassName in _type2) then
 }; 
 if (_ScriptClassName in _Halojump)then
 {
-	newvehicle setVehicleInit 'this addAction ["HALO Jump","jump.sqf",[],1,false,true,"","_this in _target"]'; 
+	newvehicle setVehicleInit 'this addAction ["HALO Jump","scripts\jump.sqf",[],1,false,true,"","_this in _target"]'; 
 };
    
 				

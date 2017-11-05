@@ -12,7 +12,7 @@ if (_art == "ClientWahl") then
 
 	if (WahlSperre) exitWith {systemChat  "You Just Voted For A Governor!";};				
 	_spielernum   = call compile (_this select 1);	
-	format["if (dtk_server) then {[0,1,2,[""ServerWahl"", %1, %2]] execVM ""mayor.sqf"";};", _spielernum, rolenumber] call network_broadcast;										
+	format["if (dtk_server) then {[0,1,2,[""ServerWahl"", %1, %2]] execVM ""scripts\mayor.sqf"";};", _spielernum, rolenumber] call network_broadcast;										
 	systemChat  format[localize "STRS_regierung_votedfor", (playerstringarray select _spielernum)];									
 		
 	WahlSperre = true;														

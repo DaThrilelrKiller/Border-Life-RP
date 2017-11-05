@@ -74,10 +74,6 @@ _calssname = _infos call INV_getitemClassName;
 
 			};			
 		};
-		default 
-		{
-			diag_log format ["[ERROR] ShopModule | Invalid type | %1",_type];
-		};
 	};
 
 }count _this;

@@ -16,7 +16,7 @@ if (_art == 5) exitWith
 
 {
 
-(format ["if (AR_playerString == ""%1"") then {[""licheck"", ""%2""] execVM ""civmenu.sqf"";}", _civmenu_civ, AR_playerString]) call network_broadcast;
+(format ["if (AR_playerString == ""%1"") then {[""licheck"", ""%2""] execVM ""scripts\civmenu.sqf"";}", _civmenu_civ, AR_playerString]) call network_broadcast;
 
 };
 
@@ -34,7 +34,7 @@ if (_art == 6) exitWith
 
 if(!(_civmenuciv call ISSE_IsVictim))exitwith{hint localize "STRS_inventory_checknohands"};		
 
-(format ["if (AR_playerString == ""%1"") then {[""inventcheck"", ""%2""] execVM ""civmenu.sqf"";}", _civmenu_civ, AR_playerString]) call network_broadcast;
+(format ["if (AR_playerString == ""%1"") then {[""inventcheck"", ""%2""] execVM ""scripts\civmenu.sqf"";}", _civmenu_civ, AR_playerString]) call network_broadcast;
 
 };
 
@@ -72,7 +72,7 @@ if (_art == 2) exitWith
 
 if(!(_civmenuciv call ISSE_IsVictim))exitwith{hint localize "STRS_inventory_checknohands"};
 
-(format ["if (player == %1) then {[""disarm""] execVM ""civmenu.sqf"";};", _civmenuciv]) call network_broadcast;
+(format ["if (player == %1) then {[""disarm""] execVM ""scripts\civmenu.sqf"";};", _civmenuciv]) call network_broadcast;
 
 systemChat  format [localize "STRS_civmenu_disarm", _civmenu_civ];
 
@@ -83,7 +83,7 @@ if ((_art == 3) and (player distance prisonflag <= 70)) exitWith
 {
 
 _dauer = round(_this select 1);
-format ["if (player == %1) then {[""arrest"", %2, %3] execVM ""civmenu.sqf"";};", _civmenu_civ, _dauer, player] call network_broadcast;
+format ["if (player == %1) then {[""arrest"", %2, %3] execVM ""scripts\civmenu.sqf"";};", _civmenu_civ, _dauer, player] call network_broadcast;
 
 systemChat  format[localize "STRS_civmenu_arrested", _civmenu_civ];
 
@@ -96,7 +96,7 @@ if (_art == 4) exitWith
 _strafe = _this select 1;
 if (!(_strafe call string_isInteger)) exitWith {systemChat  localize "STRS_inv_no_valid_number";};
 _strafe = _strafe call string_toInt;  if (_strafe <= 0) exitWith {};
-(format ["if (player == %1) then {[""ticket"", %2, %3] execVM ""civmenu.sqf"";}; systemChat format[localize ""STRS_civmenu_ticket_globalchat"", name %1, %2, name %3];", _civmenuciv, (_strafe call string_intToString), player]) call network_broadcast;
+(format ["if (player == %1) then {[""ticket"", %2, %3] execVM ""scripts\civmenu.sqf"";}; systemChat format[localize ""STRS_civmenu_ticket_globalchat"", name %1, %2, name %3];", _civmenuciv, (_strafe call string_intToString), player]) call network_broadcast;
 
 };
 if ((_art == 7) and (player distance maxFlag <= 40)) exitWith 
@@ -104,7 +104,7 @@ if ((_art == 7) and (player distance maxFlag <= 40)) exitWith
 {
 
 _dauer = round(_this select 1);
-format ["if (player == %1) then {[""arrestMax"", %2, %3] execVM ""civmenu.sqf"";};", _civmenu_civ, _dauer, player] call network_broadcast;
+format ["if (player == %1) then {[""arrestMax"", %2, %3] execVM ""scripts\civmenu.sqf"";};", _civmenu_civ, _dauer, player] call network_broadcast;
 
 systemChat  format[localize "STRS_civmenu_arrested", _civmenu_civ];
 

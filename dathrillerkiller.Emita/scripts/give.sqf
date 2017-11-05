@@ -17,7 +17,7 @@ if (player distance _playerobject > 20)              exitWith {systemChat  local
 if (!(_item call INV_getitemGiveable))               exitWith {systemChat  localize "STRS_inv_inventar_uebergabe_verbot";};
 if (!([player,_item,-_menge] call storage_add)) exitWith {systemChat  localize "STRS_inv_inventar_uebergabe_zuwenig";};
 if (_menge < 0) exitWith {systemChat  localize "STRS_give_minus_then";};
-format ["if (player == %1) then {[""bekommen"", ""%2"", %3, %4] execVM ""give.sqf"";};", _playerobject, _item, _menge, player] call network_broadcast;
+format ["if (player == %1) then {[""bekommen"", ""%2"", %3, %4] execVM ""scripts\give.sqf"";};", _playerobject, _item, _menge, player] call network_broadcast;
 				
 systemChat  format [localize "STRS_inv_inventar_uebergabe_success_self", name _playerobject, (_menge call string_intToString), _itemanzeige];
 

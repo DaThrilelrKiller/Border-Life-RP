@@ -1,7 +1,7 @@
 "EMSMissionType" addPublicVariableEventHandler {(_this select 1) spawn ems_EMSMissionDamageHandler;};
 "PureHouses" addPublicVariableEventHandler {call DTK_HouseInit;};
 player addEventHandler ["handleDamage", {_this call events_sethit;}];
-player addEventHandler ["fired",{_this execVM "fired.sqf"}];
+player addEventHandler ["fired",{_this execVM "scripts\fired.sqf"}];
 
 "PVEH_netSay3D" addPublicVariableEventHandler {
       private["_array"];

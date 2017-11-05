@@ -3,7 +3,7 @@ KeyPressU =
 	_tgt = cursorTarget;
 	if (!(_tgt in playableUnits)) exitWith {};
 	if (_tgt distance player > 3) exitWith {};
-	if (_tgt getVariable "Attached") exitWith {};
+	if (_tgt getVariable ["Attached",false]) exitWith {};
 	if (!(_tgt getVariable "Cuffed")) exitWith {};
 	ATT_PLY = _tgt;
 	_tgt attachTo [player,[0.6,0.3,0]]; 
@@ -40,7 +40,7 @@ KeyPressShiftF =
 			{
 			_civ = _this select 0;
 			if(_civ distance player > 2 or !isPlayer _civ)exitwith{};
-			[_civ,[player],{["hit", (_this select 0), "Melee", 1] execVM "stun.sqf"},false,false]call network_MPExec;
+			[_civ,[player],{["hit", (_this select 0), "Melee", 1] execVM "scripts\stun.sqf"},false,false]call network_MPExec;
 
 			systemChat  "You Stunned This Person!";
 			};
@@ -94,7 +94,7 @@ if(!INV_shortcuts)exitwith{};
 
 KeyPressR = 
 {
-	if (vehicle player == player) exitWith {};[] execVM "PIT.sqf";
+	if (vehicle player == player) exitWith {};[] execVM "scripts\pit.sqf";
 };
 
 KeyPressT = 
@@ -133,12 +133,12 @@ KeyPressE =
 		if(iscop and !(isnull _civ) and (_civ call core_side == "CIV")) exitWith  			
 		{  			
 			_i = 4; 			
-			call compile format['[0,0,0, ["civmenu", "%1", %1]] execVM "interact.sqf";', _civ];
+			call compile format['[0,0,0, ["civmenu", "%1", %1]] execVM "scripts\interact.sqf";', _civ];
 		};  		
 		if(!(isnull _civ) and _civ in shopusearray) exitwith  			
 		{  			
 			_i = 4; 			
-			if(iscop and _civ in drugsellarray)exitwith{_civ execVM "drugsearch.sqf"}; 			
+			if(iscop and _civ in drugsellarray)exitwith{_civ execVM "scripts\drugsearch.sqf"}; 			
 			_id = _civ call shops_index;  	
 			[_id]call shops_openshop;
 		};  
@@ -193,7 +193,7 @@ KeyPressE =
 
 KeyPressTilda = 
 {
-if(!INV_shortcuts) exitWith {};[] execVM "requestbackup.sqf";
+if(!INV_shortcuts) exitWith {};[] execVM "scriptsequestbackup.sqf";
 };
 
 KeypressShift = 

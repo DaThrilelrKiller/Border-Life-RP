@@ -40,7 +40,7 @@ if ([player,_item,-_amount] call storage_add) then
 	_name13 = _item call INV_getitemname;
 	
 	_object  setvehicleinit format["
-	this addaction ['Pickup %1 (%2)','pickup.sqf',[this, '%3', %2]];
+	this addaction ['Pickup %1 (%2)','scripts\pickup.sqf',[this, '%3', %2]];
 	", _name13, _amount,_item];
 	processInitCommands;
 	

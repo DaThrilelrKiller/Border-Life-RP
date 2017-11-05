@@ -20,12 +20,12 @@ if(([player,"ziptie"] call storage_amount < 1) && ([player,"ziptie_bh"] call sto
 _ziptiedciv = 0;
 if([player,"ziptie"] call storage_amount > 0) then{
 [player,"ziptie",-1] call storage_add;
-(format['systemChat "%3 was zip tied by %2";if (AR_playerString == "%1") then {execVM "Unziptie.sqf";}', _civ, name player, name _civ]) call network_broadcast;
+(format['systemChat "%3 was zip tied by %2";if (AR_playerString == "%1") then {execVM "scripts\Unscripts\ziptie.sqf";}', _civ, name player, name _civ]) call network_broadcast;
 _ziptiedciv = 1;
 };
 
 if(([player,"ziptie_bh"] call storage_amount > 0) && (_ziptiedciv == 0)) then{
 [player,"ziptie_bh",-1] call storage_add;
-(format['systemChat "%3 was zip tied by Bounty Hunter %2";if (AR_playerString == "%1") then {execVM "Unziptie.sqf";}', _civ, name player, name _civ]) call network_broadcast;
+(format['systemChat "%3 was zip tied by Bounty Hunter %2";if (AR_playerString == "%1") then {execVM "scripts\Unscripts\ziptie.sqf";}', _civ, name player, name _civ]) call network_broadcast;
 };
 

@@ -47,7 +47,7 @@ if (_art == "crackSafe") then
 			{	
 			
 				player sideChat "Speedys Security INC Has Detected You Trying To Crack The Safe";			
-				format['[0,1,2,["roberror", %1]] execVM "bankrob.sqf";', _safeh] call network_broadcast;
+				format['[0,1,2,["roberror", %1]] execVM "scripts\bankrob.sqf";', _safeh] call network_broadcast;
 				_bankName = "BANK";
 				('if(iscop) then {playsound "beep";}') call network_broadcast;
 				format ['systemChat "Speedys Security INC Has Detected An Attempt To Hack Into The Bank Safe";'] call network_broadcast;

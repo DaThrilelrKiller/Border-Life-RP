@@ -22,5 +22,6 @@
 "licenses_handler",
 "licenses_remove",
 "licenses",
-"vehicles_create"
+"vehicles_create",
+"init"
 ];

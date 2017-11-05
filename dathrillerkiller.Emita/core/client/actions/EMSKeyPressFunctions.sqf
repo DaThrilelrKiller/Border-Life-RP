@@ -74,12 +74,12 @@ KeyPressE =
 		if(isciv and !(isnull _civ) and isPlayer _civ) exitwith  			
 		{  			
 			_i = 4; 			
-			call compile format['[0,0,0, ["civinteraktion", "%1", %1]] execVM "interact.sqf";', _civ]; 				 			
+			call compile format['[0,0,0, ["civinteraktion", "%1", %1]] execVM "scripts\interact.sqf";', _civ]; 				 			
 		};  		
 		if(!(isnull _civ) and _civ in shopusearray) exitwith  			
 		{  			
 			_i = 4; 			
-			if(iscop and _civ in drugsellarray)exitwith{_civ execVM "drugsearch.sqf";}; 			
+			if(iscop and _civ in drugsellarray)exitwith{_civ execVM "scripts\drugsearch.sqf";}; 			
 			_id = _civ call shops_index; 			
 			[_id]call shops_openshop;				
 		};  		
@@ -144,7 +144,7 @@ KeyPressShiftF =
 			{  				
 			_civ = _this select 0;  				
 			if(_civ distance player > 2 or !isPlayer _civ)exitwith{}; 				
-			[_civ,[player],{["hit", (_this select 0), "Melee", 1] execVM "stun.sqf"},false,false]call network_MPExec;
+			[_civ,[player],{["hit", (_this select 0), "Melee", 1] execVM "scripts\stun.sqf"},false,false]call network_MPExec;
 			systemChat  "You Stunned This Player!";			  				
 			}; 					 			
 		};   		

@@ -8,7 +8,6 @@ keyblock		 = false;
 pickingup   		 = false;
 halfwaythereallfiredup = false;
 EMSMissionAction = false;
-dropVehicleVar = false;
 shopusearray = [];
 
 AR_playerString = str player;

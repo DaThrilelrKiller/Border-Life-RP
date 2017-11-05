@@ -19,7 +19,9 @@ while {((fuel _vehicle) < 0.99)} do
 	systemChat  "refueling stoped; the vehicle has been moved"; 
 	};
 	
-	_vehicle setFuel ((fuel _vehicle)+0.1);
+	[_vehicle,[_vehicle,((fuel _vehicle)+0.1)],{(_this select 0) setFuel (_this select 1)},false,false]call network_MPExec;
+	
+	
 	cutText [format[localize "STRS_gasstation_tanken_zwischenmsg",round(fuel _Vehicle * 100)],"PLAIN DOWN",64439];
 	
 	sleep 1;

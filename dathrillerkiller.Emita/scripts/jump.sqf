@@ -8,7 +8,7 @@ if (_art == 1) then
 	player setPos [ getPos player select 0, (getPos player select 1)-10, (getPos player select 2)];
 	sleep 1;
 	[player] exec "\ca\air2\halo\data\scripts\halo.sqs";
-	_jumpaction = player addaction ["Pull Secondary","jump.sqf",[2],1,false,true,"",""];
+	_jumpaction = player addaction ["Pull Secondary","scripts\jump.sqf",[2],1,false,true,"",""];
 	_flare = _gas createVehicle position vehicle player;
 	_flare attachTo [vehicle player,[0,0,0]];
 		while {((getposATL player)select 2) > 3} do
