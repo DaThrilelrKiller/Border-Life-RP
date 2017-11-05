@@ -4,5 +4,6 @@
 "updateplayer",
 "hint",
 "updateweapon",
-"updatevehweapon"
+"updatevehweapon",
+"names"
 ];

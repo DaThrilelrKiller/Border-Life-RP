@@ -12,6 +12,3 @@ MPID = format ["MP%1",(_MParray find _find)];
 }ForEach _MParray;
 
 "PGRE" addPublicVariableEventHandler {call compile (_this select 1);};	
-
-network_init_done = true;
-

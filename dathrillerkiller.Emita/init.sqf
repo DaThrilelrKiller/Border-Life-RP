@@ -43,14 +43,10 @@ if (dtk_client)then {
 call compile preprocessFile format ['configuration\SIDEVARIABLES\%1variables.sqf',ar_side];
 };
 
-_fncs = []spawn compile preprocessFile "configuration\Cfgmodules.sqf";
-waitUntil {ScriptDone _fncs};
-
-
-call compile preprocessFile "configuration\CfgVariables.sqf";													
-call compile preprocessFile  "ServerLoad\INVvars.sqf";
+call compile preprocessFile "configuration\Cfgmodules.sqf";	
+call compile preprocessFile  "ServerLoad\INVvars.sqf";											
 
 
 if (dtk_client) then {
-	_initClient = execVM "InitClient.sqf";
+	call compile preprocessFile "InitClient.sqf";
 };

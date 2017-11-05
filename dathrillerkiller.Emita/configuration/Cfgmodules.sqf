@@ -27,7 +27,6 @@ dtk_active_modules =
 "Drug",
 "ATM",
 "Medical",
-"Hud",
 "Gear",
 "Robbery",
 "Speedcam",
@@ -39,9 +38,10 @@ dtk_active_modules =
 "GPS",
 "Dance",
 "Statsave",
-"Hunger",
 "Gang",
 "Vehicle",
+"Hunger",
+"Hud",
 "Spawn"
 ];
 
@@ -66,8 +66,7 @@ dtk_active_modules =
 
 diag_log text format ["Total Modules: %2 Total Functions: %1",dtk_fnc_total,count dtk_active_modules];
 
-_handler = []spawn setup_init;
-waitUntil {ScriptDone _handler};
+call setup_init;
 if (dtk_client)then {
 ["ALL",[player,ar_side,getPlayerUID player],"setup_jip",false,true]call network_MPExec;
 };

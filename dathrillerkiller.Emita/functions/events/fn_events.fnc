@@ -3,15 +3,6 @@
 player addEventHandler ["handleDamage", {_this call events_sethit;}];
 player addEventHandler ["fired",{_this execVM "scripts\fired.sqf"}];
 
-"PVEH_netSay3D" addPublicVariableEventHandler {
-      private["_array"];
-      _array = _this select 1;
-	  if (player distance  (_array select 0) < (_array select 2))then
-	  {
-	  (_array select 0) say3D (_array select 1);
-	  };
-};
-
 /*On ESC*/
 []spawn events_OnPause;
 

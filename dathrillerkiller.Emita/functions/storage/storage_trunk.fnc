@@ -1,4 +1,3 @@
-storage_trunk = {
 private ["_vehicle","_weight","_maxweight"];
 createDialog "itemkaufdialog";
 _vehicle = _this select 0;
@@ -28,4 +27,3 @@ if ((lbCurSel 101) >= 0) then {
 	[player,dtk_active_storage,(call compile(lbData [101, (lbCurSel 101)]) select 0),ctrlText 102]call storage_move;
 };
 ',_vehicle]];
-};

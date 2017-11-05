@@ -82,5 +82,3 @@ private ["_settings","_mrkname","_UnitSide","_color","_pos","_comparePos","_mark
 		sleep 1;
 	};
 };
-
-markers_init_done = true;

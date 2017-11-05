@@ -19,12 +19,10 @@ private ["_KeybindingsDone"];
 _KeybindingsDone = profileNamespace getVariable "SFGKeys123";
 KeybindingsDone = if (isNil '_KeybindingsDone')then {profileNamespace setVariable ['SFGKeys123',keybindingDefaults]; keybindingDefaults}else {_KeybindingsDone};
 
-call compile preprocessFile  format ['CORE\CLIENT\ACTIONS\%1KeyPressFunctions.sqf',ar_side];
-call compile preprocessFile format ['CORE\CLIENT\ACTIONS\%1actions.sqf',ar_side];
-call compile preprocessFile format ['CORE\CLIENT\ACTIONS\%1OnKeyPress.sqf',ar_side];
-call compile preprocessFile 'CORE\CLIENT\ACTIONS\TFRKeyPress.sqf';
+call compile preprocessFile  format ['actions\%1KeyPressFunctions.sqf',ar_side];
+call compile preprocessFile format ['actions\%1actions.sqf',ar_side];
+call compile preprocessFile format ['actions\%1OnKeyPress.sqf',ar_side];
+call compile preprocessFile 'actions\TFRKeyPress.sqf';
 
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call keybindings_KeyDown"];
 (findDisplay 46) displayAddEventHandler ["KeyUp", "_this call keybindings_keyUp"];
-
-keybindings_init_done = true;

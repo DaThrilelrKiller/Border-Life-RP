@@ -1,27 +1,15 @@
-keybindings_refreshMenu = {
 private ["_cursel","_data","_id","_name","_upordown","_settings","_key","_shift","_ctrl","_alt"];
 
-waitUntil {(lbCurSel 1401) != -1 or !ctrlVisible 33363};
-while {ctrlVisible 33363}do
-{
-	_cursel = (lbCurSel 1401);
-	waitUntil {(lbCurSel 1401) != _cursel or !ctrlVisible 33363};
-	if (!ctrlVisible 33363) exitWIth{};
-
+_data = dtk_keybindings select (lbCurSel 1401);
+_id = _data select 0;
+_name = _data select 1;
+_upordown = _data select 2;
 	
-	
-	_data = dtk_keybindings select (lbCurSel 1401);
-	systemchat str _data;
-	_id = _data select 0;
-	_name = _data select 1;
-	_upordown = _data select 2;
-	
-	_settings = _data select 3;
-	_key = _settings select 0;
-	_shift = _settings select 1;
-	_ctrl = _settings select 2;
-	_alt = _settings select 3;
-
+_settings = _data select 3;
+_key = _settings select 0;
+_shift = _settings select 1;
+_ctrl = _settings select 2;
+_alt = _settings select 3;
 
 lbSetCurSel [2100, (_key call keybindings_index)];
 
@@ -30,5 +18,3 @@ if (_shift) then {lbSetCurSel [2101, 0];}else{lbSetCurSel [2101, 1];};
 if (_ctrl) then {lbSetCurSel [2102, 0];}else{lbSetCurSel [2102, 1];};
 if (_alt) then {lbSetCurSel [2103, 0];}else{lbSetCurSel [2103, 1];};
 
-};
-};

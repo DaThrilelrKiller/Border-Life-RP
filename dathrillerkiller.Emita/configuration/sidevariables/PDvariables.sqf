@@ -14,7 +14,7 @@ INV_apps = [
 ["app_gangs","sfg_textures\ipad\GANGS.PAA","[0,0,0,[""gangsswag""]] execVM 'scripts\maindialogs.sqf';"],
 ["app_stockmarket","sfg_textures\ipad\stockmarket.PAA","[0,0,0,[""fundsswag""]] execVM ""scripts\maindialogs.sqf"";"],
 ["app_computer","sfg_textures\ipad\Computer.PAA","if(vehicle player != player)then{call cdb_open}else {systemChat 'You Must Be In A Vehicle To Access Your ECPD Computer!';};"],
-["app_store","sfg_textures\ipad\stockmarket.PAA"," [AppStorenum]call shops_openshop; "],
+["app_store","sfg_textures\ipad\stockmarket.PAA"," [(BuildingCollapesLogic call shops_index)]call shops_openshop; "],
 ["app_phone","sfg_textures\ipad\PHONE.PAA","systemChat 'W.I.P';"],
 ["app_settings","sfg_textures\ipad\SETTINGS.PAA","createDialog 'AR_KeybindingsMenu';"]
 ];

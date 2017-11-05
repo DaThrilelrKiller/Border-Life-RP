@@ -34,4 +34,3 @@ PureGamingMarkerArray set[count PureGamingMarkerArray,[_markerID,_position,[_wid
 };
 
 call gps_diary;
-gps_init_done = true;

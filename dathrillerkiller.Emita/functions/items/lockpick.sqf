@@ -60,7 +60,8 @@ if (isNil '_closeVcl')exitWith {systemChat localize "STRS_inventar_lockpick_zuwe
 			};
 			
 			if ([7]call Main_Random)then {
-			[_closeVcl,"caralarm1",250]call Main_NetSay3D;
+			["ALL",[_closeVcl,"caralarm1",250],"network_say3d",false,true]call network_MPExec;
+
 			};
 								
 		[player,_item,-1] call storage_add;	

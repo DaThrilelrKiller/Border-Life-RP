@@ -15,7 +15,7 @@ if (!AM_temp_carrying) then {createDialog "AM_CheckpointBuilder";}else{[] call C
 
 KeyPressF5 = 
 {
-if(INV_shortcuts)then{INV_shortcuts=false; titletext["SFG Keys Off", "PLAIN DOWN"];[] execVM "CORE\CLIENT\ACTIONS\removeActions.sqf"}else{INV_shortcuts=true; titletext["SFG Keys On", "PLAIN DOWN"];[] execVM "CORE\CLIENT\ACTIONS\EMSactions.sqf"};
+if(INV_shortcuts)then{INV_shortcuts=false; titletext["SFG Keys Off", "PLAIN DOWN"];[] execVM "actions\removeActions.sqf"}else{INV_shortcuts=true; titletext["SFG Keys On", "PLAIN DOWN"];[] execVM "actions\EMSactions.sqf"};
 };
 
 KeyPressL = 

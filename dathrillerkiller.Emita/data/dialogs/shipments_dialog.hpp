@@ -65,6 +65,7 @@ class shipment_open
 		{
 			idc = 1500;
 			colorSelectBackground[] = {0.5,0,0,0.5};
+			onLBSelChanged = "[]call shipment_update_map;";
 
 			x = 0.188052 * safezoneW + safezoneX;
 			y = 0.27899 * safezoneH + safezoneY;

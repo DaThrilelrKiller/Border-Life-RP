@@ -1,6 +1,5 @@
 if (iSServer)exitWith{};
 []spawn {
-	locations_init_done = true;
 	private ["_i","_loc"];
 
 	for "_i" from 0 to 1 step 0 do 

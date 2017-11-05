@@ -26,7 +26,9 @@ if (_machine animationPhase "armat_wheel" > 0)exitWith
 };
 
 [player,"geld",-1000] call storage_add;
-[_machine,"slot",7] call Main_NetSay3D;
+["ALL",[_machine,"slot",7],"network_say3d",false,true]call network_MPExec;
+
+
 
 _wheel = random (random 20);
 _wheel1 = random (random 20);
@@ -55,7 +57,8 @@ dtk_playing_slots = time + 300;
 _rNumber = random 1000;
 _payout = round(_rNumber*50);
 
-[_machine,"slotwin",7]call Main_NetSay3D;
+["ALL",[_machine,"slotwin",7],"network_say3d",false,true]call network_MPExec;
+
 [player,"geld",_payout] call storage_add;
 systemChat  "Congratulations on your win at the Emita Casino! You now must wait 5 minutes to spin again!";
 ["ALL",["dtk_client",format["%1 JUST WON THE JACKPOT AT THE Emita CASINO!",name player],3],"network_chat",false,true]call network_MPExec;

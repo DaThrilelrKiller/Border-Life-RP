@@ -177,6 +177,7 @@ class dtk_keybindings
 			colorText[] = {0.0000,0.0000,0.0000,1.0000};
 			colorBackground[] = {0.051,0.4353,0.1765,1};
 			colorBackgroundActive[] = {0.051,0.4353,0.1765,1};
+			onLBSelChanged = "call keybindings_refreshMenu;";
 		};
 		class selectKey: RscCombo
 		{

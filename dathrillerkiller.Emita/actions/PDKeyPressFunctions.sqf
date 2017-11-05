@@ -71,7 +71,7 @@ KeyPress9 =
 
 KeyPressf5 = 
 {
-	if(INV_shortcuts)then{INV_shortcuts=false; titletext["SFG Keys Off", "PLAIN DOWN"];[] execVM "CORE\CLIENT\ACTIONS\removeActions.sqf"}else{INV_shortcuts=true; titletext["SFG Keys On", "PLAIN DOWN"];[] execVM "CORE\CLIENT\ACTIONS\PDactions.sqf"};
+	if(INV_shortcuts)then{INV_shortcuts=false; titletext["SFG Keys Off", "PLAIN DOWN"];[] execVM "actions\removeActions.sqf"}else{INV_shortcuts=true; titletext["SFG Keys On", "PLAIN DOWN"];[] execVM "actions\PDactions.sqf"};
 };
 
 KeyPressL = 

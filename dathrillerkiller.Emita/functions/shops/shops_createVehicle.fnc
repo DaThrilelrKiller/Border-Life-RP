@@ -27,7 +27,7 @@ _towers = ["bc_towtruck","oldtruck","datsun1_civil_3_open","oltruc3","Pickup_PK_
 		newvehicle setVariable ["dtk_storage",[[],[]], true];
 	',_Classname, _SpawnLocation, MPID, round(time)];
 	
-	newvehicle addeventhandler ["HandleDamage",vehicle_handleDamag ];
+	newvehicle addeventhandler ["HandleDamage",'_this call vehicle_handleDamage' ];
 
 	
 	_plate = _this select 4;

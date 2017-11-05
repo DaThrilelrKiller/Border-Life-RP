@@ -17,10 +17,12 @@ private ["_display","_text","_vehicle"];
 disableSerialization;
 waitUntil {!isNull (findDisplay 106)};
 _display = (findDisplay 106) displayCtrl 156;
+
 _text =  (ctrlText _display);
 if (_text != "")then 
 {
 	_vehicle = _text call gear_grabVehicle;
+	
 	if  (!([player,_vehicle]call keys_has) && {vehicle player != _vehicle})then 
 	{
 		(findDisplay 106) closeDisplay 1;

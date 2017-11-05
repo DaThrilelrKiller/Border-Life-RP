@@ -26,7 +26,7 @@ if (_alt) then {lbSetCurSel [2103, 0];}else{lbSetCurSel [2103, 1];};
 
 /*Reloads all the keys after the menu is closed*/
 KeybindingsDone = profileNamespace getVariable "SFGKeys123";
-_keyremoveHandler = []execVM "core\client\actions\RemoveKeyPress.sqf";
+_keyremoveHandler = []execVM "actions\RemoveKeyPress.sqf";
 waitUntil {ScriptDone _keyremoveHandler};
-call compile preprocessFile format ['CORE\CLIENT\ACTIONS\%1OnKeyPress.sqf',ar_side];
-call compile preprocessFile 'CORE\CLIENT\ACTIONS\TFRKeyPress.sqf';
+call compile preprocessFile format ['actions\%1OnKeyPress.sqf',ar_side];
+call compile preprocessFile 'actions\TFRKeyPress.sqf';

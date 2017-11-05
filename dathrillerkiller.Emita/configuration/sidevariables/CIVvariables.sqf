@@ -27,7 +27,7 @@ INV_apps = [
 ["app_laws","sfg_textures\ipad\LAWS.PAA","[0,0,0,[""lawswag""]] execVM 'scripts\maindialogs.sqf';"],
 ["app_gangs","sfg_textures\ipad\GANGS.PAA","closeDialog 0;call gang_open"],
 ["app_stockmarket","sfg_textures\ipad\stockmarket.PAA","[0,0,0,[""fundsswag""]] execVM ""scripts\maindialogs.sqf"";"],
-["app_store","sfg_textures\ipad\stockmarket.PAA","[AppStorenum]call shops_openshop; "],
+["app_store","sfg_textures\ipad\stockmarket.PAA","[(BuildingCollapesLogic call shops_index)]call shops_openshop; "],
 ["app_phone","sfg_textures\ipad\PHONE.PAA","systemChat 'W.I.P';"],
 ["app_settings","sfg_textures\ipad\SETTINGS.PAA","createDialog 'AR_KeybindingsMenu';"]
 ];

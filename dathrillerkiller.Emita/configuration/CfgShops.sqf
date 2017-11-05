@@ -1376,5 +1376,3 @@ _shop = _x select 0;
 _shop setVariable ['shop_data',_forEachIndex,false];
 shopusearray set [count shopusearray,_shop];
 }forEach INV_ItemShops;
-
-AppStorenum = (BuildingCollapesLogic call shops_index);

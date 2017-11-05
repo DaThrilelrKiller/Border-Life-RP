@@ -1,16 +1,13 @@
-setup_init_done = true;
-
 dtk_active_modules = dtk_active_modules - ["setup"];
 
 {
-	if (!isNil format["%1_init",_x] && {isNil format["%1_init_done",_x]})then {
+	if (!isNil format["%1_init",_x] && {_x != "Setup"})then {
 		call call compile format["%1_init",_x];
-		if (dtk_client)then {waitUntil {!isNil format["%1_init_done",_x]};};
 		diag_log text format ["Module Setup - %1",_x];
 	};
 }count dtk_active_modules;
 
-systemchat "Modules Done!";
+diag_log text "Modules Done!";
 
 
 if (dtk_client)then{

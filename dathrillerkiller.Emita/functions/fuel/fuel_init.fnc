@@ -8,4 +8,3 @@ call fuel_actions;
 
 
 call fuel_setup;
-fuel_init_done = true;

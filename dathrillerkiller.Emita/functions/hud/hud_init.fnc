@@ -14,6 +14,9 @@ if (dtk_server)exitWith {};
 	for "_i" from 0 to 1 step 0 do 
 	{
 		uiSleep 0.1;
+		
+		call hud_names;
+		
 		_veh = (vehicle player);
 		if (_veh != player) then 
 		{
@@ -65,7 +68,4 @@ if (dtk_server)exitWith {};
 		};
 	};
 };
-
-hud_init_done = true;
-
 

@@ -16,6 +16,3 @@ true
 _index = lbAdd [1401,_x select 1];
 true	
 }forEach dtk_keybindings;
-
-lbSetCurSel [1401, 0];
-[]spawn keybindings_refreshMenu;

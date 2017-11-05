@@ -13,7 +13,7 @@ if ((_car  animationPhase "ani_lights") != 0.1)then
 	if ((player == driver _car) and (_car distance _x < 40) and (_speed >= 100) and !(_car iskindof "Air")) then 
 		{ 
 
-		[_x,"speedcam",100]call Main_NetSay3D;
+		["ALL",[_x,"speedcam",100],"network_say3d",false,true]call network_MPExec;
 		titleCut [" ","white in",1];
 		if(_speed >= 100  && {_speed < 110}) then {_penalty = 1};
 		if(_speed >= 110 && {_speed < 130}) then {_penalty = 2};

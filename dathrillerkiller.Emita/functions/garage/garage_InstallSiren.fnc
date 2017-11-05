@@ -5,6 +5,3 @@ titleText [format ["Siren %1 had been installed",((_this select 0) call INV_geti
 
 
 (_this select 1) addWeapon (_this select 0);
-
-/* camDestroy _camera; */
-/* _camera cameraEffect ["terminate","back"]; */

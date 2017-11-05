@@ -490,3 +490,48 @@ color[] = {0.2, 0.2, 0.2, 1};
 colorActive[] = {1, 1, 1, 1};
 
 };
+
+class RscListNBox
+{
+access = 0; 
+
+type = 102;
+style =ST_MULTI;
+w = 0.4;   h = 0.4; 
+font = "Zeppelin32"; 
+sizeEx = 0.04; 
+colorText[] = {0.8784, 0.8471, 0.651, 1}; 
+colorBackground[] = {0, 0, 0, 1}; 
+
+
+autoScrollSpeed = -1; 
+autoScrollDelay = 5; 
+autoScrollRewind = 0; 
+arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)"; 
+arrowFull = "#(argb,8,8,3)color(1,1,1,1)"; 
+columns[] = {0.3, 0.6, 0.7}; 
+color[] = {1, 1, 1, 1}; 
+colorScrollbar[] = {0.95, 0.95, 0.95, 1}; 
+colorSelect[] = {0.95, 0.95, 0.95, 1}; 
+colorSelect2[] = {0.95, 0.95, 0.95, 1}; 
+colorSelectBackground[] = {0, 0, 0, 1}; 
+colorSelectBackground2[] = {0.8784, 0.8471, 0.651, 1}; 
+drawSideArrows = 0; 
+idcLeft = -1; 
+idcRight = -1; 
+maxHistoryDelay = 1; 
+rowHeight = 0; 
+soundSelect[] = {"", 0.1, 1}; 
+period = 1; 
+shadow = 2; 
+	class ScrollBar
+	{
+		 arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+		 arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+		 border = "#(argb,8,8,3)color(1,1,1,1)";
+		 color[] = {1,1,1,0.6};
+		 colorActive[] = {1,1,1,1};
+		 colorDisabled[] = {1,1,1,0.3};
+		 thumb = "#(argb,8,8,3)color(1,1,1,1)";
+	 };
+};

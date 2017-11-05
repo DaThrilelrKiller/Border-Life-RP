@@ -85,7 +85,7 @@ DaThrillerKiller - New Hunger module
 DaThrillerKiller - Optimized and added another pram to the cdb_AddNote function
 DaThrillerKiller - Deleted old hunger and speedcam files and variables
 
-Version 1.7 151 Files Changed
+Version 1.7 128 Files Changed
 DaThrillerKiller - Removed unused server side variables
 DaThrillerKiller - Added Ipad to the modules system
 DaThrillerKiller - Added Vehcile keys to its own module 
@@ -108,7 +108,7 @@ DaThrillerKiller - New ExecVM function for the network
 DaThrillerKiller - New reset safecode function 100% random now
 DaThrillerKiller - increased starvation time
 
-Version 1.8
+Version 1.8 81 Files Changed
 DaThrillerKiller - Removed impound save loop it now save over the network when a vehciel is impounded
 DaThrillerKiller - Removed old gang files
 DaThrillerKiller - added new gang module, complete over haul and allow ranks to be set for gangs
@@ -130,10 +130,10 @@ DaThrillerKiller - removed old admin menu
 DaThrillerKiller - remove unneeded spawn points
 DaThrillerKiller - removed unneeded shops from shop file
 
-Version 1.9
+Version 1.9  50 Files Changed
 DaThrillerKiller - Remove unused modules they might be implmented at a later state
 
-Version 2.0
+Version 2.0 52 Files Changed
 DaThrillerKiller - Removed the warrant app for police forcing them to use the crimnal Database
 DaThrillerKiller - Added new way for gang actions to capture teratory
 DaThrillerKiller - Changed the way Switching clothing actions worked
@@ -152,6 +152,31 @@ DaThrillerKiller - Changed the way vehicle lock was displayed on hud
 DaThrillerKiller - Sirens now save on vehciels
 DaThrillerKiller - changed to the new patrol uniform in the missoin.sqm no longer need to switch to it
 
+Version 2.1 89 Files Changed
+DaThrillerKiller - Moved changelog to server side with a link in client files to veiw it on github
+DaThrillerKiller - Moved all scripts from main directory to "\scripts"
+DaThrillerKiller - Tweaked network system, locality based commands should now work if they did not already
+DaThrillerKiller - Compiled all functions in serverload to one file
+DaThrillerKiller - Improved uneeded code from init files
+DaThrillerKiller - Vehcile damage tracker so we can now put engine and tire damage on hud
+DaThrillerKiller - It now shows who pulled you out of a vehicle
+DaThrillerKiller - Optimized some getVariable commands
+DaThrillerKiller - Made it so only civilains have the optain to rob places
+DaThrillerKiller - added Network say3D commands in network module
+DaThrillerKiller - Removed nil object from clothing variables
+DaThrillerKiller - Other improvments
+
+Version 2.2 109 Files Changed
+DaThrillerKiller - New tag system aka atm and shop tags
+DaThrillerKiller - Mass improvment to loading times it alot faster
+DaThrillerKiller - Moved actions directory
+DaThrillerKiller - Fixed gear lock breaking after opening ammo box
+DaThrillerKiller - Shop tags turn read if you are not whitelisted to acess them
+DaThrillerKiller - Removed old Say3D system and implmented new one
+DaThrillerKiller - Added weapon shipments for player to do
+DaThrillerKiller - Fixed some foods not working like donuts
+DaThrillerKiller - Alot of UI optimization this optimization is really noticable in UI that involce listboxs for actions
+DaThrillerKiller - Added more shipment locations
 
 
 

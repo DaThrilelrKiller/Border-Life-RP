@@ -44,4 +44,3 @@ setViewDistance (_stats select 19);
 setTerrainGrid (_stats select 20);
 
 AR_StaticsLoaded = true;
-statsave_init_done = true;

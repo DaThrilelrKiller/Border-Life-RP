@@ -6,5 +6,6 @@
 "police_distance",
 "time",
 "update_map",
-"defent"
+"defent",
+"init"
 ];

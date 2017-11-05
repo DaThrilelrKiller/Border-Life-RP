@@ -48,6 +48,7 @@ class AR_SpawnMenu
 			colorText[] = {0.0000,0.0000,0.0000,1.0000};
 			colorBackground[] = {0.051,0.4353,0.1765,1};
 			colorBackgroundActive[] = {0.051,0.4353,0.1765,1};
+			onLBSelChanged = "[]call spawn_animatemap;";
 		};
 		class kndr_MapControl 
 		{ 

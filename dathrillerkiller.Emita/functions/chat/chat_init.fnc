@@ -17,5 +17,3 @@ for "_i" from 0 to 1 step 0 do
 	waitUntil {isNull (findDisplay 24)};
 };
 };
-chat_init_done = true;
-

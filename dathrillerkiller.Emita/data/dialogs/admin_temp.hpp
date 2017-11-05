@@ -362,6 +362,7 @@ class admin_teleport
 			y = 0.27899 * safezoneH + safezoneY;
 			w = 0.143976 * safezoneW;
 			h = 0.476022 * safezoneH;
+			onLBSelChanged = "_this call admin_exec1;";
 		};
 	};
 };
@@ -426,6 +427,7 @@ class admin_console
 			w = 0.143976 * safezoneW;
 			h = 0.476022 * safezoneH;
 			colorSelectBackground[] = {0.5,0,0,0.5};
+			onLBSelChanged = "_this call admin_exec1;";
 		};
 		class RscEdit_1400: RscEdit
 		{
@@ -439,6 +441,7 @@ class admin_console
 		class RscListbox_1501: RscListbox
 		{
 			idc = 1501;
+			onLBSelChanged = "_this call admin_console_handler;";
 			x = 0.372021 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
 			w = 0.439927 * safezoneW;
@@ -537,10 +540,11 @@ class admin_logs
 			w = 0.143976 * safezoneW;
 			h = 0.476022 * safezoneH;
 			colorSelectBackground[] = {0.5,0,0,0.5};
+			onLBSelChanged = "_this call admin_exec1;";
 		};
 		class RscListbox_1501: RscListbox
 		{
-			idc = 1501;
+			idcLeft = 1501; 
 			x = 0.372021 * safezoneW + safezoneX;
 			y = 0.227987 * safezoneH + safezoneY;
 			w = 0.439927 * safezoneW;
@@ -621,6 +625,7 @@ class admin_licenses
 			w = 0.143976 * safezoneW;
 			h = 0.476022 * safezoneH;
 			colorSelectBackground[] = {0.5,0,0,0.5};
+			onLBSelChanged = "_this call admin_exec1;";
 		};
 		class RscListbox_1501: RscListbox
 		{
@@ -639,6 +644,7 @@ class admin_licenses
 			w = 0.191968 * safezoneW;
 			h = 0.527024 * safezoneH;
 			colorSelectBackground[] = {0.5,0,0,0.5};
+			onLBSelChanged = "_this call admin_licenses_handler;";
 		};
 		class RscButton_1600: RscButton
 		{
@@ -717,6 +723,7 @@ class admin_inventory
 			y = 0.227987 * safezoneH + safezoneY;
 			w = 0.143976 * safezoneW;
 			h = 0.0340016 * safezoneH;
+			onLBSelChanged = "_this call admin_inventory_handler;";
 		};
 		class RscListbox_1500: RscListbox
 		{
@@ -726,6 +733,7 @@ class admin_inventory
 			w = 0.143976 * safezoneW;
 			h = 0.476022 * safezoneH;
 			colorSelectBackground[] = {0.5,0,0,0.5};
+			onLBSelChanged = "_this call admin_exec1;";
 		};
 		class RscListbox_1501: RscListbox
 		{
@@ -838,6 +846,7 @@ class admin_vehicles
 			w = 0.143976 * safezoneW;
 			h = 0.476022 * safezoneH;
 			colorSelectBackground[] = {0.5,0,0,0.5};
+			onLBSelChanged = "_this call admin_exec1;";
 		};
 		class RscListbox_1501: RscListbox
 		{

@@ -21,7 +21,6 @@ _Funcitons =
 ["inv","getshoparray","inventory"],
 
 
-["main","netsay3d","main"],
 ["main","resetsafecode","main"],
 ["main","notification","main"],
 ["main","loadingsettext","main"],

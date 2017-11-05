@@ -1,12 +1,8 @@
-private ["_sel"];
-
 /* refresh member list when new gang is select in the list box */
-while {ctrlVisible 2} do {
-	_sel = (lbCurSel 2);
-	waitUntil {(lbCurSel 2) != _sel or !ctrlVisible 2};
-	lbClear 4;
-	[4,lbText[2,(lbCurSel 2)]]call gang_members;
-	if (_sel != -1)then {
-	ctrlEnable [7, true];
-	};
-};
+
+if !(v_gang_refresh)exitWith {};
+
+lbClear 4;
+[4,lbText[2,(lbCurSel 2)]]call gang_members;
+ctrlEnable [7, true];
+

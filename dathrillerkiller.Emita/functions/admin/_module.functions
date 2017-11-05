@@ -12,7 +12,6 @@
 "console_exec",
 "load",
 "console_handler",
-"handler",
 "exec1",
 "loadFromConfig",
 "inventory_add",

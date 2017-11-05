@@ -84,6 +84,7 @@ class gang_menu1
 			maxHistoryDelay = 0;
 			rowHeight = 0;
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			onLBSelChanged = "_this call gang_refresh;";
 			class ScrollBar {
 				arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
 				arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";

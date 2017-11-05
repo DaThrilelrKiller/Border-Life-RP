@@ -14,5 +14,3 @@ private ["_name","_price","_condition","_lic","_index"];
 	}count (_x select 1);
 	true
 }forEach dtk_licenses;
-
-licenses_init_done = true;

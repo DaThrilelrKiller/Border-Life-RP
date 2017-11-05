@@ -54,7 +54,7 @@ class ar_plate
 			idc = 4;
 			text = "sfg_textures\plates\P.paa";
 			x = 0.0840336;
-			y = 0.0833334;
+			y = 0.0851935;
 			w = 0.0317227;
 			h = 0.0813989;
 		};

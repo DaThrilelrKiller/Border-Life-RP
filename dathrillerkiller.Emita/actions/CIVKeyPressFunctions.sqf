@@ -23,13 +23,13 @@ KeyPressF5 =
 	{
 		INV_shortcuts=false; 
 		titletext["SFG Keys Off", "PLAIN DOWN"];
-		[] execVM "CORE\CLIENT\ACTIONS\removeActions.sqf";
+		[] execVM "actions\removeActions.sqf";
 	}
 	else
 	{
 		INV_shortcuts=true;
 		titletext["SFG Keys On", "PLAIN DOWN"];
-		[] execVM "CORE\CLIENT\ACTIONS\CIVactions.sqf";
+		[] execVM "actions\CIVactions.sqf";
 	};
 };
 

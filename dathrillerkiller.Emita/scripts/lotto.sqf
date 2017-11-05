@@ -17,7 +17,7 @@ sleep 10;
 if (_winner > 1) exitWith {systemChat  format ["You lost on the ticket - (%1)",_lotto select 1];playing_lotto = 0;};
 
 	
-[_player,"slotwin",7] call Main_NetSay3D;
+["ALL",[_player,"slotwin",7],"network_say3d",false,true]call network_MPExec;
 [player,'geld',_lottowin] call storage_add;
 
 systemChat  format ["You won: $%1 on the (%2)!", _lottowin, _lotto select 1];

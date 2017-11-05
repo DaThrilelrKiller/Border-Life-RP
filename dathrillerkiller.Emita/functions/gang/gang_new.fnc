@@ -1,7 +1,6 @@
 createDialog "gang_menu1";
 
 call gang_list;
-[]spawn gang_refresh;
 
 /* sets buttons */
 ctrlSetText [6,"Create"];

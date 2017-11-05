@@ -70,11 +70,13 @@ class Mission
 		"CAWheeled2_VWGolf",
 		"aplion_buildings",
 		"E76_Objects",
-		"GLT_Objects"
+		"GLT_Objects",
+		"sfg_items",
+		"CACharacters_BAF"
 	};
 	addOnsAuto[]=
 	{
-		"tcg_police",
+		"sfg_items",
 		"kpfs_thw_characters",
 		"cacharacters_e",
 		"rav_lifter",
@@ -152,7 +154,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=178;
+		items=179;
 		class Item0
 		{
 			side="LOGIC";
@@ -3862,6 +3864,27 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="gangs";
+				};
+			};
+		};
+		class Item178
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2580.823,10.724804,4765.0796};
+					azimut=185.192;
+					id=863;
+					side="GUER";
+					vehicle="GUE_Commander";
+					leader=1;
+					skill=0.60000002;
+					text="shipment_man";
+					init="this setpos [getpos this select 0, getpos this select 1,5]; this disableAI ""anim"";this disableAI ""move""; this allowdamage false;";
+					description="Mr. Da";
 				};
 			};
 		};
@@ -11163,7 +11186,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=291;
+		items=298;
 		class Item0
 		{
 			position[]={3085.5813,40.354015,4505.5166};
@@ -13786,6 +13809,56 @@ class Mission
 			type="mil_box";
 			colorName="ColorGreen";
 			angle=-89.289047;
+		};
+		class Item291
+		{
+			position[]={2538.176,4.1295543,4966.8291};
+			name="shipment_9";
+			text="Location 9";
+			type="Empty";
+		};
+		class Item292
+		{
+			position[]={3391.5183,4.1295543,3675.196};
+			name="shipment_10";
+			text="Location 10";
+			type="Empty";
+		};
+		class Item293
+		{
+			position[]={2084.3291,12,3160.3296};
+			name="shipment_11";
+			text="Location 11";
+			type="Empty";
+		};
+		class Item294
+		{
+			position[]={1123.3298,4.1295543,4907.4136};
+			name="shipment_12";
+			text="Location 12";
+			type="Empty";
+		};
+		class Item295
+		{
+			position[]={1239.6022,4.1295543,4892.2969};
+			name="shipment_13";
+			text="Location 13";
+			type="Empty";
+		};
+		class Item296
+		{
+			position[]={1667.5851,4.1295543,4952.2246};
+			name="shipment_14";
+			text="Location 14";
+			type="Empty";
+		};
+		class Item297
+		{
+			position[]={2580.7703,10.724804,4765.0752};
+			name="shipments";
+			text="Weapon Shipments";
+			type="mil_box";
+			colorName="ColorRed";
 		};
 	};
 	class Sensors

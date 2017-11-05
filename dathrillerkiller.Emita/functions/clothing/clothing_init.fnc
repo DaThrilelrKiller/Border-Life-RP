@@ -12,5 +12,3 @@ private ["_name","_condition","_class","_index"];
 	}count (_x select 3);
 	true
 }forEach v_clothing_actions;
-
-clothing_init_done = true;
