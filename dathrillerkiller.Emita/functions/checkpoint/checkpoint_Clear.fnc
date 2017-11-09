@@ -1,5 +1,5 @@
 	private ["_message"];
-	if ((PO1_id) or (EMTBasic_id) or (PSO_id)) then
+	if ((PO1_id) or (EMTBasic_id)) then
 	{
 	    _message = format["%1 has cleared a checkpoint (200m).", name player];
 		["ALL",["isCop",_message,2],"network_chat",false,true]call network_MPExec;

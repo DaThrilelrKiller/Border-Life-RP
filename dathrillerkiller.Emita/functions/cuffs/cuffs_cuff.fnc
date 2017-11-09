@@ -15,5 +15,4 @@ if (isNil "_cuffed" || {!_cuffed})then
 else
 {
 	_player setVariable ["ar_cuffed",false,true];
-	["ALL",[_player," "],"network_SwitchMove",false,true]call network_MPExec;
 };

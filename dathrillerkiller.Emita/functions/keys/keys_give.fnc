@@ -12,4 +12,9 @@ _UID set[count _UID,(getPlayerUID _play)];
 _VclVar set[0,_UID]; 
 _Veh setVariable ["DTK_OwnerUID",_VclVar, true];
 
-[_play,["true",format ["you received a key from %2 %1", name player, player],3],"network_chat",false,false]call network_MPExec;
+/* 
+scences its imposible to send a publicVariableclient from a client, we have to send it to server and then client 
+this still uses less bandwith then publicVariable because its not going to all clients
+*/
+
+["SERVER",[_play,["true",format ["you received a key from %2 %1", name player, player],3],"network_chat",false,false],"network_MPExec",false,false]call network_MPExec;

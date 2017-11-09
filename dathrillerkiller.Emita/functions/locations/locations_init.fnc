@@ -1,4 +1,4 @@
-if (iSServer)exitWith{};
+if (dtk_server)exitWith{};
 []spawn {
 	private ["_i","_loc"];
 

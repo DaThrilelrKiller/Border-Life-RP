@@ -1,45 +1,31 @@
-_art         = _this select 0;
+_action         = _this select 0;
 _item        = _this select 1;
-_menge       = _this select 2;
-_itemanzeige = (_item call INV_getitemName);
+_amount       = _this select 2;
+_name = (_item call INV_getitemName);
 
 if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};
 
-if (_art == "uebergabe") then 
+if (_action == "uebergabe") then 
 
 {	
 
-_playerobject   = call compile(_this select 3);
+	_player   = call compile(_this select 3);
 
-if (_menge <= 0) exitWith {systemChat  "You cannot give less than 0";};
-if (_playerobject == player)                         exitWith {systemChat  localize "STRS_inv_inventar_uebergabe_self";};
-if (player distance _playerobject > 20)              exitWith {systemChat  localize "STRS_inv_inventar_uebergabe_distance";};	
-if (!(_item call INV_getitemGiveable))               exitWith {systemChat  localize "STRS_inv_inventar_uebergabe_verbot";};
-if (!([player,_item,-_menge] call storage_add)) exitWith {systemChat  localize "STRS_inv_inventar_uebergabe_zuwenig";};
-if (_menge < 0) exitWith {systemChat  localize "STRS_give_minus_then";};
-format ["if (player == %1) then {[""bekommen"", ""%2"", %3, %4] execVM ""scripts\give.sqf"";};", _playerobject, _item, _menge, player] call network_broadcast;
-				
-systemChat  format [localize "STRS_inv_inventar_uebergabe_success_self", name _playerobject, (_menge call string_intToString), _itemanzeige];
+	/* go ahead and check to make sure you are able to give the item to the player */
+	if (_amount <= 0) exitWith {systemChat  "You cannot give less than 0";};
+	if (_player == player)                         exitWith {systemChat  localize "STRS_inv_inventar_uebergabe_self";};
+	if (player distance _player > 20)              exitWith {systemChat  localize "STRS_inv_inventar_uebergabe_distance";};	
+	if (!(_item call INV_getitemGiveable))               exitWith {systemChat  localize "STRS_inv_inventar_uebergabe_verbot";};
 
-};
-
-if (_art == "bekommen") then 
-
-{
-_spieler = _this select 3;
-
-if ([player,_item,_menge] call storage_add) then 
-
-	{
-
-	systemChat  format[localize "STRS_inv_inventar_gotfromotherplayer", (_menge call string_intToString), _itemanzeige, name _spieler];	
-
-	} 
-	else 
-	{
-
-	format ["if (player == %1) then {[player,'%2',%3] call storage_add;};", _spieler, _item, _menge] call network_broadcast;
-
+	/* go ahead and add and if true then remove from player giving */
+	if ([_player,_item,_amount] call storage_add)then {
+		[player,_item,-_amount] call storage_add;
+		/* notify the player that they have recived the item */
+		format ["if (player == %1) then {
+		systemChat 'You have recived %2 of %3 from %4'
+		};", _player,_amount, _name, name player] call network_broadcast;
 	};
+					
+	systemChat  format [localize "STRS_inv_inventar_uebergabe_success_self", name _player, (_amount call string_intToString), _name];
 
 };

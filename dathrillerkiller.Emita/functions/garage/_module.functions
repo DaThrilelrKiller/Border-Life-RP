@@ -3,5 +3,6 @@
 "installUpgrade",
 "serviceVehicle",
 "cam",
-"paint"
+"paint",
+"near"
 ];

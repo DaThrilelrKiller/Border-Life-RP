@@ -1,13 +1,3 @@
-reveal =
-
-{
-
-_objs = nearestobjects[getpos player, ["man", "allvehicles"], 300];
-
-{_x reveal _this;_x dotarget _this;} count _objs;
-
-};
-
 isprone = 
 
 {

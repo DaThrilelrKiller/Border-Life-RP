@@ -1,4 +1,4 @@
-SpawnPoints =[["ems_spawn_1","true"],["ems_spawn_2","true"],["ems_spawn_3","PSO_id"],["ems_spawn_4","EMSAirUnit_id"]];
+SpawnPoints =[["ems_spawn_1","true"],["ems_spawn_2","true"],["ems_spawn_4","EMSAirUnit_id"]];
 
 isciv         	= false;						
 iscop          	= false;	
@@ -10,7 +10,7 @@ INV_apps = [
 ["app_civilian","sfg_textures\ipad\CIVILIAN.PAA","[0,0,0,[""playerlist""]] execVM 'scripts\maindialogs.sqf';"],
 ["app_save","sfg_textures\ipad\SAVE.PAA","[]spawn StatSave_Save;"],
 ["app_oil","sfg_textures\ipad\OIL.PAA","[0,0,0,[""oilswag""]] execVM 'scripts\maindialogs.sqf'"],
-["app_dmv","sfg_textures\ipad\DMV.PAA","[0,0,0,[""licswag""]] execVM 'scripts\maindialogs.sqf';"],
+["app_dmv","sfg_textures\ipad\DMV.PAA","[player]call licenses_check"],
 ["app_laws","sfg_textures\ipad\LAWS.PAA","[0,0,0,[""lawswag""]] execVM 'scripts\maindialogs.sqf';"],
 ["app_gangs","sfg_textures\ipad\GANGS.PAA","closeDialog 0;call gang_open"],
 ["app_stockmarket","sfg_textures\ipad\stockmarket.PAA","[0,0,0,[""fundsswag""]] execVM ""scripts\maindialogs.sqf"";"],

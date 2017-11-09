@@ -160,26 +160,6 @@ if (_exitart == "ausbruch") then
 
 };
 
-if (_loopart == "inventcheck") then 
-
-{		
-
-_aktionsStarter = _this select 1;
-										
-(format ['if (AR_playerString == "%1") then {[0, 0, 0, ["inventorycheck", %2, %3, %4]] execVM "scripts\maindialogs.sqf";};',_aktionsStarter, (player getvariable "cdb_license"), INV_InventarArray, player]) call network_broadcast;
-
-};
-
-
-if (_loopart == "licheck") then 
-
-{		
-_aktionsStarter = _this select 1;
-										
-(format ['if (AR_playerString == "%1") then {[0, 0, 0, ["licensecheck", %2, %3, %4]] execVM "scripts\maindialogs.sqf";};',_aktionsStarter, (player getvariable "cdb_license"), INV_InventarArray, player]) call network_broadcast;
-
-};
-
 if (_loopart == "stealmoney") then 
 
 {

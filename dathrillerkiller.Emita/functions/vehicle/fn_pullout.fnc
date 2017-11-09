@@ -17,4 +17,5 @@ _this lock false;
 
 player switchMove "AmovPercMstpSnonWnonDnon_AcrgPknlMstpSnonWnonDnon_getInLow";
 sleep 0.4;
-[_target,["eject", vehicle _target],"network_action",false,false]call network_MPExec;
+["SERVER",[_target,["eject", vehicle _target],"network_action",false,false],"network_MPExec",false,false]call network_MPExec;
+

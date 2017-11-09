@@ -1109,53 +1109,6 @@ _SFGDealer =
 ];
 
 
-_pso1 = 
-[
-"DTK_LableBreak",
-"DTK_LableVehicles",
-"DTK_LableBreak",
-"C_DD_FOR06CV_PSO",
-"C_DD_CHE10Impala_PSO",
-"gmc_ambulance",
-"DTK_LableBreak",
-"DTK_LableEquipment",
-"DTK_LableBreak",
-"bjerk",
-"GPS",
-"stretcher"
-];
-
-_pso2 = 
-[
-"DTK_LableBreak",
-"DTK_LableVehicles",
-"DTK_LableBreak",
-"C_DD_DOD12Charger_PSO",
-"C_DD_FOR13Taurus_PSO",
-"C_DD_CHE15Suburban_PSO",
-"DTK_LableBreak",
-"DTK_LableEquipment",
-"DTK_LableBreak",
-"bjerk",
-"GPS",
-"stretcher"
-];
-
-_pso3 = 
-[
-"DTK_LableBreak",
-"DTK_LableVehicles",
-"DTK_LableBreak",
-"C_DD_CHE08Tahoe_PSO",
-"bc_towtruck",
-"DTK_LableBreak",
-"DTK_LableEquipment",
-"DTK_LableBreak",
-"bjerk",
-"GPS",
-"stretcher"
-];
-
 _sfgrs =
 [
 "RH_m4maim_cmd",
@@ -1305,9 +1258,6 @@ INV_ItemShops = [
 [tdocsub,["EMTChief","Command Equipment"],tdocsub,tdocspawnsub,_td7,_td7,true,{EMSCommand_id}],
 [tdoc7,["Advanced EMT","Paramedic Equipment"],tdoc7,tdocspawn,_td3,_td3,true,{EMTAdavnced_id}],
 [tdoc7sub,["Advanced EMT","Paramedic Equipment"],tdoc7sub,tdocspawnsub,_td3,_td3,true,{EMTAdavnced_id}],
-[psobox,["","BLS PSO Box"],psobox,psocarspawn,_pso1,_pso1,true,{PSO_id}],
-[psosrbox,["","ALS PSO Box"],psosrbox,psocarspawn,_pso2,_pso2,true,{PSOSenior_id}],
-[psocombox,["","PSO Command Box"],psocombox,psocarspawn,_pso3,_pso3,true,{PSOCommand_id}],
 [resourcesell,["","Sell Resources"],dummyobj,dummyobj,_rs,_rs,true,{isciv}],
 [workplace_getjobflag_4,["","PG Emporium"],dummyobj,dummyobj,_gds1,_gds1,true,{true}],
 [workplace_getjobflag_6,["","Wigworths"],dummyobj,dummyobj,_gds3,_gds3,true,{true}],

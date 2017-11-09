@@ -1,4 +1,11 @@
-if (vehicle player != player)exitwith{};
+if (vehicle player != player)exitwith{
+
+	if (call garage_near)then {
+		titleRsc["Rtags", "PLAIN"];
+		_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
+		_control ctrlSetText "Open Garage (E)";
+	};
+};
 
 _objects = ["Man", "RUSpecialWeaponsBox","DTK_InfoStand","tcg_ATM","LandVehicle", "Air", "ship", "LocalBasicWeaponsBox"];
 _object = nearestObjects [getPos player,_objects,2];

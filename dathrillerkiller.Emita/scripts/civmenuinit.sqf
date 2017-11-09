@@ -1,53 +1,34 @@
 _civmenuciv  = civmenuciv;
 _civmenu_civ = civmenu_civ;
-
 _art         = _this select 0;
-_geld        = [player,"geld"] call storage_amount;
 
 if ((player distance _civmenuciv >= 25) or (!(alive _civmenuciv))) exitWith 
-
 {
-
-systemChat  format[localize "STRS_civmenu_distance"];
-
+	systemChat  format[localize "STRS_civmenu_distance"];
 };
 
+/*check player licenses */
 if (_art == 5) exitWith 
-
 {
-
-(format ["if (AR_playerString == ""%1"") then {[""licheck"", ""%2""] execVM ""scripts\civmenu.sqf"";}", _civmenu_civ, AR_playerString]) call network_broadcast;
-
+	[_civmenu_civ]call licenses_check
 };
 
-if ((count (weapons player)) == 0) exitWith 
-
-{	
-
-systemChat  localize "STRS_civmenu_copnotarmed";
-
-};
-
+/* seach players storage,licenses,weapons... */
 if (_art == 6) exitWith 
 
 {
-
-if(!(_civmenuciv call ISSE_IsVictim))exitwith{hint localize "STRS_inventory_checknohands"};		
-
-(format ["if (AR_playerString == ""%1"") then {[""inventcheck"", ""%2""] execVM ""scripts\civmenu.sqf"";}", _civmenu_civ, AR_playerString]) call network_broadcast;
-
+	if(!(_civmenuciv call ISSE_IsVictim))exitwith{hint localize "STRS_inventory_checknohands"};		
+	[_civmenu_civ] call storage_seach;
 };
 
+/* civilain menu basicly used to rob people and drop all their items */
 if (_art == 20) exitWith 
-
 {
-
-if(!(_civmenuciv call ISSE_IsVictim))exitwith{hint localize "STRS_inventory_checknohands"};
-
-(format ["if (AR_playerString == ""%1"") then {[]call INV_DropAll;};", _civmenu_civ, AR_playerString]) call network_broadcast;
-
+	if(!(_civmenuciv call ISSE_IsVictim))exitwith{hint localize "STRS_inventory_checknohands"};
+	(format ["if (AR_playerString == ""%1"") then {[]call storage_dropall;};", _civmenu_civ, AR_playerString]) call network_broadcast;
 };
 
+/* Seach for controban and remove it */
 if (_art == 1) exitWith 
 {
 	drugsvalue = 0;
@@ -107,36 +88,6 @@ _dauer = round(_this select 1);
 format ["if (player == %1) then {[""arrestMax"", %2, %3] execVM ""scripts\civmenu.sqf"";};", _civmenu_civ, _dauer, player] call network_broadcast;
 
 systemChat  format[localize "STRS_civmenu_arrested", _civmenu_civ];
-
-};
-if (_art == 8) exitWith 
-
-{	
-_check = call (compile format ["%1_warning", _civmenuciv]);
-if (count _check <= 1) exitwith {hint "Not Warned";};
-if (!(createDialog "liste_1_button")) exitWith {hint "Dialog Error!";};
-
-	_trennlinie = "---------------------------------------------";
-	lbAdd [1, _trennlinie];
-		
-	private "_k"; 
-	lbAdd [1, "C U R R E N T  W A R N I N G S:"];
-	lbAdd [1, _trennlinie];
-	for [{_k=0}, {_k < (count _check)}, {_k=_k+1}] do 
-	{
-	
-	_civ	  = _check select _k;
-	
-	
-			lbAdd [1, (format ["%1", _civ])];
-			_str = "";
-			{if(_str == "")then{_str = _str + _x}else{_str = _str + ", "; _str = _str + _x;};} count _reason;
-			lbAdd [1, _trennlinie];
-			
-
-		
-
-	};
 
 };
 

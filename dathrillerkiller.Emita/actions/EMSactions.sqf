@@ -43,14 +43,6 @@ _role addaction ["Switch To Turn Out Uniform","noscript.sqf",'["a2l_firefighter1
 _role addaction ["Switch To Turn Out SCBA Uniform","noscript.sqf",'["a2l_firefighter"] call clothing_switch;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call keys_has and (FF1_id)'];
 _role addaction ["Switch To Firefighter Duty Uniform","noscript.sqf",'["sfg_fr"] call clothing_switch;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and [player,_vcl]call keys_has and (FF1_id)'];
 
-
-_role addaction ["Switch To PSO Command Uniform","noscript.sqf",'["sfg_psocmd"] call clothing_switch;',1,true,true,"",'PSOCommand_id && {player distance psoatm < 2}'];
-_role addaction ["Switch To PSO Uniform","noscript.sqf",'["sfg_psoreg"] call clothing_switch;',1,true,true,"",'PSO_id && {player distance psoatm < 2}'];
-
-(vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call shops_index)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance tdocspawn <= 10) and vehicle player != player"];
-(vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call shops_index)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance psocarspawn <= 10) and vehicle player != player"];
-(vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call shops_index)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance tdocspawnsub <= 10) and vehicle player != player"];
-
 _role addaction ["[SAVE YOUR LAND VEHICLE]","noscript.sqf",'[carspawn1]call StatSave_SaveVehicle;',1,true,true,"",'player distance cursorTarget < 5 and [cursorTarget,_vcl]call keys_has and (player distance emssavepoint2 <= 30 or player distance emssavepoint1 <= 30)'];
 _role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[tdocspawn]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance emssavepoint1 <= 3"];
 _role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[tdocspawnsub]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance emssavepoint2 <=3"];

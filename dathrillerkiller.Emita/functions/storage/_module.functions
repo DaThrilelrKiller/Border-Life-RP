@@ -12,5 +12,6 @@
 "move",
 "isNumber",
 "dropall",
-"RemoveKind"
+"RemoveKind",
+"seach"
 ];

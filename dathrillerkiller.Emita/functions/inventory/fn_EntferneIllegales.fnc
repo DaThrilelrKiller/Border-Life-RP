@@ -7,8 +7,6 @@ private["_Fhasnvgoogles", "_Fhasbinoculars"];
    player REMOVEMAGAZINES "Handgrenade";
    player REMOVEMAGAZINES "Pipebomb";
    player REMOVEMAGAZINES "Mine";
-   ["INV_InventarArray", "weapon"] call INV_StorageRemoveKindOf;
-   ["INV_InventarArray", "Magazin"] call INV_StorageRemoveKindOf;
    player removeAction unholsterPistol;
    saveWeaponPistol set [1,false];
 	saveWeaponRifle = ["",false,false];

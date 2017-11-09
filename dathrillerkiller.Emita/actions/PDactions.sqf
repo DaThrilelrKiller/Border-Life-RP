@@ -39,7 +39,7 @@ _role addaction ["Remove Blindfold","FUNCTIONS\ITEMS\blindfold.sqf",[],1,false,t
 
 /*VEHICLE*/
 player addaction ["Role Vehicle Over","noscript.sqf",'[]call Other_unflipvehicle;',1,false,true,"",'_vcl = cursorTarget; player distance _vcl < 5 and [player,_vcl]call keys_has'];
-_role addaction [localize "STRS_addaction_trunk_see","noscript.sqf",'_vcl = cursorTarget;_var = _vcl getVariable "DTK_OwnerUID"; _str = format["%1_storage", _vcl];[_str]call Other_vehiclecheck;',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID"; player distance _vcl < 5 and !([player,_vcl]call keys_has) and (!isNil "_var")'];
+_role addaction [localize "STRS_addaction_trunk_see","noscript.sqf",'[cursorTarget]call storage_seach;',1,true,true,"",'_vcl = cursorTarget; [_vcl,["Air", "Ship", "LandVehicle"]]call core_isKindOf && {player distance _vcl < 10}'];
 _role addaction [localize "STRS_addaction_trunk_check","noscript.sqf",'_vcl = cursorTarget;_var = _vcl getVariable "DTK_OwnerUID";_str = format["%1_storage", _vcl];if([_vcl,_str] call INV_RemoveIllegalStorage)then{call compile format["publicvariable ""%1"";", _str]};',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID"; player distance _vcl < 5 and !([player,_vcl]call keys_has) and (!isNil "_var")'];
 _role addaction ["Pull Player Out","noscript.sqf",'cursorTarget spawn Other_pullout;',1,true,true,"",'_vcl = cursorTarget;player distance _vcl < 5 and count (crew _vcl) > 0 and (call INV_isArmed)'];
 _role addaction [localize "STRS_addAction_vehicleinfo","noscript.sqf",'cursorTarget call Other_vehinfo;',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID";player distance _vcl < 5 and (!isNil "_var")'];
@@ -69,7 +69,3 @@ _role addaction ["Release Vehicle","noscript.sqf",'_vcl = (nearestobjects [getpo
 _role addaction ["Burn Marijuana","noscript.sqf", "['SERVER',[cursorTarget],'s_drug_burnplant',true,false]call network_MPExec;", 1, false, true, "", "player distance cursorTarget < 3 && {typeOf cursorTarget == 'as_p_fiberPlant_EP1'}"];
 _role addaction ["Burn Poppy","noscript.sqf", "['SERVER',[cursorTarget],'s_drug_burnplant',true,false]call network_MPExec;", 1, false, true, "", "player distance cursorTarget < 3 && {typeOf cursorTarget == 'as_b_PinusM1s_EP1'}"];
 _role addaction ["Burn Cocaine","noscript.sqf", "['SERVER',[cursorTarget],'s_drug_burnplant',true,false]call network_MPExec;", 1, false, true, "", "player distance cursorTarget < 3 && {typeOf cursorTarget == 'as_b_PistaciaL1s_EP1'}"];
-
-
-/*Garage*/
-(vehicle player) addaction ["Open Garage","noscript.sqf",'[ (dtkgarage call shops_index)]call shops_openshop; ',1,false,true,"","(player distance dtkgarage <= 10 or player distance ccarspawn <= 10) and vehicle player != player"];

@@ -50,6 +50,7 @@ dtk_active_modules =
 	call compile format['call compile preprocessFileLineNumbers "functions\%1\_module.variables";', _x ];
 }count dtk_active_modules;
 
+
 /*loads module functions*/
 {
 	_functions = call compile format['call compile preprocessFileLineNumbers "functions\%1\_module.functions";', _x];
@@ -63,6 +64,7 @@ dtk_active_modules =
 	diag_log text format ["Loaded Module - %1 With %2 Functions",_module,dtk_fnc_num];
 	dtk_fnc_total = dtk_fnc_total + dtk_fnc_num;
 }count dtk_active_modules;
+
 
 diag_log text format ["Total Modules: %2 Total Functions: %1",dtk_fnc_total,count dtk_active_modules];
 

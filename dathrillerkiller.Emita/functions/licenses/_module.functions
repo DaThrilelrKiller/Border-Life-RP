@@ -5,5 +5,6 @@
 "toDialog",
 "add",
 "remove",
-"name"
+"name",
+"check"
 ];

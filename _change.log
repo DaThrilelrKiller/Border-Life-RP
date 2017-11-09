@@ -178,7 +178,21 @@ DaThrillerKiller - Fixed some foods not working like donuts
 DaThrillerKiller - Alot of UI optimization this optimization is really noticable in UI that involce listboxs for actions
 DaThrillerKiller - Added more shipment locations
 
-
+Version 2.3
+DaThrillerKiller - Removed PSO and everything with it
+DaThrillerKiller - Added "Open Garage" to tags and made it so you press E to open it
+DaThrillerKiller - New Storage seach function for both cars and players
+DaThrillerKiller - New licence check function
+DaThrillerKiller - Changed the way items are given to people (needs to be tested)
+DaThrillerKiller - Optimized Keybinding UI
+DaThrillerKiller - Fixed it so you can acess info stand gear... this is important how are people going to get weapons silly me
+DaThrillerKiller - Removed BAL functions
+DaThrillerKiller - Removed all stat thingy dialog
+DaThrillerKiller - Fixed interaction menus
+DaThrillerKiller - Fixed giving key message (needs to be tested in a MP enviment)
+DaThrillerKiller - Fixed pullind out player for real this time, hopefuly it suck not having someon to test thing that require two peope
+DaThrillerKiller - core_addLoop now returns a unique ID to index that function and remove it
+DaThrillerKiller - added abilty to remvoe code from core loop
 
 
 

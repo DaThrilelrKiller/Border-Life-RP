@@ -15,7 +15,7 @@ showHUD = 0;
 disabledAI    = 1;
 enableItemsDropping = 0;
 disableChannels[]={0,1,2,4,5,6};
-loadScreen = "sfg_textures\misc\loading.jpg";
+loadScreen = "\ol_loading\onload.jpg";
 onMinimapScript[] = {"BIS_customGPS_Spawn"};
 
 class Header
@@ -52,7 +52,6 @@ class CfgPatches
 #include "DATA\DIALOGS\bankCodeDlg.hpp"
 #include "DATA\DIALOGS\INVdialogs.hpp"
 #include "DATA\DIALOGS\SpawnMenu.hpp"
-#include "DATA\DIALOGS\Menu.hpp"
 #include "DATA\DIALOGS\PlayerCust.hpp"
 #include "DATA\DIALOGS\ipad.hpp"
 #include "DATA\DIALOGS\AR_KeyBindings.hpp"

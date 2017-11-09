@@ -9,7 +9,6 @@ _Funcitons =
 
 ["goverment","addtax","goverment"],
 
-["inv","storageremovekindof","inventory"],
 ["inv","entferneillegales","inventory"],
 ["inv","getobjectsteuer","inventory"],
 ["inv","addprozent","inventory"],

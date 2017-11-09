@@ -118,6 +118,12 @@ KeyPressE =
 	if(keyblock)exitwith{};
 	if(dialog)exitwith{closeDialog 0;};
 	if(local_arrest == 1)exitwith{};
+	if (call garage_near && {(vehicle player != player)})exitWith
+	{
+		[ (dtkgarage call shops_index)]call shops_openshop;
+	};
+	
+	
 	private ["_civ"]; 	
 	for [{_i=1}, {_i < 3}, {_i=_i+1}] do
 	{  		

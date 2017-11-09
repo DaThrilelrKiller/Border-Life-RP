@@ -65,10 +65,7 @@ switch (_Playerteam) do
 			[_playerside, "EMSAirUnit_id"],
 			[_playerside, "EMSSupervisor_id"],
 			[_playerside, "EMSCommand_id"],
-			[_playerside, "EMSChiefs_id"],
-			[_playerside, "PSO_id"],
-			[_playerside, "PSOSenior_id"],
-			[_playerside, "PSOCommand_id"]
+			[_playerside, "EMSChiefs_id"]
 		];
 	};
 };
