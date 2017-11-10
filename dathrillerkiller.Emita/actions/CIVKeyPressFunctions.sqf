@@ -57,7 +57,6 @@ _vcl = (nearestobjects [getpos player, ["LandVehicle", "Air", "ship", "TKOrdnanc
 if (player != driver _vcl)exitwith{systemChat  "You must be in the drivers seat to get to the trunk";};
 if(!([player,_vcl]call keys_has) and typeof _vcl == "TKOrdnanceBox_EP1")exitwith{systemChat  "You do not have the keys to this hideout."; };
 if(!([player,_vcl]call keys_has))exitwith{systemChat  "You do not have the keys to this vehicle.";};
-if(UpgradingCar)exitWith{systemChat  "You cant use your trunk while upgrading your car";};
 if(!isnull _vcl)then
 {
 [_vcl]call storage_trunk;

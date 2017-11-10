@@ -1,0 +1,14 @@
+/* this returns current election data */
+private ["_votes","_return"];
+
+_return = [];
+
+{
+	_votes = _x getVariable ["votes",0];
+	if (_votes > 0)then {
+		_return set [count _return,[_x,_votes]];
+	};
+	true
+}count playableUnits;
+
+_return

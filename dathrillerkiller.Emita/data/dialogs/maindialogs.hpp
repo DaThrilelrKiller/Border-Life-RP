@@ -469,7 +469,7 @@ class wahldialog
 		h = 0.04;
 		
 		text = $STRD_description_wahl_submit;
-		action = "[0,1,2,[""ClientWahl"", lbData [1, (lbCurSel 1)]]] execVM ""scripts\mayor.sqf""; closedialog 0";
+		action = "call goverment_submit";
 	};
 	
 	class cancel : RscButton		

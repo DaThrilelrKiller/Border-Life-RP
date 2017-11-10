@@ -1,1 +1,0 @@
-MayorSteuern = MayorSteuern + _this;

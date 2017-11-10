@@ -15,9 +15,3 @@ _money = _x select 1;
 
 kontostand = kontostand + _income;
 systemchat format ["%1 you recived a paycheck of %2$",(name player),_income];
-
-if (call Other_isMayor) then
-{
-	systemchat format ["As mayor you reviced %1 in Taxes",MayorSteuern];
-};
-MayorSteuern = 0;

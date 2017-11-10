@@ -33,8 +33,6 @@ gasspawnlocations =  [[1649.76,4703.58,0.00143957],[1487.75,4136.12,0.00143909],
 
 EMSMissionType = "";
 publicvariable "EMSMissionType";
-PG_mayor = objNull;
-publicvariable "PG_mayor";
 
 GesetzArray = ["Always Drive on the RIGHT side of the road","Always Holster weapons in Towns.","Speed limits 60 in town 90 out", "Governor and Gaurds May have any weapon unlicensed","Governor is immune to traffic laws if his life is in danger","","","","","","","","","",""];
 publicvariable "GesetzArray";

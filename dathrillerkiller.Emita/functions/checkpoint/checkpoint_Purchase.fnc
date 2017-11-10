@@ -10,7 +10,7 @@
 	_price = _price * AM_classnames_priceincrease;
 	_model = _class call INV_GetItemClassname;
 	
-	temp_item = _model createVehicle position player;
+	temp_item = _model createVehicle [0,0,0];
 	temp_item setVariable ["AM_CP",1,true];
 	temp_item attachto[player,[0,2,temp_altitude]];
 	

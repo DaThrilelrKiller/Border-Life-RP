@@ -109,9 +109,6 @@ switch(_itemtype)do
 	{
 	[_cost,true,_info] call shops_ProcessMoney;
 	shop_selllist call Shops_selllist;
-	if (!isNull PG_mayor)then {
-		[PG_mayor,(_costwithTax -  _itemcost),"goverment_addTax",false,false]call network_MPExec;
-	};
 
 	};
 	dtk_shopactive = false;

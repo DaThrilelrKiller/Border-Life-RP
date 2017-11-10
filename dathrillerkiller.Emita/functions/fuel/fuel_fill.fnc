@@ -3,8 +3,6 @@ private ["_vehicle","_fuel"];
 _vehicle = (nearestobjects [getpos player, ["Motorcycle","car","Truck", "Ship", "LandVehicle"], 10]);
 _vehicle = _vehicle select 0;
 
-systemChat str _vehicle;
-
 /* cehcks for vehicle to refill */
 if (isNull _vehicle)exitWith {
 systemChat "No vehicle found, please look at the vehicle you are trying to refill";

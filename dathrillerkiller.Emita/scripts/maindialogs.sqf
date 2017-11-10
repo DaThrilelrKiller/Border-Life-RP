@@ -26,8 +26,9 @@ if (_art == "lawswag") then
 	
 	lbAdd [1, _trennlinie];
 	lbAdd [1, "Emita County Mayor"];
-	_mayor = if (isNull PG_mayor)then {"There Is No Emita County Mayor"}else {name PG_mayor};
-		lbAdd [1, _mayor];
+	_mayor = call goverment_govonor;
+	_mayor = if (isNull _mayor)then {"Currently no govonor"}else{name _mayor};
+	lbAdd [1, _mayor];
 
 
 	lbAdd [1, _trennlinie];
@@ -141,13 +142,6 @@ if (_art == "coplog") then
 	};
 
 	
-};
-
-if (_art == "wahlen") then 
-{
-	if (!(createDialog "wahldialog")) exitWith {hint "Dialog Error!";};
-	_array = [0, 1, true, false] call DialogSpielerListe;
-	lbSetCurSel [1, _array select 1];
 };
 
 if (_art == "steuern") then 

@@ -6,9 +6,6 @@ _role addaction ["Rob Safe","scripts\bankrob.sqf", ["robDialog", safe1],1,false,
 _role addaction ["Crack Safe","noscript.sqf", '["crackSafe", safe1]call Other_safehack;',1,false,true,"","player distance Safe1 <= 3"];
 
 /*GOV*/
-_role addaction ["Elect A Governor","scripts\maindialogs.sqf",["wahlen"],1,false,true,"","player distance rathaus <= 3"];
-_role addaction ["Change The Laws","scripts\maindialogs.sqf",["gesetz"],1,false,true,"","player distance rathaus <= 3 and (call Other_isMayor)"];
-_role addaction ["Change The Taxes","scripts\maindialogs.sqf",["steuern"],1,false,true,"","player distance rathaus <= 3 and (call Other_isMayor)"];
 _role addaction ["Crime Log","scripts\maindialogs.sqf",["coplog"],1,false,true,"","player distance rathaus <= 3"];
 _role addaction [format ["Pay Bail", slave_cost],"scripts\maindialogs.sqf", ["bail"],1,false,true,"","player distance bailflag <= 3"];
 

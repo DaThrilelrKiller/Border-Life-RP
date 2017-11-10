@@ -11,15 +11,6 @@ animationstate player == "amovppnemsprslowwrfldf"
 
 };
 
-TurnMayorFunc = 
-
-{
-
-PG_mayor = call compile _this;
-publicVariable "PG_mayor";
-
-};
-
 DialogSpielerListe = {
 private ["_Fart", "_Fid", "_Fname", "_Fingame", "_Findex", "_Flistlen", "_Feigenenum"];
     _Fart = _this select 0;

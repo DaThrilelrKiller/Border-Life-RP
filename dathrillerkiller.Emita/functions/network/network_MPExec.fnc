@@ -20,10 +20,14 @@ switch(typeName _target)do
 			if (_OnClient)then {
 			[_Prams,_Function,_Sceduled]call  network_Run;
 			};
-		
-			_owner = owner _target;
-			missionNamespace setVariable [MPID,_MPPaket];
-			_owner publicVariableClient MPID;
+			
+			if (dtk_server)then {
+				_owner = owner _target;
+				missionNamespace setVariable [MPID,_MPPaket];
+				_owner publicVariableClient MPID;
+			}else{
+				["SERVER",_this,"network_MPExec",false,false]call network_MPExec;
+			};
 		};
 	};
 	case "STRING":

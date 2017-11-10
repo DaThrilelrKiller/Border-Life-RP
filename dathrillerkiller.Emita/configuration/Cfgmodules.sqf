@@ -8,6 +8,7 @@ dtk_active_modules =
 "Network",
 "Storage",
 "Shops",
+"Goverment",
 "Licenses",
 "Keybindings",
 "Slots",

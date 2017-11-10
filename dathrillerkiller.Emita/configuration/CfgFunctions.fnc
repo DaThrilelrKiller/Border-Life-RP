@@ -7,8 +7,6 @@ _Funcitons =
 ["events","onpause","events"],
 ["events","sethit","events"],
 
-["goverment","addtax","goverment"],
-
 ["inv","entferneillegales","inventory"],
 ["inv","getobjectsteuer","inventory"],
 ["inv","addprozent","inventory"],
@@ -52,7 +50,6 @@ _Funcitons =
 ["other","getlottoarray","other"],
 ["other","safehack","other"],
 ["other","safecodedlgitems","other"],
-["other","ismayor","other"],
 ["other","getquest","other\quest"],
 
 

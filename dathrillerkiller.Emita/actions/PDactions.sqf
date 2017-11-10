@@ -29,7 +29,6 @@ _role addaction [format ["Buy K9 ($%1)", dog_cost],"scripts\copdog.sqf", ["buydo
 /*OTHER*/
 _role addaction ["Get Patrol Mission","scripts\coppatrol.sqf",["start"],1,false,true,"","player distance copbank <= 4 and !pmissionactive and !patrolwaittime"];
 _role addaction ["Cancel My Patrol Mission","scripts\coppatrol.sqf",["end"],1,false,true,"","pmissionactive and player distance copbank <= 4"];
-_role addaction ["Elect A Governor","scripts\maindialogs.sqf",["wahlen"],1,false,true,"","player distance rathaus <= 3"];
 _role addaction ["Sign-up For A Debit Card","scripts\debitcardsignup.sqf",["mainbank"],1,false,true,"","player distance mainbank <= 15 and (!SigningUpForDebitCard)"];
 _role addaction ["Impound Lot","noscript.sqf",'[dummyobj, "Retrive","LandVehicle"]call Other_impound;',1,false,true,"","player distance newimpoundlot <= 5"];
 _role addaction ["Reset Targets","noscript.sqf",'{_x animate["terc",0]} count (nearestobjects [getpos player, ["TargetEpopup"],  500])',1,true,true,"",'player distance targetrange1 < 10'];

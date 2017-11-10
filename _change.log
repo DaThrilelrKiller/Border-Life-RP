@@ -194,7 +194,11 @@ DaThrillerKiller - Fixed pullind out player for real this time, hopefuly it suck
 DaThrillerKiller - core_addLoop now returns a unique ID to index that function and remove it
 DaThrillerKiller - added abilty to remvoe code from core loop
 
-
+Version 2.4
+DaThrillerKiller - Removed mayor system
+DaThrillerKiller - Added new goverment system, you now have to run for govonor
+DaThrillerKiller - removed item scripts that we dont use anymore
+DaThrillerKiller - Permenant fix for PublicVariableClient within the network system, now we can do things more efficently across the network
 
 
 

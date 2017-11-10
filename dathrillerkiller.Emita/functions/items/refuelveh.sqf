@@ -19,24 +19,3 @@ systemChat  "REFUELED";
 
 
 };
-/*
-    if (player == vehicle player)  exitWith {
-systemChat  localize "STRS_inv_items_repair_refuel_notincar";
-};
-
-   if (!(player == driver vehicle player)) exitWith {
-systemChat  localize "STRS_inv_items_repair_refuel_notdriver";
-};
-
-    if ((fuel vehicle player) == 1)  exitWith {
-systemChat  localize "STRS_inv_items_refuel_notneeded";
-};
-
-systemChat  "Refueling Vehicle!";
-sleep 15;
-vehicle player setFuel 1;
-    systemChat  localize "STRS_inv_items_refuel_refueled";
-[player,_item,-1] call storage_add;
-};
-*/
-
