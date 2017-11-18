@@ -14,7 +14,7 @@ dtk_server = [false,true]select (isServer && isDedicated);
 if (isNil "server_auth" && {dtk_client})then {
 	systemchat "Waiting for server to authenticate";
 	waitUntil {!isNil "server_auth"};
-	systemchat "Server Authentication finished";
+	systemchat "Server authentication finished";
 };
 
 
@@ -40,7 +40,7 @@ if (dtk_client)then {
 		case "GUER":{"EMS"};
 		case "WEST":{"PD"};
 	};
-call compile preprocessFile format ['configuration\SIDEVARIABLES\%1variables.sqf',ar_side];
+call compile preprocessFile format ['configuration\sidevariables\%1variables.sqf',ar_side];
 };
 
 call compile preprocessFile "configuration\Cfgmodules.sqf";	
@@ -48,5 +48,5 @@ call compile preprocessFile  "ServerLoad\INVvars.sqf";
 
 
 if (dtk_client) then {
-	call compile preprocessFile "InitClient.sqf";
+	call compile preprocessFile "initclient.sqf";
 };

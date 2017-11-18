@@ -94,6 +94,10 @@ switch (_command) do
 		{
 			['ping']call core_performance;
 		};
+		case "!quest": 
+		{
+			call quest_info;
+		};
 		default 
 		{ 
 			if (_this != "")then {

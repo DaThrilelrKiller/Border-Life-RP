@@ -1,5 +1,6 @@
 [
 "customgps",
 "selectrandom",
-"timeToString"
+"timeToString",
+"init"
 ];

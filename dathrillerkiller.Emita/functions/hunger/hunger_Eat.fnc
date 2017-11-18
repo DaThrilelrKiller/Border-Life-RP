@@ -12,13 +12,6 @@ if( _amount >  _max) then { _amount =  _max;};
 _hunger = switch toLower _item do 
 	{	
 		case "d5w":  		{5};
-		case "blowfish": 	{8};
-		case "perch":  		{6};
-		case "walleye":  	{7};
-		case "trout":  		{7};
-		case "mackerel":  	{8};
-		case "herring":  	{8};
-		case "bass":  		{8};
 		case "straw":  		{3};
 		case "donut":     	{10};
 		case "cl_donut":    {10};

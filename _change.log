@@ -200,6 +200,14 @@ DaThrillerKiller - Added new goverment system, you now have to run for govonor
 DaThrillerKiller - removed item scripts that we dont use anymore
 DaThrillerKiller - Permenant fix for PublicVariableClient within the network system, now we can do things more efficently across the network
 
+Version 2.5
+DaThrillerKiller - Brand new quest system to earn bounse cash while doing a task
+DaThrillerKiller - New fishing system makers are now 100% dynamic per restart, and new fish
+DaThrillerKiller - New chat commands "!quest" to check quest info
+DaThrillerKiller - New random intiger function with min and max values
+DaThrillerKiller - All network trafic is now logged on the server
+DaThrillerKiller - moved whitelist variables to .variable file
+
 
 
 

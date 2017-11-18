@@ -11,3 +11,7 @@ else
 {
 	_Prams call _Function;
 };
+
+if (dtk_server)then {
+	_this call network_log;
+};

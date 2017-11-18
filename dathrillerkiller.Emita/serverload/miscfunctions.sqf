@@ -111,7 +111,12 @@ INV_getitemScriptName = { ((_this call INV_getitemArray) select 0);};
 INV_getitemType = {((_this call INV_getitemArray) select 1) select 0;};
 INV_getitemKindOf = { ((_this call INV_getitemArray) select 1) select 1;};
 INV_getitemClassName = { ((_this call INV_getitemArray) select 2) select 0;};
-INV_getitemName = {((_this call INV_getitemArray) select 2) select 1;};
+INV_getitemName = {
+	private ["_return"];
+	_return = ((_this call INV_getitemArray) select 2) select 1;
+	_return = if (isNil "_return")then {_this}else{_return};
+	_return
+};
 INV_getitemBuyCost = {((_this call INV_getitemArray) select 3) select 0;};
 INV_getitemSellCost = { ((_this call INV_getitemArray) select 3) select 1;};
 INV_getitemTypeKg = { ((_this call INV_getitemArray) select 4) select 0;};

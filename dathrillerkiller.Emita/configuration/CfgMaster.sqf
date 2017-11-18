@@ -935,13 +935,6 @@ INV_AlleItemsArray = [
 ["rabbit",["Item", "food"],["rabbit", "Rabbit meat"],[400, 400], [1, "",""], [true, true, true,false,hunger_Eat]], 
 ["cookie",["Item", "food"],["cookie", "Fortune Cookie"],[400, 400], [1, "",""], [true, true, true,false,hunger_Eat]], 
 ["strangemeat",["Item", "food"],["strangemeat", "Strange meat"],[225, 225], [2, "",""], [true, true, true,false,hunger_Eat] ], 
-["blowfish",["Item", "food"],["blowfish", "Blowfish"],[600, 600], [2, "",""], [true, true, true,false,hunger_Eat]], 
-["mackerel",["Item", "food"],["mackerel", "Mackerel"],[600, 600], [2, "",""], [true, true, true,false,hunger_Eat]], 
-["herring",["Item", "food"],["herring", "Herring"],[600, 600], [2, "",""], [true, true, true,false,hunger_Eat]], 
-["trout",["Item", "food"],["trout", "trout"],[800, 800], [2, "",""], [true, true, true,false,hunger_Eat]], 
-["walleye",["Item", "food"],["walleye", "walleye"],[600, 600], [2, "",""], [true, true, true,false,hunger_Eat] ], 
-["perch",["Item", "food"],["perch", "perch"],[600, 600], [2, "",""], [true, true, true,false,hunger_Eat]], 
-["bass",["Item", "food"],["bass", "Bass"],[750, 750], [2, "",""], [true, true, true,false,hunger_Eat]], 
 ["Apple",["Item", "ressource"],["Apple", "Apple"],[250, 250], [0.5, "",""], [true, true, true,false,hunger_Eat] ],
 ["Coconut",["Item", "ressource"],["Coconut", "Coconut"],[150, 150], [0.5, "",""], [true, true, true,false,hunger_Eat]],
 ["Banana",["Item", "ressource"],["Banana", "Banana"],[100, 100], [0.1, "",""], [true, true, true,false,hunger_Eat]],
@@ -973,7 +966,6 @@ INV_AlleItemsArray = [
 ["woodchair",["Item", "misc"],["woodchair", "Wood Chair"],[1000, 1000], [10, "", ""], [true, true, true,false,"useresource"]],
 ["iron",["Item", "ressource"],["cl_iron_ore", "Iron"], [1500, 1500],[1, "",""],[true,true,true, false, "useresource"]],
 ["SwatArmor",["Item", "ressource"],["SwatArmor", "SWAT Body Armor"], [30000, 15000],[1, "",""],[true,true,true, false, "nouse"]],
-["drill",["Item", "ressource"],["drill", "StrongArm MiniRig Drill"], [40000, 15000],[1, "",""],[true,true,true, false, "UseDrill"]],
 ["bunnyhop", ["Item", "misc"], ["bunnyhop", "Bunny-Hop (Bike Only)"], [2000, 500], [1, "",""], [true, true, true, false, "bunnyhop"]],
 ["copper",["Item", "ressource"],["copper", "Copper"],[1600, 1600],[1, "",""],[true,true,true, false, "useresource"]],
 ["steel",["Item", "ressource"],["cl_minesteel", "Steel"], [500, 500500],[1, "",""],[true,true,true, false, "useresource"]],
@@ -991,7 +983,6 @@ INV_AlleItemsArray = [
 ["Oil",["Item", "ressource"],["Barrel4", "Crude Oil"],[1000, 1000], [10, "",""], [true, true, true,false,"useresource"]],
 ["pharm",["Item", "drug"],["pharm", "Pharmaceutical Items"],[1500, 1500], [5, "",""], [true, true, true,true,"nouse"]],
 ["meth", ["Item", "drug"], ["meth", "Meth"],[10000, 10000], [5, "",""],[true,true,true, true, "drugs"]],
-["Whale",["Item", "drug"],["Whale", "Whale"],[12000, 12000], [5, "",""], [true, true, true,true,"nouse"]],
 ["Unprocessed_Cocaine",["Item", "drug"],["cl_c_seeds", "Unprocessed Cocaine"],[800, 800], [2, "",""], [true, true, true,true,"useresource"]],
 ["Unprocessed_Marijuana",["Item", "drug"],["Unprocessed Marijuana", "Unprocessed Marijuana"],[800, 800], [2, "",""], [true, true, true,true,"useresource"]],
 ["Unprocessed_LSD",["Item", "drug"],["Unprocessed LSD", "Unprocessed LSD"],[600, 600], [1, "",""], [true, true, true,true,"useresource"]],
@@ -1034,7 +1025,7 @@ INV_AlleItemsArray = [
 ["Shovel", ["Item", "misc"], ["Suitcase", "Shovel"],[550, 550], [1, "", ""],[true,true,true, false, "mine"]],
 ["Pickaxe", ["Item", "misc"], ["Suitcase", "Pickaxe"],[1000, 1000], [1, "", ""],[true,true,true, false, "mine"]],
 ["JackHammer", ["Item", "misc"], ["Suitcase", "Jack Hammer"],[20000, 20000], [1, "", ""],[true,true,true, false, "mine"]],
-["fishingpole", ["Item", "Shop"], ["Suitcase", "Fishing Pole"],[100, 100], [5, "", ""],[true,true,true, false, "fishing"]],
+["fishingpole", ["Item", "Shop"], ["Suitcase", "Fishing Pole"],[100, 100], [5, "", ""],[true,true,true, false, fishing_fish]],
 ["GunrackUS_EP1", ["Item", "misc"], ["GunrackUS_EP1", "Gunrack"],[10000, 10000], [20, "", "", 400],[true,true,true, false, "createobject"]],
 ["TKOrdnanceBox_EP1", ["Item", "misc"], ["TKOrdnanceBox_EP1", "Hideout storage"],[10000, 10000], [20, "", "", 600],[true,true,true, false, "createobject"]],
 ["emptywine",["Item", "drink"],["Suitcase", "Empty Wine Bottle"],[0, 0], [0.3, "",""], [true, true, true,false,"nouse"]],
@@ -1199,9 +1190,15 @@ INV_AlleItemsArray = [
 ["dtk_shipment2",["shipment", "shipment"],["dtk_shipment2", "SubMachine Gun Shipment"],[100000, 2500], [150, "",""], [true, false, true,false,"nouse"]],
 ["dtk_shipment3",["shipment", "shipment"],["dtk_shipment3", "Assault Rifle Shipment"],[100000, 3500], [200, "",""], [true, false, true,false,"nouse"]],
 ["dtk_shipment4",["shipment", "shipment"],["dtk_shipment4", "Sniper Shipment"],[100000, 4500], [300, "",""], [true, false, true,false,"nouse"]],
-["dtk_shipment5",["shipment", "shipment"],["dtk_shipment5", "Nuclear Weapon Shipment"],[100000, 5500], [350, "",""], [true, false, true,false,"nouse"]]
-
-
+["dtk_shipment5",["shipment", "shipment"],["dtk_shipment5", "Nuclear Weapon Shipment"],[100000, 5500], [350, "",""], [true, false, true,false,"nouse"]],
+["fishing_turtle",["Item", "fish"],["fishing_turtle", "Turtle"],[1250, 1250], [1, "",""], [true, true, true,false,fishing_release]],
+["fish_catfish",["Item", "fish"],["fish_catfish", "Catfish"],[1100, 1100], [1, "",""], [true, true, true,false,fishing_release]],
+["fishing_whale",["Item", "fish"],["fishing_whale", "Whale"],[14000, 14000], [1, "",""], [true, true, true,false,fishing_release]],
+["fishing_trout",["Item", "fish"],["fishing_trout", "Trout"],[1200, 1200], [1, "",""], [true, true, true,false,fishing_release]],
+["fishing_bass",["Item", "fish"],["fishing_bass", "Bass"],[1150, 1150], [1, "",""], [true, true, true,false,fishing_release]],
+["fishing_walleye",["Item", "fish"],["fishing_walleye", "Walleye"],[1000, 1000], [1, "",""], [true, true, true,false,fishing_release]],
+["fishing_mackerel",["Item", "fish"],["fishing_mackerel", "Mackerel"],[1000, 1000], [1, "",""], [true, true, true,false,fishing_release]],
+["fishing_herring",["Item", "fish"],["fishing_herring", "Herring"],[1000, 1000], [1, "",""], [true, true, true,false,fishing_release]]
 ];
 
 AlleMissionsObjekte = INV_AllewaffenObjekte + INV_AllemagazinObjekte + INV_AllefahrzeugeArray + INV_AlleItemsArray;

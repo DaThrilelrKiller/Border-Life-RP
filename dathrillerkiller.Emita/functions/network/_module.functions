@@ -13,5 +13,6 @@
 "allowDamage",
 "setUnconscious",
 "broadcast",
-"Say3D"
+"Say3D",
+"log"
 ];

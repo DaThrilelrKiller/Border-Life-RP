@@ -2,7 +2,9 @@
 
 _fs = ["kanister","Fuelline","reparaturkit","tcgmp","doshd","gdar","bjerk","wulf"];
 
-_is = ["apple","straw","getreide","blowfish","mackerel","herring","perch","trout","walleye","bass","boar","lighter"];
+_is = ["apple","straw","getreide""lighter"];
+
+_is1 = ["apple","straw","getreide","fishing_turtle","fish_catfish","fishing_whale","fishing_trout","fishing_bass","fishing_walleye","fishing_mackerel","fishing_herring","boar","lighter","rawcow","cowmeat","rabbit"];
 
 _cf = ["wulf","bjerk","tcgmp","doshd"];
 
@@ -144,7 +146,7 @@ _gds3 = [];
 
 _os = ["OilBarrel","Oil"];
 
-_ws = ["Whale"];
+_ws = ["fishing_whale"];
 
 _dsc = ["cocaine","cocaineseed"];
 
@@ -1204,8 +1206,8 @@ INV_ItemShops = [
 [fuel5,["Gas pump","Gas N Chips"],dummyobj,dummyobj,_fs,_fs,true,{true}],
 [fuel7,["Gas pump","Mikes Hard Gas"],dummyobj,dummyobj,_fs,_fs,true,{true}],
 [fuel8,["Gas pump","Gas Haus"],dummyobj,dummyobj,_fs,_fs,true,{true}],
-[shop1,["","Food Shop"],dummyobj,dummyobj,_is,_is,true,{true}],
-[shop4,["","Food Shop"],dummyobj,dummyobj,_is,_is,true,{true}],
+[shop1,["","Food Shop"],dummyobj,dummyobj,_is,_is1,true,{true}],
+[shop4,["","Food Shop"],dummyobj,dummyobj,_is,_is1,true,{true}],
 [bailflag,["","Food and Gun Locker"],dummyobj,dummyobj,_cf,_cf,true,{true}],
 [pub1,["pub","Fionas Pub"],dummyobj,dummyobj,_pub,_pub,true,{true}],
 [pub2,["pub","SouthSide Pub"],dummyobj,dummyobj,_pub,_pub,true,{true}],
@@ -1258,7 +1260,7 @@ INV_ItemShops = [
 [tdocsub,["EMTChief","Command Equipment"],tdocsub,tdocspawnsub,_td7,_td7,true,{EMSCommand_id}],
 [tdoc7,["Advanced EMT","Paramedic Equipment"],tdoc7,tdocspawn,_td3,_td3,true,{EMTAdavnced_id}],
 [tdoc7sub,["Advanced EMT","Paramedic Equipment"],tdoc7sub,tdocspawnsub,_td3,_td3,true,{EMTAdavnced_id}],
-[resourcesell,["","Sell Resources"],dummyobj,dummyobj,_rs,_rs,true,{isciv}],
+[resourcesell,["","Sell Resources"],dummyobj,dummyobj,[],_rs,true,{isciv}],
 [workplace_getjobflag_4,["","PG Emporium"],dummyobj,dummyobj,_gds1,_gds1,true,{true}],
 [workplace_getjobflag_6,["","Wigworths"],dummyobj,dummyobj,_gds3,_gds3,true,{true}],
 [OilSell1,["oil","Oil Dealer"], dummyobj,dummyobj, _emptyshop,_os,true,{isciv}],
@@ -1312,7 +1314,7 @@ INV_ItemShops = [
 [Diamond_1,["","Pawn Shop"],dummyobj,dummyobj,_js,_js,true,{isCiv}],
 [hospsell,["","Sell Organs"],dummyobj,dummyobj,_hsc,_hsc,true,{isCiv}],
 [towservice1,["","Towing Service"],towservice1,towspawn,_ImpoundService,_ImpoundService,true,{TowingService_id}],
-[lumbermill,["","Lumber Mill"],lumbermill,dummyobj,_LummberMill,_LummberMill,false,{isCiv}],
+[lumbermill,["","Lumber Mill"],lumbermill,dummyobj,[],_LummberMill,false,{isCiv}],
 [terror,["","Terror Shop"],terror,dummyobj,_terror2,_terror2,true,{isCiv}],
 [terrorair,["","Terror Air Shop"],terrorair,dummyobj,_terrorairlist,_terrorairlist,true,{isCiv}],
 [SFGVehicleDealer,["","Emita County Vehicle Dealer"],SFGVehicleDealer,SFGSpawn,_SFGDealer,_SFGDealer,true,{isCiv}],

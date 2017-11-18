@@ -43,12 +43,11 @@ switch(_itemtype)do
 			_fahne setvariable["druglist", _list, true];
 		};
 
-		/*QUEST*/
-		if ((QuestTime > 0) and (_item in QuestItems))then 
+		if (_item in (v_questitems select 1))then 
 		{
 			_costIncreat = (_cost * 0.4);
 			_cost = _cost + _costIncreat;
-			systemChat format ['You have made %1$ by doing this job threw a quest',_costIncreat];
+			systemChat format ['You have made a extra %1$ by selling this item during your quest',_costIncreat];
 		};
 		
 		[player,"geld",_cost] call storage_add;

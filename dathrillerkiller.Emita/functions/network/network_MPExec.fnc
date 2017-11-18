@@ -5,7 +5,7 @@ _Prams = (_this select 1);
 _Function = (_this select 2);
 _Sceduled = (_this select 3);
 _OnClient = (_this select 4);
-_MPPaket = [_Prams,_Function,_Sceduled];
+_MPPaket = [_Prams,_Function,_Sceduled,name player];
 
 switch(typeName _target)do
 {

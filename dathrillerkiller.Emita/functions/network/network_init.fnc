@@ -5,10 +5,7 @@ MPID = format ["MP%1",(_MParray find _find)];
 
 
 {
-	format ["MP%1",_ForEachIndex] addPublicVariableEventHandler 
-	{
-	(_this select 1) call network_Run;
-	};	
+	format ["MP%1",_ForEachIndex] addPublicVariableEventHandler {(_this select 1) call network_Run;};
 }ForEach _MParray;
 
 "PGRE" addPublicVariableEventHandler {call compile (_this select 1);};	

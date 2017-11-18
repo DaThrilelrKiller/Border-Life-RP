@@ -1,0 +1,57 @@
+module_quest = true;
+v_questitems = [];
+v_questtime = 0;
+v_quest = 
+[
+	[
+		"Miner",
+		[
+			"Make some great money by mining precious gems",
+			"Gold",
+			"copper",
+			"steel",
+			"coal",
+			"sand"
+		]
+	],
+	[
+		"Roughneck",
+		[
+			"Oil fields are booming, go make money fracking",
+			"Oil",
+			"OilBarrel"
+		]
+	],
+	[
+		"Start Hunting or get Hunted",
+		[
+			"Oh not much goes on out here, buddy. I run tru de snow, dey shoot de guns. I always get away. Buncha hosers in orange don’t bother me none.",
+			"boar",
+			"rawcow",
+			"cowmeat",
+			"rabbit"
+		]
+	],
+	[
+		"Fisherman",
+		[
+			"Fish for fun, fishing for gold",
+			"fishing_whale",
+			"fishing_turtle",
+			"fishing_trout",
+			"fishing_bass",
+			"fishing_walleye",
+			"fishing_mackerel",
+			"fishing_herring"
+		]
+	],
+	[
+		"Lumber Jack",
+		[
+			"Say bye to the forrest",
+			"wood",
+			"lummber"
+		]
+	]
+
+];

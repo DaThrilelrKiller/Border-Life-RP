@@ -1,0 +1,7 @@
+private ["_name","_items","_list"];
+
+_name = v_questitems select 0;
+_items = v_questitems select 1;
+_list = _items call quest_items;
+
+_name hintC _list;

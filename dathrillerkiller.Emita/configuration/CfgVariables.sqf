@@ -14,10 +14,6 @@ AR_playerString = str player;
 
 ar_doggy = false;
 
-/*QUEST*/
-QuestTime = 0;
-QuestItems = [];
-
 /*Invars*/
 INV_shortcuts           = true;
 
@@ -43,27 +39,6 @@ Miningarray =
 [["CopperArea",30],"copper",12],
 [["CopperArea1",30],"copper",12]
 ];
-fishingarray =
-[
-[["fishingwhale",200], "whale",1],
-[["fishingwhale1",200], "whale",1],
-[["fishingwhale2",200], "whale",1],
-[["fishingblowfish",30], "blowfish",6],
-[["fishingblowfish_1",30], "blowfish",6],
-[["fishingherring",30], "herring",6],
-[["fishingherring_1",30], "herring",6],
-[["fishingherring_2",30], "herring",6],
-[["fishingmackerel",30], "mackerel",6],
-[["fishingmackerel_1",30], "mackerel",6],
-[["fishingmackerel_2",30], "mackerel",6],
-[["fishingbass",100], "bass",6],
-[["fishingbass_1",100], "bass",6],
-[["fishingbass_2",100], "bass",6],
-[["percharea",30], "perch",6],
-[["walleyearea",30], "walleye",6],
-[["troutarea",30], "trout",6]
-];
-fishingarray1 = ["blowfish","herring","mackerel","bass","perch","walleye","trout"];
 
 /*car parks*/
 INV_VehicleGaragen = [

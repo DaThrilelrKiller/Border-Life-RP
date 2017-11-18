@@ -50,8 +50,6 @@ _Funcitons =
 ["other","getlottoarray","other"],
 ["other","safehack","other"],
 ["other","safecodedlgitems","other"],
-["other","getquest","other\quest"],
-
 
 ["dtk","interationhandler","dathrillerkiller"],
 ["dtk","playersettingsmenu","dathrillerkiller"],

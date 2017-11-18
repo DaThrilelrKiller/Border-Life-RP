@@ -37,4 +37,38 @@ statsave_ranks = [
 ["Public Saftey Officer", "PSO_id"],
 ["Public Saftey Officer", "PSOSenior_id"],
 ["Public Saftey Officer", "PSOCommand_id"]
-]
+];
+
+adminlevel4 = false;
+adminlevel3 = false;
+adminlevel2 = false;
+SwagDevs = false;
+TowingService_id = false;
+RT_id = false;
+TP_id = false;
+PO1_id = false;
+PO2_id = false;
+PO3_id = false;
+Cpl_id = false;
+Sgt_id = false;
+Lt_id = false;
+Cpt_id = false;
+Chief_id = false;
+K9_id = false;
+PDAviation_id = false;
+SWAT_id = false;
+CoastGuard_id = false;
+Undercover_id = false;
+DOC_id = false;
+HWP_id = false;
+EMTBasic_id = false;
+EMTAdavnced_id = false;
+FF1_id = false;
+FF2_id = false;
+EMSAirUnit_id = false;
+EMSSupervisor_id = false;
+EMSCommand_id = false;
+EMSChiefs_id = false;
+PMC_id = false;
+PMCDivisions_id = false;
+PMCCommand_id = false;

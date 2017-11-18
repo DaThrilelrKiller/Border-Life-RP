@@ -11,7 +11,7 @@ medical_effect_2 ppEffectAdjust [0.25, 1, 0, [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 
 medical_effect_2 ppEffectCommit 2;
 	
 			
-while {true} do
+while {lifeState player == "UNCONSCIOUS"} do
 {
 	medical_effect_1 ppEffectAdjust [0.3+random 0.3];
 	medical_effect_1 ppEffectCommit 0;

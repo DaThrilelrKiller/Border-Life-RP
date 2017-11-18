@@ -10,5 +10,6 @@
 "init",
 "addAction",
 "waitUnitl",
-"removeLoop"
+"removeLoop",
+"random"
 ];
