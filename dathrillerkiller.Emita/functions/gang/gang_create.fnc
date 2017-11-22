@@ -17,5 +17,7 @@ _gangs set[count _gangs,_name];
 gangs setVariable ["Names",_gangs,true];
 gangs setVariable [_name,[[name player,"Leader"]],true];
 
+["SERVER",_name,"s_gang_save",false,false]call network_MPExec;
+
 closeDialog 0;
 call gang_open;

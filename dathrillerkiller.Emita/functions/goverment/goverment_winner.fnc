@@ -14,9 +14,15 @@ _i = 0;
 	_unit setVariable["votes",nil,true];
 }forEach _data;
 
-["ALL",_winner,{systemchat str _this},false,false]call network_MPExec;
+if (isNil "_winner")then 
+{
+	["ALL",["dtk_client","Elections","The elections for governor has ended %1, no one ran for governor"],"Main_Notification",true,false]call network_MPExec;
 
-_message = format ["The elections for governor had ended %1 has won the election with %2 votes",name (_winner select 0),(_winner select 1)];
-server setVariable ["governor",(_winner select 0),true];
-["ALL",["dtk_client","Elections",_message],"Main_Notification",true,false]call network_MPExec;
-["ALL",[],{V_voted = false},false,false]call network_MPExec;
+}else
+{
+	_message = format ["The elections for governor had ended %1 has won the election with %2 votes",name (_winner select 0),(_winner select 1)];
+	server setVariable ["governor",(_winner select 0),true];
+	["ALL",["dtk_client","Elections",_message],"Main_Notification",true,false]call network_MPExec;
+	["ALL",[],{V_voted = false},false,false]call network_MPExec;
+
+};

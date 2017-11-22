@@ -43,7 +43,7 @@ if (_object in shopusearray)then {
 			
 	_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
 	
-	if(iscop and _object in drugsellarray)exitwith{
+	if(iscop && {_object in drugsellarray})exitwith{
 		_control ctrlSetTextColor [0, 0, 1, 0.8];
 		_control ctrlSetText "Drug Search (E)";
 	};

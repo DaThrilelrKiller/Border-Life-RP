@@ -1,6 +1,4 @@
-
 private["_i","_car","_carsKilled","_xCar"];
-if (vehicle player == player) exitWith {systemChat  "You Must Be In A Vehicle!";};
 
 for "_i" from 0 to (count bc_baitcars) do
 {
@@ -16,11 +14,8 @@ _carsKilled = 0;
 	{
 
 
-                       (format ["%1 setFuel (0);", _xCar]) call network_broadcast;
-                       (format ["%1 lock true;", _xCar]) call network_broadcast;
-
-		{
-		} count (crew _xCar);
+         (format ["%1 setFuel (0);", _xCar]) call network_broadcast;
+         (format ["%1 lock true;", _xCar]) call network_broadcast;
 		_carsKilled = _carsKilled + 1;
 	};
 	true

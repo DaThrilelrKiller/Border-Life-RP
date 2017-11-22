@@ -53,7 +53,7 @@ if (dtk_server)exitWith {};
 			_playhud ctrlCommit 1.5;
 			
 			
-			if (((weaponState player) select 0)== "" and ARHP == "" and ARHR == "")then
+			if (((weaponState player) select 0)== "" && {ARHP == ""} && {ARHR == ""})then
 			{
 				_wephud ctrlSetPosition [safeZoneX + safeZoneW, safeZoneY];
 				_wephud ctrlCommit 1;

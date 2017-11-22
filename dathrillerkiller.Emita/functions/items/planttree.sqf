@@ -21,9 +21,9 @@ if (_art == "use") then
 _foundtree = false;
 	{   
 	
-	if ((typeOf _x == "") and (damage _x > 0)) exitWith     
+	if ((typeOf _x == "") && {damage _x > 0}) exitWith     
 		{ 
-		if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};
+		if(primaryweapon player == "" && {secondaryweapon player == ""})then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};
 		
    
 		_x setdamage 0;  

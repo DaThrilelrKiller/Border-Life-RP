@@ -208,6 +208,22 @@ DaThrillerKiller - New random intiger function with min and max values
 DaThrillerKiller - All network trafic is now logged on the server
 DaThrillerKiller - moved whitelist variables to .variable file
 
+Version 2.6
+DaThrillerKiller - Removed useless things from repo
+DaThrillerKiller - Added a day/Night cycle still needs a bit of configuration
+DaThrillerKiller - Organized server side modules a bit more
+DaThrillerKiller - Gangs now save after restart
+DaThrillerKiller - Optimized alot of if statments
+DaThrillerKiller - Changed the way TFAR is loaded on the server
+DaThrillerKiller - Optimized the way keybindings are loaded
+DaThrillerKiller - Changed the way, the weapon HUD is displayed when holster to make it more pleasent to the eye
+DaThrillerKiller - added a message that says no one has ran for govonor, if there is none at the end of election
+DaThrillerKiller - You can now, open a dead players gear
+DaThrillerKiller - Core loop now supports times as low as 0.5 seconds 
+DaThrillerKiller - Alot of getVariable optimization again
+DaThrillerKiller - The ATM menu now shows 73,000,000 instead of 7.3e7 
+DaThrillerKiller - Added a function that reveses array
+DaThrillerKiller - Made console a bit more user friendly
 
 
 

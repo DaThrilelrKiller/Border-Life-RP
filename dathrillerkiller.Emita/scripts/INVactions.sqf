@@ -12,7 +12,7 @@ _player = _this select 3;
 if ((player call isse_isvictim) or (!inv_canuseinventory)) exitWith {systemChat  localize "STRS_inv_cannotUseNow";};
 INV_InventarGiveReceiver = _player;
 
-if ((_action == "use") and (INV_CanUseItem)) then 
+if ((_action == "use") && {INV_CanUseItem}) then 
 
 {
 _filename = _item call INV_getitemFilename;
@@ -35,7 +35,7 @@ _filename = _item call INV_getitemFilename;
 
 
 
-if ((_action == "drop") and (inv_candropitem)) then 
+if ((_action == "drop") && {inv_candropitem}) then 
 
 {
 
@@ -43,7 +43,7 @@ _h = [_item, _textamount] execVM "scripts\drop.sqf";
 waitUntil {ScriptDone _h};
 };
 
-if ((_action == "give") and (inv_cangiveitem)) then 
+if ((_action == "give") && {inv_cangiveitem}) then 
 
 {
 

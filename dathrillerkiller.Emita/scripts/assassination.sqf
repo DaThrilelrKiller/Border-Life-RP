@@ -156,15 +156,6 @@ VIPtarget domove getmarkerpos "policebase";
 while {true} do 
 
 	{
-
-	/* removed this so the mission keeps going even if assassin dies
-	if(!alive player)exitwith
-		{
-		deletevehicle VIPtarget;
-		deletemarker "targetmarker";
-				
-		};
-	*/
 	"if(alive player and isciv and player distance assveh <= 150)then{titleText [""The Government is operating in this area! Turn back or you will be shot!"", ""plain down""]};" call network_broadcast;
 	"targetmarker" setmarkerpos getpos VIPtarget;
 	if (_secondcounter >= 15) then

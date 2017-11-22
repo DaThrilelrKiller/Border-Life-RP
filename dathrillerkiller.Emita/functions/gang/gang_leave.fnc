@@ -16,7 +16,9 @@ _members set [_index,[]];
 _members = _members - [["",""]];
 
 /* set the variable to make sure the bitch is gone */
-gangs setVariable [_name,_members,true];
+gangs setVariable [_gang,_members,true];
+
+["SERVER",_gang,"s_gang_save",false,false]call network_MPExec;
 
 systemchat format ["You have left %1",_gang];
 

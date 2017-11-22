@@ -16,8 +16,7 @@ if (dtk_server)exitWith {};
 
 private ["_KeybindingsDone"];
 
-_KeybindingsDone = profileNamespace getVariable "SFGKeys123";
-KeybindingsDone = if (isNil '_KeybindingsDone')then {profileNamespace setVariable ['SFGKeys123',keybindingDefaults]; keybindingDefaults}else {_KeybindingsDone};
+KeybindingsDone = profileNamespace getVariable ["SFGKeys123",keybindingDefaults];
 
 call compile preprocessFile  format ['actions\%1KeyPressFunctions.sqf',ar_side];
 call compile preprocessFile format ['actions\%1actions.sqf',ar_side];

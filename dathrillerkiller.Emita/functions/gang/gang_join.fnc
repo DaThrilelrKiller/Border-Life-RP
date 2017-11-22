@@ -12,7 +12,9 @@ if (_locked && {!(_gang in dtk_gang_invites)})exitWith {systemchat format ["%1 i
 /* join the gang bitch */
 _members = gangs getVariable [_gang,[]];
 _members set[count _members,[name player,"Recruit"]];
-gangs setVariable [_name,_members,true];
+gangs setVariable [_gang,_members,true];
+
+["SERVER",_gang,"s_gang_save",false,false]call network_MPExec;
 
 systemchat format ["You have joined %1",_gang];
 

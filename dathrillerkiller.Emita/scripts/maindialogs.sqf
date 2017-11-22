@@ -123,8 +123,8 @@ if (_art == "coplog") then
 
 		{
 		private ["_reason"];
-		_reason = (_civ getvariable "cdb_warrants");
-		_bounty = (_civ getvariable "cdb_bounty");
+		_reason = (_civ getvariable ["cdb_warrants",[]]);
+		_bounty = (_civ getvariable ["cdb_bounty",[]]);
 		
 		if(count _reason > 0) then
 

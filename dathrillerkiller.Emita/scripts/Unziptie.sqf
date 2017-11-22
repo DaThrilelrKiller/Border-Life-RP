@@ -3,7 +3,8 @@ if (!alive player)exitwith{};
 isstunned=true;
 
 systemChat  "You Have Been Ziptied!"; 
-waituntil {(animationstate player != "civilsitting" and animationstate player != "civilsitting03" and animationstate player != "civilsitting02" and animationstate player != "civilsitting01")};
+
+waituntil {!(animationstate player in ["civilsitting","civilsitting03","civilsitting02","civilsitting01"])};
 	
 if(animationstate player == "civilsitting" or animationstate player == "civilsitting03" or animationstate player == "civilsitting02" or animationstate player == "civilsitting01")then
 

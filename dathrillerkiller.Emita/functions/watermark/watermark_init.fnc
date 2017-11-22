@@ -1,0 +1,1 @@
+5 cutRsc ["water_mark","PLAIN"];

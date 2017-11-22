@@ -12,5 +12,7 @@ gangs setVariable [format["%1_locked",_gang],_locked,true];
 _text = ["Un-Locked","Locked"]select _locked;
 systemchat format ["%1 %2",_gang,_text];
 
+["SERVER",_gang,"s_gang_save",false,false]call network_MPExec;
+
 closeDialog 0;
 call gang_open;

@@ -1,9 +1,0 @@
-		class Itemint_number
-		{
-			side="str_side";
-			class Vehicles
-			{
-				items=int_items;
-				block_units;
-			};
-		};

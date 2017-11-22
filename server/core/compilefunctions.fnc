@@ -2,14 +2,10 @@ private ["_Funcitons"];
 
 _Funcitons = 
 [
-["drug","GrowLoop","DaThrillerKiller\drugs"],
-["drug","burnplant","DaThrillerKiller\drugs"],
-["gang","capturearea","DaThrillerKiller\gangs"],
 ["ems","buildingcolapes","ems"],
 ["ems","fire","ems"],
 ["ems","gasleak","ems"],
 ["ems","missionloop","ems"],
-["main","SetupMap","main"],
 ["main","ServerCleaner","main"],
 ["vehicle","OwnerOnline","vehicle"],
 ["vehicle","saveimpound","vehicle"]

@@ -9,7 +9,7 @@ if (isNil "_pitcar") exitwith {pitavailable = true; player sidechat format["Your
 	
 if (_pitcarspeed <= 39) exitwith {player sidechat format["Your Target Must Be Going At Least 40 km/h!"];};
 
-if ((_rdmpit == 1) and (_pitcar distance player <= 7)) then {
+if ((_rdmpit == 1) && {_pitcar distance player <= 7}) then {
 	_pitcar setVehicleInit 'this setfuel 0'; processInitCommands;
 	player sidechat "You Have Disabled The Fleeing Vehicle!";
 

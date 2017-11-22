@@ -63,12 +63,12 @@ class CfgPatches
 
 class RscTitles
 {
-#define screenwidth  (1 - safeZonex*2)
-#define screenheight (1 - safeZoney*2)
-#include "DATA\DIALOGS\hud_dialog.hpp"
-#include "DATA\DIALOGS\IDCard.hpp"
-#include "DATA\DIALOGS\RscTitles.hpp"
-#include "DATA\DIALOGS\ar_plate.hpp"
+	#define screenwidth  (1 - safeZonex*2)
+	#define screenheight (1 - safeZoney*2)
+	#include "DATA\DIALOGS\hud_dialog.hpp"
+	#include "DATA\DIALOGS\IDCard.hpp"
+	#include "DATA\DIALOGS\RscTitles.hpp"
+	#include "DATA\DIALOGS\ar_plate.hpp"
 };
 
 class antidialog

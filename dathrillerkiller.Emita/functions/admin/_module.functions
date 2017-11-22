@@ -22,5 +22,6 @@
 "licenses_remove",
 "licenses",
 "vehicles_create",
-"init"
+"init",
+"console_recents"
 ];

@@ -7,11 +7,11 @@ private ["_oldplayer","_oldweapons","_oldmags","_score","_rank","_damage","_skin
 	_skin = _this select 0;
 	_pos = getposATL player;
 	_skinsold = typeof player;
-	_storage = player getVariable 'dtk_storage';
-	_warrants = player getVariable 'cdb_warrants';
-	_license = player getVariable 'cdb_license';
-	_notes = player getVariable 'cdb_notes';
-	_bounty = player getVariable 'cdb_bounty';
+	_storage = player getVariable ['dtk_storage',[["schluesselbund","idcard"],[1,1]]];
+	_warrants = player getVariable ['cdb_warrants',[]];
+	_license = player getVariable ['cdb_license',[]];
+	_notes = player getVariable ['cdb_notes',[]];
+	_bounty = player getVariable ['cdb_bounty',0];
 	call TFAR_RemoveRadios;
 
 if (_skinsold != _skin) then {

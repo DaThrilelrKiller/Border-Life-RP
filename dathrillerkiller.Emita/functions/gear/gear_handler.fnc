@@ -24,7 +24,7 @@ if (_text != "")then
 {
 	_vehicle = _text call gear_grabVehicle;
 	
-	if  (!([player,_vehicle]call keys_has) && {vehicle player != _vehicle} && {_text != "SFG Info Stand"})then 
+	if  (!([player,_vehicle]call keys_has) && {vehicle player != _vehicle} && {_text != "SFG Info Stand"} && {!(_vehicle isKindof "Man")})then 
 	{
 		(findDisplay 106) closeDisplay 1;
 		systemchat format ["(%1) you do not have the keys, sorry ;(",_text];

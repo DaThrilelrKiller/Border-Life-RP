@@ -15,4 +15,4 @@ admin_actions = [
 ];
 
 
-profileNameSpace setVariable ["admin_console_recent",[]];
+v_admin_recents = profileNameSpace getVariable ["v_admin_recents",[]];

@@ -4,7 +4,8 @@ createDialog "atm_menu";
 if !(local_useBankPossible)  exitWith {systemChat  format [localize "STRS_bank_dialoge_robbsperre",(local_robbsperre_zeit call string_intToString)]};
 
 _geld = [player,"geld"] call storage_amount;
-_bank  = Kontostand;
+_geld = [_geld]call Main_FormatMoney;
+_bank  = [konToStand] call Main_FormatMoney;
 
 /* Addes your current data */
 [2100, true] call dtk_PlayerListToControl;

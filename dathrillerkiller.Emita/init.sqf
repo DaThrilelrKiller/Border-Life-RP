@@ -11,12 +11,12 @@ diag_log text "[LOG] Straight Forward Gaming Island Life Init Started";
 dtk_client = [true,false]select (isServer && isDedicated);
 dtk_server = [false,true]select (isServer && isDedicated);
 
+waitUntil {time > 1 and (count playableUnits > 0)}; 
 if (isNil "server_auth" && {dtk_client})then {
 	systemchat "Waiting for server to authenticate";
 	waitUntil {!isNil "server_auth"};
 	systemchat "Server authentication finished";
 };
-
 
 enableSaving [false, false];
 

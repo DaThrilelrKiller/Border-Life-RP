@@ -1,6 +1,6 @@
 private ["_bools","_KeySettings","_index"];
 _bools = [2101,2102,2103];
-_KeySettings = profileNamespace getVariable "SFGKeys123";
+_KeySettings = profileNamespace getVariable ["SFGKeys123",keybindingDefaults];
 
 {
 	lbAdd [2100,(_x select 0)];

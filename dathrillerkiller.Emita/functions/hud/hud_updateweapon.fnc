@@ -20,20 +20,33 @@ _mname = getText (configFile >> "cfgMagazines" >> _magizine >> "displayName");
 _holsterPistol = if (ARHP == "")then {"No pistol holstered"}else{getText (configFile >> "cfgWeapons" >> ARHP >> "displayName")}; 
 _holsterRifle = if (ARHR == "")then {"No rifle holstered"}else{getText (configFile >> "cfgWeapons" >> ARHR >> "displayName")};  
 
-_wephud ctrlSetStructuredText parseText format [
-"
-%6 | %2<br/>
-<img size='5' image='%1'/><br/>
-%4 %5<img size='1.5' image='%3'/><br/>
-1. %7<br/>
-2. %8<br/>
-"
-,_picure
-,_name
-,_mpicure
-,_mname
-,_ammo
-,_firemode
-,_holsterRifle
-,_holsterPistol
-];
+if (_weapon == "")then {
+	
+	_wephud ctrlSetStructuredText parseText format [
+	"
+	1. %2<br/>
+	2. %1
+	"
+	,_holsterRifle
+	,_holsterPistol
+	];
+
+}else{
+	_wephud ctrlSetStructuredText parseText format [
+	"
+	%6 | %2<br/>
+	<img size='5' image='%1'/><br/>
+	%4 %5<img size='1.5' image='%3'/><br/>
+	1. %8<br/>
+	2. %7<br/>
+	"
+	,_picure
+	,_name
+	,_mpicure
+	,_mname
+	,_ammo
+	,_firemode
+	,_holsterRifle
+	,_holsterPistol
+	];
+};

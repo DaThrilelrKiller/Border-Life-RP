@@ -5,8 +5,12 @@ dtk_server_modules =
 [
 "Statsave",
 "OwlEye",
-"robbery",
-"Setup"
+"Robbery",
+"Map",
+"Setup",
+"Drugs",
+"Gang",
+"Night"
 ];
 
 /*loads variables first for all active modules*/

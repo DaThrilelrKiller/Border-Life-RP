@@ -58,7 +58,7 @@ for "_a" from 0 to 1 step 0 do
 		disableSerialization;
 		_ctrl3 = _this select 0;
 		_sText2 = ctrlText _ctrl3;
-		_text3 = format ["ArmaLifeRPG"]; _ctrl3 ctrlSetText _text3;
+		_text3 = format ["IslandLifeRPG"]; _ctrl3 ctrlSetText _text3;
 	};
 
 	waitUntil {isNull (findDisplay 49)};

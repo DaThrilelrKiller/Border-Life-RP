@@ -14,7 +14,7 @@ Prams:
 
 private ["_vehicles","_return","_name"];
 
-_vehicles = (getPos player) nearEntities [["LandVehicle", "Air", "ship"], 10];
+_vehicles = (getPos player) nearEntities [["LandVehicle", "Air", "ship","Man"], 10];
 
 _return = 
 {

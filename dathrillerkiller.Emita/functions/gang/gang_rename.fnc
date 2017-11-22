@@ -25,6 +25,8 @@ gangs setVariable ["Names",_gangs,true];
 gangs setVariable [_name,_members,true];
 gangs setVariable [format["%1_locked",_gang],_locked,true];
 
+["SERVER",_name,"s_gang_save",false,false]call network_MPExec;
+
 systemchat format ["%1 has been renamed to %2",_gang,_name];
 
 closeDialog 0;

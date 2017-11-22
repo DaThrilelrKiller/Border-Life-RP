@@ -14,7 +14,7 @@ _nearplants = _nearplants - [_plant];
 sleep (random (20)) + 5;
 	if (isNil {_x getVariable "onFire"})then
 	{
-		[_x]spawn S_drug_burnplant;
+		[_x]spawn S_drugs_burn;
 	};
 	true
 }count _nearplants;

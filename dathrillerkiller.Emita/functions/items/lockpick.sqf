@@ -24,13 +24,7 @@ if (isNil '_closeVcl')exitWith {systemChat localize "STRS_inventar_lockpick_zuwe
 
 		} 
 		else 
-		{
-			{
-
-			if ((player distance (_x select 0)) < (_x select 1)) then {_incarpark = true};
-
-			} count INV_VehicleGaragen;	
-					
+		{			
 		if ([10]call Main_Random) then 
 
 			{

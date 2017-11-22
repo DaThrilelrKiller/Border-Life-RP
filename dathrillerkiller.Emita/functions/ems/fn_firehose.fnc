@@ -17,14 +17,14 @@ private ["_unit","_weapon","_nearfire"];
 _unit = _this select 0;
 _weapon = _this select 1;
 
-if (_weapon == "FirefighterWeap2" and _unit == player) then
+if (_weapon == "FirefighterWeap2" && {_unit == player}) then
 {
 	if (EMSMissionType != "Fire")exitWith {};
 	_nearfire = (nearestObjects [player, ["HeliH"], 10]select 0);
 	if (!isNil "_nearfire")then
 	{
 		_nearfire setDamage (damage _nearfire + random 0.005);
-		if (damage _nearfire > 0.50 and !(halfwaythereallfiredup))then {systemChat "The Fire Is Half Way Contained!";halfwaythereallfiredup = true;};
+		if (!halfwaythereallfiredup && {damage _nearfire > 0.50})then {systemChat "The Fire Is Half Way Contained!";halfwaythereallfiredup = true;};
 		
 		if !(damage _nearfire < 1)then
 		{

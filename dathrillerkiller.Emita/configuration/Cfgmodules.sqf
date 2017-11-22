@@ -4,6 +4,7 @@ dtk_fnc_total = 0;
 dtk_active_modules = 
 [
 "Core",
+"Array",
 "BIS",
 "Network",
 "Storage",

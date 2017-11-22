@@ -1,10 +1,11 @@
+[]spawn 
+{
+	_nul = [] execVM '\task_force_radio\init.sqf';
+	waitUntil {scriptDone _nul};
 
-if (dtk_server)exitwith{};
-
-[]spawn {
-player call TFAR_AddItemRadio;
-
-_nul = [] execVM '\task_force_radio\init.sqf';
-waitUntil {scriptDone _nul};
-[]spawn TFAR_fnc_clientinit;
+	if (dtk_client)then
+	{
+		player call TFAR_AddItemRadio;
+		[]spawn TFAR_fnc_clientinit;
+	};
 };

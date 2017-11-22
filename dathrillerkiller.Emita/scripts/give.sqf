@@ -21,9 +21,7 @@ if (_action == "uebergabe") then
 	if ([_player,_item,_amount] call storage_add)then {
 		[player,_item,-_amount] call storage_add;
 		/* notify the player that they have recived the item */
-		format ["if (player == %1) then {
-		systemChat 'You have recived %2 of %3 from %4'
-		};", _player,_amount, _name, name player] call network_broadcast;
+		[_player,["true",format ['You have recived %1 of %2 from %3',_amount, _name,name player],3],"network_chat",false,false]call network_MPExec;
 	};
 					
 	systemChat  format [localize "STRS_inv_inventar_uebergabe_success_self", name _player, (_amount call string_intToString), _name];

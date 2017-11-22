@@ -23,6 +23,6 @@ _return = if (gangarea1 distance player > 900) then {true}else {_return};
 _return = if (gangarea2 distance player > 900) then {true}else {_return};
 _return = if (gangarea3 distance player > 900) then {true}else {_return};
 _return = if (gangarea4 distance player > 900) then {true}else {_return};
-_return = if (_surface != "#Default" and _return)then {_return} else {false};
+_return = if (_surface != "#Default" && {_return})then {_return} else {false};
 
 _return

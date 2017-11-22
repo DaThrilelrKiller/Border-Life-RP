@@ -1,6 +1,6 @@
 private ["_KeySettings","_data","_index","_key","_shift","_ctrl","_alt"];
 
-_KeySettings = profileNamespace getVariable "SFGKeys123";
+_KeySettings = profileNamespace getVariable ["SFGKeys123",keybindingDefaults];
 
 _data = call compile (lbData [1401, (lbCurSel 1401)]);
 _index = _data select 3;

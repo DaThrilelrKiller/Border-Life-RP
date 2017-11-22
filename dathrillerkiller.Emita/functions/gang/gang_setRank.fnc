@@ -24,6 +24,8 @@ _members set [_index,_data];
 
 gangs setVariable [_gang,_members,true];
 
+["SERVER",_gang,"s_gang_save",false,false]call network_MPExec;
+
 closeDialog 0;
 call gang_open;
 

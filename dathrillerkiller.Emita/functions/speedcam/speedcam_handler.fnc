@@ -10,7 +10,7 @@ if ((_car  animationPhase "ani_lights") != 0.1)then
 {
 	{
 	_speed  = speed _car;
-	if ((player == driver _car) and (_car distance _x < 40) and (_speed >= 100) and !(_car iskindof "Air")) then 
+	if ((player == driver _car) && {_car distance _x < 40} && {_speed >= 100} && {!(_car iskindof "Air")}) then 
 		{ 
 
 		["ALL",[_x,"speedcam",100],"network_say3d",false,true]call network_MPExec;

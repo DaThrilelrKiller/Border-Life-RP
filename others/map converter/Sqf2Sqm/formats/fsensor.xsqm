@@ -1,9 +1,0 @@
-		class Itemint_number
-		{
-			position[]=array_position;
-			interruptable=1;
-			age="UNKNOWN";
-			class Effects
-			{
-			};
-		};

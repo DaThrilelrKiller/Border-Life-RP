@@ -29,7 +29,7 @@ _civ = (nearestObjects [getpos player,["Man"],2] select 1);
 KeyPressShiftF = 
 {
 	if(!INV_shortcuts)exitwith{};
-	if((vehicle player == player) and call INV_isArmed) then
+	if((vehicle player == player) && INV_isArmed) then
 	{
 		_men = nearestobjects [getposatl player, ["Man"], 2] - [player];
 		_men spawn 

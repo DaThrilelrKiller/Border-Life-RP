@@ -40,11 +40,6 @@ Miningarray =
 [["CopperArea1",30],"copper",12]
 ];
 
-/*car parks*/
-INV_VehicleGaragen = [
-[dummyobj, 50]
-];
-
 /*bank Vars*/
 local_useBankPossible    = true;  
 maxinsafe                = 300000;
