@@ -1,0 +1,8 @@
+module_garage = true;
+v_garages = [
+dtkgarage,
+ccarspawn,
+tdocspawn,
+tdocspawn,
+tdocspawnsub
+];

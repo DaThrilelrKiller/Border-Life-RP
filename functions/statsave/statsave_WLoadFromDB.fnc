@@ -17,7 +17,10 @@ switch (_Playerteam) do
 			["Main", "SwagDevs"],
 			[_playerside, "PMC_id"],
 			[_playerside, "PMCDivisions_id"],
-			[_playerside, "PMCCommand_id"]
+			[_playerside, "PMCCommand_id"],
+			[_playerside, "TowingService_id"],
+			[_playerside, "TP_id"],
+            [_playerside, "RT_id"]
 		];
     };
 

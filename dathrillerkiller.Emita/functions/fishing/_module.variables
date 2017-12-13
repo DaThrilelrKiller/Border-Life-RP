@@ -1,0 +1,15 @@
+module_fishing = true;
+v_fishing = false;
+v_fishing_pole = false;
+v_fish_onhook = "";
+v_types = [
+["Whale","fishing_whale"],
+["Turtle","fishing_turtle"],
+["Trout","fishing_trout"],
+["Bass","fishing_bass"],
+["Walleye","fishing_walleye"],
+["Mackerel","fishing_mackerel"],
+["Herring","fishing_herring"]
+];
+v_spots = 15;
+v_cast_time = 0;
