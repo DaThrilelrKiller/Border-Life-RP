@@ -26,8 +26,7 @@ _MainArray =
 	[_playerside, "INVAppsInstalled",_apps],
 	["Main", "lifestate",""],
 	["Main", "distance",800],
-	["Main", "detail",50],
-	[_playerside, "seasion",[]]
+	["Main", "detail",50]
 ];
 
 _tempaccountToClient = [_uid];
@@ -45,5 +44,5 @@ _tempaccountToClient = [_uid];
 [_player,_tempaccountToClient,"statsave_loadacount",false,false]call network_MPExec;
 
 if !(_inDB)then {
-[_player,["dtk_client",format ["%1 Welcome to Border Life Roleplay remember to read the rules if you have any questions feel free to ask an admin", name _player],3],"network_chat",false,false]call network_MPExec;
+[_player,["dtk_client",format ["%1 Welcome to Straight Forward Gaming Island Life remember to read the rules if you have any questions feel free to ask an admin", name _player],3],"network_chat",false,false]call network_MPExec;
 };

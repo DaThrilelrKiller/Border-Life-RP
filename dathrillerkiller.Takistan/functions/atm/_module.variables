@@ -1,5 +1,0 @@
-module_atm = true;
-atm_running = false;
-bank_limit		 = 25000000;
-local_useBankPossible    = true;
-bankflagarray            = [mainbank,copbank,copairbank,copsgtbank,copdispatchbank,copcmdbank,atm5,atm6,atm10,atm11,atm12,atm13,atm115,atmswag,devatm,atmmall,atmsubfire,docatm,rattlersbank,pmcatm,tpatm];

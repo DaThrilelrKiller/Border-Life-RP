@@ -1,0 +1,2 @@
+v_roads = (getPos BuildingCollapesLogic) nearroads 3500;
+player setPos getPos (v_roads call BIS_selectRandom)
