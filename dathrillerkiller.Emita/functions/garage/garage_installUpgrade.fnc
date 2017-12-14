@@ -25,7 +25,7 @@ titleText ["Installing Speed Upgrade 90%", "PLAIN"];
 sleep 1;
 titleText ["Installing Speed Upgrade 100%", "PLAIN"];
 sleep 1;
-titleText [format ["%1 has been installed",((_this select 0) call INV_getitemName)], "PLAIN"];
+titleText [format ["%1 has been installed",((_this select 0) call config_displayname)], "PLAIN"];
 
 
 _upgrade = switch(_this select 0)do

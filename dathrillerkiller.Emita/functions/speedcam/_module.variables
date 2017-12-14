@@ -1,2 +1,2 @@
 module_speedcam = true;
-speedcam_array  = [speed1,speed2,speed3,speed4,speed5,speed6];
+speedcam_array  = allMissionObjects "SearchLight_US_EP1";

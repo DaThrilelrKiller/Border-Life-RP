@@ -11,7 +11,8 @@ admin_actions = [
 "Licenses",
 "Vehicles",
 "Logs",
-"Spectate"
+"Spectate",
+"Camera"
 ];
 
 

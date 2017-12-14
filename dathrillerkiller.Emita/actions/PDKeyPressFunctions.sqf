@@ -59,37 +59,12 @@ call dance_open;
 
 KeyPress9 = 
 {
-	if (!AM_temp_carrying) then 
-	{
-	createDialog "AM_CheckpointBuilder";
-	}
-	else
-	{
-	[] call Checkpoint_Drop;
-	};
+	call checkpoint_open;
 };
 
 KeyPressf5 = 
 {
 	if(INV_shortcuts)then{INV_shortcuts=false; titletext["SFG Keys Off", "PLAIN DOWN"];[] execVM "actions\removeActions.sqf"}else{INV_shortcuts=true; titletext["SFG Keys On", "PLAIN DOWN"];[] execVM "actions\PDactions.sqf"};
-};
-
-KeyPressL = 
-{
-if(!INV_shortcuts)exitwith{};
-
-	_vcl = call keys_grabVehicle;
-
-	if (locked _vcl) then 
-	{
-		systemChat "Vehicle Unlocked";
-		[_vcl,[_vcl,false],'network_lock',false,true]call network_MPExec;
-	}
-	else
-	{
-		systemChat "Vehicle Locked";
-		[_vcl,[_vcl,true],'network_lock',false,true]call network_MPExec;
-	};
 };
 
 KeyPressR = 
@@ -123,6 +98,8 @@ KeyPressE =
 	};
 	
 	
+	
+	
 	private ["_civ"]; 	
 	for [{_i=1}, {_i < 3}, {_i=_i+1}] do
 	{  		
@@ -131,7 +108,7 @@ KeyPressE =
 		_dirV = vectorDir vehicle player;        	
 		_pos = player modelToWorld [0,0,0];        	
 		_posFind = [(_pos select 0)+(_dirV select 0)*_range,(_pos select 1)+(_dirV select 1)*_range,(_pos select 2)+(_dirV select 2)*_range];        	
-		_men = nearestObjects [_posFind,["Man", "RUBasicAmmunitionBox", "DTK_InfoStand","RUSpecialWeaponsBox","Barrels"], 1] - [player]; 		
+		_men = nearestObjects [_posFind,["Man", "RUBasicAmmunitionBox", "DTK_InfoStand","RUSpecialWeaponsBox","Barrels","MAP_notebook"], 1] - [player]; 		
 		_atms = nearestObjects [_posFind,["Man", "tcg_ATM"],2]; 		
 		_civ = _men select 0; 		
 		_atm = _atms select 0; 		 		
@@ -152,7 +129,11 @@ KeyPressE =
 			_i = 4; 			
 			if(!local_useBankPossible)exitwith{hint "The ATM rejected your card"}; 			
 			call atm_open; 				 			
-		};  		
+		};
+		if (typeOf _civ == "MAP_notebook")then {
+			_civ call camera_open;
+		};
+  		
 	};  
 
 

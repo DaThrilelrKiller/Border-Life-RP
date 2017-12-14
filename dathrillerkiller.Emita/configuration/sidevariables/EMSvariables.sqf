@@ -3,7 +3,7 @@ SpawnPoints =[["ems_spawn_1","true"],["ems_spawn_2","true"],["ems_spawn_4","EMSA
 isciv         	= false;						
 iscop          	= false;	
 isamedic       	= true;	
-ar_sidename = "Emergency Medical Technician";
+dtk_sidename = "Emergency Medical Technician";
 
 INV_apps = [
 ["app_warrants","sfg_textures\ipad\WARRANTS.PAA","[0,1,2,[""coplog""]] execVM 'scripts\maindialogs.sqf';"],

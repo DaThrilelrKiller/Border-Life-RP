@@ -50,13 +50,13 @@ else
 		_CurrentArray = (INVVehiclesImpoundArray select _i);
 		_UID = (_CurrentArray select 0); 
 		_Scriptname = (_CurrentArray select 1);
-		_classname = _Scriptname call INV_getitemClassName;		
+		_classname = _Scriptname call config_class;		
 		_Playerside = (_CurrentArray select 2);
 		_trunk = (_CurrentArray select 3);
 		_speedupgrade = (_CurrentArray select 4);
-		_name = _Scriptname call inv_getitemname;
+		_name = _Scriptname call config_displayname;
 		
-		if (getPlayerUID player == _UID and _Playerside == ar_side)then
+		if (getPlayerUID player == _UID and _Playerside == dtk_side)then
 		{
 			if (_classname isKindOf _Kind)then
 			{
@@ -79,7 +79,7 @@ else
 	INVVehiclesImpoundArray = INVVehiclesImpoundArray - [''];
 	publicVariable 'INVVehiclesImpoundArray';
 	
-	[_Scriptname,impoundarea2,player,ar_side]call shops_createVehicle;
+	[_Scriptname,impoundarea2,player,dtk_side]call shops_createVehicle;
 		[_trunk,_upgrades]spawn
 		{
 			sleep 0.1;

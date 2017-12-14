@@ -58,4 +58,10 @@ switch (_text) do
 		};
 		closeDialog 0;
 	};
+	case "Camera": 
+	{
+		closeDialog 0;
+		player exec "camera.sqs";
+	};
+
 };

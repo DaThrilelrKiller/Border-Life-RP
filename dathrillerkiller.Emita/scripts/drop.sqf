@@ -8,7 +8,7 @@ if(!isnull (nearestobjects[getpos player,["EvMoney","Suitcase"], 1] select 0))ex
 
 if (_amount <= 0) exitwith {};
 
-if (_item call INV_getitemDropable) then 
+if (_item call config_dropable) then 
 
 {
 
@@ -37,7 +37,7 @@ if ([player,_item,-_amount] call storage_add) then
 
 	_object setposASL getposASL player;
 	_object setvariable ["droparray", [_amount, _item], true];
-	_name13 = _item call INV_getitemname;
+	_name13 = _item call config_displayname;
 	
 	_object  setvehicleinit format["
 	this addaction ['Pickup %1 (%2)','scripts\pickup.sqf',[this, '%3', %2]];

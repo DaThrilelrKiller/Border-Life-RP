@@ -21,7 +21,7 @@ private ["_settings","_mrkname","_UnitSide","_color","_pos","_comparePos","_mark
 	_settings = call markers_config;
 	_UnitSide = (_settings select 0);
 	_color = (_settings select 1);
-	_curside = ar_side; 
+	_curside = dtk_side; 
 	
 	for "_i" from 0 to 1 step 0 do 
 	{
@@ -30,7 +30,6 @@ private ["_settings","_mrkname","_UnitSide","_color","_pos","_comparePos","_mark
 			_mrkname =  format['%1_mrk',_x];
 			_pos = getMarkerPos _mrkname;  
 			_comparePos =  str _pos;
-			_side = _unit call core_side;
 
 				if (isNull _unit)then
 				{
@@ -42,11 +41,12 @@ private ["_settings","_mrkname","_UnitSide","_color","_pos","_comparePos","_mark
 				}
 				else
 				{  
+					_side = _unit call core_side;
 					if !(isPlayer _unit) exitWith {};
 
 					if (_comparePos == '[0,0,0]')then
 					{
-						if (_side == ar_side) then
+						if (_side == dtk_side) then
 						{
 
 						_marker = createMarkerLocal[format["%1_mrk",_unit], [-100, -100]];																																																						
@@ -62,7 +62,7 @@ private ["_settings","_mrkname","_UnitSide","_color","_pos","_comparePos","_mark
 					{
 
 						_mrkname SetMarkerPosLocal (getPos _unit);
-						if (_side != ar_side)then 
+						if (_side != dtk_side)then 
 						{
 						deleteMarkerLocal _mrkname;
 						}
@@ -72,12 +72,12 @@ private ["_settings","_mrkname","_UnitSide","_color","_pos","_comparePos","_mark
 	
 			}count _UnitSide;
 			
-			if (_curside != ar_side)then 
+			if (_curside != dtk_side)then 
 			{
 				_settings = call markers_config;
 				_UnitSide = (_settings select 0);
 				_color = (_settings select 1);
-				_curside = ar_side;
+				_curside = dtk_side;
 			};
 		sleep 1;
 	};

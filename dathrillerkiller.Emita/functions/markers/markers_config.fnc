@@ -1,8 +1,8 @@
 private ["_return"];
-_return = switch(ar_side)do
+_return = switch(dtk_side)do
 	{
-		case "PD": {[playerstringarray,"ColorBlue"]};
-		case "EMS":{[playerstringarray,"ColorGreen"]};
+		case "PD": {[call core_units,"ColorBlue"]};
+		case "EMS":{[call core_units,"ColorGreen"]};
 		case "CIV": { [[str player],"ColorWhite"] };
 	};
 	

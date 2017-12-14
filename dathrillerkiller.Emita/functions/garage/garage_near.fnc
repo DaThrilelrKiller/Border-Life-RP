@@ -1,8 +1,6 @@
 private ["_return"];
-_return = false;
-{
-	if (player distance _x < 7)then {_return = true};
-}forEach v_garages;
 
-
+_objs = (nearestobjects [getpos (vehicle player), ["Land_House_C_12_EP1"], 7]select 0);
+_return = [false,true]select (!isNil "_objs");
 _return
+

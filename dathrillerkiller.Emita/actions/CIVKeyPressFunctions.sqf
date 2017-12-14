@@ -23,30 +23,13 @@ KeyPressF5 =
 	{
 		INV_shortcuts=false; 
 		titletext["SFG Keys Off", "PLAIN DOWN"];
-		[] execVM "actions\removeActions.sqf";
+		call compile preprocessFile "actions\removeActions.sqf";
 	}
 	else
 	{
 		INV_shortcuts=true;
 		titletext["SFG Keys On", "PLAIN DOWN"];
-		[] execVM "actions\CIVactions.sqf";
-	};
-};
-
-KeyPressL = {
-if(!INV_shortcuts)exitwith{};
-
-	_vcl = call keys_grabVehicle;
-
-	if (locked _vcl) then 
-	{
-		systemChat "Vehicle Unlocked";
-		[_vcl,[_vcl,false],'network_lock',false,true]call network_MPExec;
-	}
-	else
-	{
-		systemChat "Vehicle Locked";
-		[_vcl,[_vcl,true],'network_lock',false,true]call network_MPExec;
+		call compile preprocessFile "actions\CIVactions.sqf";
 	};
 };
 
@@ -73,6 +56,17 @@ KeyPressE =
 	if (call garage_near && {(vehicle player != player)})exitWith
 	{
 		[ (dtkgarage call shops_index)]call shops_openshop;
+	};
+	
+	if ([player,10] call statsave_nearSave)exitWith
+	{
+		if (driver (vehicle player) == player)then {
+			if (vehicle player != player)then {
+				call statsave_savevehicle;
+			}else{
+				[]call statsave_retrivevehicleland;
+			};
+		};
 	};
 
 	private ["_civ"];
@@ -128,9 +122,7 @@ KeyPressE =
 			if(!(isnull _vcl))exitwith{_i = 4};  			
 		}; 		
 		if(locked _vcl)exitwith{};
-		if(_vcl emptyPositions "Driver" > 0)exitwith   
-		{
-		player action ["getInDriver", _vcl]};
+		if(_vcl emptyPositions "Driver" > 0)exitwith  { player action ["getInDriver", _vcl]};
 		if(_vcl emptyPositions "Gunner" > 0)exitwith   {player action ["getInGunner", _vcl]}; 		
 		if(_vcl emptyPositions "Commander" > 0)exitwith{player action ["getInCommander", _vcl]}; 		
 		if(_vcl emptyPositions "Cargo" > 0)exitwith    {player action ["getInDriver", _vcl];_vcl spawn {keyblock=true;sleep 0.5;player moveincargo _this; keyblock=false;};};
@@ -230,7 +222,6 @@ display_keypress = {
 	_handled = false;
 	_control = _this select 0;
 	_code = _this select 1;
-	systemChat str _code;
 	_shift = _this select 2;
 	_ctrlKey = _this select 3;
 	_alt = _this select 4;

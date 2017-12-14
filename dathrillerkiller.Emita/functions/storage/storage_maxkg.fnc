@@ -17,5 +17,5 @@ private ["_object","_variable","_return"];
 _object = _this select 0;
 _variable = _object getVariable "DTK_OwnerUID";
 
-_return = if (isNil "_variable")then {60}else {(_variable select 1) call INV_getvehmaxkg};
+_return = if (isNil "_variable")then {60}else {(_variable select 1) call config_storage};
 _return

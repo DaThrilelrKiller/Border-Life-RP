@@ -6,7 +6,7 @@ if (_art == "use") then
 {
 
 _item    = _this select 1;
-_class	 = _item call INV_getitemClassName;
+_class	 = _item call config_class;
 _exitvar = 0;
 
 

@@ -39,7 +39,7 @@ if ((player distance getmarkerpos "forest" < 175) or (player distance getmarkerp
 			_x setdamage 1;  
 
 			[player,_choppedtree,_amountchopped] call storage_add;
-			systemChat format ["you chopped down a tree and got %1 %2", _amount, _choppedtree call INV_getitemName];
+			systemChat format ["you chopped down a tree and got %1 %2", _amount, _choppedtree call config_displayname];
 			
 			_foundtree = true;
 			};

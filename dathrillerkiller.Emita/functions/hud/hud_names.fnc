@@ -1,13 +1,24 @@
-if (vehicle player != player)exitwith{
+private ["_objects","_object","_text"];
 
-	if (call garage_near)then {
+if ([player,10] call statsave_nearSave)then {
+		_text = ["Retrive Vehicle (E)","Save Vehicle (E)"]select (vehicle player != player);
 		titleRsc["Rtags", "PLAIN"];
 		_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
-		_control ctrlSetText "Open Garage (E)";
+		_control ctrlSetText _text;
+};
+
+if (vehicle player != player)exitwith{
+
+	if (driver(vehicle player) == player)then {
+		if (call garage_near)then {
+			titleRsc["Rtags", "PLAIN"];
+			_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
+			_control ctrlSetText "Open Garage (E)";
+		};
 	};
 };
 
-_objects = ["Man", "RUSpecialWeaponsBox","DTK_InfoStand","tcg_ATM","LandVehicle", "Air", "ship", "LocalBasicWeaponsBox"];
+_objects = ["Man", "RUSpecialWeaponsBox","DTK_InfoStand","tcg_ATM","LandVehicle", "Air", "ship", "LocalBasicWeaponsBox","MAP_notebook"];
 _object = nearestObjects [getPos player,_objects,2];
 _object = _object - [player];
 _object = _object select 0;
@@ -15,25 +26,25 @@ _object = _object select 0;
 if (isNil "_object")exitwith{};
 
 
-if ([_object,["Air", "Ship", "LandVehicle"]]call core_isKindOf && {alive _object} && {!locked _object})then {
+if ([_object,["Air", "Ship", "LandVehicle"]]call core_isKindOf && {alive _object} && {!locked _object})exitwith {
 	titleRsc["Rtags", "PLAIN"];
 	_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
 	_control ctrlSetText "ENTER VEHIClE (E)";
 };
 
-if (typeOf _object == "LocalBasicWeaponsBox")then {
+if (typeOf _object == "LocalBasicWeaponsBox")exitwith {
 	titleRsc["Rtags", "PLAIN"];
 	_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
 	_control ctrlSetText "OPEN STORAGE (T)";
 };
 
-if ([_object,["tcg_ATM"]]call core_isKindOf)then {
+if ([_object,["tcg_ATM"]]call core_isKindOf)exitwith {
 	titleRsc["Rtags", "PLAIN"];
 	_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
 	_control ctrlSetStructuredText parseText '<t align="center"><img image="sfg_textures\hud\7.paa"/> ATM (E)</t>'; 
 };
 
-if (_object in shopusearray)then {
+if (_object in shopusearray)exitwith {
 	_data = (_object call INV_getshopArray);
 	_img = _data select 1 select 0;
 	_name = _data select 1 select 1;
@@ -62,8 +73,14 @@ if (_object in shopusearray)then {
 	
 };
 
-if (isPlayer _object)then {
+if (isPlayer _object)exitwith {
 	titleRsc["Rtags", "PLAIN"];
 	_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
 	_control ctrlSetText "PLAYER MENU (E)";
+};
+
+if (_object isKindOf "MAP_notebook")exitwith {
+	titleRsc["Rtags", "PLAIN"];
+	_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
+	_control ctrlSetText "OPEN CCTV (E)";
 };

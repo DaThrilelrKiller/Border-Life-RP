@@ -23,7 +23,7 @@ if ([player,_item,_anzahl] call storage_add) then
 
 	if(_anzahl == 0)exitwith{systemChat  "The Stores Are Full Of This Item!";};
 
-	systemChat  format[localize "STRS_inv_buyitems_get_erhalten", (_anzahl call string_intToString), (_item call INV_getitemName)];
+	systemChat  format[localize "STRS_inv_buyitems_get_erhalten", (_anzahl call string_intToString), (_item call config_displayname)];
 
 	} 
 	else 

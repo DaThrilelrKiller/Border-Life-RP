@@ -18,9 +18,9 @@ private ["_KeybindingsDone"];
 
 KeybindingsDone = profileNamespace getVariable ["SFGKeys123",keybindingDefaults];
 
-call compile preprocessFile  format ['actions\%1KeyPressFunctions.sqf',ar_side];
-call compile preprocessFile format ['actions\%1actions.sqf',ar_side];
-call compile preprocessFile format ['actions\%1OnKeyPress.sqf',ar_side];
+call compile preprocessFile  format ['actions\%1KeyPressFunctions.sqf',dtk_side];
+call compile preprocessFile format ['actions\%1actions.sqf',dtk_side];
+call compile preprocessFile format ['actions\%1OnKeyPress.sqf',dtk_side];
 call compile preprocessFile 'actions\TFRKeyPress.sqf';
 
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call keybindings_KeyDown"];

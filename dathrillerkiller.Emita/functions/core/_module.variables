@@ -26,3 +26,10 @@ ar_paychecks =
 [{isamedic and EMSCommand_id},(5000 + random 2000 - random 2000)],
 [{isciv},add_civmoney]
 ];
+
+v_core_prones = [
+"amovppnemrunsnonwnondf",
+"amovppnemstpsnonwnondnon",
+"amovppnemstpsraswrfldnon",
+"amovppnemsprslowwrfldf"
+];

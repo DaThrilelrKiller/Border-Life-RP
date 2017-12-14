@@ -11,11 +11,11 @@ _arrayitems = _array select 0;
 _arrayamount = _array select 1;
 
 {
-	if (_x call INV_getitemKindOf == _kind)then
+	if (_x call config_kind == _kind)then
 	{
 		_amount = _amount + (_arrayamount select _ForEachIndex);
 		[_object,_x,0]call storage_setAmount;
-		_cost = _cost + ((_x call INV_getitemBuyCost)*_amount);
+		_cost = _cost + ((_x call config_buycost)*_amount);
 	};
 }foreach _arrayitems;
 

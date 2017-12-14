@@ -1,9 +1,9 @@
-SpawnPoints = [["Police_spawn_1","iscop"],["Police_spawn_3","Undercover_id"],["Police_spawn_4","Lt_id or Cpt_id or Chief_id"],["Police_spawn_5","SWAT_id"],["Police_spawn_7","Cpl_id or Sgt_id"],["Police_spawn_8","K9_id"],["Police_spawn_9","PDAviation_id"],["Police_spawn_10","DOC_id"],["Police_spawn_11","HWP_id"],["Police_spawn_12","CoastGuard_id"]];
+SpawnPoints = [["Police_spawn_1","iscop"],["Police_spawn_3","Undercover_id"],["Police_spawn_4","Lt_id or Cpt_id or Chief_id"],["Police_spawn_5","SWAT_id"],["Police_spawn_7","Cpl_id or Sgt_id"],["Police_spawn_8","K9_id"],["Police_spawn_9","PDAviation_id"],["Police_spawn_10","DOC_id"]];
 
 iscop			= true;
 isciv	      	= false;		
 isamedic       	= false;
-ar_sidename = "Police Officer";
+dtk_sidename = "Police Officer";
 
 INV_apps = [
 ["app_civilian","sfg_textures\ipad\CIVILIAN.PAA","[0,0,0,[""playerlist""]] execVM 'scripts\maindialogs.sqf';"],

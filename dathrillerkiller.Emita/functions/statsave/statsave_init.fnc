@@ -1,0 +1,1 @@
+call statsave_markers;

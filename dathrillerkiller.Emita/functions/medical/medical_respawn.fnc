@@ -12,7 +12,7 @@ removeAllWeapons _unit;
 /* waits until the corps is not moving to prevent another dealth */
 waitUntil {(str (velocity _corps)) == '[0,0,0]'};
 
-["ALL",["ar_side == 'EMS'",format ["%1 Has Died Near %3 (cords: %2)",name player, ([_corps]call Emita_GetGridRef),location_name],2],"network_chat",false,false]call network_MPExec;
+["ALL",["dtk_side == 'EMS'",format ["%1 Has Died Near %3 (cords: %2)",name player, ([_corps]call Emita_GetGridRef),location_name],2],"network_chat",false,false]call network_MPExec;
 
 /* sets the variables so we know the player is Unconscious and cannot be killed again */
 ["ALL",player,{_this setUnconscious true;},false,true]call network_MPExec;

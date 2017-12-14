@@ -26,9 +26,9 @@ if (_amount == 0)exitWith {};
 
 _return = false;
 
-_itemarray = _item call INV_getitemArray;
+_itemarray = _item call config_array;
 _currentamount = [_object,_item]call storage_amount;
-_itemkg = (_amount * (_itemarray call INV_getitemTypeKg));
+_itemkg = (_amount * (_itemarray call config_weight));
 _space = [_object]call storage_kg;
 _maxspace = [_object]call storage_maxkg;
 
@@ -51,7 +51,7 @@ else
 if (!isNil "_array")then {
 [_object,_array] call storage_set;
 _return = true;
-_name = _itemarray call INV_getitemName;
+_name = _itemarray call config_displayname;
 };
 
 _return

@@ -225,6 +225,31 @@ DaThrillerKiller - The ATM menu now shows 73,000,000 instead of 7.3e7
 DaThrillerKiller - Added a function that reveses array
 DaThrillerKiller - Made console a bit more user friendly
 
+Version 2.7
+DaThrillerKiller - Added a border
+DaThrillerKiller - New Vehicle role over function, more use friendly and op[timized
+DaThrillerKiller - New Key unlocking function that displays the vehicle that you unlocked instead of just "Vehcile unlocked"
+DaThrillerKiller - New Vehcile save/retrive system, you retrive vehicle at any marked garage on the map
+DaThrillerKiller - Removed vehicle information, not really needed fro gameplay anymore
+DaThrillerKiller - Renamed alot of vehicle so that color is after, that way when they or sorted in abc order they are correct
+DaThrillerKiller - Removed fishing
+DaThrillerKiller - New oil module
+DaThrillerKiller - New impound functions
+DaThrillerKiller - All close buttons now work
+DaThrillerKiller - New config backend
+DaThrillerKiller - Added free cam to admin menu
+DaThrillerKiller - New Camera Module
+DaThrillerKiller - redid checkpoit module 
+DaThrillerKiller - New shopping system
+DaThrillerKiller - Fixed shop lag
+DaThrillerKiller - New funciton that build player array
+DaThrillerKiller - New spawn menu animations
+DaThrillerKiller - you can now spawn at your last know location if you login within 3 minutes of disconecting
+DaThrillerKiller - New speedcam system markers are automaticly made
+DaThrillerKiller - New intro system
+
+Version 2.8
+DaThrillerKiller - Switch to Takistan
 
 
 

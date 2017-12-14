@@ -1,9 +1,9 @@
-SpawnPoints = [["Civ_Spawn_1","true"],["Civ_Spawn_2","true"],["Civ_Spawn_3","true"],["Civ_Spawn_4","TowingService_id"],["Civ_Spawn_6","RT_id"],["Civ_Spawn_7","PMC_id"]];
+SpawnPoints = [["Civ_Spawn_1","true"],["Civ_Spawn_2","true"],["Civ_Spawn_3","true"],["Civ_Spawn_6","true"],["Civ_Spawn_7","PMC_id"],["Civ_Spawn_9","true"]];
 
 isciv         	= true;						
 iscop          	= false;	
 isamedic      	= false;
-ar_sidename = "Civilian";
+dtk_sidename = "Civilian";
 
 /*DaThrillerKiller*/
 USBW_Interactions = [

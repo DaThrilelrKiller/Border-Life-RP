@@ -19,7 +19,7 @@ removeAllWeapons player;
 
 if ((getPlayerUID player) != _UID)exitWith {
 systemChat format ["Almost loaded with (%1`s) stats requesting stats again",_UID];
-["SERVER",[player,ar_side],"s_statsave_loadfromdb",false,false]call network_MPExec;
+["SERVER",[player,dtk_side],"s_statsave_loadfromdb",false,false]call network_MPExec;
 };
 
 kontostand = (_stats select 1);
@@ -42,5 +42,6 @@ if ((_stats select 18) == "UNCONSCIOUS")then {
 };
 setViewDistance (_stats select 19);
 setTerrainGrid (_stats select 20);
+dtk_seasion = (_stats select 21);
 
 AR_StaticsLoaded = true;

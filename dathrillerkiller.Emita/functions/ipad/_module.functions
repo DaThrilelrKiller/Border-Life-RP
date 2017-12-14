@@ -1,5 +1,6 @@
 [
 "loadapps",
-"openipad",
-"getapparray"
+"open",
+"apps",
+"background"
 ];

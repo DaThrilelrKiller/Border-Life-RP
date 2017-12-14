@@ -3,5 +3,5 @@ _data = call compile(lbData [1501, (lbCurSel 1501)]);
 _item = _data select 0;
 _name = lbText [1501, (lbCurSel 1501)];
 
-[_item,player,player,ar_side]call shops_createVehicle;
+[_item,player,player,dtk_side]call shops_createVehicle;
 systemchat format ["%1 spawned you %2", name player, _name];

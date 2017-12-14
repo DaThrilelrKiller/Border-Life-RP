@@ -1,6 +1,5 @@
 private ["_VclVar","_UID","_index"];
 createDialog "schluessel";
-dtk_keychainarray = [];
 {
 	_VclVar = (_x getVariable "DTK_OwnerUID");
 	if !(isNil "_VclVar")then
@@ -10,7 +9,6 @@ dtk_keychainarray = [];
 		 { 
 			_index = lbAdd [1, format ["%1 (%2)", typeOf _x, _x]];
 			lbSetData [1, _index, format ["%1", _x]];
-			dtk_keychainarray set [count dtk_keychainarray,_x];
 		};
 	};
 

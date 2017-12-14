@@ -1,51 +1,3 @@
-isprone = 
-
-{
-
-if(
-animationstate player == "amovppnemrunsnonwnondf" or 
-animationstate player == "amovppnemstpsnonwnondnon" or 
-animationstate player == "amovppnemstpsraswrfldnon" or 
-animationstate player == "amovppnemsprslowwrfldf" 
-) then {true}else{false};
-
-};
-
-DialogSpielerListe = {
-private ["_Fart", "_Fid", "_Fname", "_Fingame", "_Findex", "_Flistlen", "_Feigenenum"];
-    _Fart = _this select 0;
-   _Fid = _this select 1;
-_Fname = _this select 2;
-_Fingame = _this select 3;
-   _Findex = 0;
-_Flistlen = 0;
-   _Feigenenum = -1;
-  for [{
-_c=0}, {
-_c < (count playerstringarray)}, {
-_c=_c+1}] do {
-   _Fspieler = playerstringarray select _c;
-   if ( ((_Fart == 0) or ((_Fart == 1) and (_c > civscount)) or ((_Fart == 2) and (_c < civscount))) and ((_Fingame) or (_Fspieler call ISSE_UnitExists)) ) then 
- {
-    if (_Fname) then 
- {
-    _Findex = lbAdd [_Fid, format ["%1 - (%2)", _Fspieler, name (call compile _Fspieler)]];
-   } else {
-    _Findex = lbAdd [_Fid, _Fspieler];
-};
-
-   lbSetData [_Fid, _Findex, format["%1", _c]];
-    if (_Fspieler == rolestring) then 
- {
-_Feigenenum = _Flistlen;
-};
-
-  _Flistlen = _Flistlen + 1;
-};
-
-  };
-
-[_Flistlen, _Feigenenum]};
 
 Emita_GetGridRef =
 {
@@ -107,31 +59,6 @@ if(_this == player)then
 
 };			
 
-INV_getitemScriptName = { ((_this call INV_getitemArray) select 0);};
-INV_getitemType = {((_this call INV_getitemArray) select 1) select 0;};
-INV_getitemKindOf = { ((_this call INV_getitemArray) select 1) select 1;};
-INV_getitemClassName = { ((_this call INV_getitemArray) select 2) select 0;};
-INV_getitemName = {
-	private ["_return"];
-	_return = ((_this call INV_getitemArray) select 2) select 1;
-	_return = if (isNil "_return")then {_this}else{_return};
-	_return
-};
-INV_getitemBuyCost = {((_this call INV_getitemArray) select 3) select 0;};
-INV_getitemSellCost = { ((_this call INV_getitemArray) select 3) select 1;};
-INV_getitemTypeKg = { ((_this call INV_getitemArray) select 4) select 0;};
-INV_getvehmaxkg = { ((_this call INV_getitemArray) select 4) select 3;};
-INV_getitemLicense = { ((_this call INV_getitemArray) select 4) select 1;};
-INV_getitemLicense2 = { ((_this call INV_getitemArray) select 4) select 2;};
-INV_getitemOtherStuff = { ((_this call INV_getitemArray) select 5);};
-INV_getitemCostWithTax  = { ((_this call INV_getitemArray) call INV_getitemSteuer);};
-INV_getitemGiveable = { ((_this call INV_getitemArray) select 5) select 0;};
-INV_getitemDropable = { ((_this call INV_getitemArray) select 5) select 1;};
-INV_getitemLooseable = { ((_this call INV_getitemArray) select 5) select 2;};
-INV_getitemIsIllegal = { ((_this call INV_getitemArray) select 5) select 3;};
-INV_getitemFilename = { ((_this call INV_getitemArray) select 5) select 4;};
-
-
 TastenDruck = 
 {
 	private ["_ctrl", "_zeichennummer", "_ctrlid"];
@@ -144,41 +71,6 @@ TastenDruck =
 		systemChat  format[localize "STRS_wrong_input", _zeichennummer];
 	};
 };
-ISSE_UnitExists = 
-{
-	private ["_obj"];
-	if ((typeName _this) == "STRING") then
-	{
-		if ((isnil(_this)) or (_this == "scalar bool array string 0xe0ffffef") or (_this == "<NULL-Object>") or (_this == "Error: No vehicle")) then
-		{
-			false
-		}
-		else
-		{
-			_obj = call compile format ["%1", _this];
-			if (format ["%1", isplayer _obj] == "true") then
-			{
-				true
-			}
-			else
-			{
-				false
-			};
-		};
-	}
-	else
-	{
-		if (isNull _this) then
-		{
-			false
-		}
-		else
-		{
-			true
-		};
-	};
-};
-
 
 ISSE_ArrayNumberNear = 
 {

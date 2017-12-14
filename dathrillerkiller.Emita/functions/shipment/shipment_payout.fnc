@@ -1,5 +1,5 @@
 
-_normal = shipment_item call INV_getitemSellCost;
+_normal = shipment_item call config_sellcost;
 _totaltime = shipment_road_time + shipment_offroad_time;
 [shipment_vehicle,shipment_item,-1]call storage_add;
 _dec = [shipment_offroad_time,1]select (shipment_offroad_time < 1);

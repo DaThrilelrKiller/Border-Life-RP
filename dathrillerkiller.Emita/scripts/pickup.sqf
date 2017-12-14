@@ -10,9 +10,9 @@ _object	    = _this select 0;
 if ([_object, playableUnits, 5] call ISSE_ArrayNumberNear > 1)exitWith {systemChat "There Are To Many People Near This Item!";pickingup = false; };
 _item  	    = _this select 1;
 _tamount    = _this select 2;
-_infos      = _item call INV_getitemArray;
-_name       = _infos call INV_getitemName;
-_itemweight = (_infos call INV_getitemTypeKg)*_tamount;   												
+_infos      = _item call config_array;
+_name       = _infos call config_displayname;
+_itemweight = (_infos call config_weight)*_tamount;   												
 _ownweight  =  [player]call storage_kg;
 _amount     = _this select 2;
 _exitvar    = 0;
@@ -21,7 +21,7 @@ _time       = round time;
 if ((_ownweight + _itemweight) > INV_Tragfaehigkeit) then 
 { 
 
-_amount = (floor((INV_Tragfaehigkeit - _ownweight) / (_infos call INV_getitemTypeKg)));
+_amount = (floor((INV_Tragfaehigkeit - _ownweight) / (_infos call config_weight)));
 
 if (_amount <= 0) exitWith {systemChat  localize "STRS_inv_buyitems_maxgewicht"; _exitvar = 1;pickingup = false;};
 

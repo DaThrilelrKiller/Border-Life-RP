@@ -13,7 +13,7 @@ lbAdd [1, localize "STRS_statdialog_inventarlist"];
 lbAdd [1,"------------------------------------------------------------------------------------------"];
 
 {
-	lbAdd [1,(_x call INV_getitemName)];
+	lbAdd [1,(_x call config_displayname)];
 	true
 }count _storage;
 
@@ -33,8 +33,8 @@ lbAdd [1, localize "STRS_statdialog_waffen"];
 lbAdd [1,"------------------------------------------------------------------------------------------"];
 
 {
-	_script = _x call INV_GetScriptFromClass_Weap;
-	_name = (_script call INV_getitemName);
+	_script = _x call config_classtoname;
+	_name = (_script call config_displayname);
 	lbAdd [1,_name];
 	true
 }count _weapons;
@@ -43,8 +43,8 @@ lbAdd [1,"----------------------------------------------------------------------
 lbAdd [1, localize "STRS_statdialog_magazine"];
 lbAdd [1,"------------------------------------------------------------------------------------------"];
 {
-	_script = _x call INV_GetScriptFromClass_Mag;
-	_name = (_script call INV_getitemName);
+	_script = _x call config_classtoname;
+	_name = (_script call config_displayname);
 	lbAdd [1,_name];
 	true
 }count _magazines;

@@ -4,6 +4,7 @@ dtk_fnc_total = 0;
 dtk_active_modules = 
 [
 "Core",
+"Config",
 "Array",
 "BIS",
 "Network",
@@ -14,6 +15,8 @@ dtk_active_modules =
 "Keybindings",
 "Slots",
 "Chat",
+"Camera",
+"Impound",
 "Markers",
 "Siren",
 "Checkpoint",
@@ -34,11 +37,11 @@ dtk_active_modules =
 "Robbery",
 "Speedcam",
 "Fuel",
+"Oil",
 "Ipad",
 "Keys",
 "Garage",
 "Clothing",
-"Fishing",
 "GPS",
 "Dance",
 "Statsave",
@@ -74,6 +77,6 @@ diag_log text format ["Total Modules: %2 Total Functions: %1",dtk_fnc_total,coun
 
 call setup_init;
 if (dtk_client)then {
-["ALL",[player,ar_side,getPlayerUID player],"setup_jip",false,true]call network_MPExec;
+["ALL",[player,dtk_side,getPlayerUID player],"setup_jip",false,true]call network_MPExec;
 };
 

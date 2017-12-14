@@ -7,7 +7,7 @@ _vehhud = _hud displayCtrl 152;
 _vcl = (vehicle player);
 _vclClass = (_vcl getVariable "DTK_OwnerUID" select 1);
 _storweight = [_vcl] call storage_kg;
-_maxweight = _vclClass call INV_getvehmaxkg;
+_maxweight = _vclClass call config_storage;
 _stor = format ["%1/%2",_storweight,_maxweight];
 _locked = ["Un-Locked","Locked"]select (locked _vcl);
 	

@@ -4,5 +4,8 @@
 "loadwhitelist",
 "retrivevehicleland",
 "save",
-"savevehicle"
+"savevehicle",
+"init",
+"markers",
+"nearSave"
 ];

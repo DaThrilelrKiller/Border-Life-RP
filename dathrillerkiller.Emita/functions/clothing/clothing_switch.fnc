@@ -51,8 +51,8 @@ if (_skinsold != _skin) then {
 	player setVariable ["cdb_license",_license,true];
 	player setVariable ["cdb_notes",_notes,true];
 	player setVariable ["cdb_bounty",_bounty,true]; 
-	execVM format ['actions\%1actions.sqf',ar_side];
-	if (ar_side == "EMS")then
+	execVM format ['actions\%1actions.sqf',dtk_side];
+	if (dtk_side == "EMS")then
 	{
 	player addEventHandler ["fired", {[(_this select 0),(_this select 1), (_this select 4)]call ems_firehose;}];
 	};
@@ -61,7 +61,7 @@ if (_skinsold != _skin) then {
 	{player addMagazine _x} count _oldmags;
 
 	_PlayerSettings = profileNamespace getVariable "tickleme";
-	player setVariable ["PlayerSettings", [_PlayerSettings,ar_side], true];
+	player setVariable ["PlayerSettings", [_PlayerSettings,dtk_side], true];
 	_face = (_PlayerSettings select 0);
 	clearVehicleInit player;
 	player setVehicleInit format["this setFace '%1';", _face];

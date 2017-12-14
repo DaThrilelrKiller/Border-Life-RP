@@ -2,4 +2,4 @@
 call events_events;
 [player,"cookie", 1] call storage_add;
 
-diag_log text "[LOG] Straight Forward Gaming Island Life init finished";
+diag_log text "[LOG] Border Life Roleplay finished!";

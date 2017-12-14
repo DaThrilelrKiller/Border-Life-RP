@@ -10,32 +10,13 @@ call dance_open;
 
 Keypress9 = 
 {
-if (!AM_temp_carrying) then {createDialog "AM_CheckpointBuilder";}else{[] call Checkpoint_Drop;};
+	call checkpoint_open;
 };
 
 KeyPressF5 = 
 {
 if(INV_shortcuts)then{INV_shortcuts=false; titletext["SFG Keys Off", "PLAIN DOWN"];[] execVM "actions\removeActions.sqf"}else{INV_shortcuts=true; titletext["SFG Keys On", "PLAIN DOWN"];[] execVM "actions\EMSactions.sqf"};
 };
-
-KeyPressL = 
-{
-if(!INV_shortcuts)exitwith{};
-
-	_vcl = call keys_grabVehicle;
-
-	if (locked _vcl) then 
-	{
-		systemChat "Vehicle Unlocked";
-		[_vcl,[_vcl,false],'network_lock',false,true]call network_MPExec;
-	}
-	else
-	{
-		systemChat "Vehicle Locked";
-		[_vcl,[_vcl,true],'network_lock',false,true]call network_MPExec;
-	};
-};
-
 KeyPressT = 
 {
 	if(!INV_shortcuts)exitwith{};

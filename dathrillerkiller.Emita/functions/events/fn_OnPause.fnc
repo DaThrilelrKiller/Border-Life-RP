@@ -12,6 +12,7 @@ for "_a" from 0 to 1 step 0 do
 	_abortctrl ctrlEnable false; 
 	_title = (findDisplay 49) displayCtrl 523;
 	
+	
 	_enCtrl = [_Respawnctrl,_abortctrl] spawn 
 	{
 		disableSerialization;
@@ -37,7 +38,8 @@ for "_a" from 0 to 1 step 0 do
 					{
 						/*Saves player acount to prevent dupping*/
 						private ["_save"];
-						_save = [player,[ 	["Main", "BankAcount", kontostand], ["Main", "NAME",name player], ["Main", "Hunger", dtk_hunger], [ar_side, "Inventory", player getVariable "dtk_storage"], 	[ar_side, "INV_Lizenz", (player getvariable "cdb_license")],[ar_side, "VehiclesLand", INVVehiclesLand],[ar_side, "ARHP", ARHP],[ar_side, "ARHR", ARHR],[ar_side, "Weapons", weapons player],[ar_side, "Magazines", magazines player],[ar_side, "INVAppsInstalled",INVAppsInstalled]]];
+						if (isNil "dtk_seasion" or isNil "dtk_side" or isNil "dtk_sidename")exitWith {systemChat "[SAVE ABORTED]Your stats have not loaded yet"};
+						_save = [player,[ 	["Main", "BankAcount", kontostand], ["Main", "NAME",name player], ["Main", "Hunger", dtk_hunger], [dtk_side, "Inventory", player getVariable "dtk_storage"], 	[dtk_side, "INV_Lizenz", (player getvariable "cdb_license")],[dtk_side, "VehiclesLand", INVVehiclesLand],[dtk_side, "ARHP", ARHP],[dtk_side, "ARHR", ARHR],[dtk_side, "Weapons", weapons player],[dtk_side, "Magazines", magazines player],[dtk_side, "INVAppsInstalled",INVAppsInstalled],[dtk_side, "seasion", [s_seasion,time,getPos player]]]];
 						["SERVER",_save,"S_statsave_SaveToDB",false,false]call network_MPExec;
 						_text1 = format ["Saving Stats",_e]; 
 					};
@@ -58,7 +60,7 @@ for "_a" from 0 to 1 step 0 do
 		disableSerialization;
 		_ctrl3 = _this select 0;
 		_sText2 = ctrlText _ctrl3;
-		_text3 = format ["IslandLifeRPG"]; _ctrl3 ctrlSetText _text3;
+		_text3 = format ["Border Life"]; _ctrl3 ctrlSetText _text3;
 	};
 
 	waitUntil {isNull (findDisplay 49)};

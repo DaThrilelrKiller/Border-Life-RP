@@ -8,7 +8,7 @@ createdialog 'shipment_open';
 }count Shipment_locations;
 
 {
-	_name = (_x call INV_getitemName);
+	_name = (_x call config_displayname);
 	_index = lbAdd [1501, _name];
 	lbSetData [1501, _index, _x];	
 }count Shipment_items;

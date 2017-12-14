@@ -4,7 +4,7 @@ dtk_licenses =
 [
 ["SFG_Clothing_License", [atmmall, rlrpgclothingshop_1, rlrpgclothingshop_2],      "SFG Clothing License",150000,"isciv"],
 ["hunting_license",        [atmswag],                                                "Hunting License",20000,"true"],
-["hunting_licensea",        [scubashop, scubashop, boatshop2],                        "Fishing License",20000,"true"],
+["hunting_licensea",        [],                        "Fishing License",20000,"true"],
 ["pistol",                 [atmswag, specbox],                                       "(Pistol) Concealed Carry License",50000,"true"],
 ["sub",                    [atmswag],                                                "Sub-Machine Gun License",100000,"true"],
 ["rifle",                  [atmswag, specbox],                                       "Rifle License",150000,"true"],
@@ -29,5 +29,6 @@ dtk_licenses =
 ["marijuanaga4",          [gangarea4],                                              "Safe House Marijuana Drug Processor's License",35000,"true"],
 ["assassinlic",            [assassinshop],                                           "Illegal Assassin Weapons Fee",500000,"true"],
 ["terror",                 [terrorbox],                                              "Illegal Terrorist License",999999,"true"],
-["towl",                   [truckshop,towservice1],                                              "Towing License",50000,"true"]
+["towl",                   [truckshop,towservice1],                                              "Towing License",50000,"true"],
+["",                   [],                                              "n/a",0,"false"]
 ];

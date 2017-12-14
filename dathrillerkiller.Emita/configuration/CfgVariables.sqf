@@ -31,8 +31,6 @@ INV_FarmItemArray =
 ];
 Miningarray =
 [
-[["OilArea1",15],"Oil",12],
-[["OilArea2",15],"Oil",12],
 [["IronArea",30],"iron",12],
 [["GoldArea",15],"gold",12],
 [["GoldArea1",15],"gold",12],
@@ -47,7 +45,7 @@ rblock			 = 0;
 stolencash		 = 0;
 Maxbankrobpercentlost    = 0.1; 
 robenable              	 = true;     
-drugsellarray		 = [mdrugsell,cdrugsell,ldrugsell,hdrugsell,whalesell,methsell];
+drugsellarray		 = [mdrugsell,cdrugsell,ldrugsell,hdrugsell,methsell];
 /*Lottery*/
 playing_lotto = 0;
 

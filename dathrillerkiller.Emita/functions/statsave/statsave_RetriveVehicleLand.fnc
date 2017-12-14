@@ -1,11 +1,10 @@
-_Loaction = _this select 0;
-waitUntil {createDialog "liste_1_button"};
+createDialog "liste_1_button";
 {
-	_Array = _x + [_Loaction];
+	_Array = _x;
 	_Scriptname = (_x select 0);
 	_trunk = (_x select 1);
 	_upgrades = (_x select 2);
-	_name = _Scriptname call inv_getitemname;
+	_name = _Scriptname call config_displayname;
 	_index = lbAdd [1, format["Name: %1 Trunk: %2 SpeedUpgrade: %3", _name, _trunk,_upgrades]];															
 	lbSetData [1, _index,format ['%1',_Array]];	
 }count INVVehiclesLand;
@@ -25,9 +24,8 @@ _warrants = _Array select 6;
 _Licences = _Array select 7;
 _notes = _Array select 8;
 _sirens = _Array select 9;
-_Loaction = _Array select 10;
 
-[_Scriptname,_Loaction,player,ar_side,_plate]call shops_createVehicle;
+[_Scriptname,nil,player,dtk_side,_plate]call shops_createVehicle;
 	[_trunk,_upgrades,_weaps,_mags,_warrants,_Licences,_notes,_sirens]spawn
 	{
 		_weaps = _this select 2;

@@ -24,7 +24,7 @@ if (_art == "hit") then
 	"dynamicBlur" ppEffectCommit StunActiveTime;
 
 	["ALL",["dtk_client",format["%1 was tased by %2", name player, name _shooter],1],"network_chat",false,true]call network_MPExec;																																																							
-	if(!(call isprone)) then
+	if(!(call core_prone)) then
 	{
 	["ALL",[player,"adthpercmstpslowwrfldnon_4"],"network_SwitchMove",false,true]call network_MPExec;
 	}

@@ -20,9 +20,9 @@ onMinimapScript[] = {"BIS_customGPS_Spawn"};
 
 class Header
 {
- gameType = Life;            
- minPlayers = 1;             
- maxPlayers = 80;           
+	 gameType = Life;            
+	 minPlayers = 1;             
+	 maxPlayers = 80;           
 };
 
 class MissionSQM
@@ -60,6 +60,9 @@ class CfgPatches
 #include "DATA\DIALOGS\shipments_dialog.hpp"
 #include "DATA\DIALOGS\atm_dialog.hpp"
 #include "DATA\DIALOGS\gang_dialog.hpp"
+#include "DATA\DIALOGS\camera_dialog.hpp"
+#include "DATA\DIALOGS\shopping.hpp"
+#include "DATA\DIALOGS\impound.hpp"
 
 class RscTitles
 {
@@ -69,218 +72,5 @@ class RscTitles
 	#include "DATA\DIALOGS\IDCard.hpp"
 	#include "DATA\DIALOGS\RscTitles.hpp"
 	#include "DATA\DIALOGS\ar_plate.hpp"
+	#include "DATA\DIALOGS\progressbar.hpp"
 };
-
-class antidialog
-{
-	idd = 0110;
-	movingEnable = 0;
-	enableSimulation = 0;
-	enableDisplay = 0;
-	onload = "";
-};
-
- class RscConfigEditor_main: antidialog {};
- class RscTextSmall: antidialog {};
- class RscTitle: antidialog {};
- class RscProgress: antidialog {};
- class RscProgressNotFreeze: antidialog {};
- class RscHTML: antidialog {};
- class RscButtonSmall: antidialog {};
- class RscTree: antidialog {};
- class RscXSliderH: antidialog {};
- class RscActiveText: antidialog {};
- class RscControlsGroup: antidialog {};
- class RscBackgroundStripeTop: antidialog {};
- class RscBackgroundStripeBottom: antidialog {};
- class RscDisplayBackgroundStripes: antidialog {};
- class RscCinemaBorder: antidialog {};
- class RscToolbox: antidialog {};
- class RscXKeyShadow: antidialog {};
- class RscXKey: antidialog {};
- class RscMapControl: antidialog {};
- class RscObject: antidialog {};
- class RscStandardDisplay: antidialog {};
- class RscLineBreak: antidialog {};
- class RscCompass: antidialog {};
- class RscWatch: antidialog {};
- class RscMiniMap: antidialog {};
- class RscMiniMapSmall: antidialog {};
- class RscButtonImages: antidialog {};
- class RscObjectives: antidialog {};
- class RscMsgBox: antidialog {};
- class RscMsgBox3: antidialog {};
- class RscMap: antidialog {};
- class RscDisplayChannel: antidialog {};
- class RscDisplayChat: antidialog {};
- class RscDisplayVoiceChat: antidialog {};
- class RscDisplayMissionEditor: antidialog {};
- class RscDisplayEditObject: antidialog {};
- class RscDisplayMissionLoad: antidialog {};
- class RscDisplayMissionSave: antidialog {};
- class RscDisplayScriptingHelp: antidialog {};
- class RscDisplayCapture: antidialog {};
- class RscDisplayInterruptEditorPreview: antidialog {};
- class RscDisplayInterruptEditor3D: antidialog {};
- class RscDisplayAddonActions: antidialog {};
- class RscDisplayNewMod: antidialog {};
- class RscDisplayInsertMarker: antidialog {};
- class RscDisplayDebug: antidialog {};
- class RscChatListDefault: antidialog {};
- class RscChatListMission: antidialog {};
- class RscChatListBriefing: antidialog {};
- class RscChatListMap: antidialog {};
- class RscTitlesText: antidialog {};
- class RscIGText: antidialog {};
- class RscIGProgress: antidialog {};
- class RscDisplayHintC: antidialog {};
- class RscDisplayHintCEx: antidialog {};
- class RscInGameUI: antidialog {};
- class RscDisplayLoading: antidialog {};
- class RscDisplayLoadMission: antidialog {};
- class RscDisplayNotFreeze: antidialog {};
- class RscDisplayNotFreezeBig: antidialog {};
- class RscDisplayStart: antidialog {};
- class RscDisplayEditDiaryRecord: antidialog {};
- class RscDisplayDiary: antidialog {};
- class RscDisplayMainMap: antidialog {};
- class RscDisplayMain: antidialog {};
- class RscDisplaySingleplayer: antidialog {};
- class RscDisplaySingleMission: antidialog {};
- class RscDisplayCampaignLoad: antidialog {};
- class RscDisplayRevert: antidialog {};
- class RscDisplaySelectDifficulty: antidialog {};
- class RscDisplayDifficultySelect: antidialog {};
- class RscDisplayGetReady: antidialog {};
- class RscDisplayGear: antidialog {};
- class RscDisplayGearWeapon: antidialog {};
- class RscDisplayArtillery: antidialog {};
- class RscDisplayEmpty: antidialog {};
- class RscDisplayMission: antidialog {};
- class RscDisplayIntro: antidialog {};
- class RscDisplayOutro: antidialog {};
- class RscDisplayAward: antidialog {};
- class RscDisplayCampaign: antidialog {};
- class RscDisplayMissionEnd: antidialog {};
- class RscDisplayTeamSwitch: antidialog {};
- class RscDisplayInterrupt: antidialog {};
- class RscDisplayInterruptRevert: antidialog {};
- class RscDisplaySelectSave: antidialog {};
- class RscDisplayMPInterrupt: antidialog {};
- class RscDisplayDebriefing: antidialog {};
- class RscDisplayMissionFail: antidialog {};
- class RscDisplayLogin: antidialog {};
- class RscDisplayNewUser: antidialog {};
- class RscDisplayModLauncher: antidialog {};
- class RscDisplayOptions: antidialog {};
- class RscDisplayOptionsInGame: antidialog {};
- class RscDisplayOptionsVideo: antidialog {};
- class RscDisplayOptionsAudio: antidialog {};
- class RscDisplayMicSensitivityOptions: antidialog {};
- class RscDisplayGameOptions: antidialog {};
- class RscDisplayDifficulty: antidialog {};
- class RscListBoxKeys: antidialog {};
- class RscDisplayConfigure: antidialog {};
- class RscDisplayConfigureAction: antidialog {};
- class RscDisplayConfigureControllers: antidialog {};
- class RscDisplayCustomizeController: antidialog {};
- class RscDisplayCredits: antidialog {};
- class RscDisplaySelectIsland: antidialog {};
- class RscDisplayCustomArcade: antidialog {};
- class RscDisplayArcadeMap: antidialog {};
- class RscDisplayArcadeUnit: antidialog {};
- class RscDisplayArcadeModules: antidialog {};
- class RscDisplayArcadeGroup: antidialog {};
- class RscDisplayArcadeWaypoint: antidialog {};
- class RscDisplayArcadeMarker: antidialog {};
- class RscDisplayArcadeSensor: antidialog {};
- class RscDisplayArcadeEffects: antidialog {};
- class RscDisplayTemplateSave: antidialog {};
- class RscDisplayTemplateLoad: antidialog {};
- class RscDisplayIntel: antidialog {};
- class RscDisplayXWizardTemplate: antidialog {};
- class RscDisplayXWizardIntel: antidialog {};
- class RscDisplayXWizardIntelName: antidialog {};
- class RscDisplayXWizardIntelIsland: antidialog {};
- class RscDisplayXWizardIntelWeather: antidialog {};
- class RscDisplayXWizardIntelTime: antidialog {};
- class RscDisplayXWizardUnit: antidialog {};
- class RscDisplayXWizardUnitSelect: antidialog {};
- class RscDisplayXWizardUnitSelectCustom: antidialog {};
- class RscDisplayXWizardMap: antidialog {};
- class RscDisplayXWizardMapInsertUnit: antidialog {};
- class RscDisplayXWizardMapInsertWaypoint: antidialog {};
- class RscDisplayXWizardParams: antidialog {};
- class RscDisplayXWizardParameter: antidialog {};
- class RscDisplayESRBOnline: antidialog {};
- class RscDisplayMultiplayer: antidialog {};
- class RscDisplayHostSettings: antidialog {};
- class RscDisplayRemoteMissions: antidialog {};
- class RscDisplayRemoteMissionVoted: antidialog {};
- class RscDisplayServer: antidialog {};
- class RscDisplayClient: antidialog {};
- class RscDisplayMultiplayerSetup: antidialog {};
- class RscDisplayMultiplayerSetupParams: antidialog {};
- class RscDisplayMultiplayerSetupParameter: antidialog {};
- class RscDisplayPassword: antidialog {};
- class RscDisplayPort: antidialog {};
- class RscDisplayIPAddress: antidialog {};
- class RscDisplayFilter: antidialog {};
- class RscDisplayMPPlayers: antidialog {};
- class RscDisplayClientWait: antidialog {};
- class RscDisplayServerGetReady: antidialog {};
- class RscDisplayClientGetReady: antidialog {};
- class RscMPSetupMessage: antidialog {};
- class RscDisplayDedicatedServerSettings: antidialog {};
- class RscDisplayDedicatedServer: antidialog {};
- class RscPendingInvitation: antidialog {};
- class RscPendingInvitationInGame: antidialog {};
- class RscXTitle: antidialog {};
- class RscXBackgroundAll: antidialog {};
- class RscXNotepad: antidialog {};
- class RscXNotepadSett: antidialog {};
- class RscDisplayEditProfile: antidialog {};
- class RscDisplayProfileFace: antidialog {};
- class RscDisplayProfileVoice: antidialog {};
- class RscDisplayProfileController: antidialog {};
- class RscDisplayProfileControllerWheel: antidialog {};
- class RscDisplayProfileControllerJoystick: antidialog {};
- class RscDisplayProfileAudio: antidialog {};
- class RscDisplayProfileVideo: antidialog {};
- class RscDisplayEditProfileInGame: antidialog {};
- class RscDisplayVoiceMask: antidialog {};
- class RscXMPNotepad: antidialog {};
- class RscDisplayLive: antidialog {};
- class RscDisplayMPType: antidialog {};
- class RscDisplayOptiMatchFilter: antidialog {};
- class RscDisplayQuickMatch: antidialog {};
- class RscDisplayPlayers: antidialog {};
- class RscDisplayStatistics: antidialog {};
- class RscDisplayStatisticsCurrent: antidialog {};
- class RscDisplayInteruptReceiving: antidialog {};
- class DisplayMultiplayerServerAdvanced: antidialog {};
- class DisplayMultiplayerServerAdvancedSelect: antidialog {};
- class DisplayMultiplayerServerSettings: antidialog {};
- class RscDisplayCampaignSelect: antidialog {};
- class RscDisplayMovieInterrupt: antidialog {};
- class RscGroupRootMenu: antidialog {};
- class RscMainMenu: antidialog {};
- class RscSubmenu: antidialog {};
- class RscMoveHigh: antidialog {};
- class RscMoveDir: antidialog {};
- class RscReply: antidialog {};
- class RscCallSupport: antidialog {};
- class RscStatus: antidialog {};
- class RscWatchDir: antidialog {};
- class RscWatchMoreDir: antidialog {};
- class RscMoveDist: antidialog {};
- class RscFormations: antidialog {};
- class RscCombatMode: antidialog {};
- class RscTeam: antidialog {};
- class RscSelectTeam: antidialog {};
- class RscRadio: antidialog {};
- class RscMenuBasicLevel: antidialog {};
- class RadioChannels: antidialog {};
- class RadioProtocolBase: antidialog {};
- class RadioProtocolDefault: antidialog {};
-

@@ -1,4 +1,6 @@
 [
 "handleDamage",
-"getDamage"
+"getDamage",
+"name",
+"unflip"
 ];

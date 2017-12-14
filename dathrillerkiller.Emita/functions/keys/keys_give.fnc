@@ -1,5 +1,5 @@
 private ["_Veh","_play","_VclVar","_UID"];
-_veh = dtk_keychainarray select (lbCurSel 1);
+_veh = call compile lbData [1, (lbCurSel 1)];
 
 _play = call compile INV_InventarGiveReceiver;
 

@@ -15,9 +15,10 @@ scriptName "fn_customGPS.sqf";
 	Returns:
 	True
 */
+
 BIS_customGPS_Params = _this;
 
-BIS_customGPS_Spawn = {scriptName "fn_customGPS.sqf: Loop";
+BIS_customGPS_Spawn = {
 
 	_params = BIS_customGPS_Params;
 	_frame = _params select 0;
@@ -43,4 +44,5 @@ BIS_customGPS_Spawn = {scriptName "fn_customGPS.sqf: Loop";
 	GPS_FRAME ctrlcommit 0;
 };
 
-true
+false
+

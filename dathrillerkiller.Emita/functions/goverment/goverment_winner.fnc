@@ -16,7 +16,7 @@ _i = 0;
 
 if (isNil "_winner")then 
 {
-	["ALL",["dtk_client","Elections","The elections for governor has ended %1, no one ran for governor"],"Main_Notification",true,false]call network_MPExec;
+	["ALL",["dtk_client","Elections","The elections for governor has ended %1 is sill governor, no one ran for governor",name call goverment_govonor],"Main_Notification",true,false]call network_MPExec;
 
 }else
 {

@@ -3,12 +3,24 @@ if(working)exitwith{systemChat  "You are collecting a resource, please wait";};
 working=true;
 _isInArea=false;
 {if (player distance (getMarkerPos ((_x select 0) select 0)) < ((_x select 0) select 1) && isciv) then {_isInArea = true; _minearray = _x};} count miningarray;
+
 _amount = floor (random 2)+1;
-_resource = _minearray select 1;
-_max      = _minearray select 2;
-_infos    = _resource call INV_getitemArray;
-_name     = (_infos call INV_getitemName);
-_itemweight = (_infos call INV_getitemTypeKg)*_amount;
+
+if (!isNil "_this")then {
+	_isInArea = true;
+	_resource = "Oil";
+	_max = 12;
+}else{
+	_resource = _minearray select 1;
+	_max      = _minearray select 2;
+};
+
+
+_infos    = _resource call config_array;
+_name     = (_infos call config_displayname);
+_itemweight = (_infos call config_weight)*_amount;
+
+
 if (!_isInArea) then
 {
 systemChat  "You are not near a resource area.";

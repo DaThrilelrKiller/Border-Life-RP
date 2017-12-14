@@ -129,39 +129,23 @@ class MyCookie
 	};
 };
 
-class water_mark {
-		idd = -1;
-		onLoad = "uiNamespace setVariable ['water_mark', _this select 0];";
-		onUnLoad = "5 cutRsc ['water_mark','PLAIN'];";
-		fadein = 0;
-		fadeout = 0;
-		duration = 10e10;
-		controlsBackground[] = {};
-		objects[] = {};
-		class controls {
-			class wm_text2 {
-				idc = 1;
-				x = safeZoneX+0.027;
-				y = safeZoneY+safeZoneH-0.16;
-				w = 0.4*safeZoneH;
-				h = 0.057*safeZoneH;
-				shadow = 2;
-				class Attributes
-				{
-					font = "EtelkaNarrowMediumPro";
-					color = "#24FFFFFF";
-					align = "left"; 
-					valign = "middle";
-					shadow = 2;
-				};
-				colorBackground[] = { 1, 0.3, 0, 0 };  
-				font = "EtelkaNarrowMediumPro";
-				size = 0.06*safeZoneH;
-				type = 13;
-				style = 0;
-				text="ArmaLifeRPG";
-			};
+class dtk_logo
+{
+	idd = -1;
+	onLoad = "execVM 'scripts\intro.sqf';";
+	fadein = 7;
+	fadeout = 0;
+	duration = 10e10;
+	
+	class ControlsBackground
+	{
+		class logo : RscPicture
+		{
+			x = safeZoneX + safeZoneW * 0.00125;
+			y = safeZoneY + safeZoneH * -0.01777777;
+			w = safeZoneW * 0.99875;
+			h = safeZoneH * 1.03555556;
+			text = "sfg_textures\dathrillerkiller\logo.paa";
 		};
 	};
-
-
+};

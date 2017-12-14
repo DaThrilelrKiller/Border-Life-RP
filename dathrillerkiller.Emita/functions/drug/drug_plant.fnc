@@ -17,8 +17,8 @@ Prams:
 private ["_item","_name","_classname","_amount","_y","_plant","_amounplanted"];
 _item = _this select 1;
 _amount = _this select 2;
-_name = _item call INV_getitemName;
-_classname = _item call INV_getitemClassName;
+_name = _item call config_displayname;
+_classname = _item call config_class;
 
 if (ar_planting)exitWith {systemChat "You are already playnting somting"};
 if !(call drug_isAbleToPlant)exitWith {systemChat "you must be 900m aways from a gang area and in grass";};

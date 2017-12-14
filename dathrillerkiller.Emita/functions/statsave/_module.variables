@@ -39,6 +39,8 @@ statsave_ranks = [
 ["Public Saftey Officer", "PSOCommand_id"]
 ];
 
+v_save_locs = [];
+
 adminlevel4 = false;
 adminlevel3 = false;
 adminlevel2 = false;

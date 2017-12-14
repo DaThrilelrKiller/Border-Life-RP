@@ -9,9 +9,9 @@ _arrayitems = _array select 0;
 _arrayamount = _array select 1;
 
 {
-	if (_showdrap || {_x call INV_getitemDropable})then 
+	if (_showdrap || {_x call config_dropable})then 
 	{
-		_index = lbAdd [_idc, format ["%1 - %2 (%3kg)",(_arrayamount select _ForEachIndex),(_x call INV_getitemName),(_x call INV_getitemTypeKg)]];
+		_index = lbAdd [_idc, format ["%1 - %2 (%3kg)",(_arrayamount select _ForEachIndex),(_x call config_displayname),(_x call config_weight)]];
 		lbSetData [_idc, _index, str [_x,(_arrayamount select _ForEachIndex)]];
 	};
 }forEach _arrayitems;

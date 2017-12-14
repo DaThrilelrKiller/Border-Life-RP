@@ -15,17 +15,17 @@ INV_InventarGiveReceiver = _player;
 if ((_action == "use") && {INV_CanUseItem}) then 
 
 {
-_filename = _item call INV_getitemFilename;
+_filename = _item call config_code;
 	switch(typeName _filename)do
 	{
 		case "CODE":
 		{
-			["use", _item, _textamount, []]call _filename;
+			["use", _item, _textamount]call _filename;
 		};
 
 		case "STRING":
 		{
-			["use", _item, _textamount, []] execVM format["functions\items\%1.sqf",_filename];
+			["use", _item, _textamount] execVM format["functions\items\%1.sqf",_filename];
 		};
 		default {systemChat  localize "STRS_inv_inventar_cannotuse";};
 	};

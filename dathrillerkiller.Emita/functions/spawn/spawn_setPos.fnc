@@ -12,6 +12,8 @@ if (isNil '_array') exitWith
 	};
 };
 
+dtk_cam cameraEffect ["terminate","back"];
+168 cutText ["", "PLAIN"];
 
 player setPos _array; 
 player setUnconscious false;

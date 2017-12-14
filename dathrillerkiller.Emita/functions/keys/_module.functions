@@ -3,5 +3,6 @@
 "has",
 "list",
 "lock",
-"grabVehicle"
+"grabVehicle",
+"toggle"
 ];

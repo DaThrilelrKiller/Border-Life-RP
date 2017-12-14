@@ -4,5 +4,7 @@
 "serviceVehicle",
 "cam",
 "paint",
-"near"
+"near",
+"markers",
+"init"
 ];

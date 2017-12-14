@@ -37,19 +37,12 @@ _role addaction ["Escort VIP", "noscript.sqf", "[VIPtarget] join (group player);
 _role addaction ["Remove Blindfold","FUNCTIONS\ITEMS\blindfold.sqf",[],1,false,true,"","isPlayer cursorTarget and cursorTarget getVariable 'blindfolded'"];
 
 /*VEHICLE*/
-player addaction ["Role Vehicle Over","noscript.sqf",'[]call Other_unflipvehicle;',1,false,true,"",'_vcl = cursorTarget; player distance _vcl < 5 and [player,_vcl]call keys_has'];
+player addaction ["Role Vehicle Over","noscript.sqf",'[]spawn vehicle_unflip;',1,false,true,"",'_vcl = cursorTarget; player distance _vcl < 5 and [player,_vcl]call keys_has'];
 _role addaction [localize "STRS_addaction_trunk_see","noscript.sqf",'[cursorTarget]call storage_seach;',1,true,true,"",'_vcl = cursorTarget; [_vcl,["Air", "Ship", "LandVehicle"]]call core_isKindOf && {player distance _vcl < 10}'];
 _role addaction [localize "STRS_addaction_trunk_check","noscript.sqf",'_vcl = cursorTarget;_var = _vcl getVariable "DTK_OwnerUID";_str = format["%1_storage", _vcl];if([_vcl,_str] call INV_RemoveIllegalStorage)then{call compile format["publicvariable ""%1"";", _str]};',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID"; player distance _vcl < 5 and !([player,_vcl]call keys_has) and (!isNil "_var")'];
 _role addaction ["Pull Player Out","noscript.sqf",'cursorTarget spawn Other_pullout;',1,true,true,"",'_vcl = cursorTarget;player distance _vcl < 5 and count (crew _vcl) > 0 and (call INV_isArmed)'];
-_role addaction [localize "STRS_addAction_vehicleinfo","noscript.sqf",'cursorTarget call Other_vehinfo;',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID";player distance _vcl < 5 and (!isNil "_var")'];
 _role addaction ["Put Player In Vehicle","noscript.sqf",'[]call Other_PutPlayerInCar;',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID"; player distance _vcl < 5 and (!isNil "_var")'];
 _role addaction ["Impound Vehicle","noscript.sqf",'_vcl = cursorTarget;[_vcl, "impound",""]call Other_impound;',1,true,true,"",'_vcl = cursorTarget; _var = _vcl getVariable "DTK_OwnerUID"; player distance _vcl < 10 and (!isNil "_var")'];
-
-/*VEHICLE SAVER*/
-_role addaction ["[SAVE YOUR LAND VEHICLE]","noscript.sqf",'[]call StatSave_SaveVehicle;',1,true,true,"",'player distance cursorTarget < 5 and [player,cursorTarget]call keys_has and (player distance savepoint2 <= 30 or player distance savepontpdcommand <= 30 or player distance savepoint2s <= 30 )'];
-_role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[ctrafficspawn]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance savepoint2 <= 3"];
-_role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[ccarspawnchief]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance savepontpdcommand <= 3"];
-_role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[ccarspawn1]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance savepoint2s <= 3"];
 
 _role addaction ["Dog Control","noscript.sqf", 'ar_doggy = true', 1, false, true, "", "!ar_doggy and alive (player getVariable 'CLAY_DogUnit')"];
 _role addaction ["Exit Dog Control","noscript.sqf", 'ar_doggy = false', 1, false, true, "", "ar_doggy"];

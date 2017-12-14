@@ -11,9 +11,6 @@ else
 };
 
 v_admin_recents set [count v_admin_recents,ctrlText 1400];
-v_admin_recents = v_admin_recents call array_reverse;
-if (count v_admin_recents > 15)then {v_admin_recents resize 14};
-
 profileNameSpace setVariable ["v_admin_recents",v_admin_recents];
 []call admin_console_recents;
 

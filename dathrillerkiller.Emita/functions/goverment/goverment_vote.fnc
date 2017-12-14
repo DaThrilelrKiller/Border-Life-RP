@@ -1,6 +1,5 @@
-createDialog "wahldialog";
-
 _data = call goverment_votes;
+createDialog "wahldialog";
 
 {
 	_index = lbAdd [1, name (_x select 0)];

@@ -21,7 +21,7 @@ private ["_plant","_seed","_drug","_drugname","_kg","_drugAmount","_seedAmount"]
 _plant = _this select 0;
 _seed = _this select 1;
 _drug = _this select 2;
-_drugname = _drug call INV_getitemName;
+_drugname = _drug call config_displayname;
 _kg = [player]call storage_kg;
 		
 if (_kg > 59) exitwith { systemChat  localize "STRS_inv_buyitems_get_zuschwer"; };

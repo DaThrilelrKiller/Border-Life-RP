@@ -9,8 +9,7 @@ dtk_server_modules =
 "Map",
 "Setup",
 "Drugs",
-"Gang",
-"Night"
+"Gang"
 ];
 
 /*loads variables first for all active modules*/

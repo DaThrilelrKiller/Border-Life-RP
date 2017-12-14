@@ -344,7 +344,6 @@ soundClick[] = {"\ca\ui\data\sound\mouse3", 0.07, 1};
 soundEscape[] = {"\ca\ui\data\sound\mouse1", 0.09, 1};
 default                   = false;
 text                      = "";
-action                    = "";
 colorActive[]             = {0, 0, 0, 0};
 colorDisabled[]           = {0.5,0,0,0};
 colorBackground[]         = {0.5,0,0,0};
@@ -359,6 +358,7 @@ offsetPressedX            = 0;
 offsetPressedY            = 0;
 borderSize                = 0;
 soundEnter[]              = {"", 0.15, 1};
+action = "closeDialog 0;";
 
 };
 

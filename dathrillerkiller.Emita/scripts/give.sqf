@@ -1,7 +1,7 @@
 _action         = _this select 0;
 _item        = _this select 1;
 _amount       = _this select 2;
-_name = (_item call INV_getitemName);
+_name = (_item call config_displayname);
 
 if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};
 
@@ -15,7 +15,7 @@ if (_action == "uebergabe") then
 	if (_amount <= 0) exitWith {systemChat  "You cannot give less than 0";};
 	if (_player == player)                         exitWith {systemChat  localize "STRS_inv_inventar_uebergabe_self";};
 	if (player distance _player > 20)              exitWith {systemChat  localize "STRS_inv_inventar_uebergabe_distance";};	
-	if (!(_item call INV_getitemGiveable))               exitWith {systemChat  localize "STRS_inv_inventar_uebergabe_verbot";};
+	if (!(_item call config_giveable))               exitWith {systemChat  localize "STRS_inv_inventar_uebergabe_verbot";};
 
 	/* go ahead and add and if true then remove from player giving */
 	if ([_player,_item,_amount] call storage_add)then {

@@ -1,14 +1,12 @@
 private ["_name","_rank"];
 
-createDialog "gang_menu1";
-
 /* grab the variables */
 _name = _this;
 _rank = _name call gang_rank;
 _locked =  gangs getVariable [format["%1_locked",_name],false];
 _locked = ["Lock","Un-Lock"]select _locked;
 
-
+createDialog "gang_menu1";
 
 ctrlSetText [1,_name];
 /* loads listboxes */

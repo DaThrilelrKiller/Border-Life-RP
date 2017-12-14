@@ -8,8 +8,10 @@
 "AddLoop",
 "loop",
 "init",
-"addAction",
 "waitUnitl",
 "removeLoop",
-"random"
+"random",
+"units",
+"prone",
+"convertBoolean"
 ];

@@ -1,7 +1,5 @@
 class AM_CheckpointBuilder {
 	idd=-1;
-	onLoad = "player setVariable [""isInCPMenu"",true,true]; []spawn Checkpoint_Open;";
-	onUnload = "player setVariable [""isInCPMenu"",false,true];";
 	CONTROLS[]={RscFrame_1800,RscListbox_1500,RscShortcutButton_1700,RscShortcutButton_1701,RscText_1000};
 	class RscFrame_1800: RscBackground
 	{

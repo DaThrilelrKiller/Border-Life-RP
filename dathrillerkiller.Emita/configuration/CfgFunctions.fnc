@@ -12,9 +12,6 @@ _Funcitons =
 ["inv","addprozent","inventory"],
 ["inv","isarmed","inventory"],
 ["inv","getitemsteuer","inventory"],
-["inv","getscriptfromclass_mag","inventory"],
-["inv","getscriptfromclass_weap","inventory"],
-["inv","getitemarray","inventory"],
 ["inv","getshoparray","inventory"],
 
 
@@ -37,11 +34,6 @@ _Funcitons =
 ["ems","emsmissiondamagehandler","ems"],
 ["ems","neardead","ems"],
 
-["other","chopshop","vehicle"],
-["other","chopshop2","vehicle"],
-["other","vehinfo","vehicle"],
-["other","vehiclecheck","vehicle"],
-["other","unflipvehicle","vehicle"],
 ["other","repairvehicle","vehicle"],
 ["other","pullout","vehicle"],
 ["other","impound","vehicle"],

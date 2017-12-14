@@ -30,17 +30,9 @@ _role addaction ["Shop 3 Export","noscript.sqf",'[ (shop4 call shops_index)]call
 _role addaction ["Food And Candy","noscript.sqf",'[ (bailflag call shops_index)]call shops_openshop; ',1,false,true,"",'player distance (nearestobjects [getpos player, ["ibr_van_BNK"],  10] select 0) < 3'];
 
 /*VEHICLE*/
-_role addaction ["Role Vehicle Over","noscript.sqf",'[]call Other_unflipvehicle;',1,false,true,"",'_vcl = cursorTarget;player distance _vcl < 5 and [player,_vcl]call keys_has'];
+_role addaction ["Role Vehicle Over","noscript.sqf",'[]spawn vehicle_unflip;',1,false,true,"",'_vcl = cursorTarget;player distance _vcl < 5 and [player,_vcl]call keys_has'];
 _role addaction ["Pull Player Out","noscript.sqf",'cursorTarget spawn Other_pullout;',1,true,true,"",'_vcl =cursorTarget; [_vcl,["Air", "Ship", "LandVehicle"]]call core_isKindOf and player distance _vcl < 5 and count (crew _vcl) > 0 and (call INV_isArmed)'];
-_role addaction [localize "STRS_addAction_vehicleinfo","noscript.sqf",'(cursorTarget)call Other_vehinfo;',1,true,true,"",'_vcl = cursorTarget;_var = _vcl getVariable "DTK_OwnerUID"; player distance _vcl < 5 and (!isNil "_var")'];
-_role addaction ["Strip Vehicle","noscript.sqf", '[]call Other_Chopshop;', 1, false, true, "", "(player distance chopshop <= 5) and chopavailable"];
-_role addaction ["Chop Vehicle","noscript.sqf", '[]call Other_Chopshop2;', 1, false, true, "", "(player distance chopshop <= 5) and chopavailable"];
 _role addaction ["Impound Vehicle","noscript.sqf",'[cursorTarget, "Impound",""]call Other_impound;',1,true,true,"",'_vcl =cursorTarget; [_vcl,["Air", "Ship", "LandVehicle"]]call core_isKindOf and player distance _vcl < 10 and player distance newimpoundlot < 15 '];
-
-/*VEHICLE SAVER*/
-_role addaction ["[SAVE YOUR LAND VEHICLE]","noscript.sqf",'[carspawn1]call StatSave_SaveVehicle;',1,true,true,"",'player distance cursorTarget < 5 and [player,cursorTarget]call keys_has and (player distance savepoint <= 30 or player distance LandSavePoint <= 30)'];
-_role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[carspawn1]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance LandSavePoint <= 3"];
-_role addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'[carspawn4]call StatSave_RetriveVehicleLand;',1,false,true,"","player distance savepoint <=3"];
 
 /*OTHER*/
 player addaction ["Take Boar Meat","noscript.sqf",'_no = ceil(random 7); if ([player,"boar",_no] call storage_add)then {cursorTarget setvariable ["inuse", 1, true]; player playmove "AinvPknlMstpSlayWrflDnon_medic";sleep 4;waituntil {animationstate player != "AinvPknlMstpSlayWrflDnon_medic"}; deletevehicle cursorTarget; systemChat  format["you got %1 boar meat", _no];}',1,true,true,"",'(typeOf cursorTarget == "wildboar") && {player distance cursorTarget < 4} && {isNil {cursorTarget getVariable "inuse"}} && {!alive cursorTarget}'];

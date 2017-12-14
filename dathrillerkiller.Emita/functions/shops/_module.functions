@@ -9,5 +9,9 @@
 "processmoney",
 "purchaselic",
 "createvehicle",
-"index"
+"index",
+"keyhandler",
+"lbChanged",
+"types",
+"info"
 ];

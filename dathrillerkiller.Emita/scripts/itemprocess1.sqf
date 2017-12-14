@@ -16,8 +16,8 @@ if(iscop)exitwith{systemChat  "Only Civilians Can Do This!"; processscriptrunnin
  _req = _this select 2;
  _license = _this select 3;
  _nitem1 = [player,_item1] call storage_amount;
- _name1 = _item1 call INV_getitemName;
- _name2 = _item2 call INV_getitemName;
+ _name1 = _item1 call config_displayname;
+ _name2 = _item2 call config_displayname;
 
 	if (_num < 10)exitwith
 	{

@@ -4,7 +4,7 @@ waituntil {!isNil "CBA_fnc_addKeyHandler"};
 [(KeybindingsDone select 3 select 1),(KeybindingsDone select 3 select 2),{call KeyPressY; true}, "keydown", "103"] call CBA_fnc_addKeyHandler;
 [(KeybindingsDone select 1 select 1), (KeybindingsDone select 1 select 2),{call KeyPress7; true}, "keydown", "104"] call CBA_fnc_addKeyHandler;
 [(KeybindingsDone select 4 select 1),(KeybindingsDone select 4 select 2),{call KeyPressF5;true}, "keydown", "105"] call CBA_fnc_addKeyHandler;
-[(KeybindingsDone select 5 select 1),(KeybindingsDone select 5 select 2),{call KeyPressL;true}, "keydown", "106"] call CBA_fnc_addKeyHandler;
+[(KeybindingsDone select 5 select 1),(KeybindingsDone select 5 select 2),{call keys_toggle;true}, "keydown", "106"] call CBA_fnc_addKeyHandler;
 [(KeybindingsDone select 6 select 1),(KeybindingsDone select 6 select 2),{call KeyPressT;true}, "keydown", "107"] call CBA_fnc_addKeyHandler;
 [(KeybindingsDone select 7 select 1),(KeybindingsDone select 7 select 2),{call KeyPressE;false}, "keydown", "108"] call CBA_fnc_addKeyHandler;
 [(KeybindingsDone select 8 select 1),(KeybindingsDone select 8 select 2), {call KeyPressF;false}, "keydown", "109"] call CBA_fnc_addKeyHandler;

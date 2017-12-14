@@ -24,7 +24,7 @@ _arrayamount = _array select 1;
 
 {
 	_amount = _arrayamount select _ForEachIndex;
-	_weight = _x call INV_getitemTypeKg;
+	_weight = _x call config_weight;
 	_return = _return + (_amount * _weight);
 }forEach _arrayitems;
 
