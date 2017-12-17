@@ -1,0 +1,3 @@
+
+
+Start ""  "D:\Steam\steamapps\common\Arma 2 Operation Arrowhead\arma2oaserver.exe" -port=2302 "-config=D:\Steam\steamapps\common\Arma 2 Operation Arrowhead\TADST\default\TADST_config.cfg" "-cfg=D:\Steam\steamapps\common\Arma 2 Operation Arrowhead\TADST\default\TADST_basic.cfg" "-profiles=D:\Steam\steamapps\common\Arma 2 Operation Arrowhead\TADST\default" -name=default -filePatching -netlog "-mod=@DTK_DB;@SFG"
