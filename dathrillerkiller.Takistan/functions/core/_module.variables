@@ -33,3 +33,12 @@ v_core_prones = [
 "amovppnemstpsraswrfldnon",
 "amovppnemsprslowwrfldf"
 ];
+
+v_events = [
+"killed",
+"Fired",
+"FiredNear",
+"HandleDamage",
+"Respawn",
+"MPHit"
+];

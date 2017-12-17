@@ -1,4 +1,4 @@
-private["_file", "_section", "_key", "_type", "_data", "_ret", "_result","_default"];
+private["_file", "_section", "_key", "_data", "_result","_default"];
 if(count _this < 4) exitwith { 
 	["Inidb: read failed not enough parameter"] call S_statsave_log;
 };

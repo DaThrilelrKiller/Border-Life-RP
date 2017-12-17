@@ -17,8 +17,8 @@ _mpicure = getText (configFile >> "cfgMagazines" >> _magizine >> "picture");
 _mname = getText (configFile >> "cfgMagazines" >> _magizine >> "displayName");
 
 
-_holsterPistol = if (ARHP == "")then {"No pistol holstered"}else{getText (configFile >> "cfgWeapons" >> ARHP >> "displayName")}; 
-_holsterRifle = if (ARHR == "")then {"No rifle holstered"}else{getText (configFile >> "cfgWeapons" >> ARHR >> "displayName")};  
+_holsterPistol = if ((player getVariable ["Pistol",""]) == "")then {"No pistol holstered"}else{getText (configFile >> "cfgWeapons" >> (player getVariable ["Pistol",""]) >> "displayName")}; 
+_holsterRifle = if ((player getVariable ["Rifle",""]) == "")then {"No rifle holstered"}else{getText (configFile >> "cfgWeapons" >> (player getVariable ["Rifle",""]) >> "displayName")};  
 
 if (_weapon == "")then {
 	

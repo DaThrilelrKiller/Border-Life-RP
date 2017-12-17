@@ -12,6 +12,6 @@ private ["_owner","_side","_uid","_name","_displayname","_index"];
 		_name = _x select 0;
 		_displayname = _name call config_displayname;
 		_index = lbAdd [1, _displayname];											
-		lbSetData [1, _index,str _x];	
+		lbSetData [1, _index,str _ForEachIndex];	
 	};
 }forEach v_impound;

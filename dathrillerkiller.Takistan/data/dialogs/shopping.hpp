@@ -2,9 +2,9 @@ class shopping
 {
 	idd = 24;
 	movingEnable = false;
-	onKeyDown = "_this call shops_keyhandler; false";
-	onKeyUp = "_this call shops_keyhandler; false";
-	onLoad = "((_this select 0) displayCtrl 20) progressSetPosition 1";
+	onKeyDown = "[_this,'onKeyDown'] call shops_keyhandler; false";
+	onKeyUp = "[_this,'onKeyUp'] call shops_keyhandler; false";
+	onLoad = "((_this select 0) displayCtrl 21) progressSetPosition 1";
 	
 	class ControlsBackground
 	{
@@ -24,7 +24,7 @@ class shopping
 		class Control1339119205
 		{
 			type = 8;
-			idc = -1;
+			idc = 21;
 			x = safeZoneX+safeZoneW*0.440625;
 			y = safeZoneY+safeZoneH*0.72444445;
 			w = safeZoneW*0.265;
@@ -44,7 +44,7 @@ class shopping
 			w = safeZoneW*0.4125;
 			h = safeZoneH*0.55;
 			style = 0+48;
-			text = "sfg_textures\DaThrillerKiller\money.paa";
+			text = "";
 			colorBackground[] = {0.6784,0.5412,0.3176,1};
 			colorText[] = {0.3216,0.4588,0.6824,1};
 			font = "Zeppelin32";

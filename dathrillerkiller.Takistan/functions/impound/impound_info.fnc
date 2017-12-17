@@ -1,9 +1,12 @@
 private ["_amount","_items","_data","_trunk","_upgrade","_weapons","_magazines","_plate","_sirens"];
 
+lbClear 6;
+lbClear 4;
+lbClear 3;
 
-_data = call compile (lbData [1,(lbCurSel 1)]);
 
-systemchat str _data;
+_data = parseNumber (lbData [1,(lbCurSel 1)]);
+_data = v_impound select _data;
 
 _trunk = _data select 1;
 _items = _trunk select 0;

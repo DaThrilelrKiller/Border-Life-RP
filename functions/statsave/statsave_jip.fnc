@@ -1,6 +1,6 @@
 
 
-_this call S_statsave_LoadFromDB;
+_this call s_statsave_load;
 _this call S_statsave_WLoadFromDB;
 
 /* temp place for remote functions */

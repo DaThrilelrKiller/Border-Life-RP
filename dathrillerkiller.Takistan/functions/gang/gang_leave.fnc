@@ -12,8 +12,8 @@ _index =
 }forEach _members;
 
 /* remove the bitch */
-_members set [_index,[]];
-_members = _members - [["",""]];
+_members set [_index,""];
+_members = _members - [""];
 
 /* set the variable to make sure the bitch is gone */
 gangs setVariable [_gang,_members,true];

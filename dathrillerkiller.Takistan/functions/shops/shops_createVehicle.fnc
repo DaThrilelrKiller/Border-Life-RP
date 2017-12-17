@@ -197,3 +197,4 @@ if (isamedic)then
 
 processInitCommands;
 newvehicle = _vehicle;
+_vehicle

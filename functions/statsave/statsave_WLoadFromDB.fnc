@@ -1,11 +1,10 @@
-private ["_DBSection","_Playerteam","_whitelistUID","_MainArray1","_Client","_WhitelisttempArray","_WhiteListToClienttemp","_c","_Array","_playerside","_Whitelist","_type","_loadArray","_array1","_varName","_varValue"];
+private ["_DBSection","_whitelistUID","_MainArray1","_Client","_WhitelisttempArray","_WhiteListToClienttemp","_c","_Array","_side","_Whitelist","_type","_loadArray","_array1","_varName","_varValue"];
 
-_Playerteam = (_this select 1);
-_playerside = _this select 1;
+_side = _this select 1;
 _whitelistUID = getPlayerUID(_this select 0);
 _Client = (_this select 0);
 
-switch (_Playerteam) do
+switch (_side) do
 {
     case "CIV": 
 	{
@@ -15,9 +14,9 @@ switch (_Playerteam) do
 			["Main", "adminlevel3"],
 			["Main", "adminlevel2"],
 			["Main", "SwagDevs"],
-			[_playerside, "PMC_id"],
-			[_playerside, "PMCDivisions_id"],
-			[_playerside, "PMCCommand_id"]
+			[_side, "PMC_id"],
+			[_side, "PMCDivisions_id"],
+			[_side, "PMCCommand_id"]
 		];
     };
 
@@ -29,21 +28,21 @@ switch (_Playerteam) do
 			["Main", "adminlevel3"],
 			["Main", "adminlevel2"],
 			["Main", "SwagDevs"],
-			[_playerside, "PO1_id"],
-			[_playerside, "PO2_id"],
-			[_playerside, "PO3_id"],
-			[_playerside, "Cpl_id"],
-			[_playerside, "Sgt_id"],
-			[_playerside, "Lt_id"],
-			[_playerside, "Cpt_id"],
-			[_playerside, "Chief_id"],
-			[_playerside, "K9_id"],
-			[_playerside, "PDAviation_id"],
-			[_playerside, "SWAT_id"],
-			[_playerside, "CoastGuard_id"],
-			[_playerside, "Undercover_id"],
-			[_playerside, "DOC_id"],
-			[_playerside, "HWP_id"]
+			[_side, "PO1_id"],
+			[_side, "PO2_id"],
+			[_side, "PO3_id"],
+			[_side, "Cpl_id"],
+			[_side, "Sgt_id"],
+			[_side, "Lt_id"],
+			[_side, "Cpt_id"],
+			[_side, "Chief_id"],
+			[_side, "K9_id"],
+			[_side, "PDAviation_id"],
+			[_side, "SWAT_id"],
+			[_side, "CoastGuard_id"],
+			[_side, "Undercover_id"],
+			[_side, "DOC_id"],
+			[_side, "HWP_id"]
 		];
 	};
     
@@ -55,14 +54,14 @@ switch (_Playerteam) do
 			["Main", "adminlevel3"],
 			["Main", "adminlevel2"],
 			["Main", "SwagDevs"],
-			[_playerside, "EMTBasic_id"],
-			[_playerside, "EMTAdavnced_id"],
-			[_playerside, "FF1_id"],
-			[_playerside, "FF2_id"],
-			[_playerside, "EMSAirUnit_id"],
-			[_playerside, "EMSSupervisor_id"],
-			[_playerside, "EMSCommand_id"],
-			[_playerside, "EMSChiefs_id"]
+			[_side, "EMTBasic_id"],
+			[_side, "EMTAdavnced_id"],
+			[_side, "FF1_id"],
+			[_side, "FF2_id"],
+			[_side, "EMSAirUnit_id"],
+			[_side, "EMSSupervisor_id"],
+			[_side, "EMSCommand_id"],
+			[_side, "EMSChiefs_id"]
 		];
 	};
 };

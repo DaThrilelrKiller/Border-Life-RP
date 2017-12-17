@@ -12,7 +12,7 @@ _members = gangs getVariable [_gang,[]];
 		[_gang, "locked", _locked], 
 		[_gang, "members", _members]
 	]
-]call S_statsave_SaveToDB;
+]call S_statsave_save;
 
 
 

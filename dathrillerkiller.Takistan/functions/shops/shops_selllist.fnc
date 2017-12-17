@@ -1,8 +1,9 @@
-private ["_item","_infos","_preisOhneTax","_preis","_name","_type","_calssname","_index","_mags","_vehicle","_vclClass","_j","_weps","_sort","_vehicles"];
+private ["_magazines","_item","_infos","_preisOhneTax","_preis","_name","_type","_calssname","_index","_mags","_vehicle","_vclClass","_j","_weps","_sort","_vehicles"];
 
 lbClear 301;
 _sort = lbText [2101, (lbCurSel 2101)];
 _vehicles = allMissionObjects "AllVehicles";
+_magazines = (magazines player);
 
 
 {
@@ -28,7 +29,7 @@ _calssname = _infos call config_class;
 		};
 		case "magazin":
 		{
-			if (_calssname in (magazines player)) then 
+			if (_calssname in _magazines) then 
 			{																																						
 				_mags      = {_x == _calssname} count magazines player;	
 				_index = lbAdd [301, format["%1 ($%2 %3x)", _name, (_preis call string_intToString), (_mags call string_intToString)] ];																	

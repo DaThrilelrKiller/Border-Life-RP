@@ -251,7 +251,17 @@ DaThrillerKiller - New intro system
 Version 2.8
 DaThrillerKiller - Switch to Takistan
 
-
+Version 2.9
+DaThrillerKiller - New Holster system
+DaThrillerKiller - New Impound System
+DaThrillerKiller - Removed EMS missions
+DaThrillerKiller - Improved Shopping System
+DaThrillerKiller - Renamed statsave functions
+DaThrillerKiller - Fixed Gangs not deleting when no one is in them
+DaThrillerKiller - Funciton to get weapon Kind
+DaThrillerKiller - the CreateVehicle function now returns the vehicle created
+DaThrillerKiller - Moved server cleaner to new module (for some reason its not being added to the core loop)
+DaThrillerKiller - Overall Orgainzation and Orgainzation update 
 
 
 

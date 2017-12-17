@@ -19,4 +19,3 @@ call shops_types;
 lbAdd [2100,"Shop"];
 lbAdd [2100,"Inventoy"];
 lbSetCurSel [2100,0];
-call shops_refresh;

@@ -17,6 +17,6 @@ INVVehiclesLand set [count INVVehiclesLand, [_vclClass,_trunk,_speedupgrade,_wea
 deleteVehicle _vcl;
 
 _save = [player, [ [dtk_side, "VehiclesLand", INVVehiclesLand] ] ];
-["SERVER",_save,"S_statsave_SaveToDB",false,false]call network_mpexec;
+["SERVER",_save,"S_statsave_save",false,false]call network_mpexec;
 
 systemChat format ["(%1) has been saved in your garage, you now have %2 vehicles stored",_name,count INVVehiclesLand];

@@ -24,7 +24,7 @@ _displayname = _vehicle call vehicle_name;
 v_impound set [count v_impound, [_name,_trunk,_upgrade,_weapons,_magazines,_plate,_warrants,_license,_notes,_sirens,_owner,_side]];
 publicvariable "v_impound";
 deleteVehicle _vehicle;
-["SERVER",[],"s_vehicle_saveimpound",false,false]call network_MPExec;
+["SERVER",[],"s_impound_save",false,false]call network_MPExec;
 
 if !([player,_vehicle]call keys_has)then {
 [player,"geld",2000] call storage_add; 

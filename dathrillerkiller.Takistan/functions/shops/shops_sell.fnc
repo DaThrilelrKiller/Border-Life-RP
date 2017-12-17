@@ -1,8 +1,6 @@
 private ["_return","_data","_item","_info","_itemcost","_costwithTax","_amount","_cost","_itemtype","_classname","_shoparray","_fahne","_crate","_logic","_license","_license1","_license2","_invspace","_menge"];
 
-
-if (dtk_shopactive)exitWith {systemChat "Please wait script active";};
-if ((lbCurSel 301) < 0)exitWith {systemChat "select and item to sell";};
+if(dtk_shopactive)exitWith {};
 dtk_shopactive = true;
 
 _return = false;

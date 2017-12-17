@@ -19,7 +19,7 @@ removeAllWeapons player;
 
 if ((getPlayerUID player) != _UID)exitWith {
 systemChat format ["Almost loaded with (%1`s) stats requesting stats again",_UID];
-["SERVER",[player,dtk_side],"s_statsave_loadfromdb",false,false]call network_MPExec;
+["SERVER",[player,dtk_side],"s_statsave_load",false,false]call network_MPExec;
 };
 
 kontostand = (_stats select 1);
@@ -28,8 +28,8 @@ player setVariable ["dtk_storage",(_stats select 3), true];
 INVVehiclesLand = (_stats select 5);
 {player addMagazine _x} count (_stats select 9);
 {if !(_x call TFAR_fnc_isRadio)then {player addWeapon _x};}count (_stats select 8);
-ARHP = (_stats select 10);
-ARHR =  (_stats select 11);
+player setVariable ["Rifle",(_stats select 11),true];
+player setVariable ["Pistol",(_stats select 10),true];
 player setVariable ["cdb_warrants",(_stats select 13),true];
 player setVariable ["cdb_license",(_stats select 4),true];
 player setVariable ["cdb_notes",(_stats select 14),true];

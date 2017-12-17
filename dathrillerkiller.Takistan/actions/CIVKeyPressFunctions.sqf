@@ -100,7 +100,6 @@ KeyPressE =
 		 if(!(isnull _atm) and _atm in bankflagarray) exitwith  			
 		 {  			
 			 _i = 4; 			
-			 if(!local_useBankPossible)exitwith{hint "The ATM Rejected Your Card"}; 			
 			call atm_open;	
 			_handled=true; 				 			
 		};  		
@@ -210,11 +209,11 @@ createDialog "USBW_Interation";
 
 KeypressHolsterPistol = 
 {
-[currentWeapon player,"ARHP"]call main_holster;
+["Pistol"]call holster_add;
 };
 KeypressHolsterRifle = 
 {
-[primaryWeapon player,"ARHR"]call main_holster;
+["Rifle"]call holster_add;
 };
 
 display_keypress = {

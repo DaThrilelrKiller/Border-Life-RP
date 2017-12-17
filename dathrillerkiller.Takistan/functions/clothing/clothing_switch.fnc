@@ -36,12 +36,7 @@ if (_skinsold != _skin) then {
 	_group selectLeader _to_become;
 	[_oldplayer] call clothing_delete;
 	removeAllWeapons _to_become;
-	player removeAllEventHandlers "killed";
-	player removeAllEventHandlers "Fired";
-	player removeAllEventHandlers "FiredNear";
-	player removeAllEventHandlers "HandleDamage";
-	player removeAllEventHandlers "Respawn";
-	player removeAllEventHandlers "MPHit";
+	[player]call core_removeEventHandlers;
 	player addEventHandler ["fired",{_this execVM "scripts\fired.sqf"}];
 	player addEventHandler ["handleDamage", {_this call events_sethit}];
 	player addEventHandler ["respawn", {_this call setup_respawn; _this}]; 

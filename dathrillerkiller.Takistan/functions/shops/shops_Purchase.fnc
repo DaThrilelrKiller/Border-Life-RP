@@ -1,7 +1,6 @@
 private ["_weapons","_return","_data1","_item","_info","_itemcost","_costwithTax","_amount","_cost","_itemtype","_classname","_shoparray","_fahne","_crate","_logic","_license","_license1","_license2","_invspace","_menge"];
 
-
-if (dtk_shopactive)exitWith {systemChat "Please wait script active";};
+if(dtk_shopactive)exitWith {};
 dtk_shopactive = true;
 
 _return = false;
@@ -38,14 +37,9 @@ switch(_itemtype)do
 		_menge = (floor((INV_Tragfaehigkeit - _invspace) / (_info call config_weight)));	
 		if (_menge <= 0) exitWith {
 			systemChat  localize "STRS_inv_buyitems_maxgewicht"; 
-			dtk_shopactive = false;
 			_return = false;
 		};	
-
-		if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};		
 		[player,_item,_amount] call storage_add;
-		
-	
 		_return = true;
 	};
 	case "weapon":

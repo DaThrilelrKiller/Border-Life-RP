@@ -3,11 +3,11 @@ dtk_fnc_total = 0;
 
 dtk_active_modules = 
 [
+"Network",
 "Core",
 "Config",
 "Array",
 "BIS",
-"Network",
 "Storage",
 "Shops",
 "Goverment",
@@ -24,6 +24,7 @@ dtk_active_modules =
 "Cdb",
 "Plates",
 "Cuffs",
+"Holster",
 "String",
 "Shipment",
 "Quest",
@@ -76,7 +77,7 @@ dtk_active_modules =
 diag_log text format ["Total Modules: %2 Total Functions: %1",dtk_fnc_total,count dtk_active_modules];
 
 call setup_init;
+
 if (dtk_client)then {
 ["ALL",[player,dtk_side,getPlayerUID player],"setup_jip",false,true]call network_MPExec;
 };
-

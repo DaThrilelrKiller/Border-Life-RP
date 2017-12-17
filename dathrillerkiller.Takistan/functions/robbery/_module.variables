@@ -18,3 +18,5 @@ robbery_dialog_array =
 ["You: Hand me the money you have a minute","Clerk: Okay, please don't kill me.","You: Just hand me the fucking money NOWW!!","Clerk: Thats all just take it."],
 ["You: Give me the key to the register.","Clerk: its under the counter.","You: If you make any sudden movements your dead.","Clerk: Okay Okay just take the money."]
 ];
+
+wantedamountforrobbing = 20000;

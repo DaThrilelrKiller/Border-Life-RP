@@ -54,7 +54,7 @@ switch (_command) do
 			_distance = parseNumber (_stringElements select 1);
 			setViewDistance _distance;
 			_display closeDisplay 1;
-			["SERVER",[player,[["Main","distance", _distance]]],"S_statsave_SaveToDB",false,false]call network_MPExec;
+			["SERVER",[player,[["Main","distance", _distance]]],"S_statsave_save",false,false]call network_MPExec;
 		};
 		case "!detail": 
 		{
@@ -67,7 +67,7 @@ switch (_command) do
 				};
 				setTerrainGrid _detail;
 			_display closeDisplay 1;
-			["SERVER",[player,[["Main","detail", _detail]]],"S_statsave_SaveToDB",false,false]call network_MPExec;
+			["SERVER",[player,[["Main","detail", _detail]]],"S_statsave_save",false,false]call network_MPExec;
 		};
 		case "!spec": 
 		{

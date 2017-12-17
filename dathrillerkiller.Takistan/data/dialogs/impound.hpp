@@ -150,7 +150,7 @@ class impound
 			soundEnter[] = {"",0.15,1.0};
 			soundEscape[] = {"\ca\ui\data\sound\mouse1",0.09,1.0};
 			soundPush[] = {"",0.2,1.0};
-			action = "call shipment_add;";
+			action = "call impound_remove;";
 			default = false;
 			
 		};

@@ -1,8 +1,6 @@
 _item   = _this select 0; 
 _amount = _this select 1;
 
-if ((!INV_CanUseInventory) or (!INV_CanDropItem)) exitWith {systemChat  localize "STRS_inv_inventar_cannotdrop";};
-
 if(!isnull (nearestobjects[getpos player,["EvMoney","Suitcase"], 1] select 0))exitwith{systemChat  "You cannot drop items on top of each other. move and try again."};
 
 

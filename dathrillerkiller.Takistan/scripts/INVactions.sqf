@@ -9,10 +9,10 @@ _textamount = parseNumber _textamount;
 _itemamount = ([player,_item] call storage_amount);
 _textamount = if (_textamount > _itemamount) then {_itemamount}else {_textamount};
 _player = _this select 3;
-if ((player call isse_isvictim) or (!inv_canuseinventory)) exitWith {systemChat  localize "STRS_inv_cannotUseNow";};
+if (player call isse_isvictim) exitWith {systemChat  localize "STRS_inv_cannotUseNow";};
 INV_InventarGiveReceiver = _player;
 
-if ((_action == "use") && {INV_CanUseItem}) then 
+if (_action == "use") then 
 
 {
 _filename = _item call config_code;
@@ -35,7 +35,7 @@ _filename = _item call config_code;
 
 
 
-if ((_action == "drop") && {inv_candropitem}) then 
+if (_action == "drop") then 
 
 {
 
@@ -43,7 +43,7 @@ _h = [_item, _textamount] execVM "scripts\drop.sqf";
 waitUntil {ScriptDone _h};
 };
 
-if ((_action == "give") && {inv_cangiveitem}) then 
+if (_action == "give") then 
 
 {
 

@@ -13,5 +13,6 @@
 "random",
 "units",
 "prone",
-"convertBoolean"
+"convertBoolean",
+"removeEventHandlers"
 ];

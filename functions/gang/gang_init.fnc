@@ -5,7 +5,6 @@ _names = ["Gangs", "Names", "Names",[]]call S_statsave_read;
 	_members = ["Gangs", _x, "members",[]]call S_statsave_read;
 	
 	if (count _members > 0)then {
-		["ALL",_x,{systemchat str _this},false,false]call network_MPExec;
 		gangs setVariable [format["%1_locked",_x],_locked,true];
 		gangs setVariable [_x,_members,true];
 	}else{

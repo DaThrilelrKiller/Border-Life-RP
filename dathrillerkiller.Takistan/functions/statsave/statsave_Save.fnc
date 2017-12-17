@@ -9,8 +9,8 @@ _save =
 		[dtk_side, "Inventory", player getVariable "dtk_storage"], 
 		[dtk_side, "INV_Lizenz", (player getvariable "cdb_license")], 	
 		[dtk_side, "VehiclesLand", INVVehiclesLand],
-		[dtk_side, "ARHP", ARHP], 	
-		[dtk_side, "ARHR", ARHR], 
+		[dtk_side, "Pistol", (player getVariable ["Pistol",""])], 	
+		[dtk_side, "Rifle", (player getVariable ["Rifle",""])], 
 		[dtk_side, "Weapons", weapons player], 
 		[dtk_side, "Magazines", magazines player],
 		[dtk_side, "1_reason",(player getvariable "cdb_warrants")],
@@ -23,7 +23,7 @@ _save =
 	]
 ];
 
-["SERVER",_save,"S_statsave_SaveToDB",false,false]call network_MPExec;
+["SERVER",_save,"S_statsave_save",false,false]call network_MPExec;
 server globalchat "Player saving statics as:";
 systemChat dtk_sidename;
 

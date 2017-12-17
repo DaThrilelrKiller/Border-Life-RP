@@ -18,6 +18,9 @@ _text call {
 		if (isNil "_amount")exitWith {};
 		[_amount]call shops_sell;
 	};
+	if (!isNil "_amount")then {
+	ctrlSetText [_ForEachIndex,_pic];
+	};
 };
 
 call shops_info;

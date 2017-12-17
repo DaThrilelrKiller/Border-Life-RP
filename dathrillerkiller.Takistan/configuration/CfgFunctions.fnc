@@ -25,18 +25,12 @@ _Funcitons =
 ["main","isplayernear","main"],
 ["main","random","main"],
 ["main","playersettings","main"],
-["main","ispistol","main"],
-["main","holster","main"],
 
 ["ems","firehose","ems"],
-["ems","fixgas","ems"],
-["other","cleanupbuildingcollapes","ems"],
-["ems","emsmissiondamagehandler","ems"],
 ["ems","neardead","ems"],
 
 ["other","repairvehicle","vehicle"],
 ["other","pullout","vehicle"],
-["other","impound","vehicle"],
 ["other","putplayerincar","vehicle"],
 
 ["other","getlottoarray","other"],
@@ -219,7 +213,5 @@ _externalFunctions =
 {
 	call compile format['%1_fnc_%2 = compile preprocessFile "%3fn_%2.sqf";', _x select 0, _x select 1,_x select 2];
 }count _externalFunctions;
-
-if (isServer) then {call compile preprocessFile"\MPMissions\server\core\compilefunctions.fnc";};
 
 siren_fnc_say = compile preprocessFile "functions\siren\siren_say.fnc";
