@@ -16,18 +16,11 @@ if (_action == "use") then
 
 {
 _filename = _item call config_code;
-	switch(typeName _filename)do
-	{
-		case "CODE":
-		{
-			["use", _item, _textamount]call _filename;
-		};
 
-		case "STRING":
-		{
-			["use", _item, _textamount] execVM format["functions\items\%1.sqf",_filename];
-		};
-		default {systemChat  localize "STRS_inv_inventar_cannotuse";};
+	if (isNil format ["%1",_filename])then {
+		["use", _item, _textamount] execVM format["functions\items\%1.sqf",_filename];
+	}else{
+		["use", _item, _textamount]spawn call compile _filename;
 	};
 };
 

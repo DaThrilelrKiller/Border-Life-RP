@@ -36,8 +36,8 @@ if (dtk_client)then {
 call compile preprocessFile format ['configuration\sidevariables\%1variables.sqf',dtk_side];
 };
 
-call compile preprocessFile "configuration\Cfgmodules.sqf";	
-call compile preprocessFile  "ServerLoad\INVvars.sqf";											
+call compile preprocessFile  "ServerLoad\INVvars.sqf";	
+call compile preprocessFile "configuration\Cfgmodules.sqf";											
 
 
 if (dtk_client) then {

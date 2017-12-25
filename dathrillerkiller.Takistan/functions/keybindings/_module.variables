@@ -178,7 +178,7 @@ keybindingDefaults = [
 ["dialog_dd",25,[false,true,false]],
 ["Holster Pistol",2,[false,true,false]],
 ["Holster Rifle",3,[false,true,false]],
-["PurePad++",9,[false,false,false]],
+["Holster Taser",4,[false,true,false]],
 ["Activate Siren",5,[false,false,false]],
 ["Toggle Siren Mode",4,[false,false,false]],
 ["Toggle Lights",59,[false,false,false]]

@@ -39,37 +39,38 @@ switch true do
 case (_resource == "oil"):{
 _pos = getposASL player;
 _object = "Barrel4" createvehicle (position player);
-_object setPos [ getPos this select 0, (getPos this select 1)+4, (getPos this select 2)];
+_object setPos [ getPos _object select 0, (getPos _object select 1)+4, (getPos _object select 2)];
 _object setvariable ["droparray", [_amount, _resource], true];
 };
 case (_resource == "iron"):{
 _pos = getposASL player;
 _object = "MAP_R2_Boulder2" createvehicle (position player);
-_object setPos [ getPos this select 0, (getPos this select 1)+4, (getPos this select 2)];
+_object setPos [ getPos _object select 0, (getPos _object select 1)+4, (getPos _object select 2)];
 _object setvariable ["droparray", [_amount, _resource], true];
 };
 case (_resource == "gold"):{
 _pos = getposASL player;
 _object = "R_Stone_01_EP1" createvehicle (position player);
-_object setPos [ getPos this select 0, (getPos this select 1)+4, (getPos this select 2)];
+_object setPos [ getPos _object select 0, (getPos _object select 1)+4, (getPos _object select 2)];
 _object setvariable ["droparray", [_amount, _resource], true];
 };
 case (_resource == "copper"):{
 _pos = getposASL player;
 _object = "R_Stone_02_EP1" createvehicle (position player);
-_object setPos [ getPos this select 0, (getPos this select 1)+4, (getPos this select 2)];
+_object setPos [ getPos _object select 0, (getPos _object select 1)+4, (getPos _object select 2)];
 _object setvariable ["droparray", [_amount, _resource], true];
 };
 case (_resource == "coal"):{
 _pos = getposASL player;
 _object = "MAP_R2_Boulder1" createvehicle (position player);
-_object setPos [ getPos this select 0, (getPos this select 1)+4, (getPos this select 2)];
+_object setPos [ getPos _object select 0, (getPos _object select 1)+4, (getPos _object select 2)];
 _object setvariable ["droparray", [_amount, _resource], true];
 };
 };
 
 _object  setvehicleinit format["
 this addaction ['Pickup %1 (%2)','scripts\pickup.sqf',[this, '%3', %2]];
+[this,'Pickup %1 (%2) (E)','sfg_textures\tags\oil']call tag_add;
 ", _name, _amount,_resource];
 processInitCommands;
 

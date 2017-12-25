@@ -263,6 +263,11 @@ DaThrillerKiller - the CreateVehicle function now returns the vehicle created
 DaThrillerKiller - Moved server cleaner to new module (for some reason its not being added to the core loop)
 DaThrillerKiller - Overall Orgainzation and Orgainzation update 
 
+Version 3.0
+DaThrillerKiller - Added seperate holster for Taser ctrl + 3 
+DaThrillerKiller - New 3D User Interface
+DaThrillerKiller - code is now stored as string in the master array
+
 
 
 

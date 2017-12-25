@@ -17,7 +17,7 @@ _array =
 	[_side, "Magazines",[]], 
 	[_side, "Pistol",""], 
 	[_side, "Rifle",""],
-	[_side, "blank",""],
+	[_side, "x26",""],
 	[_side, "1_reason",[]],
 	[_side, "1_notes",[]],
 	[_side, "kopfgeld_1",0],

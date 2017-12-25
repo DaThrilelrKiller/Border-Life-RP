@@ -1,2 +1,3 @@
 module_oil = true;
 v_oil_loc = [];
+v_oil_pumps = (nearestobjects [getpos BuildingCollapesLogic, ["Land_Ind_Oil_Pump_EP1","Land_Ind_Oil_Tower_EP1"], 20000]);

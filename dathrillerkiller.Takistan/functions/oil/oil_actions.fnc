@@ -1,4 +1,6 @@
-
 {
-	_x addaction ["Drill for Oil","functions\items\mine.sqf",'oil',1,false,true,"","true"];
-}ForEach (nearestobjects [getpos BuildingCollapesLogic, ["Land_Ind_Oil_Pump_EP1","Land_Ind_Oil_Tower_EP1"], 20000]);
+	_x setVehicleVarName format ["oil_%1",_forEachIndex];
+	missionNamespace setVariable [format ["oil_%1",_forEachIndex],_x];
+	_x addaction ["","functions\items\mine.sqf",'oil',1,false,true,"LeanRight","true"];
+	[_x,"Drill For Oil (E)","sfg_textures\tags\oil"]call tag_add;
+}ForEach v_oil_pumps;

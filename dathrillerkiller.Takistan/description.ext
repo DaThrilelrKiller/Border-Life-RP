@@ -73,4 +73,5 @@ class RscTitles
 	#include "DATA\DIALOGS\RscTitles.hpp"
 	#include "DATA\DIALOGS\ar_plate.hpp"
 	#include "DATA\DIALOGS\progressbar.hpp"
+	#include "DATA\DIALOGS\tags.hpp"
 };

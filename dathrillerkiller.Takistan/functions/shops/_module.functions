@@ -13,5 +13,6 @@
 "keyhandler",
 "lbChanged",
 "types",
-"info"
+"info",
+"init"
 ];

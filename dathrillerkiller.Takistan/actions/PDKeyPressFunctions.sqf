@@ -279,6 +279,13 @@ KeypressHolsterRifle =
 ["Rifle"]call holster_add;
 };
 
+KeypressHolsterx26 = 
+{
+["x26"]call holster_add;
+};
+
+x26
+
 display_keypress = {
 	private["_control","_code","_shift","_ctrlKey","_alt","_handled"];
 	_handled = false;

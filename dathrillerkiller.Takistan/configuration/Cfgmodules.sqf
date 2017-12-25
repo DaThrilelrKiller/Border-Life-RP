@@ -50,7 +50,8 @@ dtk_active_modules =
 "Vehicle",
 "Hunger",
 "Hud",
-"Spawn"
+"Spawn",
+"Tag"
 ];
 
 /*loads variables first for all active modules*/

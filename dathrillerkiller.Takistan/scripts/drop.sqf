@@ -38,8 +38,11 @@ if ([player,_item,-_amount] call storage_add) then
 	_name13 = _item call config_displayname;
 	
 	_object  setvehicleinit format["
+	this setVehicleVarName 'item_%2_%4_%3';
+	item_%2_%4_%3 = this;
 	this addaction ['Pickup %1 (%2)','scripts\pickup.sqf',[this, '%3', %2]];
-	", _name13, _amount,_item];
+	[this,'Pickup %1 (%2)','sfg_textures\tags\oil']call tag_add;
+	", _name13, _amount,_item,MPID];
 	processInitCommands;
 	
 	} 

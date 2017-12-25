@@ -1,0 +1,1 @@
+10 cutRsc ["tag", "PLAIN"];

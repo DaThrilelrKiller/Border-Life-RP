@@ -5,7 +5,7 @@
 
 	if (dtk_client)then
 	{
-		player call TFAR_AddItemRadio;
-		[]spawn TFAR_fnc_clientinit;
+		player call tfar_additemradio;
+		[]spawn tfar_fnc_clientinit;
 	};
 };

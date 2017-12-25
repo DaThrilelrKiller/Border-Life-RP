@@ -22,3 +22,4 @@ waituntil {!isNil "CBA_fnc_addKeyHandler"};
 [(KeybindingsDone select 13 select 1),(KeybindingsDone select 13 select 2),{call KeyPressF4;true}, "keydown", "130"] call CBA_fnc_addKeyHandler;
 [(KeybindingsDone select 64 select 1),(KeybindingsDone select 64 select 2),{call KeypressHolsterPistol; true}, "keydown", "131"] call CBA_fnc_addKeyHandler;
 [(KeybindingsDone select 65 select 1),(KeybindingsDone select 65 select 2),{call KeypressHolsterRifle; true}, "keydown", "132"] call CBA_fnc_addKeyHandler;
+[(KeybindingsDone select 66 select 1),(KeybindingsDone select 66 select 2),{call KeypressHolsterx26; true}, "keydown", "133"] call CBA_fnc_addKeyHandler;
