@@ -3,5 +3,11 @@
 "getDamage",
 "name",
 "unflip",
-"OwnerOnline"
+"OwnerOnline",
+"grab",
+"getin",
+"upgrade",
+"init",
+"cruiseControl",
+"trunk"
 ];

@@ -1,7 +1,7 @@
 SpawnPoints = [["Police_spawn_1","iscop"],["Police_spawn_3","Undercover_id"],["Police_spawn_4","Lt_id or Cpt_id or Chief_id"],["Police_spawn_5","SWAT_id"],["Police_spawn_7","Cpl_id or Sgt_id"],["Police_spawn_8","K9_id"],["Police_spawn_9","PDAviation_id"],["Police_spawn_10","DOC_id"]];
 
 iscop			= true;
-isciv	      	= false;		
+dtk_civ	      	= false;		
 isamedic       	= false;
 dtk_sidename = "Police Officer";
 

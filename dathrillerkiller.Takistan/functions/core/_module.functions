@@ -14,5 +14,9 @@
 "units",
 "prone",
 "convertBoolean",
-"removeEventHandlers"
+"removeEventHandlers",
+"surender",
+"refreshActions",
+"interact",
+"hit"
 ];

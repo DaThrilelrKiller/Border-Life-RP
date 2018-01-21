@@ -4,5 +4,6 @@
 "list",
 "lock",
 "grabVehicle",
-"toggle"
+"toggle",
+"init"
 ];

@@ -54,7 +54,6 @@ class CfgPatches
 #include "DATA\DIALOGS\spawn_dialog.hpp"
 #include "DATA\DIALOGS\PlayerCust.hpp"
 #include "DATA\DIALOGS\ipad_dialog.hpp"
-#include "DATA\DIALOGS\keybindings_dialog.hpp"
 #include "DATA\DIALOGS\cdb_dialog.hpp"
 #include "DATA\DIALOGS\admin_dialog.hpp"
 #include "DATA\DIALOGS\shipments_dialog.hpp"
@@ -63,6 +62,7 @@ class CfgPatches
 #include "DATA\DIALOGS\camera_dialog.hpp"
 #include "DATA\DIALOGS\shopping.hpp"
 #include "DATA\DIALOGS\impound.hpp"
+#include "DATA\DIALOGS\keypress_dialog.hpp"
 
 class RscTitles
 {

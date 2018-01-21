@@ -1,5 +1,7 @@
 private ["_geld","_bank"];
 
+if (dialog)exitWIth {closedialog 0};
+
 if !(local_useBankPossible)  exitWith {systemChat  format [localize "STRS_bank_dialoge_robbsperre",(local_robbsperre_zeit call string_intToString)]};
 
 _geld = [player,"geld"] call storage_amount;

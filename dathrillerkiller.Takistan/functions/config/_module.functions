@@ -16,5 +16,6 @@
 "storage",
 "type",
 "weight",
-"classtoname"
+"classtoname",
+"image"
 ];

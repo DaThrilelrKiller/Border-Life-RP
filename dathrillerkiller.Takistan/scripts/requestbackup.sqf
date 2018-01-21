@@ -3,8 +3,6 @@ if (!backupavailable) exitwith {player sidechat format["Your Panic Button Is Dis
 systemChat  format["You have requested backup. Your location has been marked on the map."];
 
 _civ = player;
-_unit = _this select 0;
-_unitname = name _unit;
 _location = _this select 1;
 _gridPos = mapGridPosition getpos _civ;
 

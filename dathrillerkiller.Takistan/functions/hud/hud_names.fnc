@@ -18,7 +18,7 @@ if (vehicle player != player)exitwith{
 	};
 };
 
-_objects = ["Man", "RUSpecialWeaponsBox","LandVehicle", "Air", "ship", "LocalBasicWeaponsBox","MAP_notebook"];
+_objects = ["RUSpecialWeaponsBox","LandVehicle", "Air", "ship", "LocalBasicWeaponsBox","MAP_notebook"];
 _object = nearestObjects [getPos player,_objects,2];
 _object = _object - [player];
 _object = _object select 0;
@@ -36,12 +36,6 @@ if (typeOf _object == "LocalBasicWeaponsBox")exitwith {
 	titleRsc["Rtags", "PLAIN"];
 	_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
 	_control ctrlSetText "OPEN STORAGE (T)";
-};
-
-if (isPlayer _object)exitwith {
-	titleRsc["Rtags", "PLAIN"];
-	_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
-	_control ctrlSetText "PLAYER MENU (E)";
 };
 
 if (_object isKindOf "MAP_notebook")exitwith {

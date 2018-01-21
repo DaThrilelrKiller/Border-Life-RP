@@ -29,7 +29,9 @@ switch(_action)do
 		format ["Client Min FPS: %1",diag_fpsMin],
 		format ["Player count: %1",count playableUnits],
 		format ["Entities: %1",count allMissionObjects "ALL"],
-		format ["Groups: %1",count allGroups]
+		format ["Groups: %1",count allGroups],
+		format ["Number of Modules: %1",count dtk_active_modules],
+		format ["Number of Functions: %1",dtk_fnc_total]
 		];
 	};
 };

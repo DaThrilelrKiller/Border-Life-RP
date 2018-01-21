@@ -18,8 +18,8 @@ _vehicles = (getPos player) nearEntities [["LandVehicle", "Air", "ship","Man"], 
 
 _return = 
 {
- _name = getText (configFile >> "cfgVehicles" >> typeOf _x >> "DisplayName");
-if (_name == _this)exitWith {_x};
+	 _name = getText (configFile >> "cfgVehicles" >> typeOf _x >> "DisplayName");
+	if (_name == _this)exitWith {_x};
 }count _vehicles;
 
 _return = [_return,objNull]select (typename _return != "OBJECT");

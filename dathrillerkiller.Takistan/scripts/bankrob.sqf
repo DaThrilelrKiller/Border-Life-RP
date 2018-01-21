@@ -49,7 +49,7 @@ if (alive player) then
 	};
 
 stolencash = stolencash + local_cash;
-('if((isciv) and (player distance mainbank < 50)) then {local_useBankPossible = false;};') call network_broadcast;
+('if((dtk_civ) and (player distance mainbank < 50)) then {local_useBankPossible = false;};') call network_broadcast;
 robenable = true;
 rblock = rblock + ((local_cash/50000)*60);
 _rblock = rblock;

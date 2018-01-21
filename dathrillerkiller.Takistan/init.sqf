@@ -8,7 +8,7 @@ diag_log text "[LOG] Border Life Roleplay Init Started";
 dtk_client = [true,false]select (isServer && isDedicated);
 dtk_server = !dtk_client;
 
-waitUntil {time > 0.1 and (count playableUnits > 0)}; 
+waitUntil {time > 0.1}; 
 if (dtk_client)then {
 168 cutRsc ['dtk_logo','PLAIN'];
 };
@@ -41,5 +41,8 @@ call compile preprocessFile "configuration\Cfgmodules.sqf";
 
 
 if (dtk_client) then {
-	call compile preprocessFile "initclient.sqf";
+	[] execVM "scripts\shopfarmfaclicenseactions.sqf";
+	call compile preprocessFile format ['actions\%1actions.sqf',dtk_side];
+	call events_events;
+	diag_log text "[LOG] Border Life Roleplay finished!";
 };

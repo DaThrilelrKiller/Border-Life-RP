@@ -29,5 +29,4 @@ v_clothing_actions = [
 ["Fire Command Uniform","sfg_fdcmd",{EMSCommand_id},[atmsubfire,atm5]],
 ["ECEMS District Chief's Uniform","sfg_dchief",{EMSChiefs_id},[atmsubfire,atm5]],
 ["FECEMS Chief's Uniform","sfg_fchief",{EMSChiefs_id},[atmsubfire,atm5]]
-
 ];

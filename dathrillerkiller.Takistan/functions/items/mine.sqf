@@ -2,7 +2,7 @@ private ["_minearray","_isInArea","_amount","_resource","_max","_infos","_name",
 if(working)exitwith{systemChat  "You are collecting a resource, please wait";};
 working=true;
 _isInArea=false;
-{if (player distance (getMarkerPos ((_x select 0) select 0)) < ((_x select 0) select 1) && isciv) then {_isInArea = true; _minearray = _x};} count miningarray;
+{if (player distance (getMarkerPos ((_x select 0) select 0)) < ((_x select 0) select 1) && dtk_civ) then {_isInArea = true; _minearray = _x};} count miningarray;
 
 _amount = floor (random 2)+1;
 

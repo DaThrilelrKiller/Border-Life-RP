@@ -1,6 +1,6 @@
 private ["_player","_cuffed"];
 
-_player = _this select 0;
+_player = (nearestObjects [getpos player,["Man"],2] select 1);
 _cuffed = _player getVariable ["ar_cuffed",false];
 
 
@@ -15,4 +15,5 @@ if (!_cuffed)then
 else
 {
 	_player setVariable ["ar_cuffed",false,true];
+	detach _player;
 };

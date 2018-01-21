@@ -2,5 +2,6 @@
 "add",
 "remove",
 "selectWeapon",
-"kind"
+"kind",
+"init"
 ];

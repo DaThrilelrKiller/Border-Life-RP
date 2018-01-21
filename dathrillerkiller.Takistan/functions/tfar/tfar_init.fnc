@@ -7,5 +7,6 @@
 	{
 		player call tfar_additemradio;
 		[]spawn tfar_fnc_clientinit;
+		call tfar_keys;
 	};
 };

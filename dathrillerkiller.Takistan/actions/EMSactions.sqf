@@ -29,7 +29,7 @@ _role addaction ["Shop 4 Export","noscript.sqf",'[ (shop4 call shops_index)]call
 _role addaction ["Impound Lot","noscript.sqf",'[]call impound_open;',1,false,true,"","player distance newimpoundlot <= 5"];
 _role addaction ["Sign-Up For Debit Card","scripts\debitcardsignup.sqf",["mainbank"],1,false,true,"","player distance mainbank <= 15 and (!SigningUpForDebitCard)"];
 _role addaction ["Crime Log","scripts\maindialogs.sqf",["coplog"],1,false,true,"","player distance rathaus <= 3"];
-_role addaction [format ["Pay Bail", slave_cost],"scripts\maindialogs.sqf", ["bail"],1,false,true,"","player distance bailflag <= 3 and isciv"];
+_role addaction [format ["Pay Bail", slave_cost],"scripts\maindialogs.sqf", ["bail"],1,false,true,"","player distance bailflag <= 3 and dtk_civ"];
 _role addaction ["Resuscitate/Shock Victim","noscript.sqf",'[ems_nearman]call medical_revive;',1,true,true,"",'call ems_neardead'];
 _role addaction ["Remove Blindfold","FUNCTIONS\ITEMS\blindfold.sqf",[],1,false,true,"","isPlayer cursorTarget and cursorTarget getVariable 'blindfolded'"];
 

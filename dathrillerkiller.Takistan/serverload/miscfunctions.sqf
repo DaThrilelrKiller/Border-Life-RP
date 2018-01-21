@@ -184,3 +184,18 @@ processInitCommands;
  
 };
 
+display_keypress = {
+	private["_control","_code","_shift","_ctrlKey","_alt","_handled"];
+	_handled = false;
+	_control = _this select 0;
+	_code = _this select 1;
+	systemChat str _code;
+	_shift = _this select 2;
+	_ctrlKey = _this select 3;
+	_alt = _this select 4;
+	_disallowed = [1,2,3,4,5,6,41,7,24,21,8,42,63,38,20,18,33,57,17,62];
+	
+	if(_code in _disallowed) then {_handled = true;};
+	_handled;
+};
+

@@ -6,5 +6,6 @@
 "paint",
 "near",
 "markers",
-"init"
+"init",
+"open"
 ];

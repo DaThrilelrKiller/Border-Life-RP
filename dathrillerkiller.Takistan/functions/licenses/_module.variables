@@ -2,7 +2,7 @@ module_licenses = true;
 
 dtk_licenses = 
 [
-["SFG_Clothing_License", [atmmall, rlrpgclothingshop_1, rlrpgclothingshop_2],      "SFG Clothing License",150000,"isciv"],
+["SFG_Clothing_License", [atmmall, rlrpgclothingshop_1, rlrpgclothingshop_2],      "SFG Clothing License",150000,"dtk_civ"],
 ["hunting_license",        [atmswag],                                                "Hunting License",20000,"true"],
 ["hunting_licensea",        [],                        "Fishing License",20000,"true"],
 ["pistol",                 [atmswag, specbox],                                       "(Pistol) Concealed Carry License",50000,"true"],
@@ -13,7 +13,7 @@ dtk_licenses =
 ["fboat",                  [dmv],                                              "Ferry Captain License",2500,"true"],
 ["air",                    [airshop],                                  "Pilot License",35000,"true"],
 ["comair",                 [airshop3],                                         "Commerical Air License",100000,"true"],
-["terrorli",                  [terror],                                        "Terror License",800000,"isciv"],
+["terrorli",                  [terror],                                        "Terror License",800000,"dtk_civ"],
 ["cdl_license",            [truckshop],                                              "Commerical Drivers License",1000,"true"],
 ["taxi",                   [taxishop],                                               "Taxi License",5000,"true"],
 ["car",                    [dmv, specbox,atm10],                               "Drivers License",2500,"true"],

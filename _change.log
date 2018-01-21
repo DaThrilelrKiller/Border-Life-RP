@@ -268,7 +268,14 @@ DaThrillerKiller - Added seperate holster for Taser ctrl + 3
 DaThrillerKiller - New 3D User Interface
 DaThrillerKiller - code is now stored as string in the master array
 
-
+Version 3.1
+DaThrillerKiller - Added Cruise Control
+DaThrillerKiller - Added New Key press module. This allows developers in the future to add key handlers 10x easier
+DaThrillerKiller - Removed old key binding module - Was good at the time, but now is junk
+DaThrillerKiller - Fixed core_SelectNested causing errors aka "Zero Devisor"
+DaThrillerKiller - Added images for inventory items
+DaThrillerKiller - ATM markers are now created via script
+DaThrillerKiller - New escort funtion togled by pressing U unless you change it threw your settings
 
 
 

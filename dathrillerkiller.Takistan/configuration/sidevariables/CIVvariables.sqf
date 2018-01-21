@@ -1,6 +1,6 @@
 SpawnPoints = [["Civ_Spawn_1","true"],["Civ_Spawn_2","true"],["Civ_Spawn_3","true"],["Civ_Spawn_6","true"],["Civ_Spawn_7","PMC_id"],["Civ_Spawn_9","true"]];
 
-isciv         	= true;						
+dtk_civ         	= true;						
 iscop          	= false;	
 isamedic      	= false;
 dtk_sidename = "Civilian";

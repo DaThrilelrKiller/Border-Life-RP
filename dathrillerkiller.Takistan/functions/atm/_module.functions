@@ -6,5 +6,6 @@
 "refresh",
 "depositeAll",
 "jip",
-"init"
+"init",
+"markers"
 ];

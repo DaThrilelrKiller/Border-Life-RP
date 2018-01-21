@@ -2,5 +2,6 @@
 "open",
 "clear",
 "drop",
-"purchase"
+"purchase",
+"init"
 ];

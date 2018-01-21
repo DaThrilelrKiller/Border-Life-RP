@@ -4,6 +4,7 @@ add_copmoney		 = 5000;
 MayorSteuern             = 0;
 dtk_jointime = time;
 core_loop_array = [];
+dtk_action_time = 0;
 
 ar_paychecks = 
 [
@@ -24,7 +25,7 @@ ar_paychecks =
 [{isamedic and FF2_id},(5000 + random 2000 - random 2000)],
 [{isamedic and EMSAirUnit_id},(5000 + random 2000 - random 2000)],
 [{isamedic and EMSCommand_id},(5000 + random 2000 - random 2000)],
-[{isciv},add_civmoney]
+[{dtk_civ},add_civmoney]
 ];
 
 v_core_prones = [

@@ -1,5 +1,3 @@
-tag_show = {
-
 private ["_text","_img","_display","_control","_h","_pos","_maxDist","_dist","_name","_target"];
 
 _target = _this select 0;

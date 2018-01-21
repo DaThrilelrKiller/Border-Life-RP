@@ -156,7 +156,7 @@ VIPtarget domove getmarkerpos "policebase";
 while {true} do 
 
 	{
-	"if(alive player and isciv and player distance assveh <= 150)then{titleText [""The Government is operating in this area! Turn back or you will be shot!"", ""plain down""]};" call network_broadcast;
+	"if(alive player and dtk_civ and player distance assveh <= 150)then{titleText [""The Government is operating in this area! Turn back or you will be shot!"", ""plain down""]};" call network_broadcast;
 	"targetmarker" setmarkerpos getpos VIPtarget;
 	if (_secondcounter >= 15) then
 		{

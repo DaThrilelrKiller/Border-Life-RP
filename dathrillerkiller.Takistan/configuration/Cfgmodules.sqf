@@ -5,6 +5,7 @@ dtk_active_modules =
 [
 "Network",
 "Core",
+"Keypress",
 "Config",
 "Array",
 "BIS",
@@ -12,7 +13,6 @@ dtk_active_modules =
 "Shops",
 "Goverment",
 "Licenses",
-"Keybindings",
 "Slots",
 "Chat",
 "Camera",
@@ -21,6 +21,7 @@ dtk_active_modules =
 "Siren",
 "Checkpoint",
 "Admin",
+"Police",
 "Cdb",
 "Plates",
 "Cuffs",
@@ -76,7 +77,6 @@ dtk_active_modules =
 
 
 diag_log text format ["Total Modules: %2 Total Functions: %1",dtk_fnc_total,count dtk_active_modules];
-
 call setup_init;
 
 if (dtk_client)then {

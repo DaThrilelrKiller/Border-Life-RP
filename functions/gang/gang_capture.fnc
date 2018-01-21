@@ -23,7 +23,7 @@ switch(_action)do
 	{
 		_gangArea setpos [getpos _gangArea select 0, getpos _gangArea select 1, -3];
 		sleep 1;
-		["ALL",["isciv","Gang Alert",format["%1 has been neutralised by %2!", _gangarea1, _gang]],"Main_Notification",true,false]call network_MPExec;
+		["ALL",["dtk_civ","Gang Alert",format["%1 has been neutralised by %2!", _gangarea1, _gang]],"Main_Notification",true,false]call network_MPExec;
 	};
 	case "capture":
 	{
@@ -31,6 +31,6 @@ switch(_action)do
 		sleep 1;
 		_gangArea setvariable["control", _gang, true];
 
-		["ALL",["isciv","Gang Alert",format["%1 has been captured by %2!", _gangarea1, _gang]],"Main_Notification",true,false]call network_MPExec;
+		["ALL",["dtk_civ","Gang Alert",format["%1 has been captured by %2!", _gangarea1, _gang]],"Main_Notification",true,false]call network_MPExec;
 	};
 };

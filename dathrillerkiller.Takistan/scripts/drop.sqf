@@ -1,5 +1,9 @@
+private ["_image"];
+
 _item   = _this select 0; 
 _amount = _this select 1;
+_image = format ["\sfg_textures\items\%1",[_item]call config_image];
+
 
 if(!isnull (nearestobjects[getpos player,["EvMoney","Suitcase"], 1] select 0))exitwith{systemChat  "You cannot drop items on top of each other. move and try again."};
 
@@ -23,10 +27,10 @@ if ([player,_item,-_amount] call storage_add) then
 	private "_class";
 	switch true do
 	{
-	case (_item == "geld"):{_class = "EvMoney"};
-	case (_item == "oil"):{_class = "Barrel4"};
-	case (_item == "oilbarrel"):{_class = "Barrel4"};
-	default {_class = "Suitcase"};
+		case (_item == "geld"):{_class = "EvMoney"};
+		case (_item == "oil"):{_class = "Barrel4"};
+		case (_item == "oilbarrel"):{_class = "Barrel4"};
+		default {_class = "Suitcase"};
 	};
 
 	_pos = getposASL player;
@@ -38,11 +42,8 @@ if ([player,_item,-_amount] call storage_add) then
 	_name13 = _item call config_displayname;
 	
 	_object  setvehicleinit format["
-	this setVehicleVarName 'item_%2_%4_%3';
-	item_%2_%4_%3 = this;
-	this addaction ['Pickup %1 (%2)','scripts\pickup.sqf',[this, '%3', %2]];
-	[this,'Pickup %1 (%2)','sfg_textures\tags\oil']call tag_add;
-	", _name13, _amount,_item,MPID];
+	this addaction ['','scripts\pickup.sqf',[this, '%3', %2],25,false,true,'LeanRight','player distance this < 5 && {!([this,'Pick up %1 (E)','%5']call tag_show)}'];
+	", _name13, _amount,_item,MPID,_image];
 	processInitCommands;
 	
 	} 

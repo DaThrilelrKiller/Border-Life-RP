@@ -9,7 +9,7 @@ else
 {
 
 	if (getPlayerUID player == _uid)then {
-	systemchat "you have been kicked fron the server!!";
+	systemchat "you have been kicked from the server!!";
 	(findDisplay 46) closeDisplay 1;
 	}
 	else{

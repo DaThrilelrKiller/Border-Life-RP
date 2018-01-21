@@ -2,5 +2,6 @@
 "loadapps",
 "open",
 "apps",
-"background"
+"background",
+"init"
 ];

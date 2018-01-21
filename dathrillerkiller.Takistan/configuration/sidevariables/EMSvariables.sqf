@@ -1,6 +1,6 @@
 SpawnPoints =[["ems_spawn_1","true"],["ems_spawn_2","true"],["ems_spawn_4","EMSAirUnit_id"]];
 
-isciv         	= false;						
+dtk_civ         	= false;						
 iscop          	= false;	
 isamedic       	= true;	
 dtk_sidename = "Emergency Medical Technician";

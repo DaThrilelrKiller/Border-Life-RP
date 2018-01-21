@@ -2,5 +2,6 @@
 "AddItemRadio",
 "addRadios",
 "RemoveRadios",
-"init"
+"init",
+"keys"
 ];
